@@ -1,0 +1,8 @@
+Write a concise weekly research newsletter using the selected articles.
+
+Audience:
+{{ audience }}
+
+Articles:
+{{ articles }}
+

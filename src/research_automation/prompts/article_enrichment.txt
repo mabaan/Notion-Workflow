@@ -1,0 +1,10 @@
+Summarize the article and extract:
+- core thesis
+- key claims
+- supporting evidence
+- notable quotes
+- tags
+
+Article:
+{{ article_text }}
+
