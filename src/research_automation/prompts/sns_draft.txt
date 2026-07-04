@@ -1,8 +1,0 @@
-Create short social posts from this research draft.
-
-Draft:
-{{ draft }}
-
-Channels:
-{{ channels }}
-

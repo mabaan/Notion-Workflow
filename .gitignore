@@ -1,4 +1,5 @@
 .env
+.local_state/
 .venv/
 __pycache__/
 *.py[cod]
@@ -11,4 +12,3 @@ dist/
 build/
 *.egg-info/
 .aws-sam/
-

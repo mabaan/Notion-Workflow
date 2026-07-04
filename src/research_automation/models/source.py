@@ -10,8 +10,12 @@ class Source:
     """Configuration for a source of research articles."""
 
     name: str
-    kind: str
-    location: str
-    enabled: bool = True
-    metadata: dict[str, str] = field(default_factory=dict)
-
+    feed_url: str
+    source_url: str = ""
+    collection_method: str = ""
+    region: list[str] = field(default_factory=list)
+    topic_focus: list[str] = field(default_factory=list)
+    credibility: str = ""
+    priority: str = ""
+    check_frequency: str = ""
+    notion_page_id: str = ""

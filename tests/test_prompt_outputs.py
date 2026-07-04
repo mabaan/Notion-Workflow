@@ -8,9 +8,8 @@ def test_prompt_templates_exist_and_are_non_empty() -> None:
     for prompt_name in [
         "article_enrichment.txt",
         "newsletter_draft.txt",
-        "sns_draft.txt",
+        "social_media_draft.txt",
     ]:
         prompt = PROMPTS_DIR / prompt_name
         assert prompt.exists()
         assert prompt.read_text(encoding="utf-8").strip()
-

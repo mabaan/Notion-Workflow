@@ -5,10 +5,16 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "research-automation"
 version = "0.1.0"
-description = "Research ingestion and weekly draft automation scaffold."
+description = "Local Notion workflow for research ingestion and weekly draft automation."
 readme = "README.md"
 requires-python = ">=3.11"
-dependencies = []
+dependencies = [
+  "feedparser>=6.0.11",
+  "httpx>=0.27.0",
+  "notion-client>=2.2.1",
+  "openai>=2.44.0",
+  "python-dotenv>=1.0.1",
+]
 
 [project.optional-dependencies]
 dev = [
@@ -21,4 +27,3 @@ where = ["src"]
 [tool.pytest.ini_options]
 pythonpath = ["src"]
 testpaths = ["tests"]
-

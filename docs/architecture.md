@@ -1,9 +1,10 @@
 # Architecture
 
-The project is organized around a small ingestion and drafting pipeline:
+The local workflow is organized around a small set of modules:
 
-1. Source adapters collect article candidates.
-2. Pipeline steps clean, deduplicate, and enrich article records.
-3. Draft generation turns selected articles into newsletter or social content.
-4. Client modules isolate Notion, LLM, DynamoDB, and S3 integrations.
-
+1. `pipeline/source_registry.py` reads active sources from Notion.
+2. `sources/rss.py` and `pipeline/collect.py` fetch feed entries.
+3. `utils/urls.py` and `utils/hashing.py` normalize and hash article candidates.
+4. `pipeline/deduplicate.py` stores seen article hashes in local JSON.
+5. `pipeline/notion_write.py` and `pipeline/weekly_pages.py` manage Notion pages and relations.
+6. `clients/llm_client.py` handles OpenAI enrichment and draft generation.

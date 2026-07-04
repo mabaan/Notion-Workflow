@@ -1,8 +1,58 @@
-Write a concise weekly research newsletter using the selected articles.
+You are drafting an internal SOMA MATER newsletter draft from approved article notes.
+This is an editor-ready working draft, not a final published piece.
 
-Audience:
-{{ audience }}
+Target style learned from the human-written newsletter examples:
+- Open like a branded weekly note, not like a generic media newsletter.
+- The intro should sound editorial and informed: short, confident, region-aware, and specific.
+- Early in the piece, frame the week's themes in Food and Water Security, Net Zero Transition, trade, resilience, regulation, or regional risk when relevant.
+- The examples usually highlight the top 3 stories of the week.
+- Before the main body, include 2 to 3 short teaser questions that point to the core issues the newsletter will unpack.
+- Use a brief sign-off before the story sections in the spirit of a house newsletter voice.
+- Story headlines should feel editorial, specific, and memorable. A colon, contrast, or turn of phrase is common.
+- Under each story headline, include 1 or 2 short topic tags such as #FoodandWaterSecurity or #NetZeroTransition only when they genuinely fit.
+- The body voice is analytical, grounded, and business-aware. It is not breathless, salesy, or academic.
+- Paragraphs are short to medium length. The rhythm should feel human, with natural transitions and occasional punchy lines.
+- Each story should move from the core development to implications, then end with a short "SOMA's Perspective:" section that adds regional, strategic, commercial, or operational framing.
+- Each story should end with "Sources:" followed by the relevant source URLs from the approved notes.
+- The close should feel understated and useful. If a branded SOMA wrap-up fits, keep it brief and do not invent a contact link.
 
-Articles:
+Drafting rules:
+- Use only the approved article information below. Do not invent facts, quotes, numbers, or certainty.
+- If the evidence is thin or uncertain, write with restraint and say so plainly.
+- Preserve the factual center of each article while making the framing more editorial.
+- Favor implications for MENA, the Gulf, food systems, water systems, climate policy, trade, resilience, regulation, infrastructure, or business exposure when supported by the notes.
+- Avoid filler and generic AI phrasing such as:
+  - "In today's rapidly evolving landscape"
+  - "This article highlights"
+  - "It is important to note"
+  - "In conclusion"
+  - "Here are the key takeaways"
+- Avoid generic section labels such as "Opening Note", "Main Stories", and "Closing Note".
+- Avoid code fences, markdown wrappers, horizontal rules, and "Read more" link lines.
+- Do not overpraise, overexplain, or make sweeping claims that are not grounded in the notes.
+- Use every supplied article below, in the order supplied.
+- The number of story sections should match the number of supplied articles.
+- Keep the draft editable. It should sound human and finished enough to work from, but still leave room for an editor's final pass.
+
+Output format:
+- Plain text only. Do not wrap the answer in markdown code fences.
+- Start with a short branded SOMA MATER weekly welcome.
+- Follow with a compact framing paragraph.
+- Add 2 to 3 teaser questions, one per line.
+- Add a brief sign-off line.
+- Then write the story sections.
+- For each story section, use this shape:
+  ## Story headline
+  #RelevantTag #OptionalSecondTag
+  2 to 4 short paragraphs
+  SOMA's Perspective:
+  2 to 4 sentences of original editorial framing grounded in the approved notes
+  Sources:
+  raw source URL(s), one per line
+- End with a brief SOMA-style closing line only if it feels natural.
+
+Week start: {{ week_start }}
+Week end: {{ week_end }}
+
+Approved articles:
 {{ articles }}
-

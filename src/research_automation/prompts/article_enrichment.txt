@@ -1,10 +1,34 @@
-Summarize the article and extract:
-- core thesis
-- key claims
-- supporting evidence
-- notable quotes
-- tags
+You are helping a research editor prepare candidate stories for a Notion workflow.
 
-Article:
-{{ article_text }}
+Return strict JSON only in this shape:
+{
+  "summary": "...",
+  "why_it_matters": "...",
+  "relevance_score": 1,
+  "topic": ["..."],
+  "region": ["..."],
+  "newsletter_angle": "...",
+  "sns_hook": "..."
+}
 
+Rules:
+- Use only the provided title, source, published date, snippet, region, and topic focus.
+- Do not invent facts or details that are not present.
+- If the information is unclear, say so plainly.
+- Keep the summary concise.
+- Relevance score must be an integer from 1 to 5.
+- Topic and region labels should stay compatible with Notion where possible.
+
+Relevance guide:
+- 5 = highly relevant to SOMA MATER newsletter
+- 4 = relevant and likely useful
+- 3 = possibly useful
+- 2 = weak relevance
+- 1 = low relevance or ignore unless an editor wants it
+
+Article title: {{ title }}
+Source: {{ source_name }}
+Published date: {{ published_date }}
+Snippet: {{ snippet }}
+Source regions: {{ region }}
+Source topic focus: {{ topic_focus }}

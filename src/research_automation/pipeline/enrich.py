@@ -2,14 +2,11 @@
 
 from __future__ import annotations
 
-from research_automation.models.article import Article
+from research_automation.clients.llm_client import LlmClient
+from research_automation.models.article import Article, EnrichedArticle
 
 
-def enrich_article(article: Article) -> Article:
-    """Return an enriched article.
+def enrich_article(article: Article, llm_client: LlmClient) -> EnrichedArticle:
+    """Enrich an article using the configured LLM client."""
 
-    This placeholder keeps the contract in place until an LLM client is wired in.
-    """
-
-    return article
-
+    return llm_client.enrich_article(article)
