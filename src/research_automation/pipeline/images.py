@@ -8,6 +8,7 @@ import logging
 from pathlib import Path
 import re
 from typing import Any
+from urllib.parse import urlsplit, urlunsplit
 
 from research_automation.clients.brave_search_client import BraveSearchClient
 from research_automation.clients.discovery_common import (
@@ -104,21 +105,44 @@ class ArticleImageResolver:
     def resolve_articles(self, articles: list[DraftArticle]) -> list[DraftArticle]:
         """Resolve image URLs for supplied draft articles."""
 
+        used_image_ids: set[str] = set()
         for article in articles:
-            if article.image_url:
+            existing_image = clean_url(article.image_url)
+            existing_image_id = image_identity(existing_image)
+            if existing_image and existing_image_id and existing_image_id not in used_image_ids:
+                article.image_url = existing_image
+                used_image_ids.add(existing_image_id)
                 continue
-            article.image_url = self.resolve_image(article)
+
+            article.image_url = self.resolve_image(
+                article,
+                excluded_image_ids=used_image_ids,
+            )
+            resolved_image_id = image_identity(article.image_url)
+            if resolved_image_id:
+                used_image_ids.add(resolved_image_id)
         return articles
 
-    def resolve_image(self, article: DraftArticle) -> str:
+    def resolve_image(
+        self,
+        article: DraftArticle,
+        *,
+        excluded_image_ids: set[str] | None = None,
+    ) -> str:
         """Resolve a single article image URL."""
 
+        excluded_image_ids = excluded_image_ids or set()
         cached = self.store.get_image_url(article.canonical_url)
         cached_provider = self.store.get_provider(article.canonical_url).casefold()
         allowed_cache_providers = {
             provider.casefold() for provider in self.settings.image_discovery_providers
         }
-        if cached and cached_provider in allowed_cache_providers:
+        cached_identity = image_identity(cached)
+        if (
+            cached
+            and cached_provider in allowed_cache_providers
+            and cached_identity not in excluded_image_ids
+        ):
             return cached
 
         for provider in self.settings.image_discovery_providers:
@@ -126,9 +150,9 @@ class ArticleImageResolver:
 
             try:
                 if provider_name == "unsplash":
-                    image_url = self._unsplash_image(article)
+                    candidate_urls = self._unsplash_image_candidates(article)
                 elif provider_name == "brave":
-                    image_url = self._brave_image(article)
+                    candidate_urls = self._brave_image_candidates(article)
                 else:
                     logger.info("Skipping unknown image provider: %s", provider)
                     continue
@@ -139,7 +163,10 @@ class ArticleImageResolver:
                 logger.warning("Image provider failed for %s: %s", article.title, exc)
                 continue
 
-            if image_url:
+            for image_url in candidate_urls:
+                image_id = image_identity(image_url)
+                if image_id and image_id in excluded_image_ids:
+                    continue
                 self.store.record_image_url(
                     canonical_url=article.canonical_url,
                     image_url=image_url,
@@ -149,32 +176,36 @@ class ArticleImageResolver:
 
         return ""
 
-    def _unsplash_image(self, article: DraftArticle) -> str:
+    def _unsplash_image_candidates(self, article: DraftArticle) -> list[str]:
         if self.unsplash is None:
-            return ""
+            return []
 
         self.unsplash_requests += 1
         queries = _unsplash_queries(article)
+        candidates: list[str] = []
         for query in queries:
             results = self.unsplash.search_photos(query=query, per_page=5)
-            image_url = _best_unsplash_image_result(results)
-            if image_url:
-                return image_url
-        return ""
+            candidates.extend(_unsplash_image_results(results))
+        return _unique_image_urls(candidates)
 
-    def _brave_image(self, article: DraftArticle) -> str:
+    def _brave_image_candidates(self, article: DraftArticle) -> list[str]:
         if self.brave is None or self.brave_requests >= self.settings.brave_max_requests_per_run:
-            return ""
+            return []
 
         self.brave_requests += 1
         query = f"{article.title} {article.source_name}".strip()
         language = "en"
         results = self.brave.search_images(query=query, count=5, search_lang=language)
-        return _best_image_result(results, article.canonical_url, "url", "properties")
+        return _image_result_candidates(
+            results,
+            article.canonical_url,
+            "url",
+            "properties",
+        )
 
 
 def inject_story_images(content: str, articles: list[DraftArticle]) -> str:
-    """Insert one markdown image line before each story heading in order."""
+    """Insert one markdown image line after each story heading and tag line."""
 
     lines = content.splitlines()
     headings = [index for index, line in enumerate(lines) if line.startswith("## ")]
@@ -188,8 +219,9 @@ def inject_story_images(content: str, articles: list[DraftArticle]) -> str:
         image_url = clean_url(articles[article_index].image_url)
         if not image_url:
             continue
+        insert_at = _story_image_insert_index(lines, heading_index + offset)
         lines.insert(
-            heading_index + offset,
+            insert_at,
             f"![{articles[article_index].title}]({image_url})",
         )
         offset += 1
@@ -209,6 +241,37 @@ def markdown_image_match(line: str) -> tuple[str, str] | None:
     if not url:
         return None
     return alt, url
+
+
+def _story_image_insert_index(lines: list[str], heading_index: int) -> int:
+    """Return the insertion point for a story image."""
+
+    insert_at = heading_index + 1
+    while insert_at < len(lines) and _is_tag_line(lines[insert_at]):
+        insert_at += 1
+    return insert_at
+
+
+def _is_tag_line(line: str) -> bool:
+    """Return True when a line is a hashtag tag row, not a heading."""
+
+    stripped = line.strip()
+    return (
+        stripped.startswith("#")
+        and not stripped.startswith("##")
+        and not stripped.startswith("# ")
+    )
+
+
+def image_identity(image_url: str) -> str:
+    """Return a duplicate-resistant identifier for an image URL."""
+
+    cleaned = clean_url(image_url)
+    if not cleaned:
+        return ""
+
+    parts = urlsplit(cleaned)
+    return urlunsplit((parts.scheme, parts.netloc, parts.path.rstrip("/"), "", ""))
 
 
 def _unsplash_queries(article: DraftArticle) -> list[str]:
@@ -233,6 +296,12 @@ def _unsplash_queries(article: DraftArticle) -> list[str]:
 
 
 def _best_unsplash_image_result(results: list[dict[str, Any]]) -> str:
+    image_urls = _unsplash_image_results(results)
+    return image_urls[0] if image_urls else ""
+
+
+def _unsplash_image_results(results: list[dict[str, Any]]) -> list[str]:
+    image_urls: list[str] = []
     for result in results:
         urls = result.get("urls")
         if not isinstance(urls, dict):
@@ -240,8 +309,8 @@ def _best_unsplash_image_result(results: list[dict[str, Any]]) -> str:
         for key in ("regular", "full", "small", "raw"):
             image_url = clean_url(str(urls.get(key) or ""))
             if image_url:
-                return image_url
-    return ""
+                image_urls.append(image_url)
+    return _unique_image_urls(image_urls)
 
 
 def _best_image_result(
@@ -250,8 +319,19 @@ def _best_image_result(
     page_url_key: str,
     image_key: str,
 ) -> str:
+    image_urls = _image_result_candidates(results, canonical_url, page_url_key, image_key)
+    return image_urls[0] if image_urls else ""
+
+
+def _image_result_candidates(
+    results: list[dict[str, Any]],
+    canonical_url: str,
+    page_url_key: str,
+    image_key: str,
+) -> list[str]:
     target_host = url_hostname(canonical_url)
-    best_fallback = ""
+    preferred: list[str] = []
+    fallback: list[str] = []
 
     for result in results:
         page_url = clean_url(str(result.get(page_url_key) or result.get("url") or ""))
@@ -272,10 +352,23 @@ def _best_image_result(
         if not image_url:
             continue
 
-        if best_fallback == "":
-            best_fallback = image_url
-
         if page_url and hostname_matches(url_hostname(page_url), target_host):
-            return image_url
+            preferred.append(image_url)
+        else:
+            fallback.append(image_url)
 
-    return best_fallback
+    return _unique_image_urls([*preferred, *fallback])
+
+
+def _unique_image_urls(image_urls: list[str]) -> list[str]:
+    unique_urls: list[str] = []
+    seen: set[str] = set()
+
+    for image_url in image_urls:
+        image_id = image_identity(image_url)
+        if not image_id or image_id in seen:
+            continue
+        seen.add(image_id)
+        unique_urls.append(clean_url(image_url))
+
+    return unique_urls

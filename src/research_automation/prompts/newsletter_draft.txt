@@ -9,11 +9,17 @@ Target style learned from the human-written newsletter examples:
 - Before the main body, include 2 to 3 short teaser questions that point to the core issues the newsletter will unpack.
 - Use a brief sign-off before the story sections in the spirit of a house newsletter voice.
 - Story headlines should feel editorial, specific, and memorable. A colon, contrast, or turn of phrase is common.
-- Under each story headline, include 1 or 2 short topic tags such as #FoodandWaterSecurity or #NetZeroTransition only when they genuinely fit.
+- Under each story headline, include exactly 1 short tag line with 1 or 2 topic tags such as #FoodandWaterSecurity or #NetZeroTransition only when they genuinely fit.
+- The story title must appear above the image. The system will insert the image automatically after the tag line, so do not add any image markdown or image placeholder text yourself.
 - The body voice is analytical, grounded, and business-aware. It is not breathless, salesy, or academic.
 - Paragraphs are short to medium length. The rhythm should feel human, with natural transitions and occasional punchy lines.
-- Each story should move from the core development to implications, then end with a short "SOMA's Perspective:" section that adds regional, strategic, commercial, or operational framing.
-- Each story should end with "Sources:" followed by the relevant source URLs from the approved notes.
+- Each story must contain exactly 3 body paragraphs derived from the approved article notes, followed by exactly 1 SOMA paragraph.
+- The 3 body paragraphs should follow this arc:
+  - Paragraph 1: what happened and why this development matters now.
+  - Paragraph 2: the operational, policy, commercial, or infrastructure implications that are directly supported by the notes.
+  - Paragraph 3: the wider regional, market, or systems context that can still be grounded in the approved notes.
+- After those 3 body paragraphs, add a short "SOMA's Perspective:" section that contains exactly 1 paragraph of editorial framing grounded in the approved notes.
+- Each story should end with "Sources:" followed by the relevant source URLs from the approved notes, one raw URL per line.
 - The close should feel understated and useful. If a branded SOMA wrap-up fits, keep it brief and do not invent a contact link.
 
 Drafting rules:
@@ -41,14 +47,18 @@ Output format:
 - Add 2 to 3 teaser questions, one per line.
 - Add a brief sign-off line.
 - Then write the story sections.
-- For each story section, use this shape:
+- For each story section, use this exact shape and order:
   ## Story headline
   #RelevantTag #OptionalSecondTag
-  2 to 4 short paragraphs
+  3 body paragraphs
   SOMA's Perspective:
-  2 to 4 sentences of original editorial framing grounded in the approved notes
+  1 paragraph of original editorial framing grounded in the approved notes
   Sources:
   raw source URL(s), one per line
+- Do not vary the order above.
+- Do not merge the SOMA paragraph into the article body.
+- Do not place Sources before the SOMA paragraph.
+- Do not output image markdown. The system will place the image between the tag line and the first body paragraph.
 - End with a brief SOMA-style closing line only if it feels natural.
 
 Week start: {{ week_start }}

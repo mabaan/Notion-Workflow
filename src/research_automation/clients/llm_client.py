@@ -39,6 +39,7 @@ class LlmClient:
     model: str
     api_key: str
     prompt_directory: Path
+    company_topics: tuple[str, ...] = ()
     client: OpenAI = field(init=False)
 
     def __post_init__(self) -> None:
@@ -63,6 +64,11 @@ class LlmClient:
                 "snippet": article.snippet or "No snippet available.",
                 "region": ", ".join(article.region) or "Unknown",
                 "topic_focus": ", ".join(article.topic_focus) or "Unknown",
+                "company_topics": ", ".join(self.company_topics) or "Unknown",
+                "geographic_scope": (
+                    "MENA, GCC, UAE, Saudi Arabia/KSA, Egypt, and genuinely global "
+                    "systemic developments with clear relevance to those regions."
+                ),
             },
         )
         payload = self._generate_json(prompt)

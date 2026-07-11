@@ -1,4 +1,9 @@
-from research_automation.utils.urls import clean_url, hostname_matches, url_hostname
+from research_automation.utils.urls import (
+    clean_url,
+    extract_entry_url,
+    hostname_matches,
+    url_hostname,
+)
 
 
 def test_clean_url_removes_tracking_params() -> None:
@@ -17,3 +22,12 @@ def test_url_hostname_normalizes_www() -> None:
 def test_hostname_matches_subdomains() -> None:
     assert hostname_matches("www.reuters.com", "reuters.com")
     assert hostname_matches("static.agbi.com", "agbi.com")
+
+
+def test_extract_entry_url_uses_non_google_summary_href() -> None:
+    entry = {
+        "link": "https://news.google.com/rss/articles/example",
+        "summary": '<a href="https://example.com/story">Story</a>',
+    }
+
+    assert extract_entry_url(entry) == "https://example.com/story"

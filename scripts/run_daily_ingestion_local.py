@@ -13,10 +13,16 @@ from research_automation.pipeline.collect import collect_articles
 from research_automation.pipeline.deduplicate import SeenArticleStore
 from research_automation.pipeline.discovery import (
     DiscoveryService,
+    choose_next_article_for_admission,
     count_weekly_region_coverage,
     select_feed_articles_for_run,
 )
 from research_automation.pipeline.enrich import enrich_article
+from research_automation.pipeline.relevance import (
+    article_has_interest_geography,
+    matched_company_topics,
+    meets_minimum_relevance,
+)
 from research_automation.pipeline.notion_write import (
     create_article_queue_page,
     update_article_enrichment,
@@ -27,6 +33,11 @@ from research_automation.pipeline.source_registry import load_active_sources
 from research_automation.pipeline.weekly_pages import ensure_current_weekly_pages
 from research_automation.utils.dates import utc_now
 from research_automation.utils.hashing import build_content_hash, build_url_hash
+from research_automation.utils.regions import (
+    TARGET_REGION_ORDER,
+    add_primary_region_count,
+    target_deficits,
+)
 from research_automation.utils.urls import clean_url
 
 logger = logging.getLogger(__name__)
@@ -70,6 +81,14 @@ def main() -> None:
     weekly_region_counts = {
         region: 0 for region in settings.weekly_region_targets
     }
+    if not args.no_enrich:
+        llm_client = LlmClient(
+            provider=settings.llm_provider,
+            model=settings.llm_model,
+            api_key=settings.openai_api_key,
+            prompt_directory=settings.prompt_directory,
+            company_topics=settings.discovery_topics,
+        )
     if not args.dry_run:
         weekly_pages = ensure_current_weekly_pages(notion, settings)
         dataset_meeting_page_id = weekly_pages.dataset_meeting_id
@@ -78,13 +97,6 @@ def main() -> None:
             settings,
             dataset_meeting_page_id,
         )
-        if not args.no_enrich:
-            llm_client = LlmClient(
-                provider=settings.llm_provider,
-                model=settings.llm_model,
-                api_key=settings.openai_api_key,
-                prompt_directory=settings.prompt_directory,
-            )
 
     stats = {
         "sources_checked": len(sources),
@@ -97,6 +109,9 @@ def main() -> None:
         "would_create": 0,
         "fallback_articles_selected": 0,
         "stale_dedupe_records_removed": removed_dedupe_records,
+        "irrelevant_skipped": 0,
+        "outside_interest_region_skipped": 0,
+        "source_cap_skipped": 0,
     }
 
     logger.info("Job started: %s sources", len(sources))
@@ -120,7 +135,7 @@ def main() -> None:
         run_seen.add(article.url_hash)
         prepared_articles.append(article)
 
-    selected_feed_articles, remaining_deficits = select_feed_articles_for_run(
+    selected_feed_articles, _ = select_feed_articles_for_run(
         prepared_articles,
         current_counts=weekly_region_counts,
         target_counts=settings.weekly_region_targets,
@@ -128,29 +143,169 @@ def main() -> None:
     )
     selected_hashes = {article.url_hash for article in selected_feed_articles}
     discovery = DiscoveryService(settings, sources)
-    top_up_articles = discovery.top_up_articles(
-        dict(remaining_deficits),
-        limit=max(0, args.limit - len(selected_feed_articles)),
-        excluded_hashes=set(store.records) | run_seen,
-    )
-    stats["fallback_articles_selected"] = len(top_up_articles)
 
     remaining_feed_articles = [
         article
         for article in prepared_articles
         if article.url_hash not in selected_hashes
     ]
-    selected_articles = [*selected_feed_articles, *top_up_articles]
-    if len(selected_articles) < args.limit:
-        backfill_slots = args.limit - len(selected_articles)
-        selected_articles.extend(remaining_feed_articles[:backfill_slots])
+    remaining_candidates = []
+    ordered_hashes: set[str] = set()
+    known_hashes = set(store.records)
+    discovery_excluded_hashes = set(store.records)
+    for article in [*selected_feed_articles, *remaining_feed_articles]:
+        if article.url_hash in ordered_hashes:
+            continue
+        ordered_hashes.add(article.url_hash)
+        remaining_candidates.append(article)
+        known_hashes.add(article.url_hash)
+        discovery_excluded_hashes.add(article.url_hash)
 
-    stats["skipped_by_limit"] = max(0, len(prepared_articles) - len(selected_articles))
+    processed_candidates = 0
+    admitted_articles = 0
+    source_counts: dict[str, int] = {}
+    live_region_counts = dict(weekly_region_counts)
+    discovery_attempts: set[tuple[int, ...]] = set()
+    while remaining_candidates and admitted_articles < args.limit:
+        deficits = target_deficits(
+            live_region_counts,
+            settings.weekly_region_targets,
+        )
+        used_source_cap_override = False
+        article = choose_next_article_for_admission(
+            remaining_candidates,
+            current_counts=live_region_counts,
+            target_counts=settings.weekly_region_targets,
+            source_counts=source_counts,
+            max_per_source=settings.max_articles_per_source_per_run,
+            deficits_only=True,
+            allow_source_cap_override=False,
+        )
+        if article is None:
+            soft_cap_article = choose_next_article_for_admission(
+                remaining_candidates,
+                current_counts=live_region_counts,
+                target_counts=settings.weekly_region_targets,
+                source_counts=source_counts,
+                max_per_source=settings.max_articles_per_source_per_run,
+                deficits_only=True,
+                allow_source_cap_override=True,
+            )
+            if soft_cap_article is not None:
+                article = soft_cap_article
+                used_source_cap_override = True
 
-    for article in selected_articles:
+        if article is None and any(deficits.values()):
+            deficit_state = tuple(deficits[region] for region in TARGET_REGION_ORDER)
+            if deficit_state not in discovery_attempts:
+                discovery_attempts.add(deficit_state)
+                top_up_articles = discovery.top_up_articles(
+                    dict(deficits),
+                    limit=max(0, args.limit - admitted_articles),
+                    excluded_hashes=discovery_excluded_hashes,
+                )
+                if top_up_articles:
+                    for top_up_article in top_up_articles:
+                        if top_up_article.url_hash in known_hashes:
+                            continue
+                        remaining_candidates.append(top_up_article)
+                        known_hashes.add(top_up_article.url_hash)
+                        discovery_excluded_hashes.add(top_up_article.url_hash)
+                        stats["fallback_articles_selected"] += 1
+                    continue
+
+        if article is None:
+            article = choose_next_article_for_admission(
+                remaining_candidates,
+                current_counts=live_region_counts,
+                target_counts=settings.weekly_region_targets,
+                source_counts=source_counts,
+                max_per_source=settings.max_articles_per_source_per_run,
+                deficits_only=False,
+                allow_source_cap_override=False,
+            )
+        if article is None:
+            soft_cap_article = choose_next_article_for_admission(
+                remaining_candidates,
+                current_counts=live_region_counts,
+                target_counts=settings.weekly_region_targets,
+                source_counts=source_counts,
+                max_per_source=settings.max_articles_per_source_per_run,
+                deficits_only=False,
+                allow_source_cap_override=True,
+            )
+            if soft_cap_article is not None:
+                article = soft_cap_article
+                used_source_cap_override = True
+        if article is None:
+            break
+
+        remaining_candidates.remove(article)
+        processed_candidates += 1
+        source_count = source_counts.get(article.source_name, 0)
+        if (
+            source_count >= settings.max_articles_per_source_per_run
+            and not used_source_cap_override
+        ):
+            stats["source_cap_skipped"] += 1
+            logger.info(
+                "Skipping article because source cap is filled for %s: %s",
+                article.source_name,
+                article.title,
+            )
+            continue
+
+        matched_topics = matched_company_topics(article, settings.discovery_topics)
+        if not matched_topics:
+            stats["irrelevant_skipped"] += 1
+            logger.info(
+                "Skipping off-mandate article before queueing: %s (%s)",
+                article.title,
+                article.source_name,
+            )
+            continue
+
+        if not article_has_interest_geography(article):
+            stats["outside_interest_region_skipped"] += 1
+            logger.info(
+                "Skipping outside-interest geography before queueing: %s (%s)",
+                article.title,
+                article.source_name,
+            )
+            continue
+
+        enriched = None
+        if llm_client is not None:
+            try:
+                enriched = enrich_article(article, llm_client)
+            except Exception:
+                stats["errors"] += 1
+                logger.exception("Failed to enrich article %s", article.title)
+                continue
+
+            if not meets_minimum_relevance(
+                enriched,
+                settings.minimum_article_relevance_score,
+            ):
+                stats["irrelevant_skipped"] += 1
+                logger.info(
+                    "Skipping low-relevance article (%s/%s): %s",
+                    enriched.relevance_score,
+                    settings.minimum_article_relevance_score,
+                    article.title,
+                )
+                continue
+
         if args.dry_run:
             stats["would_create"] += 1
-            logger.info("Dry run: would create %s", article.title)
+            admitted_articles += 1
+            source_counts[article.source_name] = source_count + 1
+            add_primary_region_count(live_region_counts, article.region)
+            logger.info(
+                "Dry run: would create %s [topics=%s]",
+                article.title,
+                ", ".join(matched_topics),
+            )
             continue
 
         try:
@@ -161,6 +316,9 @@ def main() -> None:
                 dataset_meeting_page_id,
             )
             stats["pages_created"] += 1
+            admitted_articles += 1
+            source_counts[article.source_name] = source_count + 1
+            add_primary_region_count(live_region_counts, article.region)
             store.record(
                 url_hash=article.url_hash,
                 title=article.title,
@@ -174,11 +332,10 @@ def main() -> None:
             logger.exception("Failed to create Article Queue page for %s", article.title)
             continue
 
-        if llm_client is None:
+        if enriched is None:
             continue
 
         try:
-            enriched = enrich_article(article, llm_client)
             update_article_enrichment(
                 notion,
                 page["id"],
@@ -191,6 +348,8 @@ def main() -> None:
             stats["errors"] += 1
             logger.exception("Failed to enrich article %s", article.title)
             update_article_error(notion, page["id"], str(exc))
+
+    stats["skipped_by_limit"] = len(remaining_candidates)
 
     checked_at_iso = utc_now().isoformat()
     if not args.dry_run:
@@ -206,9 +365,29 @@ def main() -> None:
     if args.dry_run:
         print(f"Would create: {stats['would_create']}")
     print(f"Fallback articles selected: {stats['fallback_articles_selected']}")
+    print(f"Irrelevant skipped: {stats['irrelevant_skipped']}")
+    print(f"Outside-interest geography skipped: {stats['outside_interest_region_skipped']}")
+    print(f"Source cap skipped: {stats['source_cap_skipped']}")
     print(f"Stale dedupe records removed: {stats['stale_dedupe_records_removed']}")
     print(f"Errors: {stats['errors']}")
     print(f"Skipped by limit: {stats['skipped_by_limit']}")
+    print(
+        "Final region counts: "
+        + ", ".join(
+            f"{region}={live_region_counts.get(region, 0)}"
+            for region in TARGET_REGION_ORDER
+        )
+    )
+    print(
+        "Remaining target deficits: "
+        + ", ".join(
+            f"{region}={count}"
+            for region, count in target_deficits(
+                live_region_counts,
+                settings.weekly_region_targets,
+            ).items()
+        )
+    )
 
 
 if __name__ == "__main__":

@@ -49,6 +49,8 @@ class Settings:
     local_state_path: Path = Path(".local_state")
     log_level: str = "INFO"
     max_articles_per_run: int = 10
+    minimum_article_relevance_score: int = 4
+    max_articles_per_source_per_run: int = 2
     news_discovery_providers: tuple[str, ...] = ("brave", "newsapi")
     image_discovery_providers: tuple[str, ...] = ("unsplash", "brave")
     article_queue_weekly_target_global: int = 2
@@ -186,6 +188,14 @@ def load_settings() -> Settings:
         local_state_path=Path(os.getenv("LOCAL_STATE_PATH", ".local_state")),
         log_level=os.getenv("LOG_LEVEL", "INFO"),
         max_articles_per_run=_env_int("MAX_ARTICLES_PER_RUN", 10),
+        minimum_article_relevance_score=_env_int(
+            "MIN_ARTICLE_RELEVANCE_SCORE",
+            4,
+        ),
+        max_articles_per_source_per_run=_env_int(
+            "MAX_ARTICLES_PER_SOURCE_PER_RUN",
+            2,
+        ),
         news_discovery_providers=_env_csv(
             "NEWS_DISCOVERY_PROVIDERS",
             "brave,newsapi",

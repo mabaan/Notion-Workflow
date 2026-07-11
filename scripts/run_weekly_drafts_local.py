@@ -53,6 +53,7 @@ def main() -> None:
         model=settings.llm_model,
         api_key=settings.openai_api_key,
         prompt_directory=settings.prompt_directory,
+        company_topics=settings.discovery_topics,
     )
 
     week_start = weekly_pages.week.start.isoformat()

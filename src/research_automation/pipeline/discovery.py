@@ -435,6 +435,99 @@ def select_feed_articles_for_run(
     return selected, target_deficits(planned_counts, target_counts)
 
 
+def prioritize_articles_for_admission(
+    articles: list[Article],
+    *,
+    current_counts: dict[str, int],
+    target_counts: dict[str, int],
+) -> list[Article]:
+    """Order candidates so unmet target regions are exhausted before generic backfill."""
+
+    deficits = target_deficits(current_counts, target_counts)
+    region_buckets = {region: deque() for region in TARGET_REGION_ORDER}
+    generic_articles: list[Article] = []
+
+    for article in articles:
+        region = primary_target_region(article.region)
+        if region in region_buckets:
+            region_buckets[region].append(article)
+        else:
+            generic_articles.append(article)
+
+    prioritized: list[Article] = []
+    deficit_regions = [
+        region for region in TARGET_REGION_ORDER if deficits.get(region, 0) > 0
+    ]
+
+    prioritized.extend(_drain_round_robin(region_buckets, deficit_regions))
+    remaining_regions = [
+        region for region in TARGET_REGION_ORDER if region not in deficit_regions
+    ]
+    prioritized.extend(_drain_round_robin(region_buckets, remaining_regions))
+    prioritized.extend(_interleave_articles_by_source(generic_articles))
+    return prioritized
+
+
+def choose_next_article_for_admission(
+    articles: list[Article],
+    *,
+    current_counts: dict[str, int],
+    target_counts: dict[str, int],
+    source_counts: dict[str, int],
+    max_per_source: int,
+    deficits_only: bool,
+    allow_source_cap_override: bool,
+) -> Article | None:
+    """Choose the next best candidate given live regional deficits and source caps."""
+
+    deficits = target_deficits(current_counts, target_counts)
+    region_buckets = {region: [] for region in TARGET_REGION_ORDER}
+    generic_articles: list[Article] = []
+
+    for article in articles:
+        region = primary_target_region(article.region)
+        if region in region_buckets:
+            region_buckets[region].append(article)
+        else:
+            generic_articles.append(article)
+
+    deficit_regions = sorted(
+        (
+            region
+            for region in TARGET_REGION_ORDER
+            if deficits.get(region, 0) > 0
+        ),
+        key=lambda region: (-deficits.get(region, 0), TARGET_REGION_ORDER.index(region)),
+    )
+    non_deficit_regions = [
+        region for region in TARGET_REGION_ORDER if region not in deficit_regions
+    ]
+
+    search_regions = deficit_regions
+    if not deficits_only:
+        search_regions = [*deficit_regions, *non_deficit_regions]
+
+    for region in search_regions:
+        candidate = _pick_candidate_from_region(
+            region_buckets[region],
+            source_counts=source_counts,
+            max_per_source=max_per_source,
+            allow_source_cap_override=allow_source_cap_override,
+        )
+        if candidate is not None:
+            return candidate
+
+    if deficits_only:
+        return None
+
+    return _pick_candidate_from_region(
+        generic_articles,
+        source_counts=source_counts,
+        max_per_source=max_per_source,
+        allow_source_cap_override=allow_source_cap_override,
+    )
+
+
 def _parse_iso_datetime(value: Any) -> datetime | None:
     if not isinstance(value, str) or not value.strip():
         return None
@@ -479,3 +572,48 @@ def _interleave_articles_by_source(articles: list[Article]) -> list[Article]:
         source_order = next_round
 
     return interleaved
+
+
+def _drain_round_robin(
+    region_buckets: dict[str, deque[Article]],
+    regions: list[str],
+) -> list[Article]:
+    ordered: list[Article] = []
+    active_regions = [region for region in regions if region_buckets[region]]
+
+    while active_regions:
+        next_round: list[str] = []
+        for region in active_regions:
+            bucket = region_buckets[region]
+            if bucket:
+                ordered.append(bucket.popleft())
+            if bucket:
+                next_round.append(region)
+        active_regions = next_round
+
+    return ordered
+
+
+def _pick_candidate_from_region(
+    articles: list[Article],
+    *,
+    source_counts: dict[str, int],
+    max_per_source: int,
+    allow_source_cap_override: bool,
+) -> Article | None:
+    uncapped_candidate: Article | None = None
+    capped_candidate: Article | None = None
+
+    for article in articles:
+        source_count = source_counts.get(article.source_name, 0)
+        if source_count < max_per_source:
+            uncapped_candidate = article
+            break
+        if capped_candidate is None:
+            capped_candidate = article
+
+    if uncapped_candidate is not None:
+        return uncapped_candidate
+    if allow_source_cap_override:
+        return capped_candidate
+    return None

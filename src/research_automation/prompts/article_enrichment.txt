@@ -18,13 +18,20 @@ Rules:
 - Keep the summary concise.
 - Relevance score must be an integer from 1 to 5.
 - Topic and region labels should stay compatible with Notion where possible.
+- Score relevance narrowly. An article is relevant only when it clearly connects to SOMA MATER's focus areas below, or to policy, commercial, operational, or infrastructure implications for those areas.
+- Do not score an article highly just because it is from the Middle East, from a preferred source, or about business in general.
+- General politics, consumer technology, retail, lifestyle, celebrity, or broad macro stories with no clear link to the focus areas should score 1 or 2.
+- The geographic scope is strict: {{ geographic_scope }}
+- Local stories outside that scope should score 1 or 2 even when they mention water, energy, climate, infrastructure, or trade. Examples: a city water project in India, a US local infrastructure grant, or a Europe-only climate event.
 
 Relevance guide:
-- 5 = highly relevant to SOMA MATER newsletter
-- 4 = relevant and likely useful
-- 3 = possibly useful
-- 2 = weak relevance
-- 1 = low relevance or ignore unless an editor wants it
+- 5 = directly on a core focus area and clearly important for the newsletter
+- 4 = clearly relevant because of direct strategic, policy, commercial, or operational implications
+- 3 = adjacent but not central
+- 2 = weak relevance, mostly general-interest or regional context
+- 1 = off-mandate for the newsletter
+
+Company focus areas: {{ company_topics }}
 
 Article title: {{ title }}
 Source: {{ source_name }}

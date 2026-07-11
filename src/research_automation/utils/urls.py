@@ -2,8 +2,11 @@
 
 from __future__ import annotations
 
+import re
 from typing import Any
 from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
+
+_HREF_RE = re.compile(r'href=[\'"](?P<url>[^\'"]+)[\'"]', re.IGNORECASE)
 
 TRACKING_PARAMS = {
     "fbclid",
@@ -104,4 +107,17 @@ def extract_entry_url(entry: dict[str, Any]) -> str:
         if href and not is_google_news_url(href):
             return href
 
+    for field_name in ("summary", "description"):
+        candidate = _first_non_google_href(str(entry.get(field_name) or ""))
+        if candidate:
+            return candidate
+
     return primary_link
+
+
+def _first_non_google_href(html: str) -> str:
+    for match in _HREF_RE.finditer(html):
+        candidate = match.group("url").strip()
+        if candidate and not is_google_news_url(candidate):
+            return candidate
+    return ""
