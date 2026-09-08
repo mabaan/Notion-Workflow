@@ -13,7 +13,6 @@ from research_automation.notion_schema import (
     DATASET_MEETINGS,
     NEWSLETTERS,
     SOCIAL_MEDIA,
-    SOURCE_REGISTRY,
     NEWSLETTER_STATUS_IN_PROGRESS,
     SOCIAL_REVIEWED_NOT_YET,
     SOCIAL_STATUS_READY,
@@ -28,15 +27,19 @@ def create_article_queue_page(
     database_id: str,
     article: Article,
     dataset_meeting_page_id: str | None,
+    *,
+    enriched: EnrichedArticle | None = None,
+    processed_at: datetime | None = None,
+    queue_score: float | None = None,
+    selection_reason: str = "",
+    available_properties: set[str] | None = None,
 ) -> dict[str, Any]:
-    """Create an Article Queue page from a collected article."""
+    """Create one complete winner page after enrichment and final selection."""
 
     relation_ids = [article.source_page_id] if article.source_page_id else []
     dataset_relation_ids = [dataset_meeting_page_id] if dataset_meeting_page_id else []
 
-    return notion.create_page(
-        database_id=database_id,
-        properties={
+    properties = {
             ARTICLE_QUEUE["title"]: props.title(article.title),
             ARTICLE_QUEUE["url"]: props.url(article.url),
             ARTICLE_QUEUE["canonical_url"]: props.url(article.canonical_url),
@@ -51,8 +54,38 @@ def create_article_queue_page(
             ARTICLE_QUEUE["duplicate"]: props.checkbox(False),
             ARTICLE_QUEUE["url_hash"]: props.rich_text(article.url_hash),
             ARTICLE_QUEUE["content_hash"]: props.rich_text(article.content_hash),
-        },
-    )
+    }
+    if enriched is not None:
+        properties.update(
+            {
+                ARTICLE_QUEUE["summary"]: props.rich_text(enriched.summary),
+                ARTICLE_QUEUE["why_it_matters"]: props.rich_text(
+                    enriched.why_it_matters
+                ),
+                ARTICLE_QUEUE["relevance_score"]: props.number(
+                    enriched.relevance_score
+                ),
+                ARTICLE_QUEUE["newsletter_angle"]: props.rich_text(
+                    enriched.newsletter_angle
+                ),
+                ARTICLE_QUEUE["sns_hook"]: props.rich_text(enriched.sns_hook),
+                ARTICLE_QUEUE["topic"]: props.multi_select(enriched.topic),
+                ARTICLE_QUEUE["region"]: props.multi_select(article.region),
+                ARTICLE_QUEUE["processed"]: props.checkbox(True),
+                ARTICLE_QUEUE["last_processed"]: props.date_value(
+                    processed_at or article.collected_date
+                ),
+                ARTICLE_QUEUE["error_notes"]: props.rich_text(""),
+            }
+        )
+    if available_properties is not None:
+        if ARTICLE_QUEUE["queue_score"] in available_properties and queue_score is not None:
+            properties[ARTICLE_QUEUE["queue_score"]] = props.number(queue_score)
+        if ARTICLE_QUEUE["selection_reason"] in available_properties:
+            properties[ARTICLE_QUEUE["selection_reason"]] = props.rich_text(
+                selection_reason
+            )
+    return notion.create_page(database_id=database_id, properties=properties)
 
 
 def update_article_enrichment(
@@ -98,21 +131,6 @@ def update_article_error(
         {
             ARTICLE_QUEUE["processed"]: props.checkbox(False),
             ARTICLE_QUEUE["error_notes"]: props.rich_text(error_message),
-        },
-    )
-
-
-def update_source_last_checked(
-    notion: NotionClient,
-    page_id: str,
-    checked_at_iso: str,
-) -> None:
-    """Update the live Source Registry Last Checked rich text field."""
-
-    notion.update_page(
-        page_id,
-        {
-            SOURCE_REGISTRY["last_checked"]: props.rich_text(checked_at_iso),
         },
     )
 

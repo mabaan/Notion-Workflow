@@ -4,11 +4,14 @@ from __future__ import annotations
 
 import os
 from dataclasses import dataclass
+import logging
 from pathlib import Path
 
 from dotenv import load_dotenv
 
 from research_automation.notion_schema import DATABASE_ID_FIELDS
+
+logger = logging.getLogger(__name__)
 
 
 def _env_first(*names: str, default: str = "") -> str:
@@ -48,14 +51,17 @@ class Settings:
     serpapi_api_key: str = ""
     local_state_path: Path = Path(".local_state")
     log_level: str = "INFO"
-    max_articles_per_run: int = 10
+    max_articles_per_run: int = 12
     minimum_article_relevance_score: int = 4
-    max_articles_per_source_per_run: int = 2
+    max_articles_per_publisher_per_week: int = 2
+    article_freshness_days: int = 7
+    article_shortlist_initial_per_region: int = 6
+    article_shortlist_max_per_region: int = 8
     news_discovery_providers: tuple[str, ...] = ("brave", "newsapi")
     image_discovery_providers: tuple[str, ...] = ("unsplash", "brave")
-    article_queue_weekly_target_global: int = 2
-    article_queue_weekly_target_uae: int = 2
-    article_queue_weekly_target_ksa: int = 2
+    article_queue_weekly_target_global: int = 3
+    article_queue_weekly_target_uae: int = 4
+    article_queue_weekly_target_ksa: int = 3
     article_queue_weekly_target_egypt: int = 2
     discovery_global_countries: tuple[str, ...] = ("ALL",)
     discovery_uae_countries: tuple[str, ...] = ("AE",)
@@ -138,6 +144,33 @@ class Settings:
         }
         return mapping.get(region, ("en",))
 
+    def validate(self) -> None:
+        """Reject unsafe or internally inconsistent ingestion settings."""
+
+        errors: list[str] = []
+        if self.max_articles_per_run <= 0:
+            errors.append("MAX_ARTICLES_PER_RUN must be greater than zero")
+        if any(target <= 0 for target in self.weekly_region_targets.values()):
+            errors.append("all ARTICLE_QUEUE_WEEKLY_TARGET_* values must be positive")
+        if self.max_articles_per_publisher_per_week <= 0:
+            errors.append("MAX_ARTICLES_PER_PUBLISHER_PER_WEEK must be greater than zero")
+        if self.article_freshness_days <= 0:
+            errors.append("ARTICLE_FRESHNESS_DAYS must be greater than zero")
+        largest_target = max(self.weekly_region_targets.values())
+        if self.article_shortlist_initial_per_region < largest_target:
+            errors.append(
+                "ARTICLE_SHORTLIST_INITIAL_PER_REGION must be at least the largest regional target"
+            )
+        if (
+            self.article_shortlist_max_per_region
+            < self.article_shortlist_initial_per_region
+        ):
+            errors.append(
+                "ARTICLE_SHORTLIST_MAX_PER_REGION must be at least ARTICLE_SHORTLIST_INITIAL_PER_REGION"
+            )
+        if errors:
+            raise ValueError("Invalid configuration:\n- " + "\n- ".join(errors))
+
 
 def _env_int(name: str, default: int) -> int:
     """Read an integer from the environment with a fallback."""
@@ -145,8 +178,22 @@ def _env_int(name: str, default: int) -> int:
     raw_value = os.getenv(name, str(default)).strip()
     try:
         return int(raw_value)
-    except ValueError:
-        return default
+    except ValueError as exc:
+        raise ValueError(f"{name} must be an integer; received {raw_value!r}") from exc
+
+
+def _publisher_cap() -> int:
+    current = os.getenv("MAX_ARTICLES_PER_PUBLISHER_PER_WEEK", "").strip()
+    if current:
+        return _env_int("MAX_ARTICLES_PER_PUBLISHER_PER_WEEK", 2)
+    legacy = os.getenv("MAX_ARTICLES_PER_SOURCE_PER_RUN", "").strip()
+    if legacy:
+        logger.warning(
+            "MAX_ARTICLES_PER_SOURCE_PER_RUN is deprecated; use "
+            "MAX_ARTICLES_PER_PUBLISHER_PER_WEEK."
+        )
+        return _env_int("MAX_ARTICLES_PER_SOURCE_PER_RUN", 2)
+    return 2
 
 
 def load_settings() -> Settings:
@@ -154,7 +201,7 @@ def load_settings() -> Settings:
 
     load_dotenv()
 
-    return Settings(
+    settings = Settings(
         notion_token=os.getenv("NOTION_TOKEN", ""),
         notion_source_registry_database_id=os.getenv(
             "NOTION_SOURCE_REGISTRY_DATABASE_ID", ""
@@ -187,14 +234,18 @@ def load_settings() -> Settings:
         serpapi_api_key=os.getenv("SERPAPI_API_KEY", ""),
         local_state_path=Path(os.getenv("LOCAL_STATE_PATH", ".local_state")),
         log_level=os.getenv("LOG_LEVEL", "INFO"),
-        max_articles_per_run=_env_int("MAX_ARTICLES_PER_RUN", 10),
+        max_articles_per_run=_env_int("MAX_ARTICLES_PER_RUN", 12),
         minimum_article_relevance_score=_env_int(
             "MIN_ARTICLE_RELEVANCE_SCORE",
             4,
         ),
-        max_articles_per_source_per_run=_env_int(
-            "MAX_ARTICLES_PER_SOURCE_PER_RUN",
-            2,
+        max_articles_per_publisher_per_week=_publisher_cap(),
+        article_freshness_days=_env_int("ARTICLE_FRESHNESS_DAYS", 7),
+        article_shortlist_initial_per_region=_env_int(
+            "ARTICLE_SHORTLIST_INITIAL_PER_REGION", 6
+        ),
+        article_shortlist_max_per_region=_env_int(
+            "ARTICLE_SHORTLIST_MAX_PER_REGION", 8
         ),
         news_discovery_providers=_env_csv(
             "NEWS_DISCOVERY_PROVIDERS",
@@ -206,15 +257,15 @@ def load_settings() -> Settings:
         ),
         article_queue_weekly_target_global=_env_int(
             "ARTICLE_QUEUE_WEEKLY_TARGET_GLOBAL",
-            2,
+            3,
         ),
         article_queue_weekly_target_uae=_env_int(
             "ARTICLE_QUEUE_WEEKLY_TARGET_UAE",
-            2,
+            4,
         ),
         article_queue_weekly_target_ksa=_env_int(
             "ARTICLE_QUEUE_WEEKLY_TARGET_KSA",
-            2,
+            3,
         ),
         article_queue_weekly_target_egypt=_env_int(
             "ARTICLE_QUEUE_WEEKLY_TARGET_EGYPT",
@@ -263,3 +314,5 @@ def load_settings() -> Settings:
         newsapi_max_requests_per_run=_env_int("NEWSAPI_MAX_REQUESTS_PER_RUN", 20),
         serpapi_max_requests_per_run=_env_int("SERPAPI_MAX_REQUESTS_PER_RUN", 10),
     )
+    settings.validate()
+    return settings

@@ -12,16 +12,42 @@ DATABASE_ID_FIELDS = {
 
 SOURCE_REGISTRY = {
     "title": "Source Name",
+    "source_type": "Source Type",
     "feed_url": "Feed URL",
     "source_url": "Source URL",
     "collection_method": "Collection Method",
     "region": "Region",
     "topic_focus": "Topic Focus",
+    "editorial_quality": "Editorial Quality",
     "credibility": "Credibility",
-    "priority": "Priority",
+    "acquisition_priority": "Acquisition Priority",
     "check_frequency": "Check Frequency",
     "active": "Active",
-    "last_checked": "Last Checked",
+    "last_attempt": "Last Attempt",
+    "last_success": "Last Success",
+    "last_outcome": "Last Outcome",
+    "last_error": "Last Error",
+    "articles": "Articles",
+}
+
+SOURCE_REGISTRY_PROPERTY_TYPES = {
+    SOURCE_REGISTRY["title"]: "title",
+    SOURCE_REGISTRY["source_type"]: "select",
+    SOURCE_REGISTRY["active"]: "checkbox",
+    SOURCE_REGISTRY["editorial_quality"]: "number",
+    SOURCE_REGISTRY["acquisition_priority"]: "select",
+    SOURCE_REGISTRY["credibility"]: "select",
+    SOURCE_REGISTRY["check_frequency"]: "select",
+    SOURCE_REGISTRY["collection_method"]: "select",
+    SOURCE_REGISTRY["feed_url"]: "url",
+    SOURCE_REGISTRY["source_url"]: "url",
+    SOURCE_REGISTRY["region"]: "multi_select",
+    SOURCE_REGISTRY["topic_focus"]: "multi_select",
+    SOURCE_REGISTRY["last_attempt"]: "date",
+    SOURCE_REGISTRY["last_success"]: "date",
+    SOURCE_REGISTRY["last_outcome"]: "select",
+    SOURCE_REGISTRY["last_error"]: "rich_text",
+    SOURCE_REGISTRY["articles"]: "relation",
 }
 
 ARTICLE_QUEUE = {
@@ -48,6 +74,8 @@ ARTICLE_QUEUE = {
     "content_hash": "Content Hash",
     "error_notes": "Error Notes",
     "last_processed": "Last Processed",
+    "queue_score": "Queue Score",
+    "selection_reason": "Selection Reason",
 }
 
 DATASET_MEETINGS = {

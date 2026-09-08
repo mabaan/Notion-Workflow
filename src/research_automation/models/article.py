@@ -22,6 +22,9 @@ class Article:
     snippet: str = ""
     region: list[str] = field(default_factory=list)
     topic_focus: list[str] = field(default_factory=list)
+    source_editorial_quality: float | None = None
+    publisher_key: str = ""
+    discovery_provider: str | None = None
     url_hash: str = ""
     content_hash: str = ""
     image_url: str = ""
