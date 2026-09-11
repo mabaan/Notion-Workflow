@@ -45,10 +45,8 @@ class Settings:
     llm_model: str = "gpt-4.1-mini"
     openai_api_key: str = ""
     unsplash_access_key: str = ""
-    unsplash_secret_key: str = ""
     brave_search_api_key: str = ""
     news_api_key: str = ""
-    serpapi_api_key: str = ""
     local_state_path: Path = Path(".local_state")
     log_level: str = "INFO"
     max_articles_per_run: int = 12
@@ -85,7 +83,6 @@ class Settings:
     )
     brave_max_requests_per_run: int = 20
     newsapi_max_requests_per_run: int = 20
-    serpapi_max_requests_per_run: int = 10
 
     @property
     def prompt_directory(self) -> Path:
@@ -225,13 +222,8 @@ def load_settings() -> Settings:
             "UNSPLASH_ACCESS_KEY",
             "Unsplash_Access_Key",
         ),
-        unsplash_secret_key=_env_first(
-            "UNSPLASH_SECRET_KEY",
-            "Unsplash_Secret_Key",
-        ),
         brave_search_api_key=os.getenv("BRAVE_SEARCH_API_KEY", ""),
         news_api_key=os.getenv("NEWS_API_KEY", ""),
-        serpapi_api_key=os.getenv("SERPAPI_API_KEY", ""),
         local_state_path=Path(os.getenv("LOCAL_STATE_PATH", ".local_state")),
         log_level=os.getenv("LOG_LEVEL", "INFO"),
         max_articles_per_run=_env_int("MAX_ARTICLES_PER_RUN", 12),
@@ -312,7 +304,6 @@ def load_settings() -> Settings:
         ),
         brave_max_requests_per_run=_env_int("BRAVE_MAX_REQUESTS_PER_RUN", 20),
         newsapi_max_requests_per_run=_env_int("NEWSAPI_MAX_REQUESTS_PER_RUN", 20),
-        serpapi_max_requests_per_run=_env_int("SERPAPI_MAX_REQUESTS_PER_RUN", 10),
     )
     settings.validate()
     return settings

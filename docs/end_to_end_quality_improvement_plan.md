@@ -90,7 +90,6 @@ This is a good MVP, but the stages optimize locally rather than as one editorial
 | Full database scans grow over time | Dedupe pruning reads the entire Article Queue; edition numbering reads all Newsletters. | Runtime and Notion API usage increase with history. |
 | No run identity or quality report | Logs and counters are printed, but candidate scores, rejection reasons, timings, provider use, and model/prompt versions are not persisted. | Regressions are hard to diagnose or compare. |
 | Tests cover helpers, not the workflow | The 40 passing tests are mostly utility and selection-unit tests. | Provider failures, Notion partial writes, prompt schema drift, and complete dry-run behavior are not protected. |
-| Dead configuration remains | SerpAPI is implemented but inactive; `UNSPLASH_SECRET_KEY` is loaded but unused. | Setup is harder to understand and maintain than necessary. |
 
 ## 4. Design Principles
 
@@ -395,7 +394,6 @@ Deliverables:
 - Implement append-verify-swap Notion writes and failure cleanup.
 - Add schema preflight, duplicate-week detection, scoped Notion queries, retries with jitter, and run IDs.
 - Add focused CLI controls for week and output type.
-- Remove SerpAPI client/config and the unused Unsplash secret unless a measured need returns.
 - Close provider clients cleanly and record stage latency and request counts.
 
 Exit criteria:
@@ -478,8 +476,6 @@ Prefer extending cohesive modules over creating one file per small function:
 Remove after replacement:
 
 - Greedy admission helpers that select before scoring.
-- Inactive `serpapi_client.py` and related settings.
-- Unused `UNSPLASH_SECRET_KEY` handling.
 - Direct JSON state writes after successful SQLite migration.
 - Markdown-dependent Newsletter layout rendering.
 
