@@ -12,7 +12,12 @@ from research_automation.models.article import Article
 from research_automation.pipeline.clean import clean_snippet, clean_text
 from research_automation.sources.base import ArticleSource
 from research_automation.utils.dates import utc_now
-from research_automation.utils.urls import extract_entry_url, url_hostname
+from research_automation.utils.urls import (
+    clean_url,
+    extract_entry_url,
+    is_google_news_url,
+    url_hostname,
+)
 
 
 class RssSource(ArticleSource):
@@ -31,8 +36,10 @@ class RssSource(ArticleSource):
         collected_at = utc_now()
 
         for entry in feed.entries:
-            url = extract_entry_url(entry)
-            if not url:
+            feed_entry_url = clean_url(str(entry.get("link") or ""))
+            canonical_url = clean_url(extract_entry_url(entry))
+            original_url = feed_entry_url or canonical_url
+            if not canonical_url:
                 continue
 
             title = clean_text(str(entry.get("title") or ""))
@@ -43,8 +50,8 @@ class RssSource(ArticleSource):
             articles.append(
                 Article(
                     title=title,
-                    url=url,
-                    canonical_url=url,
+                    url=original_url,
+                    canonical_url=canonical_url,
                     source_name=self.source.name,
                     source_page_id=self.source.notion_page_id,
                     published_date=_entry_datetime(entry),
@@ -53,8 +60,13 @@ class RssSource(ArticleSource):
                     region=list(self.source.region),
                     topic_focus=list(self.source.topic_focus),
                     source_editorial_quality=self.source.editorial_quality,
-                    publisher_key=self.source.notion_page_id or url_hostname(url),
+                    publisher_key=self.source.notion_page_id
+                    or url_hostname(canonical_url),
                     image_url=_entry_image_url(entry),
+                    url_resolution_status=_feed_resolution_status(
+                        original_url,
+                        canonical_url,
+                    ),
                 )
             )
 
@@ -93,6 +105,14 @@ def _entry_image_url(entry: dict) -> str:
                 return candidate
 
     return ""
+
+
+def _feed_resolution_status(original_url: str, canonical_url: str) -> str:
+    if is_google_news_url(original_url):
+        if canonical_url != original_url and not is_google_news_url(canonical_url):
+            return "resolved_feed_metadata"
+        return "unresolved"
+    return "publisher_url"
 
 
 class FeedHttpError(RuntimeError):

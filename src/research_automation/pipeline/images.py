@@ -111,6 +111,12 @@ class ArticleImageResolver:
             existing_image_id = image_identity(existing_image)
             if existing_image and existing_image_id and existing_image_id not in used_image_ids:
                 article.image_url = existing_image
+                if not article.image_provider:
+                    cached = self.store.get_image_url(article.canonical_url)
+                    if image_identity(cached) == existing_image_id:
+                        article.image_provider = self.store.get_provider(
+                            article.canonical_url
+                        ).casefold()
                 used_image_ids.add(existing_image_id)
                 continue
 
@@ -143,6 +149,7 @@ class ArticleImageResolver:
             and cached_provider in allowed_cache_providers
             and cached_identity not in excluded_image_ids
         ):
+            article.image_provider = cached_provider
             return cached
 
         for provider in self.settings.image_discovery_providers:
@@ -172,8 +179,10 @@ class ArticleImageResolver:
                     image_url=image_url,
                     provider=provider_name,
                 )
+                article.image_provider = provider_name
                 return image_url
 
+        article.image_provider = ""
         return ""
 
     def _unsplash_image_candidates(self, article: DraftArticle) -> list[str]:
@@ -222,7 +231,7 @@ def inject_story_images(content: str, articles: list[DraftArticle]) -> str:
         insert_at = _story_image_insert_index(lines, heading_index + offset)
         lines.insert(
             insert_at,
-            f"![{articles[article_index].title}]({image_url})",
+            f"![{_illustrative_image_caption(articles[article_index])}]({image_url})",
         )
         offset += 1
 
@@ -241,6 +250,14 @@ def markdown_image_match(line: str) -> tuple[str, str] | None:
     if not url:
         return None
     return alt, url
+
+
+def _illustrative_image_caption(article: DraftArticle) -> str:
+    provider = article.image_provider.strip().title()
+    source = f" ({provider})" if provider else ""
+    return (
+        f"Illustrative image{source}; not verified as depicting the reported project"
+    )
 
 
 def _story_image_insert_index(lines: list[str], heading_index: int) -> int:

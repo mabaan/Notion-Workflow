@@ -10,7 +10,7 @@ from research_automation.utils.text import normalize_whitespace
 
 _TOKEN_RE = re.compile(r"[a-z0-9]+")
 
-TOPIC_KEYWORDS = {
+DIRECT_TOPIC_KEYWORDS = {
     "food security": (
         "food security",
         "food system",
@@ -50,6 +50,16 @@ TOPIC_KEYWORDS = {
         "climate policy",
         "energy efficiency",
         "electrification",
+        "renewable",
+        "solar",
+        "wind",
+        "battery",
+        "energy storage",
+        "battery storage",
+        "grid",
+        "hydrogen",
+        "clean energy",
+        "low-carbon",
     ),
     "energy transition": (
         "energy transition",
@@ -57,11 +67,51 @@ TOPIC_KEYWORDS = {
         "solar",
         "wind",
         "battery",
-        "storage",
+        "energy storage",
+        "battery storage",
         "grid",
+        "hydrogen",
+        "clean energy",
+        "low-carbon",
+    ),
+    "resilience": (
+        "drought",
+        "flood",
+        "flooding",
+        "water stress",
+    ),
+    "desalination": (
+        "desalination",
+        "desal",
+        "reverse osmosis",
+        "brine",
+    ),
+    "agri-food": (
+        "agri-food",
+        "agrifood",
+        "food system",
+        "agriculture",
+        "agricultur",
+        "crop",
+        "grain",
+        "fertilizer",
+        "farm",
+        "farming",
+        "livestock",
+    ),
+}
+
+# These signals can make a story relevant, but they need an explicit bridge to a
+# mission theme before they should outrank food, water, or transition coverage.
+CONTEXTUAL_TOPIC_KEYWORDS = {
+    "net zero transition": (
+        "climate",
         "electricity",
         "power sector",
-        "hydrogen",
+    ),
+    "energy transition": (
+        "electricity",
+        "power sector",
         "lng",
         "oil",
         "gas",
@@ -82,11 +132,7 @@ TOPIC_KEYWORDS = {
     "resilience": (
         "resilience",
         "adaptation",
-        "drought",
         "heatwave",
-        "flood",
-        "flooding",
-        "water stress",
         "disruption",
     ),
     "regulation": (
@@ -107,25 +153,6 @@ TOPIC_KEYWORDS = {
         "freight",
         "port",
         "corridor",
-    ),
-    "desalination": (
-        "desalination",
-        "desal",
-        "reverse osmosis",
-        "brine",
-    ),
-    "agri-food": (
-        "agri-food",
-        "agrifood",
-        "food system",
-        "agriculture",
-        "agricultur",
-        "crop",
-        "grain",
-        "fertilizer",
-        "farm",
-        "farming",
-        "livestock",
     ),
 }
 
@@ -200,7 +227,42 @@ def matched_company_topics(
     article: Article,
     company_topics: Iterable[str],
 ) -> list[str]:
-    """Return company focus areas clearly signaled by the article text."""
+    """Return direct or contextual company focus areas signaled by the article."""
+
+    return _matched_topics(
+        article,
+        company_topics,
+        DIRECT_TOPIC_KEYWORDS,
+        CONTEXTUAL_TOPIC_KEYWORDS,
+        use_topic_as_fallback=True,
+    )
+
+
+def matched_direct_mission_signals(
+    article: Article,
+    company_topics: Iterable[str],
+) -> list[str]:
+    """Return configured topics supported by a direct mission signal."""
+
+    return _matched_topics(article, company_topics, DIRECT_TOPIC_KEYWORDS)
+
+
+def matched_contextual_signals(
+    article: Article,
+    company_topics: Iterable[str],
+) -> list[str]:
+    """Return configured topics supported by broad contextual language."""
+
+    return _matched_topics(article, company_topics, CONTEXTUAL_TOPIC_KEYWORDS)
+
+
+def _matched_topics(
+    article: Article,
+    company_topics: Iterable[str],
+    *keyword_groups: dict[str, tuple[str, ...]],
+    use_topic_as_fallback: bool = False,
+) -> list[str]:
+    """Match configured topics against one or more keyword groups."""
 
     text = _normalized_text(article)
     if not text:
@@ -217,7 +279,13 @@ def matched_company_topics(
             continue
         seen.add(topic_key)
 
-        keywords = TOPIC_KEYWORDS.get(topic_key, (topic_key,))
+        keywords = tuple(
+            keyword
+            for group in keyword_groups
+            for keyword in group.get(topic_key, ())
+        )
+        if not keywords and use_topic_as_fallback:
+            keywords = (topic_key,)
         if any(_matches_keyword(text, tokens, keyword) for keyword in keywords):
             matched.append(label)
 

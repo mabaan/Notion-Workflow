@@ -64,6 +64,10 @@ class LlmClient:
                 "snippet": article.snippet or "No snippet available.",
                 "region": ", ".join(article.region) or "Unknown",
                 "topic_focus": ", ".join(article.topic_focus) or "Unknown",
+                "canonical_url": article.canonical_url or article.url or "Unknown",
+                "evidence_retrieval_status": article.evidence_retrieval_status,
+                "article_content": article.article_text
+                or "Unavailable. Use the RSS title and snippet only.",
                 "company_topics": ", ".join(self.company_topics) or "Unknown",
                 "geographic_scope": (
                     "MENA, GCC, UAE, Saudi Arabia/KSA, Egypt, and genuinely global "
@@ -73,12 +77,11 @@ class LlmClient:
         )
         payload = self._generate_json(prompt)
 
-        score = payload.get("relevance_score", 1)
-        try:
-            relevance_score = int(score)
-        except (TypeError, ValueError):
-            relevance_score = 1
-        relevance_score = max(1, min(5, relevance_score))
+        relevance_score = _bounded_score(payload.get("relevance_score"), default=1)
+        editorial_significance = _bounded_score(
+            payload.get("editorial_significance"),
+            default=1,
+        )
 
         return EnrichedArticle(
             summary=_coerce_string(payload.get("summary")).strip(),
@@ -88,6 +91,11 @@ class LlmClient:
             region=self._string_list(payload.get("region")),
             newsletter_angle=_coerce_string(payload.get("newsletter_angle")).strip(),
             sns_hook=_coerce_string(payload.get("sns_hook")).strip(),
+            factual_points=self._string_list(payload.get("factual_points"))[:8],
+            editorial_significance=editorial_significance,
+            significance_reason=_coerce_string(
+                payload.get("significance_reason")
+            ).strip(),
         )
 
     def generate_newsletter_draft(
@@ -191,3 +199,13 @@ class LlmClient:
             if text:
                 cleaned.append(text)
         return cleaned
+
+
+def _bounded_score(value: Any, *, default: int) -> int:
+    """Coerce an LLM score to the supported one-to-five range."""
+
+    try:
+        score = int(value)
+    except (TypeError, ValueError):
+        score = default
+    return max(1, min(5, score))

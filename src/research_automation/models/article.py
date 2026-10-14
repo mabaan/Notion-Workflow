@@ -28,6 +28,9 @@ class Article:
     url_hash: str = ""
     content_hash: str = ""
     image_url: str = ""
+    url_resolution_status: str = "not_attempted"
+    evidence_retrieval_status: str = "not_attempted"
+    article_text: str = ""
 
 
 @dataclass
@@ -41,3 +44,6 @@ class EnrichedArticle:
     region: list[str] = field(default_factory=list)
     newsletter_angle: str = ""
     sns_hook: str = ""
+    factual_points: list[str] = field(default_factory=list)
+    editorial_significance: int = 3
+    significance_reason: str = ""

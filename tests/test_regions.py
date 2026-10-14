@@ -75,10 +75,11 @@ def _candidate(
     )
 
 
-def test_transitional_score_uses_exact_90_10_weighting() -> None:
-    assert calculate_queue_score(5, 10) == 100
-    assert calculate_queue_score(5, None) == 90
-    assert calculate_queue_score(4, 10) == 82
+def test_queue_score_uses_exact_70_20_10_weighting() -> None:
+    assert calculate_queue_score(5, 10, editorial_significance=5) == 100
+    assert calculate_queue_score(5, None, editorial_significance=5) == 90
+    assert calculate_queue_score(4, 10, editorial_significance=4) == 82
+    assert calculate_queue_score(5, 10) == 92
 
 
 def test_relevance_five_from_weaker_source_beats_relevance_four_from_ten() -> None:
@@ -131,6 +132,121 @@ def test_pool_ranking_is_independent_of_feed_order() -> None:
         return selected.winners[0].article.publisher_key
 
     assert rank(articles) == rank(list(reversed(articles))) == "publisher-b"
+
+
+def test_direct_mission_stories_fill_regional_shortlists_before_context() -> None:
+    settings = Settings(
+        article_shortlist_initial_per_region=1,
+        article_shortlist_max_per_region=1,
+        article_queue_weekly_target_global=1,
+        article_queue_weekly_target_uae=1,
+        article_queue_weekly_target_ksa=1,
+        article_queue_weekly_target_egypt=1,
+    )
+    cases = [
+        (
+            "Sharjah expands water infrastructure capacity",
+            "New water production and treatment assets support the emirate.",
+            "UAE",
+        ),
+        (
+            "Strait attacks intensify against oil shipping",
+            "UAE shipping faces disruption to conventional oil cargoes.",
+            "UAE",
+        ),
+        (
+            "Failure to activate Hormuz fertilizer plan could trigger food crisis",
+            "Fertilizer supply disruption threatens global food security.",
+            "Global",
+        ),
+        (
+            "OPEC oil output rises in September",
+            "Conventional crude production increased across the group.",
+            "Global",
+        ),
+        (
+            "Egypt to get new lithium-ion battery assembly facility",
+            "The plant will assemble batteries for regional markets.",
+            "Egypt",
+        ),
+        (
+            "Egyptian minister opens unrelated dry port",
+            "The logistics terminal expands freight and trade capacity.",
+            "Egypt",
+        ),
+        (
+            "Iraq in talks with Saudi ACWA to increase solar capacity",
+            "The project would add utility-scale renewable generation.",
+            "KSA",
+        ),
+        (
+            "Saudi Arabia strikes oil depots during regional conflict",
+            "The strikes damaged conventional petroleum storage sites.",
+            "KSA",
+        ),
+    ]
+    direct_titles = {title for title, _, _ in cases[::2]}
+    articles = [
+        Article(
+            title=title,
+            url=f"https://publisher-{index}.example/story",
+            canonical_url=f"https://publisher-{index}.example/story",
+            source_name=f"Publisher {index}",
+            source_page_id=f"publisher-{index}",
+            published_date=NOW,
+            snippet=snippet,
+            region=[region],
+            source_editorial_quality=8,
+            publisher_key=f"publisher-{index}",
+        )
+        for index, (title, snippet, region) in enumerate(cases)
+    ]
+    calls = []
+
+    def enrich(article):
+        calls.append(article.title)
+        return _enriched(5)
+
+    evaluate_candidate_pool(
+        list(reversed(articles)),
+        deficits={"Global": 1, "UAE": 1, "KSA": 1, "Egypt": 1},
+        settings=settings,
+        enrich=enrich,
+        now=NOW,
+    )
+
+    assert set(calls) == direct_titles
+
+
+def test_source_diversity_is_retained_within_the_direct_mission_tier() -> None:
+    settings = Settings(
+        article_shortlist_initial_per_region=2,
+        article_shortlist_max_per_region=2,
+        article_queue_weekly_target_global=2,
+        article_queue_weekly_target_uae=1,
+        article_queue_weekly_target_ksa=1,
+        article_queue_weekly_target_egypt=1,
+    )
+    articles = [
+        _article("a1", "Global", publisher="publisher-a"),
+        _article("a2", "Global", publisher="publisher-a"),
+        _article("b1", "Global", publisher="publisher-b"),
+    ]
+    calls = []
+
+    def enrich(article):
+        calls.append(article.publisher_key)
+        return _enriched(5)
+
+    evaluate_candidate_pool(
+        articles,
+        deficits={"Global": 2, "UAE": 0, "KSA": 0, "Egypt": 0},
+        settings=settings,
+        enrich=enrich,
+        now=NOW,
+    )
+
+    assert calls == ["publisher-a", "publisher-b"]
 
 
 def test_first_run_caps_at_twelve_and_second_fills_only_remaining_deficit() -> None:

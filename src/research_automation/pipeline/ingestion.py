@@ -9,9 +9,11 @@ from typing import Callable
 from research_automation.clients.llm_client import LlmClient
 from research_automation.clients.notion_client import NotionClient
 from research_automation.config import Settings
+from research_automation.models.article import Article
 from research_automation.models.candidate import CandidateEvaluation, CandidateResult
 from research_automation.models.source import SourceAttempt
 from research_automation.notion_schema import ARTICLE_QUEUE
+from research_automation.pipeline.article_retrieval import ArticleRetrievalResult
 from research_automation.pipeline.candidate_ranking import evaluate_candidate_pool
 from research_automation.pipeline.collect import CollectionResult, collect_articles
 from research_automation.pipeline.deduplicate import SeenArticleStore
@@ -71,6 +73,7 @@ def run_ingestion(
     llm_client=None,
     collector: Callable[[list], CollectionResult] = collect_articles,
     discovery_factory: Callable[[Settings, list], DiscoveryService] = DiscoveryService,
+    retrieve_article: Callable[[Article], ArticleRetrievalResult] | None = None,
     output: Callable[[str], None] = print,
 ) -> IngestionReport:
     """Evaluate the complete bounded pool before creating any Article Queue page."""
@@ -138,6 +141,7 @@ def run_ingestion(
         deficits=initial_deficits,
         settings=settings,
         enrich=enrich_callable,
+        retrieve=retrieve_article,
         now=now,
         excluded_urls=excluded_urls,
         phase_ceiling_per_region=settings.article_shortlist_initial_per_region,
@@ -181,6 +185,7 @@ def run_ingestion(
                 deficits=feed_selection.shortages,
                 settings=settings,
                 enrich=enrich_callable,
+                retrieve=retrieve_article,
                 now=now,
                 excluded_urls=excluded_urls,
                 already_shortlisted=feed_evaluation.shortlisted_counts,
@@ -314,6 +319,7 @@ def print_ingestion_report(
         output(
             f"{prefix} #{rank}: region={winner.target_region}; publisher={winner.article.source_name}; "
             f"relevance={enriched.relevance_score if enriched else 'n/a'}; "
+            f"significance={getattr(enriched, 'editorial_significance', 'n/a') if enriched else 'n/a'}; "
             f"source_rating={winner.source_quality if winner.source_quality is not None else 'unscored'}; "
             f"queue_score={winner.queue_score:.2f}; title={winner.article.title}"
         )

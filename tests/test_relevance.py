@@ -1,9 +1,27 @@
+import pytest
+
 from research_automation.models.article import Article, EnrichedArticle
 from research_automation.pipeline.relevance import (
     article_has_interest_geography,
     article_has_company_focus,
     matched_company_topics,
+    matched_contextual_signals,
+    matched_direct_mission_signals,
     meets_minimum_relevance,
+)
+
+
+COMPANY_TOPICS = (
+    "food security",
+    "water security",
+    "net zero transition",
+    "energy transition",
+    "trade",
+    "resilience",
+    "regulation",
+    "supply chains",
+    "desalination",
+    "agri-food",
 )
 
 
@@ -107,3 +125,80 @@ def test_article_has_interest_geography_rejects_us_energy_story() -> None:
     )
 
     assert not article_has_interest_geography(article)
+
+
+@pytest.mark.parametrize(
+    ("title", "snippet"),
+    [
+        (
+            "Sharjah invests in its next water infrastructure cycle",
+            "The plan adds water production and waste treatment capacity.",
+        ),
+        (
+            "Failure to activate Hormuz fertilizer plan could trigger food crisis",
+            "The disruption could constrain fertilizer supplies and food security.",
+        ),
+        (
+            "Egypt to get new lithium-ion battery assembly facility",
+            "The facility will assemble batteries for regional markets.",
+        ),
+        (
+            "Iraq in talks with ACWA to increase solar capacity",
+            "The project would add utility-scale renewable generation.",
+        ),
+    ],
+)
+def test_direct_mission_stories_have_deterministic_direct_signals(
+    title: str,
+    snippet: str,
+) -> None:
+    article = Article(
+        title=title,
+        url="https://example.com/story",
+        canonical_url="https://example.com/story",
+        source_name="Example",
+        source_page_id="source-1",
+        snippet=snippet,
+    )
+
+    assert matched_direct_mission_signals(article, COMPANY_TOPICS)
+    assert article_has_company_focus(article, COMPANY_TOPICS)
+
+
+@pytest.mark.parametrize(
+    ("title", "snippet"),
+    [
+        (
+            "Strait attacks intensify against oil shipping",
+            "Several conventional oil vessels were struck during the conflict.",
+        ),
+        (
+            "OPEC oil output rises in September",
+            "Members increased conventional crude production.",
+        ),
+        (
+            "Oil depot strikes escalate regional conflict",
+            "The attacks damaged petroleum storage sites.",
+        ),
+        (
+            "Minister opens unrelated dry port",
+            "The logistics terminal expands freight and trade capacity.",
+        ),
+    ],
+)
+def test_broad_context_stays_eligible_without_becoming_a_direct_signal(
+    title: str,
+    snippet: str,
+) -> None:
+    article = Article(
+        title=title,
+        url="https://example.com/story",
+        canonical_url="https://example.com/story",
+        source_name="Example",
+        source_page_id="source-1",
+        snippet=snippet,
+    )
+
+    assert matched_direct_mission_signals(article, COMPANY_TOPICS) == []
+    assert matched_contextual_signals(article, COMPANY_TOPICS)
+    assert article_has_company_focus(article, COMPANY_TOPICS)

@@ -18,6 +18,7 @@ class CandidateResult:
     source_quality: float | None = None
     rejection_reason: str = ""
     matched_topics: list[str] = field(default_factory=list)
+    direct_mission_signals: list[str] = field(default_factory=list)
     selection_reason: str = ""
 
     @property

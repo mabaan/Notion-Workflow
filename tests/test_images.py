@@ -49,12 +49,14 @@ def test_inject_story_images_inserts_after_story_headings_and_tags() -> None:
             source_name="Example",
             canonical_url="https://example.com/1",
             image_url="https://example.com/1.jpg",
+            image_provider="unsplash",
         ),
         DraftArticle(
             title="Second story",
             source_name="Example",
             canonical_url="https://example.com/2",
             image_url="https://example.com/2.jpg",
+            image_provider="brave",
         ),
     ]
 
@@ -62,11 +64,13 @@ def test_inject_story_images_inserts_after_story_headings_and_tags() -> None:
 
     assert (
         "## First story\n#FoodandWaterSecurity #Resilience\n"
-        "![First story](https://example.com/1.jpg)\nBody one"
+        "![Illustrative image (Unsplash); not verified as depicting the reported project]"
+        "(https://example.com/1.jpg)\nBody one"
     ) in updated
     assert (
         "## Second story\n#NetZeroTransition\n"
-        "![Second story](https://example.com/2.jpg)\nBody two"
+        "![Illustrative image (Brave); not verified as depicting the reported project]"
+        "(https://example.com/2.jpg)\nBody two"
     ) in updated
 
 
@@ -89,7 +93,11 @@ def test_inject_story_images_inserts_after_story_heading_when_no_tags_present() 
 
     updated = inject_story_images(content, articles)
 
-    assert "## First story\n![First story](https://example.com/1.jpg)\nBody one" in updated
+    assert (
+        "## First story\n"
+        "![Illustrative image; not verified as depicting the reported project]"
+        "(https://example.com/1.jpg)\nBody one"
+    ) in updated
 
 
 def test_image_identity_ignores_query_params() -> None:
@@ -132,3 +140,5 @@ def test_resolve_articles_avoids_duplicate_images(monkeypatch, tmp_path: Path) -
 
     assert articles[0].image_url == "https://images.example.com/shared.jpg?w=1200"
     assert articles[1].image_url == "https://images.example.com/second.jpg"
+    assert articles[0].image_provider == "unsplash"
+    assert articles[1].image_provider == "unsplash"

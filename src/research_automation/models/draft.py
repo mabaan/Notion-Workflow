@@ -20,6 +20,10 @@ class DraftArticle:
     region: list[str] = field(default_factory=list)
     relevance_score: int = 0
     image_url: str = ""
+    factual_points: list[str] = field(default_factory=list)
+    evidence_retrieval_status: str = ""
+    resolved_publisher_url: str = ""
+    image_provider: str = ""
 
 
 @dataclass

@@ -9,9 +9,14 @@ from datetime import UTC, datetime, timedelta
 from research_automation.config import Settings
 from research_automation.models.article import Article, EnrichedArticle
 from research_automation.models.candidate import CandidateEvaluation, CandidateResult
+from research_automation.pipeline.article_retrieval import (
+    ArticleRetrievalResult,
+    apply_retrieval_result,
+)
 from research_automation.pipeline.relevance import (
     article_has_interest_geography,
     matched_company_topics,
+    matched_direct_mission_signals,
 )
 from research_automation.utils.hashing import build_content_hash, build_url_hash
 from research_automation.utils.regions import (
@@ -24,12 +29,22 @@ from research_automation.utils.urls import clean_url, url_hostname
 def calculate_queue_score(
     relevance_score: int,
     editorial_quality: float | None,
+    editorial_significance: int = 3,
 ) -> float:
-    """Weight article relevance at exactly 90% and source quality at 10%."""
+    """Combine normalized relevance, significance, and publisher quality."""
 
-    relevance_component = relevance_score / 5
-    source_component = editorial_quality / 10 if editorial_quality is not None else 0
-    return round(100 * (0.90 * relevance_component + 0.10 * source_component), 2)
+    relevance_component = _bounded_component(relevance_score, maximum=5)
+    significance_component = _bounded_component(editorial_significance, maximum=5)
+    source_component = _bounded_component(editorial_quality or 0, maximum=10)
+    return round(
+        100
+        * (
+            0.70 * relevance_component
+            + 0.20 * significance_component
+            + 0.10 * source_component
+        ),
+        2,
+    )
 
 
 def evaluate_candidate_pool(
@@ -38,6 +53,7 @@ def evaluate_candidate_pool(
     deficits: dict[str, int],
     settings: Settings,
     enrich: Callable[[Article], EnrichedArticle] | None,
+    retrieve: Callable[[Article], ArticleRetrievalResult] | None = None,
     now: datetime,
     excluded_urls: Iterable[str] = (),
     already_shortlisted: dict[str, int] | None = None,
@@ -51,6 +67,7 @@ def evaluate_candidate_pool(
     excluded = {clean_url(url) for url in excluded_urls if clean_url(url)}
     prepared: dict[str, list[CandidateResult]] = defaultdict(list)
     run_urls: set[str] = set()
+    finalized_urls: set[str] = set()
 
     # Stable metadata ordering means neither feed nor thread completion order is meaningful.
     for article in sorted(articles, key=_candidate_identity_sort):
@@ -102,6 +119,22 @@ def evaluate_candidate_pool(
                 if enrich is None:
                     evaluation.reject(result, "enrichment disabled")
                     continue
+                if retrieve is not None:
+                    try:
+                        apply_retrieval_result(
+                            result.article,
+                            retrieve(result.article),
+                        )
+                    except Exception:
+                        result.article.evidence_retrieval_status = "fetch_failed"
+                    _refresh_article_identity(result.article)
+                if (
+                    result.article.canonical_url in excluded
+                    or result.article.canonical_url in finalized_urls
+                ):
+                    evaluation.reject(result, "duplicate URL")
+                    continue
+                finalized_urls.add(result.article.canonical_url)
                 try:
                     enriched = enrich(result.article)
                 except Exception as exc:
@@ -125,11 +158,21 @@ def evaluate_candidate_pool(
                 result.queue_score = calculate_queue_score(
                     enriched.relevance_score,
                     result.source_quality,
+                    editorial_significance=_editorial_significance(enriched),
                 )
+                significance_reason = str(
+                    getattr(enriched, "significance_reason", "") or ""
+                ).strip()
                 result.selection_reason = (
                     f"{region} quota; relevance {enriched.relevance_score}/5; "
-                    f"source quality {_quality_label(result.source_quality)}; "
+                    f"editorial significance {_editorial_significance(enriched)}/5; "
+                    f"publisher quality {_quality_label(result.source_quality)}; "
                     f"queue score {result.queue_score:.2f}"
+                    + (
+                        f"; significance: {significance_reason}"
+                        if significance_reason
+                        else ""
+                    )
                 )
                 evaluation.results.append(result)
                 qualified += 1
@@ -156,13 +199,7 @@ def _prepare_candidate(
     settings: Settings,
     now: datetime,
 ) -> CandidateResult:
-    article.canonical_url = clean_url(article.canonical_url or article.url)
-    article.url = clean_url(article.url or article.canonical_url)
-    article.publisher_key = article.publisher_key or article.source_page_id or url_hostname(
-        article.canonical_url
-    )
-    article.url_hash = build_url_hash(article.canonical_url) if article.canonical_url else ""
-    article.content_hash = build_content_hash(article.title, article.source_name)
+    _refresh_article_identity(article)
     source_quality = article.source_editorial_quality
     target_region = infer_target_region_from_text(f"{article.title}\n{article.snippet}")
     target_region = target_region or primary_target_region(article.region)
@@ -193,6 +230,10 @@ def _prepare_candidate(
         result.rejection_reason = "no company-topic match"
         return result
     result.matched_topics = matched_topics
+    result.direct_mission_signals = matched_direct_mission_signals(
+        article,
+        settings.discovery_topics,
+    )
     if not article_has_interest_geography(article):
         result.rejection_reason = "outside geographic mandate"
         return result
@@ -202,7 +243,30 @@ def _prepare_candidate(
     return result
 
 
+def _refresh_article_identity(article: Article) -> None:
+    """Normalize URLs and keep hashes aligned with the current canonical URL."""
+
+    article.canonical_url = clean_url(article.canonical_url or article.url)
+    article.url = clean_url(article.url or article.canonical_url)
+    article.publisher_key = article.publisher_key or article.source_page_id or url_hostname(
+        article.canonical_url
+    )
+    article.url_hash = build_url_hash(article.canonical_url) if article.canonical_url else ""
+    article.content_hash = build_content_hash(article.title, article.source_name)
+
+
 def _source_diverse_shortlist(results: list[CandidateResult]) -> list[CandidateResult]:
+    direct = [result for result in results if result.direct_mission_signals]
+    contextual = [result for result in results if not result.direct_mission_signals]
+    return [
+        *_source_diverse_order(direct),
+        *_source_diverse_order(contextual),
+    ]
+
+
+def _source_diverse_order(results: list[CandidateResult]) -> list[CandidateResult]:
+    """Round-robin publishers within one editorial relevance tier."""
+
     buckets: dict[str, deque[CandidateResult]] = defaultdict(deque)
     for result in sorted(results, key=_metadata_rank_sort):
         buckets[result.article.publisher_key].append(result)
@@ -257,3 +321,18 @@ def _aware_utc(value: datetime) -> datetime:
 
 def _quality_label(value: float | None) -> str:
     return "unscored" if value is None else f"{value:g}/10"
+
+
+def _editorial_significance(enriched: EnrichedArticle) -> int:
+    """Read significance defensively for enrichment objects from older callers."""
+
+    value = getattr(enriched, "editorial_significance", 3)
+    try:
+        score = int(value)
+    except (TypeError, ValueError):
+        score = 3
+    return max(1, min(5, score))
+
+
+def _bounded_component(value: float, *, maximum: float) -> float:
+    return max(0.0, min(float(value), maximum)) / maximum

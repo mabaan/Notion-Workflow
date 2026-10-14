@@ -20,6 +20,7 @@ from research_automation.notion_schema import (
 from research_automation.utils import notion_properties as props
 from research_automation.pipeline.images import markdown_image_match
 from research_automation.utils.regions import merge_region_labels
+from research_automation.utils.urls import is_google_news_url
 
 
 def create_article_queue_page(
@@ -85,7 +86,12 @@ def create_article_queue_page(
             properties[ARTICLE_QUEUE["selection_reason"]] = props.rich_text(
                 selection_reason
             )
-    return notion.create_page(database_id=database_id, properties=properties)
+    children = _research_note_blocks(article, enriched) if enriched is not None else []
+    return notion.create_page(
+        database_id=database_id,
+        properties=properties,
+        children=children,
+    )
 
 
 def update_article_enrichment(
@@ -263,6 +269,29 @@ def _markdown_blocks(content: str) -> list[dict[str, Any]]:
 def _is_numbered_list_item(line: str) -> bool:
     number, dot, remainder = line.partition(". ")
     return bool(number.isdigit() and dot and remainder)
+
+
+def _research_note_blocks(
+    article: Article,
+    enriched: EnrichedArticle,
+) -> list[dict[str, Any]]:
+    """Build concise evidence notes without storing retrieved article bodies."""
+
+    blocks = [_rich_text_block("heading_2", "Research Notes")]
+    if article.canonical_url and not is_google_news_url(article.canonical_url):
+        blocks.append(
+            _paragraph_block(f"Resolved publisher URL: {article.canonical_url}")
+        )
+    status = article.evidence_retrieval_status.replace("_", " ").strip().title()
+    blocks.append(_paragraph_block(f"Evidence retrieval status: {status or 'Unknown'}"))
+    if enriched.factual_points:
+        blocks.append(_rich_text_block("heading_3", "Key Factual Points"))
+        blocks.extend(
+            _rich_text_block("bulleted_list_item", point[:1800])
+            for point in enriched.factual_points[:8]
+            if point.strip()
+        )
+    return blocks
 
 
 def _paragraph_block(text: str) -> dict[str, Any]:

@@ -216,10 +216,22 @@ def _final_rank_sort(candidate: CandidateResult) -> tuple:
     return (
         -candidate.queue_score,
         -(enriched.relevance_score if enriched else 0),
+        -(_editorial_significance(enriched) if enriched else 0),
         -(candidate.source_quality or 0),
         -(_aware_utc(published).timestamp() if published else 0),
         candidate.article.canonical_url,
     )
+
+
+def _editorial_significance(enriched) -> int:
+    """Keep deterministic ranking compatible with older enrichment objects."""
+
+    value = getattr(enriched, "editorial_significance", 3)
+    try:
+        score = int(value)
+    except (TypeError, ValueError):
+        score = 3
+    return max(1, min(5, score))
 
 
 def _title_text(property_value: dict[str, Any]) -> str:

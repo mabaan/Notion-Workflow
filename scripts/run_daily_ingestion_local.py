@@ -9,6 +9,7 @@ from research_automation.logging_config import (
     configure_console_encoding,
     configure_logging,
 )
+from research_automation.pipeline.article_retrieval import ArticleRetriever
 from research_automation.pipeline.ingestion import IngestionOptions, run_ingestion
 
 
@@ -42,6 +43,7 @@ def main() -> None:
     settings = load_settings()
     args = parse_args(settings.max_articles_per_run)
     configure_logging(settings.log_level)
+    retriever = ArticleRetriever()
     run_ingestion(
         settings,
         IngestionOptions(
@@ -50,6 +52,7 @@ def main() -> None:
             all_sources=args.all_sources,
             limit=args.limit,
         ),
+        retrieve_article=retriever.retrieve,
     )
 
 
