@@ -18,6 +18,7 @@ from research_automation.notion_schema import (
     SOCIAL_STATUS_READY,
 )
 from research_automation.utils import notion_properties as props
+from research_automation.utils.evidence import FEED_CONTENT_LIMITATION, is_feed_content
 from research_automation.pipeline.images import markdown_image_match
 from research_automation.utils.regions import merge_region_labels
 from research_automation.utils.urls import is_google_news_url
@@ -284,6 +285,8 @@ def _research_note_blocks(
         )
     status = article.evidence_retrieval_status.replace("_", " ").strip().title()
     blocks.append(_paragraph_block(f"Evidence retrieval status: {status or 'Unknown'}"))
+    if is_feed_content(article.evidence_retrieval_status):
+        blocks.append(_paragraph_block(FEED_CONTENT_LIMITATION))
     if enriched.factual_points:
         blocks.append(_rich_text_block("heading_3", "Key Factual Points"))
         blocks.extend(

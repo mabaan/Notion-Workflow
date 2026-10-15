@@ -1,6 +1,7 @@
 from datetime import UTC, datetime
 from pathlib import Path
 
+import httpx
 import pytest
 
 import research_automation.pipeline.ingestion as ingestion_module
@@ -281,6 +282,38 @@ def test_successful_page_is_created_once_with_enrichment_in_initial_payload(tmp_
     assert article_creates[0]["Summary"]["rich_text"][0]["text"]["content"] == "Complete summary"
     assert article_creates[0]["Processed"]["checkbox"] is True
     assert (tmp_path / "seen_articles.json").exists()
+
+
+def test_agbi_403_completes_ingestion_without_retries_or_writes(tmp_path, monkeypatch):
+    row = _source_row()
+    row["properties"]["Source Name"] = {"title": [{"plain_text": "AGBI"}]}
+    row["properties"]["Feed URL"] = {"url": "https://www.agbi.com/feed/"}
+    notion = FakeNotion(source_rows=[row])
+    llm = FakeLlm()
+    requests = []
+    original_client = httpx.Client
+
+    def handler(request):
+        requests.append(str(request.url))
+        return httpx.Response(403)
+
+    monkeypatch.setattr(
+        "research_automation.sources.rss.httpx.Client",
+        lambda **kwargs: original_client(transport=httpx.MockTransport(handler), **kwargs),
+    )
+    report = run_ingestion(
+        _settings(tmp_path), IngestionOptions(dry_run=True),
+        notion=notion, llm_client=llm,
+        discovery_factory=FakeDiscovery, output=lambda _: None,
+    )
+
+    assert requests == ["https://www.agbi.com/feed/"]
+    assert report.collected_count == report.pages_created == 0
+    assert len(report.attempts) == 1
+    assert report.attempts[0].outcome == "HTTP Error"
+    assert "403" in report.attempts[0].error
+    assert llm.calls == notion.creates == notion.updates == []
+    assert not (tmp_path / "seen_articles.json").exists()
 
 
 def test_dry_run_uses_existing_weekly_counts_and_stops_when_targets_are_full(tmp_path) -> None:

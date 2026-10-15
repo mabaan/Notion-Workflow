@@ -9,9 +9,11 @@ import feedparser
 import httpx
 
 from research_automation.models.article import Article
+from research_automation.pipeline.article_retrieval import extract_feed_article_text
 from research_automation.pipeline.clean import clean_snippet, clean_text
 from research_automation.sources.base import ArticleSource
 from research_automation.utils.dates import utc_now
+from research_automation.utils.evidence import FEED_CONTENT_STATUS
 from research_automation.utils.urls import (
     clean_url,
     extract_entry_url,
@@ -46,6 +48,7 @@ class RssSource(ArticleSource):
             summary = clean_snippet(
                 str(entry.get("summary") or entry.get("description") or "")
             )
+            article_text = _entry_article_text(entry)
 
             articles.append(
                 Article(
@@ -57,6 +60,10 @@ class RssSource(ArticleSource):
                     published_date=_entry_datetime(entry),
                     collected_date=collected_at,
                     snippet=summary,
+                    article_text=article_text,
+                    evidence_retrieval_status=(
+                        FEED_CONTENT_STATUS if article_text else "not_attempted"
+                    ),
                     region=list(self.source.region),
                     topic_focus=list(self.source.topic_focus),
                     source_editorial_quality=self.source.editorial_quality,
@@ -71,6 +78,18 @@ class RssSource(ArticleSource):
             )
 
         return articles
+
+
+def _entry_article_text(entry: dict) -> str:
+    """Read feedparser's content:encoded/Atom content, never the description."""
+
+    for content in entry.get("content") or []:
+        if content.get("type") not in {"text/html", "application/xhtml+xml"}:
+            continue
+        text = extract_feed_article_text(str(content.get("value") or ""))
+        if text:
+            return text
+    return ""
 
 
 def _entry_datetime(entry: dict) -> datetime | None:

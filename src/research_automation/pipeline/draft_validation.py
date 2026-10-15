@@ -9,6 +9,11 @@ from typing import Literal
 
 from research_automation.models.draft import DraftArticle
 from research_automation.pipeline.images import image_identity
+from research_automation.utils.evidence import (
+    FEED_CONTENT_LIMITATION,
+    has_article_evidence,
+    is_feed_content,
+)
 from research_automation.utils.urls import clean_url, is_google_news_url
 
 DraftKind = Literal["newsletter", "sns"]
@@ -177,13 +182,15 @@ def _evidence_warnings(story: str, article: DraftArticle) -> list[str]:
     status = article.evidence_retrieval_status.strip()
     if not status and not article.factual_points:
         return [f"{story}: Research Notes are missing; checks rely on the summary only."]
-    if status.casefold() != "extracted":
+    if not has_article_evidence(status):
         return [
             f"{story}: evidence retrieval status is {status or 'unknown'}; "
             "factual checks are limited."
         ]
     if not article.factual_points:
         return [f"{story}: Research Notes contain no factual points."]
+    if is_feed_content(status):
+        return [f"{story}: {FEED_CONTENT_LIMITATION}"]
     return []
 
 

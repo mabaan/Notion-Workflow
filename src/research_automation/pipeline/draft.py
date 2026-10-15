@@ -9,6 +9,11 @@ from research_automation.clients.notion_client import NotionClient
 from research_automation.config import Settings
 from research_automation.models.draft import DraftArticle
 from research_automation.notion_schema import ARTICLE_QUEUE, SOURCE_REGISTRY
+from research_automation.utils.evidence import (
+    FEED_CONTENT_LIMITATION,
+    has_article_evidence,
+    is_feed_content,
+)
 from research_automation.utils.urls import clean_url, url_hostname
 
 logger = logging.getLogger(__name__)
@@ -98,7 +103,7 @@ def format_newsletter_articles_for_prompt(articles: list[DraftArticle]) -> str:
         source_url = article.resolved_publisher_url or article.canonical_url
         status = article.evidence_retrieval_status or "Not available (legacy entry)"
         evidence_available = (
-            article.evidence_retrieval_status.casefold() == "extracted"
+            has_article_evidence(article.evidence_retrieval_status)
             and bool(article.factual_points)
         )
         lines = [
@@ -114,6 +119,8 @@ def format_newsletter_articles_for_prompt(articles: list[DraftArticle]) -> str:
             f"Region: {', '.join(article.region) or 'Unknown'}",
         ]
         if evidence_available:
+            if is_feed_content(status):
+                lines.append(FEED_CONTENT_LIMITATION)
             lines.append("Factual evidence (primary reporting basis):")
             lines.extend(f"- {point}" for point in article.factual_points)
         else:
@@ -137,7 +144,7 @@ def format_social_articles_for_prompt(articles: list[DraftArticle]) -> str:
         source_url = article.resolved_publisher_url or article.canonical_url
         status = article.evidence_retrieval_status or "Not available (legacy entry)"
         evidence_available = (
-            article.evidence_retrieval_status.casefold() == "extracted"
+            has_article_evidence(article.evidence_retrieval_status)
             and bool(article.factual_points)
         )
         lines = [
@@ -152,6 +159,8 @@ def format_social_articles_for_prompt(articles: list[DraftArticle]) -> str:
             f"Region: {', '.join(article.region) or 'Unknown'}",
         ]
         if evidence_available:
+            if is_feed_content(status):
+                lines.append(FEED_CONTENT_LIMITATION)
             lines.append("Factual evidence (primary script basis):")
             lines.extend(f"- {point}" for point in article.factual_points)
         else:

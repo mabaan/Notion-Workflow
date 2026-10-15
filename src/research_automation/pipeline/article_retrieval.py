@@ -6,10 +6,12 @@ from dataclasses import dataclass
 from urllib.parse import urljoin
 
 import httpx
+from lxml import etree
 from lxml import html as lxml_html
 from readability import Document
 
 from research_automation.models.article import Article
+from research_automation.utils.evidence import FEED_CONTENT_STATUS, is_feed_content
 from research_automation.utils.text import normalize_whitespace
 from research_automation.utils.urls import (
     clean_url,
@@ -17,6 +19,10 @@ from research_automation.utils.urls import (
     is_google_news_url,
     url_hostname,
 )
+
+MAX_RESPONSE_BYTES = 2_000_000
+MAX_TEXT_CHARS = 12_000
+MINIMUM_TEXT_CHARS = 300
 
 
 @dataclass(frozen=True)
@@ -34,9 +40,9 @@ class ArticleRetriever:
     """Fetch and extract a shortlisted article without bypassing access controls."""
 
     client: httpx.Client | None = None
-    max_response_bytes: int = 2_000_000
-    max_text_chars: int = 12_000
-    minimum_text_chars: int = 300
+    max_response_bytes: int = MAX_RESPONSE_BYTES
+    max_text_chars: int = MAX_TEXT_CHARS
+    minimum_text_chars: int = MINIMUM_TEXT_CHARS
 
     def retrieve(self, article: Article) -> ArticleRetrievalResult:
         """Return publisher URL and useful article text when publicly accessible."""
@@ -47,6 +53,17 @@ class ArticleRetriever:
                 canonical_url="",
                 url_resolution_status="unresolved",
                 evidence_retrieval_status="invalid_url",
+            )
+
+        if (
+            is_feed_content(article.evidence_retrieval_status)
+            and len(article.article_text.strip()) >= self.minimum_text_chars
+        ):
+            return ArticleRetrievalResult(
+                canonical_url=original_url,
+                url_resolution_status=article.url_resolution_status,
+                evidence_retrieval_status=FEED_CONTENT_STATUS,
+                article_text=article.article_text[: self.max_text_chars],
             )
 
         if self.client is not None:
@@ -143,6 +160,28 @@ class ArticleRetriever:
 
 class ResponseTooLarge(RuntimeError):
     """Raised when a streamed article exceeds the configured byte ceiling."""
+
+
+def extract_feed_article_text(html: str) -> str:
+    """Clean bounded feed HTML without treating its presence as completeness."""
+
+    if not html or len(html.encode("utf-8")) > MAX_RESPONSE_BYTES:
+        return ""
+    try:
+        tree = lxml_html.fragment_fromstring(html, create_parent="div")
+        for node in tree.xpath(
+            ".//script|.//style|.//noscript|.//template|.//nav|.//header|.//footer|"
+            ".//aside|.//form|.//iframe|.//svg|.//button|.//input|"
+            ".//*[@hidden or @aria-hidden='true' or @role='navigation' "
+            "or @role='complementary' or @role='banner' or @role='contentinfo']"
+        ):
+            node.drop_tree()
+        text = normalize_whitespace(" ".join(tree.itertext()))
+    except (ValueError, etree.LxmlError):
+        return ""
+    if len(text) < MINIMUM_TEXT_CHARS:
+        return ""
+    return text[:MAX_TEXT_CHARS]
 
 
 def apply_retrieval_result(

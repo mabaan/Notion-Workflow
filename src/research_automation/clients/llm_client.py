@@ -10,6 +10,7 @@ from typing import Any
 from openai import OpenAI
 
 from research_automation.models.article import Article, EnrichedArticle
+from research_automation.utils.evidence import FEED_CONTENT_LIMITATION, is_feed_content
 
 
 def _render_prompt(template: str, context: dict[str, str]) -> str:
@@ -65,7 +66,11 @@ class LlmClient:
                 "region": ", ".join(article.region) or "Unknown",
                 "topic_focus": ", ".join(article.topic_focus) or "Unknown",
                 "canonical_url": article.canonical_url or article.url or "Unknown",
-                "evidence_retrieval_status": article.evidence_retrieval_status,
+                "evidence_retrieval_status": (
+                    f"{article.evidence_retrieval_status}: {FEED_CONTENT_LIMITATION}"
+                    if is_feed_content(article.evidence_retrieval_status)
+                    else article.evidence_retrieval_status
+                ),
                 "article_content": article.article_text
                 or "Unavailable. Use the RSS title and snippet only.",
                 "company_topics": ", ".join(self.company_topics) or "Unknown",
