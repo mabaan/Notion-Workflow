@@ -64,12 +64,12 @@ def test_inject_story_images_inserts_after_story_headings_and_tags() -> None:
 
     assert (
         "## First story\n#FoodandWaterSecurity #Resilience\n"
-        "![Illustrative image (Unsplash); not verified as depicting the reported project]"
+        "![Illustrative image (Unsplash)]"
         "(https://example.com/1.jpg)\nBody one"
     ) in updated
     assert (
         "## Second story\n#NetZeroTransition\n"
-        "![Illustrative image (Brave); not verified as depicting the reported project]"
+        "![Illustrative image (Brave)]"
         "(https://example.com/2.jpg)\nBody two"
     ) in updated
 
@@ -95,7 +95,7 @@ def test_inject_story_images_inserts_after_story_heading_when_no_tags_present() 
 
     assert (
         "## First story\n"
-        "![Illustrative image; not verified as depicting the reported project]"
+        "![Illustrative image]"
         "(https://example.com/1.jpg)\nBody one"
     ) in updated
 

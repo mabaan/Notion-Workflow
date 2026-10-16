@@ -1,5 +1,6 @@
 .env
 .local_state/
+.preview/ingestion_audits/
 .venv/
 __pycache__/
 *.py[cod]

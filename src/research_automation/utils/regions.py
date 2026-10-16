@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from collections.abc import Iterable
+import re
 
 TARGET_REGION_ORDER = ("Global", "UAE", "KSA", "Egypt")
 
@@ -19,10 +20,87 @@ REGION_ALIASES = {
 }
 
 REGION_KEYWORDS = {
-    "UAE": ("uae", "united arab emirates", "dubai", "abu dhabi", "emirati"),
-    "KSA": ("ksa", "saudi arabia", "saudi", "riyadh", "jeddah", "neom"),
+    "UAE": ("uae", "united arab emirates", "dubai", "abu dhabi", "emirati", "sharjah"),
+    "KSA": ("ksa", "saudi arabia", "saudi", "riyadh", "jeddah", "neom", "jazan"),
     "Egypt": ("egypt", "egyptian", "cairo", "alexandria", "suez"),
 }
+
+# Coverage locations, not new quota regions. Relevant other-MENA events use Global.
+OTHER_MENA_LOCATIONS = {
+    "Iraq": ("iraq", "iraqi", "baghdad", "basra"),
+    "Qatar": ("qatar", "qatari", "doha"),
+    "Libya": ("libya", "libyan", "tripoli"),
+    "Bahrain": ("bahrain", "bahraini", "manama"),
+    "Kuwait": ("kuwait", "kuwaiti"),
+    "Oman": ("oman", "omani", "muscat"),
+    "Jordan": ("jordan", "jordanian", "amman"),
+    "Lebanon": ("lebanon", "lebanese", "beirut"),
+    "Iran": ("iran", "iranian", "tehran"),
+    "Yemen": ("yemen", "yemeni"),
+    "Syria": ("syria", "syrian"),
+    "Morocco": ("morocco", "moroccan"),
+    "Algeria": ("algeria", "algerian"),
+    "Tunisia": ("tunisia", "tunisian"),
+    "Sudan": ("sudan", "sudanese"),
+    "Israel": ("israel", "israeli"),
+    "Palestine": ("palestine", "palestinian", "gaza"),
+}
+
+
+def strip_participant_origins(text: str) -> str:
+    """Remove nationality constructions that identify a participant, not a site."""
+
+    return re.sub(
+        r"\b(?:saudi|uae|emirati|egyptian|iraqi|qatari|bahraini|kuwaiti|omani)"
+        r"(?:['’]s\s+|[- ]based\s+(?=(?:company|firm|developer|contractor|utility)\b)|"
+        r"\s+(?=(?:company|firm|developer|contractor|utility)\b))", "", text, flags=re.IGNORECASE,
+    )
+
+
+def reported_location(title: str, snippet: str) -> tuple[str | None, str]:
+    """Prefer event location over a counterparty's nationality; leave ties explicit."""
+
+    locations = {**REGION_KEYWORDS, **OTHER_MENA_LOCATIONS}
+    aliases = {alias: location for location, names in locations.items() for alias in names}
+    names = "|".join(re.escape(name) for name in sorted(aliases, key=len, reverse=True))
+    pattern = re.compile(r"(?<!\w)(?:" + names + r")(?!\w)", re.IGNORECASE)
+
+    def locate(text: str) -> tuple[str | None, str]:
+        # These describe participants, not where their project takes place.
+        text = strip_participant_origins(text)
+        matches = list(pattern.finditer(text))
+        if not matches:
+            return None, ""
+        project = re.search(
+            r"\b(?:projects?|plants?|facilit\w*|capacity|build\w*|construct\w*|manufactur\w*|"
+            r"farms?|flood\w*|drought|renewable|solar|water infrastructure)\b", text, re.IGNORECASE
+        )
+        if project:
+            explicit = re.findall(r"\b(?:in|within|across)\s+(?:the\s+)?(" + names + r")(?!\w)", text, re.IGNORECASE)
+            targets = {aliases[name.casefold()] for name in explicit}
+            if len(targets) == 1:
+                return targets.pop(), "explicit project/event location"
+        counts = {location: 0 for location in locations}
+        for match in matches:
+            counts[aliases[match.group().casefold()]] += 1
+        present = [location for location, count in counts.items() if count]
+        if len(present) == 1:
+            return present[0], "project/event subject" if project else "title geography"
+        first = matches[0]
+        remainder = text[first.end():]
+        if not text[:first.start()].strip() and not re.match(r"\s*(?:and\b|or\b|[&,/])", remainder, re.IGNORECASE):
+            return aliases[first.group().casefold()], "project/event subject"
+        maximum = max(counts.values())
+        leaders = [location for location, count in counts.items() if count == maximum]
+        return (leaders[0], "dominant article geography") if len(leaders) == 1 else (None, "ambiguous regional geography")
+
+    location, basis = locate(title)
+    if location:
+        return location, basis
+    description_location, description_basis = locate(snippet)
+    if description_location:
+        return description_location, "description: " + description_basis
+    return None, basis or description_basis
 
 REGION_QUERY_TERMS = {
     "Global": "",
@@ -49,13 +127,24 @@ def primary_target_region(labels: Iterable[str]) -> str | None:
 
 
 def infer_target_region_from_text(text: str) -> str | None:
-    """Infer a target region from article text."""
+    """Use a unique dominant region; fixed iteration order cannot settle a tie."""
 
-    haystack = text.casefold()
-    for region in ("UAE", "KSA", "Egypt"):
-        if any(keyword in haystack for keyword in REGION_KEYWORDS[region]):
-            return region
-    return None
+    counts = region_mention_counts(text)
+    maximum = max(counts.values(), default=0)
+    leaders = [region for region, count in counts.items() if count == maximum and count]
+    return leaders[0] if len(leaders) == 1 else None
+
+
+def region_mention_counts(text: str) -> dict[str, int]:
+    """Match whole geographic names, counting overlapping aliases only once."""
+
+    return {
+        region: len(re.findall(
+            r"(?<!\w)(?:" + "|".join(re.escape(k) for k in sorted(keywords, key=len, reverse=True)) + r")(?!\w)",
+            text.casefold(),
+        ))
+        for region, keywords in REGION_KEYWORDS.items()
+    }
 
 
 def merge_region_labels(*groups: Iterable[str]) -> list[str]:

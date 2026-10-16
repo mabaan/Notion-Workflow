@@ -5,6 +5,7 @@ from __future__ import annotations
 from collections import defaultdict, deque
 from collections.abc import Callable, Iterable
 from datetime import UTC, datetime, timedelta
+import re
 
 from research_automation.config import Settings
 from research_automation.models.article import Article, EnrichedArticle
@@ -15,13 +16,18 @@ from research_automation.pipeline.article_retrieval import (
 )
 from research_automation.pipeline.relevance import (
     article_has_interest_geography,
+    has_global_systemic_scope,
+    is_foreign_local_article,
     matched_company_topics,
+    matched_contextual_signals,
     matched_direct_mission_signals,
+    metadata_mission_strength,
+    metadata_rejection_reason,
 )
 from research_automation.utils.hashing import build_content_hash, build_url_hash
 from research_automation.utils.regions import (
-    infer_target_region_from_text,
     primary_target_region,
+    reported_location,
 )
 from research_automation.utils.urls import clean_url, url_hostname
 
@@ -60,6 +66,9 @@ def evaluate_candidate_pool(
     phase_ceiling_per_region: int | None = None,
     first_batch_size: int | None = None,
     stop_when_qualified: bool = True,
+    reserve_discovery: bool = False,
+    attempted_urls: set[str] | None = None,
+    phase: str = "rss",
 ) -> CandidateEvaluation:
     """Evaluate an order-independent pool, scoring only bounded regional shortlists."""
 
@@ -68,14 +77,20 @@ def evaluate_candidate_pool(
     prepared: dict[str, list[CandidateResult]] = defaultdict(list)
     run_urls: set[str] = set()
     finalized_urls: set[str] = set()
+    attempted = attempted_urls if attempted_urls is not None else set()
 
     # Stable metadata ordering means neither feed nor thread completion order is meaningful.
     for article in sorted(articles, key=_candidate_identity_sort):
         result = _prepare_candidate(article, settings=settings, now=now)
+        result.phase = phase
         if result.rejection_reason:
             evaluation.reject(result, result.rejection_reason)
             continue
-        if article.canonical_url in excluded or article.canonical_url in run_urls:
+        if (
+            article.canonical_url in excluded or article.canonical_url in run_urls
+            or article.canonical_url in attempted
+            or clean_url(article.url) in attempted
+        ):
             evaluation.reject(result, "duplicate URL")
             continue
         run_urls.add(article.canonical_url)
@@ -87,6 +102,8 @@ def evaluate_candidate_pool(
     prior_shortlist_counts = dict(already_shortlisted or {})
     for region, candidates in prepared.items():
         all_ordered = _source_diverse_shortlist(candidates)
+        for rank, result in enumerate(all_ordered, start=1):
+            result.metadata_rank = rank
         absolute_ceiling = min(
             settings.article_shortlist_max_per_region,
             phase_ceiling_per_region
@@ -97,7 +114,18 @@ def evaluate_candidate_pool(
             0,
             absolute_ceiling - prior_shortlist_counts.get(region, 0),
         )
-        ordered = all_ordered[:score_budget]
+        reserved = (
+            [result for result in all_ordered if result.article.discovery_provider][
+                :min(2, score_budget)
+            ] if reserve_discovery else []
+        )
+        reserved_ids = {id(result) for result in reserved}
+        allocation_order = [*reserved, *[
+            result for result in all_ordered if id(result) not in reserved_ids
+        ]]
+        for rank, result in enumerate(allocation_order, start=1):
+            result.allocation_rank = rank
+        ordered = allocation_order
         initial_count = min(
             first_batch_size
             if first_batch_size is not None
@@ -106,19 +134,35 @@ def evaluate_candidate_pool(
         )
         cursor = 0
         qualified = 0
-        while cursor < len(ordered):
-            batch_size = initial_count if cursor == 0 else min(2, len(ordered) - cursor)
+        used = 0
+        discovery_used = 0
+        while cursor < len(ordered) and used < score_budget:
+            batch_size = min(initial_count if cursor == 0 else 2, score_budget - used)
             if batch_size <= 0:
                 break
-            batch = ordered[cursor : cursor + batch_size]
-            cursor += batch_size
-            evaluation.shortlisted_counts[region] = (
-                evaluation.shortlisted_counts.get(region, 0) + len(batch)
-            )
-            for result in batch:
+            batch_used = 0
+            while cursor < len(ordered) and batch_used < batch_size:
+                # A duplicate discovery must not consume one of the reserved
+                # *enrichment* opportunities; promote its next eligible replacement.
+                if reserve_discovery and discovery_used < min(2, score_budget):
+                    next_discovery = next((
+                        index for index in range(cursor, len(ordered))
+                        if ordered[index].article.discovery_provider
+                    ), None)
+                    if next_discovery is not None:
+                        ordered.insert(cursor, ordered.pop(next_discovery))
+                result = ordered[cursor]
+                cursor += 1
                 if enrich is None:
+                    result.shortlisted = True
+                    used += 1
+                    batch_used += 1
+                    discovery_used += int(bool(result.article.discovery_provider))
+                    evaluation.shortlisted_counts[region] = evaluation.shortlisted_counts.get(region, 0) + 1
                     evaluation.reject(result, "enrichment disabled")
                     continue
+                result.article.region = [region]
+                original_url = clean_url(result.article.canonical_url)
                 if retrieve is not None:
                     try:
                         apply_retrieval_result(
@@ -131,10 +175,21 @@ def evaluate_candidate_pool(
                 if (
                     result.article.canonical_url in excluded
                     or result.article.canonical_url in finalized_urls
+                    or result.article.canonical_url in attempted
                 ):
                     evaluation.reject(result, "duplicate URL")
                     continue
+                if _is_self_published(result.article):
+                    evaluation.reject(result, "self-published content is not independent discovery evidence")
+                    continue
+                result.shortlisted = True
+                used += 1
+                batch_used += 1
+                discovery_used += int(bool(result.article.discovery_provider))
+                evaluation.shortlisted_counts[region] = evaluation.shortlisted_counts.get(region, 0) + 1
                 finalized_urls.add(result.article.canonical_url)
+                attempted.update((original_url, clean_url(result.article.url), result.article.canonical_url))
+                result.enrichment_attempted = True
                 try:
                     enriched = enrich(result.article)
                 except Exception as exc:
@@ -144,11 +199,7 @@ def evaluate_candidate_pool(
                 evaluation.enriched_counts[region] = (
                     evaluation.enriched_counts.get(region, 0) + 1
                 )
-                required_score = (
-                    settings.minimum_article_relevance_score
-                    if result.article.source_page_id
-                    else 5
-                )
+                required_score = result.required_relevance_score
                 if enriched.relevance_score < required_score:
                     evaluation.reject(
                         result,
@@ -179,15 +230,16 @@ def evaluate_candidate_pool(
             if stop_when_qualified and qualified >= deficits.get(region, 0):
                 break
 
-        # Valid candidates outside the bounded LLM shortlist are reported, not silently lost.
-        for result in ordered[cursor:]:
-            evaluation.reject(result, "shortlist deferred")
+        # The finite metadata pool bounds retrieval/backfill, while only actual
+        # model attempts (including failed calls) consume the enrichment ceiling.
+        for rank, result in enumerate(ordered, start=1):
+            result.allocation_rank = rank
         overflow_reason = (
-            "shortlist deferred"
-            if absolute_ceiling < settings.article_shortlist_max_per_region
-            else "shortlist ceiling"
+            "shortlist ceiling"
+            if used >= score_budget and absolute_ceiling >= settings.article_shortlist_max_per_region
+            else "shortlist deferred"
         )
-        for result in all_ordered[score_budget:]:
+        for result in ordered[cursor:]:
             evaluation.reject(result, overflow_reason)
 
     return evaluation
@@ -201,17 +253,31 @@ def _prepare_candidate(
 ) -> CandidateResult:
     _refresh_article_identity(article)
     source_quality = article.source_editorial_quality
-    target_region = infer_target_region_from_text(f"{article.title}\n{article.snippet}")
-    target_region = target_region or primary_target_region(article.region)
-    if target_region:
-        article.region = [target_region]
+    target_region, assignment_basis = _assign_region(article)
 
     result = CandidateResult(
         article=article,
         enrichment=None,
         target_region=target_region,
         source_quality=source_quality,
+        candidate_id=(
+            build_url_hash(clean_url(article.url or article.canonical_url))
+            if article.url or article.canonical_url
+            else build_content_hash(article.title, article.source_name)
+        ),
+        region_assignment_basis=assignment_basis,
+        source_region_hints=list(article.region),
+        required_relevance_score=settings.minimum_article_relevance_score if article.source_page_id else 5,
     )
+    result.matched_topics = matched_company_topics(article, settings.discovery_topics)
+    result.direct_mission_signals = matched_direct_mission_signals(article, settings.discovery_topics)
+    result.contextual_signals = matched_contextual_signals(article, settings.discovery_topics)
+    result.mission_specificity, result.concrete_development = metadata_mission_strength(
+        article, settings.discovery_topics
+    )
+    if _is_self_published(article):
+        result.rejection_reason = "self-published content is not independent discovery evidence"
+        return result
     if not article.canonical_url or not url_hostname(article.canonical_url):
         result.rejection_reason = "no usable URL"
         return result
@@ -225,15 +291,13 @@ def _prepare_candidate(
     if published < _aware_utc(now) - timedelta(days=settings.article_freshness_days):
         result.rejection_reason = "outside freshness window"
         return result
-    matched_topics = matched_company_topics(article, settings.discovery_topics)
-    if not matched_topics:
+    metadata_reason = metadata_rejection_reason(article, result.direct_mission_signals)
+    if metadata_reason:
+        result.rejection_reason = metadata_reason
+        return result
+    if not result.matched_topics:
         result.rejection_reason = "no company-topic match"
         return result
-    result.matched_topics = matched_topics
-    result.direct_mission_signals = matched_direct_mission_signals(
-        article,
-        settings.discovery_topics,
-    )
     if not article_has_interest_geography(article):
         result.rejection_reason = "outside geographic mandate"
         return result
@@ -241,6 +305,32 @@ def _prepare_candidate(
         result.rejection_reason = "no exact target region"
         return result
     return result
+
+
+def _assign_region(article: Article) -> tuple[str | None, str]:
+    if is_foreign_local_article(article):
+        return None, "explicit foreign-local geography; publisher fallback blocked"
+    title = re.sub(r"\s+[-|]\s+" + re.escape(article.source_name) + r"$", "", article.title, flags=re.IGNORECASE)
+    location, basis = reported_location(title, article.snippet)
+    if has_global_systemic_scope(article) and "project/event" not in basis:
+        return "Global", "explicit systemic or cross-border mission scope"
+    if location:
+        if location in {"UAE", "KSA", "Egypt"}:
+            return location, basis + ": " + location
+        return "Global", f"{basis}: {location}; other MENA coverage routed to Global"
+    if basis:
+        return None, basis
+    if article.discovery_provider:
+        return None, "no article geography; discovery query is not geographic evidence"
+    source_region = primary_target_region(article.region)
+    return source_region, "source-region fallback" if source_region else "no exact regional evidence"
+
+
+def _is_self_published(article: Article) -> bool:
+    return any(
+        host == "somamater.com" or host.endswith(".somamater.com")
+        for host in (url_hostname(article.url), url_hostname(article.canonical_url))
+    )
 
 
 def _refresh_article_identity(article: Article) -> None:
@@ -288,11 +378,11 @@ def _source_diverse_order(results: list[CandidateResult]) -> list[CandidateResul
 def _metadata_rank_sort(result: CandidateResult) -> tuple:
     article = result.article
     return (
+        -result.mission_specificity,
+        -(result.source_quality or 0),
+        -int(result.concrete_development),
         -(_aware_utc(article.published_date).timestamp() if article.published_date else 0),
         -min(len(article.snippet.strip()), 500),
-        -len(result.matched_topics),
-        article.source_page_id == "",
-        -(result.source_quality or 0),
         article.canonical_url,
     )
 

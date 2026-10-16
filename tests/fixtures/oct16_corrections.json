@@ -1,0 +1,297 @@
+{
+  "now": "2026-10-16T13:49:57.291390+00:00",
+  "note": "Titles and publication metadata from the October 16 audit. Original snippets and URLs were not retained; these fixtures use headline-only descriptions and placeholder URLs, except the self-publisher domain. Before values were evaluated locally before this corrective patch. No new LLM judgments.",
+  "candidates": [
+    {
+      "key": "negation",
+      "title": "Not AI. Not energy. Not water. Mohammed bin Rashid says the currency of the future is trust - Gulf News",
+      "snippet": "Not AI. Not energy. Not water. Mohammed bin Rashid says the currency of the future is trust - Gulf News",
+      "publisher": "Gulf News",
+      "url": "https://fixture.example/negation",
+      "source_regions": [
+        "GCC",
+        "UAE"
+      ],
+      "registered": true,
+      "quality": 6.0,
+      "published": "2026-10-11T08:29:43+00:00",
+      "discovery": false,
+      "before": {
+        "region": "UAE",
+        "reason": "",
+        "direct": [
+          "water security"
+        ],
+        "concrete": false
+      }
+    },
+    {
+      "key": "battery_definition",
+      "title": "Your battery may not be a battery - Nature",
+      "snippet": "Your battery may not be a battery - Nature",
+      "publisher": "Nature",
+      "url": "https://fixture.example/battery_definition",
+      "source_regions": [
+        "Global"
+      ],
+      "registered": true,
+      "quality": 10.0,
+      "published": "2026-10-15T10:25:54+00:00",
+      "discovery": false,
+      "before": {
+        "region": "Global",
+        "reason": "",
+        "direct": [
+          "net zero transition",
+          "energy transition"
+        ],
+        "concrete": false
+      }
+    },
+    {
+      "key": "battery_science",
+      "title": "Evidence for multi-Li+ clustering in lithium-ion battery electrolytes - Nature",
+      "snippet": "Evidence for multi-Li+ clustering in lithium-ion battery electrolytes - Nature",
+      "publisher": "Nature",
+      "url": "https://fixture.example/battery_science",
+      "source_regions": [
+        "Global"
+      ],
+      "registered": true,
+      "quality": 10.0,
+      "published": "2026-10-14T22:55:28+00:00",
+      "discovery": false,
+      "before": {
+        "region": "Global",
+        "reason": "",
+        "direct": [
+          "net zero transition",
+          "energy transition"
+        ],
+        "concrete": false
+      }
+    },
+    {
+      "key": "crypto",
+      "title": "Standard Chartered licensed to launch crypto trading in UAE - Arabian Gulf Business Insight | AGBI",
+      "snippet": "Standard Chartered licensed to launch crypto trading in UAE - Arabian Gulf Business Insight | AGBI",
+      "publisher": "AGBI",
+      "url": "https://fixture.example/crypto",
+      "source_regions": [
+        "GCC",
+        "MENA"
+      ],
+      "registered": true,
+      "quality": 10.0,
+      "published": "2026-10-14T04:00:00+00:00",
+      "discovery": false,
+      "before": {
+        "region": "UAE",
+        "reason": "",
+        "direct": [],
+        "concrete": false
+      }
+    },
+    {
+      "key": "flights",
+      "title": "Flying from the UAE this weekend? Saudi flights face major disruption as cancellations mount - Gulf News",
+      "snippet": "Flying from the UAE this weekend? Saudi flights face major disruption as cancellations mount - Gulf News",
+      "publisher": "Gulf News",
+      "url": "https://fixture.example/flights",
+      "source_regions": [
+        "GCC",
+        "UAE"
+      ],
+      "registered": true,
+      "quality": 6.0,
+      "published": "2026-10-16T06:11:10+00:00",
+      "discovery": false,
+      "before": {
+        "region": "UAE",
+        "reason": "",
+        "direct": [],
+        "concrete": false
+      }
+    },
+    {
+      "key": "commission",
+      "title": "Saudi Arabia Wins Two International Commission on Irrigation and Drainage Awards in France - وكالة الأنباء السعودية",
+      "snippet": "Saudi Arabia Wins Two International Commission on Irrigation and Drainage Awards in France - وكالة الأنباء السعودية",
+      "publisher": "Saudi Press Agency",
+      "url": "https://fixture.example/commission",
+      "source_regions": [
+        "KSA"
+      ],
+      "registered": true,
+      "quality": 7.0,
+      "published": "2026-10-15T12:30:23+00:00",
+      "discovery": false,
+      "before": {
+        "region": "KSA",
+        "reason": "",
+        "direct": [
+          "water security"
+        ],
+        "concrete": true
+      }
+    },
+    {
+      "key": "veal",
+      "title": "Egypt's minister approves new funding for National Veal Project - Zawya",
+      "snippet": "Egypt's minister approves new funding for National Veal Project - Zawya",
+      "publisher": "ZAWYA",
+      "url": "https://fixture.example/veal",
+      "source_regions": [
+        "GCC",
+        "MENA"
+      ],
+      "registered": true,
+      "quality": 6.0,
+      "published": "2026-10-13T05:04:00+00:00",
+      "discovery": false,
+      "before": {
+        "region": "Egypt",
+        "reason": "no company-topic match",
+        "direct": [],
+        "concrete": false
+      }
+    },
+    {
+      "key": "gerd",
+      "title": "GERD Explained 2026: Ethiopia, Egypt and the Nile Dam Dispute",
+      "snippet": "GERD Explained 2026: Ethiopia, Egypt and the Nile Dam Dispute",
+      "publisher": "riotimesonline.com",
+      "url": "https://fixture.example/gerd",
+      "source_regions": [
+        "Egypt"
+      ],
+      "registered": false,
+      "quality": null,
+      "published": "2026-10-16T08:13:08",
+      "discovery": true,
+      "before": {
+        "region": "Egypt",
+        "reason": "no company-topic match",
+        "direct": [],
+        "concrete": false
+      }
+    },
+    {
+      "key": "harvests",
+      "title": "Hormuz shipping disruption is starting to hit harvests, UN agency says - Arab News",
+      "snippet": "Hormuz shipping disruption is starting to hit harvests, UN agency says - Arab News",
+      "publisher": "Arab News",
+      "url": "https://fixture.example/harvests",
+      "source_regions": [
+        "KSA",
+        "MENA"
+      ],
+      "registered": true,
+      "quality": 8.0,
+      "published": "2026-10-15T21:57:28+00:00",
+      "discovery": false,
+      "before": {
+        "region": "KSA",
+        "reason": "",
+        "direct": [],
+        "concrete": false
+      }
+    },
+    {
+      "key": "iraq",
+      "title": "Iraq in talks with Saudi’s Acwa to increase solar capacity - Arabian Gulf Business Insight | AGBI",
+      "snippet": "Iraq in talks with Saudi’s Acwa to increase solar capacity - Arabian Gulf Business Insight | AGBI",
+      "publisher": "AGBI",
+      "url": "https://fixture.example/iraq",
+      "source_regions": [
+        "GCC",
+        "MENA"
+      ],
+      "registered": true,
+      "quality": 10.0,
+      "published": "2026-10-13T13:42:00+00:00",
+      "discovery": false,
+      "before": {
+        "region": "KSA",
+        "reason": "",
+        "direct": [
+          "net zero transition",
+          "energy transition"
+        ],
+        "concrete": true
+      }
+    },
+    {
+      "key": "libya",
+      "title": "Flooded streets, damage in Libya as heavy rains paralyze capital - Arab News",
+      "snippet": "Flooded streets, damage in Libya as heavy rains paralyze capital - Arab News",
+      "publisher": "Arab News",
+      "url": "https://fixture.example/libya",
+      "source_regions": [
+        "KSA",
+        "MENA"
+      ],
+      "registered": true,
+      "quality": 8.0,
+      "published": "2026-10-13T21:21:02+00:00",
+      "discovery": false,
+      "before": {
+        "region": "KSA",
+        "reason": "",
+        "direct": [
+          "resilience"
+        ],
+        "concrete": false
+      }
+    },
+    {
+      "key": "self_newsletter",
+      "title": "Soma Mater Newsletter - 12.10.2026 | Proof in the Metrics",
+      "snippet": "Water security and renewable energy developments.",
+      "publisher": "somamater.com",
+      "url": "https://somamater.com/self_newsletter",
+      "source_regions": [
+        "Egypt"
+      ],
+      "registered": false,
+      "quality": null,
+      "published": "2026-10-12T11:43:47",
+      "discovery": true,
+      "before": {
+        "region": "Egypt",
+        "reason": "",
+        "direct": [
+          "water security",
+          "net zero transition",
+          "energy transition"
+        ],
+        "concrete": false
+      },
+      "snippet_is_synthetic": true
+    },
+    {
+      "key": "qatar",
+      "title": "Qatar’s renewable energy share set to more than double by 2035 - Fast Company Middle East",
+      "snippet": "Qatar’s renewable energy share set to more than double by 2035 - Fast Company Middle East",
+      "publisher": "Fast Company Middle East",
+      "url": "https://fixture.example/qatar",
+      "source_regions": [
+        "GCC",
+        "MENA"
+      ],
+      "registered": true,
+      "quality": 5.0,
+      "published": "2026-10-13T10:14:28+00:00",
+      "discovery": false,
+      "before": {
+        "region": null,
+        "reason": "no exact target region",
+        "direct": [
+          "net zero transition",
+          "energy transition"
+        ],
+        "concrete": false
+      }
+    }
+  ]
+}

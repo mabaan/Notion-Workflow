@@ -42,7 +42,7 @@ class Settings:
     notion_newsletters_database_id: str = ""
     notion_social_media_database_id: str = ""
     llm_provider: str = "openai"
-    llm_model: str = "gpt-4.1-mini"
+    llm_model: str = "gpt-6-luna"
     openai_api_key: str = ""
     unsplash_access_key: str = ""
     brave_search_api_key: str = ""
@@ -95,6 +95,12 @@ class Settings:
         """Return the local dedupe store path."""
 
         return self.local_state_path / "seen_articles.json"
+
+    @property
+    def candidate_audit_directory(self) -> Path:
+        """Diagnostics are separate from ingestion state, including in dry runs."""
+
+        return self.local_state_path.parent / ".preview" / "ingestion_audits"
 
     @property
     def article_assets_path(self) -> Path:
@@ -216,7 +222,7 @@ def load_settings() -> Settings:
             "NOTION_SOCIAL_MEDIA_DATABASE_ID", ""
         ),
         llm_provider=os.getenv("LLM_PROVIDER", "openai"),
-        llm_model=os.getenv("LLM_MODEL", "gpt-4.1-mini"),
+        llm_model=os.getenv("LLM_MODEL", "gpt-6-luna"),
         openai_api_key=os.getenv("OPENAI_API_KEY", ""),
         unsplash_access_key=_env_first(
             "UNSPLASH_ACCESS_KEY",

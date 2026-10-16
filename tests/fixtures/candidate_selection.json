@@ -1,0 +1,19 @@
+{
+  "now": "2026-10-15T22:00:00+00:00",
+  "regressions": [
+    {"key": "istanbul", "title": "Heavy rain and flooding in Istanbul forces closure of schools - Arab News", "snippet": "Heavy rain and flooding in Istanbul forces closure of schools Arab News", "publisher": "Arab News", "regions": ["KSA", "MENA"], "quality": 8, "published": "2026-10-14T20:48:41+00:00"},
+    {"key": "hormuz", "title": "Failure to activate Hormuz fertilizer plan could trigger food crisis, UN official says - Arab News", "snippet": "Fertilizer supply disruption threatens global food security.", "publisher": "Arab News", "regions": ["KSA", "MENA"], "quality": 8, "published": "2026-10-14T15:32:40+00:00"},
+    {"key": "bahrain", "title": "Bahraini fund to invest in power grids across US and Europe - Arabian Gulf Business Insight | AGBI", "snippet": "Bahraini fund to invest in power grids across US and Europe", "publisher": "AGBI", "regions": ["GCC", "MENA"], "quality": 10, "published": "2026-10-15T13:18:17+00:00"},
+    {"key": "desalination", "title": "UAE approves desalination plant with 500 million cubic metres annual capacity", "snippet": "An approved desalination project adds water treatment capacity.", "publisher": "Water Publisher", "regions": ["UAE"], "quality": 10, "published": "2026-10-14T12:00:00+00:00"},
+    {"key": "routine", "title": "UAE water company issues routine operational announcement", "snippet": "The water company issued a routine announcement.", "publisher": "Routine Publisher", "regions": ["UAE"], "quality": 2, "published": "2026-10-15T21:00:00+00:00"}
+  ],
+  "comparison": {
+    "description": "Synthetic controlled ordering/allocation comparison; scores are fixed offline stubs, not factual or LLM judgments.",
+    "routine_count": 8,
+    "rss": [
+      {"key": "strong-desalination", "title": "Global desalination plant capacity agreement approved", "snippet": "A desalination project expands water treatment capacity.", "age_hours": 24, "mock_relevance": 5},
+      {"key": "strong-battery", "title": "Global battery storage facility investment approved", "snippet": "The battery storage project adds manufacturing capacity.", "age_hours": 25, "mock_relevance": 5}
+    ],
+    "discovery": {"key": "discovered-fertilizer", "title": "Global fertilizer supply agreement advances food security", "snippet": "The agreement expands fertilizer supply and food security.", "age_hours": 48, "mock_relevance": 5}
+  }
+}

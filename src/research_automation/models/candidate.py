@@ -20,6 +20,18 @@ class CandidateResult:
     matched_topics: list[str] = field(default_factory=list)
     direct_mission_signals: list[str] = field(default_factory=list)
     selection_reason: str = ""
+    candidate_id: str = ""
+    region_assignment_basis: str = ""
+    contextual_signals: list[str] = field(default_factory=list)
+    mission_specificity: int = 0
+    concrete_development: bool = False
+    metadata_rank: int | None = None
+    allocation_rank: int | None = None
+    phase: str = "rss"
+    shortlisted: bool = False
+    enrichment_attempted: bool = False
+    source_region_hints: list[str] = field(default_factory=list)
+    required_relevance_score: int | None = None
 
     @property
     def eligible(self) -> bool:

@@ -32,11 +32,15 @@ Required `.env` values include the five Notion database IDs, Notion and OpenAI c
 2. Due `Publisher` rows are selected from `Check Frequency`; `Discovery Provider` rows are demand-triggered only.
 3. Due feeds are fetched concurrently with bounded HTTP retries and per-source health outcomes.
 4. URLs are normalized, deduplicated, assigned to exact quota regions, and filtered for freshness, topic, and geography.
-5. Up to six candidates per deficient region are shortlisted initially and at most eight are enriched per execution.
-6. The final queue score is 90% LLM relevance and 10% publisher `Editorial Quality`.
+5. Up to six candidates per deficient region are shortlisted initially and at most eight are attempted per execution. Direct mission signals precede contextual matches; within each tier, mission specificity, publisher quality and concrete developments precede recency and snippet length, while retaining publisher diversity. Expansion reserves up to two available attempts for metadata-eligible discovery results and returns unused capacity to RSS.
+6. The final queue score is 70% LLM relevance, 20% editorial significance and 10% publisher `Editorial Quality`. Registered publishers require relevance 4; unregistered publishers require 5.
 7. Selection enforces weekly targets of Global 3, UAE 4, KSA 3, and Egypt 2, with a hard two-per-publisher weekly cap and same-event suppression.
 8. Only final winners are written as complete Article Queue pages. The weekly target and per-execution ceiling are both 12 pages.
-9. Dry runs load current weekly state and perform no Notion or local-state writes.
+9. Dry runs load current weekly state and perform no Notion or ingestion-state writes. Both live runs and dry runs write metadata-only candidate diagnostics outside ingestion state.
 10. Human editors approve stories in Notion, after which the unchanged weekly draft flow uses approved articles.
 
 `--no-enrich` is diagnostic-only and requires `--dry-run`; it can never create live queue pages.
+
+Candidate audits are saved as timestamped Markdown and JSON files in ignored `.preview/ingestion_audits/` (beside the configured local-state directory). The console prints the Markdown path. Each phase observation records assignment and ordering reasons, origin and publisher registration, signals, shortlist/attempt status and available scores. Audits distinguish unique original-URL identities from reconsiderations across phases and canonical aliases; stage counts are explicitly per phase. They contain no article bodies, API credentials, snippets or raw provider errors. Audit output is diagnostic only and is never used for deduplication or scheduling. Audit write failures are logged without stopping ingestion.
+
+Pre-LLM duplicates are skipped and backfilled without consuming the eight-attempt ceiling; failed LLM calls still count. Audits now distinguish decision stages and include existing retrieval status and significance rationale. The [routing policy](docs/candidate_selection_routing.md) documents project location versus company nationality, other-MENA coverage in the existing Global quota, discovery query hints, and narrow topic/source exclusions.

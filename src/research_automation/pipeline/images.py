@@ -255,9 +255,7 @@ def markdown_image_match(line: str) -> tuple[str, str] | None:
 def _illustrative_image_caption(article: DraftArticle) -> str:
     provider = article.image_provider.strip().title()
     source = f" ({provider})" if provider else ""
-    return (
-        f"Illustrative image{source}; not verified as depicting the reported project"
-    )
+    return f"Illustrative image{source}"
 
 
 def _story_image_insert_index(lines: list[str], heading_index: int) -> int:

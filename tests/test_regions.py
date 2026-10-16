@@ -175,7 +175,7 @@ def test_direct_mission_stories_fill_regional_shortlists_before_context() -> Non
             "Egypt",
         ),
         (
-            "Iraq in talks with Saudi ACWA to increase solar capacity",
+            "Saudi Arabia in talks with ACWA to increase solar capacity",
             "The project would add utility-scale renewable generation.",
             "KSA",
         ),

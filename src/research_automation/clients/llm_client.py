@@ -152,7 +152,7 @@ class LlmClient:
         response = self.client.chat.completions.create(
             model=self.model,
             response_format={"type": "json_object"},
-            temperature=0.2,
+            **self._generation_parameters(temperature=0.2),
             messages=[
                 {
                     "role": "system",
@@ -178,7 +178,7 @@ class LlmClient:
 
         response = self.client.chat.completions.create(
             model=self.model,
-            temperature=0.4,
+            **self._generation_parameters(temperature=0.4),
             messages=[
                 {
                     "role": "system",
@@ -191,6 +191,13 @@ class LlmClient:
         if not content:
             raise ValueError("OpenAI returned an empty response.")
         return content
+
+    def _generation_parameters(self, *, temperature: float) -> dict[str, Any]:
+        """Use Luna reasoning without incompatible sampling parameters."""
+
+        if self.model == "gpt-6-luna":
+            return {"reasoning_effort": "medium"}
+        return {"temperature": temperature}
 
     @staticmethod
     def _string_list(value: Any) -> list[str]:

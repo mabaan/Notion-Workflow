@@ -1,0 +1,1697 @@
+{
+  "page": {
+    "object": "page",
+    "id": "3fbc995b-3347-81ca-bc44-c9324e4218d1",
+    "created_time": "2026-10-16T16:24:00.000Z",
+    "last_edited_time": "2026-10-16T16:24:00.000Z",
+    "created_by": {
+      "object": "user",
+      "id": "38ac995b-3347-81e6-9e07-0027f67f6ed0"
+    },
+    "last_edited_by": {
+      "object": "user",
+      "id": "38ac995b-3347-81e6-9e07-0027f67f6ed0"
+    },
+    "cover": null,
+    "icon": null,
+    "parent": {
+      "type": "database_id",
+      "database_id": "24533fd8-9177-425f-b167-e1bcb549ef1a"
+    },
+    "in_trash": false,
+    "is_archived": false,
+    "is_locked": false,
+    "properties": {
+      "Code #": {
+        "id": "AyIz",
+        "type": "rich_text",
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "NL111",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "NL111",
+            "href": null
+          }
+        ]
+      },
+      "Dataset Source": {
+        "id": "E%3Eot",
+        "type": "relation",
+        "relation": [
+          {
+            "id": "3f9c995b-3347-8179-b740-f3a9a239a875"
+          }
+        ],
+        "has_more": false
+      },
+      "Status": {
+        "id": "M%5Evg",
+        "type": "status",
+        "status": {
+          "id": "508f1616-fedd-4ecf-8286-1a4dd9424d93",
+          "name": "In progress",
+          "color": "blue"
+        }
+      },
+      "Date To Be Published": {
+        "id": "i_Q_",
+        "type": "date",
+        "date": {
+          "start": "2026-10-16",
+          "end": null,
+          "time_zone": null
+        }
+      },
+      "Social Media Script": {
+        "id": "jnvC",
+        "type": "relation",
+        "relation": [
+          {
+            "id": "3f9c995b-3347-8104-b3b9-d6a7adbba082"
+          }
+        ],
+        "has_more": false
+      },
+      "Week": {
+        "id": "title",
+        "type": "title",
+        "title": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Newsletter [111th Edition]",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Newsletter [111th Edition]",
+            "href": null
+          }
+        ]
+      }
+    },
+    "url": "https://app.notion.com/p/Newsletter-111th-Edition-3fbc995b334781cabc44c9324e4218d1",
+    "public_url": null,
+    "archived": false
+  },
+  "blocks": [
+    {
+      "object": "block",
+      "id": "3fbc995b-3347-81ff-abaf-f49440678236",
+      "parent": {
+        "type": "page_id",
+        "page_id": "3fbc995b-3347-81ca-bc44-c9324e4218d1"
+      },
+      "created_time": "2026-10-16T16:24:00.000Z",
+      "last_edited_time": "2026-10-16T16:24:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "38ac995b-3347-81e6-9e07-0027f67f6ed0"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "38ac995b-3347-81e6-9e07-0027f67f6ed0"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "[AUTOMATION:newsletter_draft:start]",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "[AUTOMATION:newsletter_draft:start]",
+            "href": null
+          }
+        ],
+        "icon": null,
+        "color": "default"
+      },
+      "archived": false
+    },
+    {
+      "object": "block",
+      "id": "3fbc995b-3347-8195-bd5c-c8fce8d72f56",
+      "parent": {
+        "type": "page_id",
+        "page_id": "3fbc995b-3347-81ca-bc44-c9324e4218d1"
+      },
+      "created_time": "2026-10-16T16:24:00.000Z",
+      "last_edited_time": "2026-10-16T16:24:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "38ac995b-3347-81e6-9e07-0027f67f6ed0"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "38ac995b-3347-81e6-9e07-0027f67f6ed0"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Welcome to this week’s SOMA MATER, where regional resource management and strategic resilience take center stage. As Ethiopia’s Grand Renaissance Dam reshapes Nile basin geopolitics, the UAE recalibrates its food security ambitions, and a new wave of youth engagement aims to amplify water awareness ahead of a pivotal UN conference in Abu Dhabi, the stakes for sustainable development and cooperation in MENA have never been clearer.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Welcome to this week’s SOMA MATER, where regional resource management and strategic resilience take center stage. As Ethiopia’s Grand Renaissance Dam reshapes Nile basin geopolitics, the UAE recalibrates its food security ambitions, and a new wave of youth engagement aims to amplify water awareness ahead of a pivotal UN conference in Abu Dhabi, the stakes for sustainable development and cooperation in MENA have never been clearer.",
+            "href": null
+          }
+        ],
+        "icon": null,
+        "color": "default"
+      },
+      "archived": false
+    },
+    {
+      "object": "block",
+      "id": "3fbc995b-3347-810b-bea7-d2cb8968dbea",
+      "parent": {
+        "type": "page_id",
+        "page_id": "3fbc995b-3347-81ca-bc44-c9324e4218d1"
+      },
+      "created_time": "2026-10-16T16:24:00.000Z",
+      "last_edited_time": "2026-10-16T16:24:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "38ac995b-3347-81e6-9e07-0027f67f6ed0"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "38ac995b-3347-81e6-9e07-0027f67f6ed0"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "How will stalled negotiations over the GERD affect Nile water security and regional stability?",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "How will stalled negotiations over the GERD affect Nile water security and regional stability?",
+            "href": null
+          }
+        ],
+        "icon": null,
+        "color": "default"
+      },
+      "archived": false
+    },
+    {
+      "object": "block",
+      "id": "3fbc995b-3347-8119-9495-d37c70949341",
+      "parent": {
+        "type": "page_id",
+        "page_id": "3fbc995b-3347-81ca-bc44-c9324e4218d1"
+      },
+      "created_time": "2026-10-16T16:24:00.000Z",
+      "last_edited_time": "2026-10-16T16:24:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "38ac995b-3347-81e6-9e07-0027f67f6ed0"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "38ac995b-3347-81e6-9e07-0027f67f6ed0"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Can the UAE’s updated food strategy realistically shift the balance toward local production?",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Can the UAE’s updated food strategy realistically shift the balance toward local production?",
+            "href": null
+          }
+        ],
+        "icon": null,
+        "color": "default"
+      },
+      "archived": false
+    },
+    {
+      "object": "block",
+      "id": "3fbc995b-3347-8194-acc8-eecdb7d81770",
+      "parent": {
+        "type": "page_id",
+        "page_id": "3fbc995b-3347-81ca-bc44-c9324e4218d1"
+      },
+      "created_time": "2026-10-16T16:24:00.000Z",
+      "last_edited_time": "2026-10-16T16:24:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "38ac995b-3347-81e6-9e07-0027f67f6ed0"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "38ac995b-3347-81e6-9e07-0027f67f6ed0"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "What role will youth-driven water awareness play in shaping regional climate resilience narratives?",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "What role will youth-driven water awareness play in shaping regional climate resilience narratives?",
+            "href": null
+          }
+        ],
+        "icon": null,
+        "color": "default"
+      },
+      "archived": false
+    },
+    {
+      "object": "block",
+      "id": "3fbc995b-3347-8155-824f-c0f616d8e74b",
+      "parent": {
+        "type": "page_id",
+        "page_id": "3fbc995b-3347-81ca-bc44-c9324e4218d1"
+      },
+      "created_time": "2026-10-16T16:24:00.000Z",
+      "last_edited_time": "2026-10-16T16:24:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "38ac995b-3347-81e6-9e07-0027f67f6ed0"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "38ac995b-3347-81e6-9e07-0027f67f6ed0"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Let’s dive in.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Let’s dive in.",
+            "href": null
+          }
+        ],
+        "icon": null,
+        "color": "default"
+      },
+      "archived": false
+    },
+    {
+      "object": "block",
+      "id": "3fbc995b-3347-8185-8e7d-cef00b0a854e",
+      "parent": {
+        "type": "page_id",
+        "page_id": "3fbc995b-3347-81ca-bc44-c9324e4218d1"
+      },
+      "created_time": "2026-10-16T16:24:00.000Z",
+      "last_edited_time": "2026-10-16T16:24:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "38ac995b-3347-81e6-9e07-0027f67f6ed0"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "38ac995b-3347-81e6-9e07-0027f67f6ed0"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "heading_2",
+      "heading_2": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "GERD at a Crossroads: Ethiopia’s Dam and the Nile Dispute Freeze",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "GERD at a Crossroads: Ethiopia’s Dam and the Nile Dispute Freeze",
+            "href": null
+          }
+        ],
+        "is_toggleable": false,
+        "color": "default"
+      },
+      "archived": false
+    },
+    {
+      "object": "block",
+      "id": "3fbc995b-3347-8160-8143-c1159f1fede9",
+      "parent": {
+        "type": "page_id",
+        "page_id": "3fbc995b-3347-81ca-bc44-c9324e4218d1"
+      },
+      "created_time": "2026-10-16T16:24:00.000Z",
+      "last_edited_time": "2026-10-16T16:24:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "38ac995b-3347-81e6-9e07-0027f67f6ed0"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "38ac995b-3347-81e6-9e07-0027f67f6ed0"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "#WaterSecurity #RegionalGeopolitics",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "#WaterSecurity #RegionalGeopolitics",
+            "href": null
+          }
+        ],
+        "icon": null,
+        "color": "default"
+      },
+      "archived": false
+    },
+    {
+      "object": "block",
+      "id": "3fbc995b-3347-81ad-9d4b-fa9c70a830c6",
+      "parent": {
+        "type": "page_id",
+        "page_id": "3fbc995b-3347-81ca-bc44-c9324e4218d1"
+      },
+      "created_time": "2026-10-16T16:24:00.000Z",
+      "last_edited_time": "2026-10-16T16:24:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "38ac995b-3347-81e6-9e07-0027f67f6ed0"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "38ac995b-3347-81e6-9e07-0027f67f6ed0"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "image",
+      "image": {
+        "caption": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Illustrative image (Unsplash); not verified as depicting the reported project",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Illustrative image (Unsplash); not verified as depicting the reported project",
+            "href": null
+          }
+        ],
+        "type": "external",
+        "external": {
+          "url": "https://images.unsplash.com/photo-1509390874189-d75fd22f19f7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5OTEzNjR8MHwxfHNlYXJjaHwxfHxXYXRlciUyMFNlY3VyaXR5JTIwSHlkcm9wb3dlcnxlbnwxfDB8fHwxNzkyMTY3ODc1fDA&ixlib=rb-4.1.0&q=80&w=1080"
+        }
+      },
+      "archived": false
+    },
+    {
+      "object": "block",
+      "id": "3fbc995b-3347-81ba-9932-d68fd08e1dcc",
+      "parent": {
+        "type": "page_id",
+        "page_id": "3fbc995b-3347-81ca-bc44-c9324e4218d1"
+      },
+      "created_time": "2026-10-16T16:24:00.000Z",
+      "last_edited_time": "2026-10-16T16:24:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "38ac995b-3347-81e6-9e07-0027f67f6ed0"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "38ac995b-3347-81e6-9e07-0027f67f6ed0"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "The Grand Ethiopian Renaissance Dam (GERD), Africa’s largest hydropower project with a 5,150 MW capacity, was inaugurated in September 2025 by Ethiopian Prime Minister Abiy Ahmed. Despite Ethiopia’s independent funding of the dam without international loans, tensions remain high as Egypt refuses to recognize the dam’s legitimacy and has suspended negotiations since December 2023. Egypt demands a binding agreement on the dam’s filling and operation, while Sudan, downstream, reports damage to its own water infrastructure amid ongoing internal conflict.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "The Grand Ethiopian Renaissance Dam (GERD), Africa’s largest hydropower project with a 5,150 MW capacity, was inaugurated in September 2025 by Ethiopian Prime Minister Abiy Ahmed. Despite Ethiopia’s independent funding of the dam without international loans, tensions remain high as Egypt refuses to recognize the dam’s legitimacy and has suspended negotiations since December 2023. Egypt demands a binding agreement on the dam’s filling and operation, while Sudan, downstream, reports damage to its own water infrastructure amid ongoing internal conflict.",
+            "href": null
+          }
+        ],
+        "icon": null,
+        "color": "default"
+      },
+      "archived": false
+    },
+    {
+      "object": "block",
+      "id": "3fbc995b-3347-81b8-b6eb-dc7b45f6980a",
+      "parent": {
+        "type": "page_id",
+        "page_id": "3fbc995b-3347-81ca-bc44-c9324e4218d1"
+      },
+      "created_time": "2026-10-16T16:24:00.000Z",
+      "last_edited_time": "2026-10-16T16:24:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "38ac995b-3347-81e6-9e07-0027f67f6ed0"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "38ac995b-3347-81e6-9e07-0027f67f6ed0"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "This standoff has concrete implications for water management and energy transition in the Nile basin. Ethiopia’s insistence on continuing development of Nile tributaries without downstream approval, provided no significant harm occurs, challenges the existing 1959 Nile water agreement, which Ethiopia rejects as a colonial-era relic excluding its interests. The US has offered mediation, though claims of US financing by former President Trump have been denied by Ethiopia, adding complexity to diplomatic efforts.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "This standoff has concrete implications for water management and energy transition in the Nile basin. Ethiopia’s insistence on continuing development of Nile tributaries without downstream approval, provided no significant harm occurs, challenges the existing 1959 Nile water agreement, which Ethiopia rejects as a colonial-era relic excluding its interests. The US has offered mediation, though claims of US financing by former President Trump have been denied by Ethiopia, adding complexity to diplomatic efforts.",
+            "href": null
+          }
+        ],
+        "icon": null,
+        "color": "default"
+      },
+      "archived": false
+    },
+    {
+      "object": "block",
+      "id": "3fbc995b-3347-81c4-a393-f9744bd2dab2",
+      "parent": {
+        "type": "page_id",
+        "page_id": "3fbc995b-3347-81ca-bc44-c9324e4218d1"
+      },
+      "created_time": "2026-10-16T16:24:00.000Z",
+      "last_edited_time": "2026-10-16T16:24:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "38ac995b-3347-81e6-9e07-0027f67f6ed0"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "38ac995b-3347-81e6-9e07-0027f67f6ed0"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "The dispute underscores a broader regional challenge: balancing Ethiopia’s hydropower ambitions with Egypt and Sudan’s water security needs. Sudan’s internal instability further complicates cooperative frameworks, risking fragmentation in transboundary water governance critical to MENA’s climate adaptation and geopolitical stability.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "The dispute underscores a broader regional challenge: balancing Ethiopia’s hydropower ambitions with Egypt and Sudan’s water security needs. Sudan’s internal instability further complicates cooperative frameworks, risking fragmentation in transboundary water governance critical to MENA’s climate adaptation and geopolitical stability.",
+            "href": null
+          }
+        ],
+        "icon": null,
+        "color": "default"
+      },
+      "archived": false
+    },
+    {
+      "object": "block",
+      "id": "3fbc995b-3347-814b-95a2-de36ccb2f0d3",
+      "parent": {
+        "type": "page_id",
+        "page_id": "3fbc995b-3347-81ca-bc44-c9324e4218d1"
+      },
+      "created_time": "2026-10-16T16:24:00.000Z",
+      "last_edited_time": "2026-10-16T16:24:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "38ac995b-3347-81e6-9e07-0027f67f6ed0"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "38ac995b-3347-81e6-9e07-0027f67f6ed0"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "SOMA’s Perspective: The GERD impasse highlights a fundamental trade-off between sovereign infrastructure development and downstream water rights under contested legal frameworks. External stakeholders should closely monitor whether renewed mediation can reconcile Ethiopia’s unilateral development plans with Egypt and Sudan’s demand for enforceable operational rules, as this will shape future investment risks and regional water diplomacy.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "SOMA’s Perspective: The GERD impasse highlights a fundamental trade-off between sovereign infrastructure development and downstream water rights under contested legal frameworks. External stakeholders should closely monitor whether renewed mediation can reconcile Ethiopia’s unilateral development plans with Egypt and Sudan’s demand for enforceable operational rules, as this will shape future investment risks and regional water diplomacy.",
+            "href": null
+          }
+        ],
+        "icon": null,
+        "color": "default"
+      },
+      "archived": false
+    },
+    {
+      "object": "block",
+      "id": "3fbc995b-3347-81ef-88ed-d57279c1ef13",
+      "parent": {
+        "type": "page_id",
+        "page_id": "3fbc995b-3347-81ca-bc44-c9324e4218d1"
+      },
+      "created_time": "2026-10-16T16:24:00.000Z",
+      "last_edited_time": "2026-10-16T16:24:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "38ac995b-3347-81e6-9e07-0027f67f6ed0"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "38ac995b-3347-81e6-9e07-0027f67f6ed0"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Sources:",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Sources:",
+            "href": null
+          }
+        ],
+        "icon": null,
+        "color": "default"
+      },
+      "archived": false
+    },
+    {
+      "object": "block",
+      "id": "3fbc995b-3347-810f-b284-e4147b4f3462",
+      "parent": {
+        "type": "page_id",
+        "page_id": "3fbc995b-3347-81ca-bc44-c9324e4218d1"
+      },
+      "created_time": "2026-10-16T16:24:00.000Z",
+      "last_edited_time": "2026-10-16T16:24:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "38ac995b-3347-81e6-9e07-0027f67f6ed0"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "38ac995b-3347-81e6-9e07-0027f67f6ed0"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "https://www.riotimesonline.com/gerd-nile-dam-dispute-explained-2026",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "https://www.riotimesonline.com/gerd-nile-dam-dispute-explained-2026",
+            "href": null
+          }
+        ],
+        "icon": null,
+        "color": "default"
+      },
+      "archived": false
+    },
+    {
+      "object": "block",
+      "id": "3fbc995b-3347-81e6-9424-ed08c2cfe8ef",
+      "parent": {
+        "type": "page_id",
+        "page_id": "3fbc995b-3347-81ca-bc44-c9324e4218d1"
+      },
+      "created_time": "2026-10-16T16:24:00.000Z",
+      "last_edited_time": "2026-10-16T16:24:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "38ac995b-3347-81e6-9e07-0027f67f6ed0"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "38ac995b-3347-81e6-9e07-0027f67f6ed0"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "heading_2",
+      "heading_2": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "UAE’s Food Security Strategy Update: Growing Half Locally",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "UAE’s Food Security Strategy Update: Growing Half Locally",
+            "href": null
+          }
+        ],
+        "is_toggleable": false,
+        "color": "default"
+      },
+      "archived": false
+    },
+    {
+      "object": "block",
+      "id": "3fbc995b-3347-814d-8a9c-cbed236ffb68",
+      "parent": {
+        "type": "page_id",
+        "page_id": "3fbc995b-3347-81ca-bc44-c9324e4218d1"
+      },
+      "created_time": "2026-10-16T16:24:00.000Z",
+      "last_edited_time": "2026-10-16T16:24:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "38ac995b-3347-81e6-9e07-0027f67f6ed0"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "38ac995b-3347-81e6-9e07-0027f67f6ed0"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "#FoodSecurity #Agriculture",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "#FoodSecurity #Agriculture",
+            "href": null
+          }
+        ],
+        "icon": null,
+        "color": "default"
+      },
+      "archived": false
+    },
+    {
+      "object": "block",
+      "id": "3fbc995b-3347-818a-8a72-ef206c90f1d5",
+      "parent": {
+        "type": "page_id",
+        "page_id": "3fbc995b-3347-81ca-bc44-c9324e4218d1"
+      },
+      "created_time": "2026-10-16T16:24:00.000Z",
+      "last_edited_time": "2026-10-16T16:24:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "38ac995b-3347-81e6-9e07-0027f67f6ed0"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "38ac995b-3347-81e6-9e07-0027f67f6ed0"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "image",
+      "image": {
+        "caption": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Illustrative image (Unsplash); not verified as depicting the reported project",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Illustrative image (Unsplash); not verified as depicting the reported project",
+            "href": null
+          }
+        ],
+        "type": "external",
+        "external": {
+          "url": "https://images.unsplash.com/photo-1560493676-04071c5f467b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5OTEzNjR8MHwxfHNlYXJjaHwxfHxmb29kJTIwc2VjdXJpdHklMjBhZ3JpY3VsdHVyZXxlbnwxfDB8fHwxNzkyMTY3ODc3fDA&ixlib=rb-4.1.0&q=80&w=1080"
+        }
+      },
+      "archived": false
+    },
+    {
+      "object": "block",
+      "id": "3fbc995b-3347-8107-8d93-e1aa7fa2dca0",
+      "parent": {
+        "type": "page_id",
+        "page_id": "3fbc995b-3347-81ca-bc44-c9324e4218d1"
+      },
+      "created_time": "2026-10-16T16:24:00.000Z",
+      "last_edited_time": "2026-10-16T16:24:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "38ac995b-3347-81e6-9e07-0027f67f6ed0"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "38ac995b-3347-81e6-9e07-0027f67f6ed0"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "The UAE is revising its National Food Security Strategy 2051 with the goal of producing half of its food crops locally. This strategic update reflects a shift toward enhancing domestic agricultural capacity to reduce reliance on imports and strengthen resilience against global supply disruptions.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "The UAE is revising its National Food Security Strategy 2051 with the goal of producing half of its food crops locally. This strategic update reflects a shift toward enhancing domestic agricultural capacity to reduce reliance on imports and strengthen resilience against global supply disruptions.",
+            "href": null
+          }
+        ],
+        "icon": null,
+        "color": "default"
+      },
+      "archived": false
+    },
+    {
+      "object": "block",
+      "id": "3fbc995b-3347-8107-81f5-c681ab20ae6b",
+      "parent": {
+        "type": "page_id",
+        "page_id": "3fbc995b-3347-81ca-bc44-c9324e4218d1"
+      },
+      "created_time": "2026-10-16T16:24:00.000Z",
+      "last_edited_time": "2026-10-16T16:24:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "38ac995b-3347-81e6-9e07-0027f67f6ed0"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "38ac995b-3347-81e6-9e07-0027f67f6ed0"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Though detailed implementation plans are not yet public, the updated strategy signals a significant policy commitment to local food production. Increasing local crop yields would require investment in technology, water-efficient farming, and supply chain infrastructure, aligning with the UAE’s broader sustainability and diversification goals.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Though detailed implementation plans are not yet public, the updated strategy signals a significant policy commitment to local food production. Increasing local crop yields would require investment in technology, water-efficient farming, and supply chain infrastructure, aligning with the UAE’s broader sustainability and diversification goals.",
+            "href": null
+          }
+        ],
+        "icon": null,
+        "color": "default"
+      },
+      "archived": false
+    },
+    {
+      "object": "block",
+      "id": "3fbc995b-3347-81c8-9755-eaf6ad68be10",
+      "parent": {
+        "type": "page_id",
+        "page_id": "3fbc995b-3347-81ca-bc44-c9324e4218d1"
+      },
+      "created_time": "2026-10-16T16:24:00.000Z",
+      "last_edited_time": "2026-10-16T16:24:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "38ac995b-3347-81e6-9e07-0027f67f6ed0"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "38ac995b-3347-81e6-9e07-0027f67f6ed0"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "This move comes amid heightened regional concerns about food security under climate stress and geopolitical uncertainties. By focusing on local production, the UAE aims to buffer its food system against external shocks, a priority for Gulf states with limited arable land and water resources.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "This move comes amid heightened regional concerns about food security under climate stress and geopolitical uncertainties. By focusing on local production, the UAE aims to buffer its food system against external shocks, a priority for Gulf states with limited arable land and water resources.",
+            "href": null
+          }
+        ],
+        "icon": null,
+        "color": "default"
+      },
+      "archived": false
+    },
+    {
+      "object": "block",
+      "id": "3fbc995b-3347-8121-8c4e-d8cb46e08651",
+      "parent": {
+        "type": "page_id",
+        "page_id": "3fbc995b-3347-81ca-bc44-c9324e4218d1"
+      },
+      "created_time": "2026-10-16T16:24:00.000Z",
+      "last_edited_time": "2026-10-16T16:24:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "38ac995b-3347-81e6-9e07-0027f67f6ed0"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "38ac995b-3347-81e6-9e07-0027f67f6ed0"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "SOMA’s Perspective: The UAE’s ambitious target to grow half its crops domestically raises questions about resource allocation, particularly water use efficiency and technology deployment. Observers should evaluate how this strategy balances intensification with sustainability constraints and whether it prompts shifts in regional agricultural trade dynamics.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "SOMA’s Perspective: The UAE’s ambitious target to grow half its crops domestically raises questions about resource allocation, particularly water use efficiency and technology deployment. Observers should evaluate how this strategy balances intensification with sustainability constraints and whether it prompts shifts in regional agricultural trade dynamics.",
+            "href": null
+          }
+        ],
+        "icon": null,
+        "color": "default"
+      },
+      "archived": false
+    },
+    {
+      "object": "block",
+      "id": "3fbc995b-3347-81af-ae2a-cb45e0a26561",
+      "parent": {
+        "type": "page_id",
+        "page_id": "3fbc995b-3347-81ca-bc44-c9324e4218d1"
+      },
+      "created_time": "2026-10-16T16:24:00.000Z",
+      "last_edited_time": "2026-10-16T16:24:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "38ac995b-3347-81e6-9e07-0027f67f6ed0"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "38ac995b-3347-81e6-9e07-0027f67f6ed0"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Sources:",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Sources:",
+            "href": null
+          }
+        ],
+        "icon": null,
+        "color": "default"
+      },
+      "archived": false
+    },
+    {
+      "object": "block",
+      "id": "3fbc995b-3347-8122-b59c-ffed3961b94a",
+      "parent": {
+        "type": "page_id",
+        "page_id": "3fbc995b-3347-81ca-bc44-c9324e4218d1"
+      },
+      "created_time": "2026-10-16T16:24:00.000Z",
+      "last_edited_time": "2026-10-16T16:24:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "38ac995b-3347-81e6-9e07-0027f67f6ed0"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "38ac995b-3347-81e6-9e07-0027f67f6ed0"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "https://agbi.com/agriculture/2026/10/uae-to-grow-more-food-locally-under-strategy-update",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "https://agbi.com/agriculture/2026/10/uae-to-grow-more-food-locally-under-strategy-update",
+            "href": null
+          }
+        ],
+        "icon": null,
+        "color": "default"
+      },
+      "archived": false
+    },
+    {
+      "object": "block",
+      "id": "3fbc995b-3347-8170-b5e6-f69881afc192",
+      "parent": {
+        "type": "page_id",
+        "page_id": "3fbc995b-3347-81ca-bc44-c9324e4218d1"
+      },
+      "created_time": "2026-10-16T16:24:00.000Z",
+      "last_edited_time": "2026-10-16T16:24:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "38ac995b-3347-81e6-9e07-0027f67f6ed0"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "38ac995b-3347-81e6-9e07-0027f67f6ed0"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "heading_2",
+      "heading_2": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Youth Training in Water Awareness: Setting the Stage for Abu Dhabi’s UN Conference",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Youth Training in Water Awareness: Setting the Stage for Abu Dhabi’s UN Conference",
+            "href": null
+          }
+        ],
+        "is_toggleable": false,
+        "color": "default"
+      },
+      "archived": false
+    },
+    {
+      "object": "block",
+      "id": "3fbc995b-3347-81c0-802b-cefc8b68f997",
+      "parent": {
+        "type": "page_id",
+        "page_id": "3fbc995b-3347-81ca-bc44-c9324e4218d1"
+      },
+      "created_time": "2026-10-16T16:24:00.000Z",
+      "last_edited_time": "2026-10-16T16:24:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "38ac995b-3347-81e6-9e07-0027f67f6ed0"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "38ac995b-3347-81e6-9e07-0027f67f6ed0"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "#WaterSecurity #Climate",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "#WaterSecurity #Climate",
+            "href": null
+          }
+        ],
+        "icon": null,
+        "color": "default"
+      },
+      "archived": false
+    },
+    {
+      "object": "block",
+      "id": "3fbc995b-3347-815e-8618-d3d6791587ef",
+      "parent": {
+        "type": "page_id",
+        "page_id": "3fbc995b-3347-81ca-bc44-c9324e4218d1"
+      },
+      "created_time": "2026-10-16T16:24:00.000Z",
+      "last_edited_time": "2026-10-16T16:24:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "38ac995b-3347-81e6-9e07-0027f67f6ed0"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "38ac995b-3347-81e6-9e07-0027f67f6ed0"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "image",
+      "image": {
+        "caption": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Illustrative image (Unsplash); not verified as depicting the reported project",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Illustrative image (Unsplash); not verified as depicting the reported project",
+            "href": null
+          }
+        ],
+        "type": "external",
+        "external": {
+          "url": "https://images.unsplash.com/photo-1720722023470-565054b8a602?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5OTEzNjR8MHwxfHNlYXJjaHwxfHxZb3VuZyUyMGNvbnRlbnQlMjBjcmVhdG9ycyUyMHRvJTIwYmUlMjB0cmFpbmVkJTIwaW4lMjB3YXRlciUyMGF3YXJlbmVzcyUyMGJlZm9yZSUyMFVOJTIwY29uZmVyZW5jZSUyMGluJTIwQWJ1JTIwRGhhYmklMjAtJTIwVGhlJTIwTmF0aW9uYWx8ZW58MXwwfHx8MTc5MjE2Nzg3OHww&ixlib=rb-4.1.0&q=80&w=1080"
+        }
+      },
+      "archived": false
+    },
+    {
+      "object": "block",
+      "id": "3fbc995b-3347-811a-869f-f16763c75ec4",
+      "parent": {
+        "type": "page_id",
+        "page_id": "3fbc995b-3347-81ca-bc44-c9324e4218d1"
+      },
+      "created_time": "2026-10-16T16:24:00.000Z",
+      "last_edited_time": "2026-10-16T16:24:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "38ac995b-3347-81e6-9e07-0027f67f6ed0"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "38ac995b-3347-81e6-9e07-0027f67f6ed0"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Ahead of an upcoming UN water conference in Abu Dhabi, young content creators in the UAE are being trained to raise awareness about water issues. This initiative aims to leverage youth influence to amplify messages on water conservation and climate resilience across the MENA region.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Ahead of an upcoming UN water conference in Abu Dhabi, young content creators in the UAE are being trained to raise awareness about water issues. This initiative aims to leverage youth influence to amplify messages on water conservation and climate resilience across the MENA region.",
+            "href": null
+          }
+        ],
+        "icon": null,
+        "color": "default"
+      },
+      "archived": false
+    },
+    {
+      "object": "block",
+      "id": "3fbc995b-3347-8195-8dd6-e403d1fcaaa7",
+      "parent": {
+        "type": "page_id",
+        "page_id": "3fbc995b-3347-81ca-bc44-c9324e4218d1"
+      },
+      "created_time": "2026-10-16T16:24:00.000Z",
+      "last_edited_time": "2026-10-16T16:24:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "38ac995b-3347-81e6-9e07-0027f67f6ed0"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "38ac995b-3347-81e6-9e07-0027f67f6ed0"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "While specific program details remain limited, the timing and focus suggest a strategic effort to engage a new generation in water security discourse. Empowering young communicators could enhance public understanding and support for sustainable water management policies.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "While specific program details remain limited, the timing and focus suggest a strategic effort to engage a new generation in water security discourse. Empowering young communicators could enhance public understanding and support for sustainable water management policies.",
+            "href": null
+          }
+        ],
+        "icon": null,
+        "color": "default"
+      },
+      "archived": false
+    },
+    {
+      "object": "block",
+      "id": "3fbc995b-3347-8195-a00e-f06fbbbfd475",
+      "parent": {
+        "type": "page_id",
+        "page_id": "3fbc995b-3347-81ca-bc44-c9324e4218d1"
+      },
+      "created_time": "2026-10-16T16:24:00.000Z",
+      "last_edited_time": "2026-10-16T16:24:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "38ac995b-3347-81e6-9e07-0027f67f6ed0"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "38ac995b-3347-81e6-9e07-0027f67f6ed0"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "This approach aligns with broader regional priorities to address water scarcity and climate risks through education and community engagement, recognizing that behavioral change is a critical complement to infrastructure and policy measures.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "This approach aligns with broader regional priorities to address water scarcity and climate risks through education and community engagement, recognizing that behavioral change is a critical complement to infrastructure and policy measures.",
+            "href": null
+          }
+        ],
+        "icon": null,
+        "color": "default"
+      },
+      "archived": false
+    },
+    {
+      "object": "block",
+      "id": "3fbc995b-3347-8199-a34e-dd64ec945d1d",
+      "parent": {
+        "type": "page_id",
+        "page_id": "3fbc995b-3347-81ca-bc44-c9324e4218d1"
+      },
+      "created_time": "2026-10-16T16:24:00.000Z",
+      "last_edited_time": "2026-10-16T16:24:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "38ac995b-3347-81e6-9e07-0027f67f6ed0"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "38ac995b-3347-81e6-9e07-0027f67f6ed0"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "SOMA’s Perspective: Training youth as water advocates ahead of a major UN event reflects an investment in soft power and narrative shaping. The effectiveness of this initiative will depend on its reach and integration with policy dialogues, offering a potential model for embedding climate awareness in regional social capital.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "SOMA’s Perspective: Training youth as water advocates ahead of a major UN event reflects an investment in soft power and narrative shaping. The effectiveness of this initiative will depend on its reach and integration with policy dialogues, offering a potential model for embedding climate awareness in regional social capital.",
+            "href": null
+          }
+        ],
+        "icon": null,
+        "color": "default"
+      },
+      "archived": false
+    },
+    {
+      "object": "block",
+      "id": "3fbc995b-3347-8189-9fc5-fc728892864c",
+      "parent": {
+        "type": "page_id",
+        "page_id": "3fbc995b-3347-81ca-bc44-c9324e4218d1"
+      },
+      "created_time": "2026-10-16T16:24:00.000Z",
+      "last_edited_time": "2026-10-16T16:24:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "38ac995b-3347-81e6-9e07-0027f67f6ed0"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "38ac995b-3347-81e6-9e07-0027f67f6ed0"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Sources:",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Sources:",
+            "href": null
+          }
+        ],
+        "icon": null,
+        "color": "default"
+      },
+      "archived": false
+    },
+    {
+      "object": "block",
+      "id": "3fbc995b-3347-8164-acb8-daf9c8c1f175",
+      "parent": {
+        "type": "page_id",
+        "page_id": "3fbc995b-3347-81ca-bc44-c9324e4218d1"
+      },
+      "created_time": "2026-10-16T16:24:00.000Z",
+      "last_edited_time": "2026-10-16T16:24:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "38ac995b-3347-81e6-9e07-0027f67f6ed0"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "38ac995b-3347-81e6-9e07-0027f67f6ed0"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQd0ZyV0xjc1lUcVRwLVZBdnduakE5dlFWM0FBMl9pc2JTV0FnOUgwUnpfa0xCV0JLb25XeUJTdi12cWFLYzZFMFlBeG9mUy1RNnRoSWVMRkRiZnZZYjdLSG5wQXBBa3BUcUQ3UkhmNHBXcDEwdk5TRnRBRjlCWXJoRGNNN0dScjE4NktvSGoxTmgxY044bXlFQzV5SmNzdGhoX3k4TEtYdE5KbFpzSnJjZWRobllvUVN6c0QydW9hMkxDNWcwcWJEbzZZWTA4dDZaWVBQbFN2dHR6Zw?oc=5",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQd0ZyV0xjc1lUcVRwLVZBdnduakE5dlFWM0FBMl9pc2JTV0FnOUgwUnpfa0xCV0JLb25XeUJTdi12cWFLYzZFMFlBeG9mUy1RNnRoSWVMRkRiZnZZYjdLSG5wQXBBa3BUcUQ3UkhmNHBXcDEwdk5TRnRBRjlCWXJoRGNNN0dScjE4NktvSGoxTmgxY044bXlFQzV5SmNzdGhoX3k4TEtYdE5KbFpzSnJjZWRobllvUVN6c0QydW9hMkxDNWcwcWJEbzZZWTA4dDZaWVBQbFN2dHR6Zw?oc=5",
+            "href": null
+          }
+        ],
+        "icon": null,
+        "color": "default"
+      },
+      "archived": false
+    },
+    {
+      "object": "block",
+      "id": "3fbc995b-3347-8175-a3d3-cbff7e2bbd3f",
+      "parent": {
+        "type": "page_id",
+        "page_id": "3fbc995b-3347-81ca-bc44-c9324e4218d1"
+      },
+      "created_time": "2026-10-16T16:24:00.000Z",
+      "last_edited_time": "2026-10-16T16:24:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "38ac995b-3347-81e6-9e07-0027f67f6ed0"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "38ac995b-3347-81e6-9e07-0027f67f6ed0"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "That’s it for this week. Stay tuned as these stories evolve and shape the future of regional resource resilience.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "That’s it for this week. Stay tuned as these stories evolve and shape the future of regional resource resilience.",
+            "href": null
+          }
+        ],
+        "icon": null,
+        "color": "default"
+      },
+      "archived": false
+    },
+    {
+      "object": "block",
+      "id": "3fbc995b-3347-81c1-8b6c-d9003aba0419",
+      "parent": {
+        "type": "page_id",
+        "page_id": "3fbc995b-3347-81ca-bc44-c9324e4218d1"
+      },
+      "created_time": "2026-10-16T16:24:00.000Z",
+      "last_edited_time": "2026-10-16T16:24:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "38ac995b-3347-81e6-9e07-0027f67f6ed0"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "38ac995b-3347-81e6-9e07-0027f67f6ed0"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "[AUTOMATION:newsletter_draft:end]",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "[AUTOMATION:newsletter_draft:end]",
+            "href": null
+          }
+        ],
+        "icon": null,
+        "color": "default"
+      },
+      "archived": false
+    }
+  ]
+}

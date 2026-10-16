@@ -216,6 +216,9 @@ def test_ingestion_level_dry_run_evaluates_complete_path_without_writes(tmp_path
     assert not (tmp_path / "seen_articles.json").exists()
     assert "Notion writes: 0 (dry-run)" in lines
     assert any(line.startswith("Would create #1: region=Global") for line in lines)
+    assert report.audit_path.is_file()
+    assert report.audit_path.with_suffix(".json").is_file()
+    assert not report.audit_path.is_relative_to(tmp_path)
 
 
 def test_no_enrich_can_never_write_live(tmp_path) -> None:
@@ -230,6 +233,23 @@ def test_no_enrich_can_never_write_live(tmp_path) -> None:
         )
     assert notion.creates == []
     assert notion.updates == []
+
+
+def test_audit_failure_does_not_stop_dry_run_or_write_state(tmp_path, monkeypatch):
+    def fail_audit(*args):
+        raise OSError("diagnostic directory unavailable")
+
+    monkeypatch.setattr(ingestion_module, "write_candidate_audit", fail_audit)
+    notion = FakeNotion()
+    report = run_ingestion(
+        _settings(tmp_path), IngestionOptions(dry_run=True), notion=notion,
+        llm_client=FakeLlm(), collector=_collection, discovery_factory=FakeDiscovery,
+        output=lambda _: None,
+    )
+    assert len(report.selection.winners) == 1
+    assert report.audit_path is None
+    assert notion.creates == notion.updates == []
+    assert not (tmp_path / "seen_articles.json").exists()
 
 
 def test_enrichment_failure_creates_no_article_queue_page(tmp_path) -> None:

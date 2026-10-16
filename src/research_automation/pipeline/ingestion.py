@@ -4,6 +4,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass, field
 import logging
+from pathlib import Path
 from typing import Callable
 
 from research_automation.clients.llm_client import LlmClient
@@ -15,6 +16,7 @@ from research_automation.models.source import SourceAttempt
 from research_automation.notion_schema import ARTICLE_QUEUE
 from research_automation.pipeline.article_retrieval import ArticleRetrievalResult
 from research_automation.pipeline.candidate_ranking import evaluate_candidate_pool
+from research_automation.pipeline.candidate_audit import write_candidate_audit
 from research_automation.pipeline.collect import CollectionResult, collect_articles
 from research_automation.pipeline.deduplicate import SeenArticleStore
 from research_automation.pipeline.discovery import DiscoveryService
@@ -63,6 +65,7 @@ class IngestionReport:
     page_errors: list[str] = field(default_factory=list)
     provider_requests: dict[str, int] = field(default_factory=dict)
     dry_run: bool = False
+    audit_path: Path | None = None
 
 
 def run_ingestion(
@@ -136,6 +139,7 @@ def run_ingestion(
         if any(initial_deficits.values())
         else None
     )
+    attempted_urls: set[str] = set()
     feed_evaluation = evaluate_candidate_pool(
         collection.articles,
         deficits=initial_deficits,
@@ -145,6 +149,7 @@ def run_ingestion(
         now=now,
         excluded_urls=excluded_urls,
         phase_ceiling_per_region=settings.article_shortlist_initial_per_region,
+        attempted_urls=attempted_urls,
     )
     feed_selection = select_final_candidates(
         [result for result in feed_evaluation.results if result.eligible],
@@ -191,6 +196,9 @@ def run_ingestion(
                 already_shortlisted=feed_evaluation.shortlisted_counts,
                 first_batch_size=2,
                 stop_when_qualified=False,
+                reserve_discovery=True,
+                attempted_urls=attempted_urls,
+                phase="expansion",
             )
 
     evaluation = _merge_evaluations(feed_evaluation, expansion_evaluation)
@@ -281,6 +289,10 @@ def run_ingestion(
         },
         dry_run=options.dry_run,
     )
+    try:
+        report.audit_path = write_candidate_audit(report, settings.candidate_audit_directory, now)
+    except OSError:
+        logger.warning("Could not write local candidate audit", exc_info=True)
     print_ingestion_report(report, output=output)
     return report
 
@@ -304,6 +316,8 @@ def print_ingestion_report(
         )
     output(f"Number collected from due feeds: {report.collected_count}")
     output(f"Number collected from discovery: {report.discovered_count}")
+    if report.audit_path:
+        output(f"Local candidate audit: {report.audit_path}")
     for reason, count in sorted(report.evaluation.rejection_counts.items()):
         output(f"Rejected [{reason}]: {count}")
     for reason, count in sorted(report.selection.rejected_by_constraint.items()):
