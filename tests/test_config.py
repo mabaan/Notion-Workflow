@@ -128,6 +128,23 @@ def test_luna_classifier_allows_explicit_sol_enrichment():
     assert settings.minimum_article_relevance_score == 4
 
 
+@pytest.mark.parametrize("raw,expected", [(None, False), ("false", False), ("true", True), ("TRUE", True)])
+def test_direct_site_flag_is_explicitly_default_off(monkeypatch, raw, expected):
+    monkeypatch.setattr(config_module, "load_dotenv", lambda: None)
+    monkeypatch.delenv("DIRECT_SITE_DISCOVERY_ENABLED", raising=False)
+    if raw is not None:
+        monkeypatch.setenv("DIRECT_SITE_DISCOVERY_ENABLED", raw)
+    assert load_settings().direct_site_discovery_enabled is expected
+    assert Settings().direct_site_discovery_enabled is False
+
+
+def test_direct_site_flag_rejects_invalid_boolean(monkeypatch):
+    monkeypatch.setattr(config_module, "load_dotenv", lambda: None)
+    monkeypatch.setenv("DIRECT_SITE_DISCOVERY_ENABLED", "maybe")
+    with pytest.raises(ValueError, match="DIRECT_SITE_DISCOVERY_ENABLED must be true or false"):
+        load_settings()
+
+
 @pytest.mark.parametrize("overrides", [
     {"article_enrichment_initial_budget": 0},
     {"article_enrichment_initial_budget": 40, "article_enrichment_max_budget": 32},

@@ -49,6 +49,7 @@ class RssSource(ArticleSource):
                 str(entry.get("summary") or entry.get("description") or "")
             )
             article_text = _entry_article_text(entry)
+            published_date = _entry_datetime(entry)
 
             articles.append(
                 Article(
@@ -57,7 +58,7 @@ class RssSource(ArticleSource):
                     canonical_url=canonical_url,
                     source_name=self.source.name,
                     source_page_id=self.source.notion_page_id,
-                    published_date=_entry_datetime(entry),
+                    published_date=published_date,
                     collected_date=collected_at,
                     snippet=summary,
                     article_text=article_text,
@@ -74,6 +75,13 @@ class RssSource(ArticleSource):
                         original_url,
                         canonical_url,
                     ),
+                    discovery_method=(
+                        "google_news_rss" if self.source.collection_method == "Google News RSS" or is_google_news_url(self.source.feed_url)
+                        else "rss"
+                    ),
+                    discovery_page=self.source.feed_url,
+                    date_provenance="rss_entry",
+                    date_precision="timestamp" if published_date else "unknown",
                 )
             )
 

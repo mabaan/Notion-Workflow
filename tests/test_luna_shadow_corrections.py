@@ -83,14 +83,17 @@ def test_soft_diversity_prevents_score_five_publisher_monopoly(factory, tmp_path
     (set(range(1, 9)), 48, 8),
     (set(range(1, 12)) | {35}, 35, 12),
 ])
-def test_adaptive_budget_stops_at_viable_unique_capacity_or_maximum(factory, positive_attempts, expected_attempts, expected_winners):
+def test_adaptive_budget_stops_at_viable_unique_capacity_or_maximum(factory, tmp_path, positive_attempts, expected_attempts, expected_winners):
     class Conditional(Enricher):
         def enrich_article(self, item):
             self.calls.append(item.title)
             score = 4 if len(self.calls) in positive_attempts else 3
             return EnrichedArticle("summary", "mission", score, region=["Global"], editorial_significance=4)
 
-    run = factory([article(f"feed-{i:03}") for i in range(60)], llm=Conditional())
+    settings = replace(_settings(tmp_path / "state"), article_selection_mode="luna",
+                       article_queue_weekly_target_global=3, article_queue_weekly_target_uae=4,
+                       article_queue_weekly_target_ksa=3, article_queue_weekly_target_egypt=2)
+    run = factory([article(f"feed-{i:03}") for i in range(60)], llm=Conditional(), settings=settings)
     assert len(run.llm.calls) == expected_attempts
     assert len(set(run.llm.calls)) == expected_attempts
     assert run.report.selection.tier_counts["strict"] == expected_winners
@@ -117,9 +120,12 @@ def test_adaptive_budget_counts_failed_calls_and_clamps_last_batch(factory, tmp_
     assert run.report.evaluation.rejection_counts["enrichment budget exhausted"] == 17
 
 
-def test_no_backfill_when_only_explicitly_irrelevant_articles_remain(factory):
+def test_no_backfill_when_only_explicitly_irrelevant_articles_remain(factory, tmp_path):
     pool = [article(f"positive-{i:03}") for i in range(32)] + [article(f"irrelevant-{i:03}") for i in range(8)]
-    run = factory(pool, llm=Enricher(score=3), classify=lambda r: (
+    settings = replace(_settings(tmp_path / "state"), article_selection_mode="luna",
+                       article_queue_weekly_target_global=3, article_queue_weekly_target_uae=4,
+                       article_queue_weekly_target_ksa=3, article_queue_weekly_target_egypt=2)
+    run = factory(pool, settings=settings, llm=Enricher(score=3), classify=lambda r: (
         ("Irrelevant", 1, "Global") if "irrelevant-" in r["title"] else ("Relevant", 4, "Global")
     ))
     assert len(run.llm.calls) == 32

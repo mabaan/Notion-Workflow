@@ -1,0 +1,142 @@
+[
+  {
+    "publisher": "AGBI",
+    "wrappers": 6,
+    "resolved": 6,
+    "body_attempts": 1,
+    "raw_extracted": 0,
+    "supported": 0,
+    "not_attempted": 5,
+    "raw_statuses": {
+      "fetch_failed": 1
+    },
+    "access_failures": 1,
+    "median_resolution_seconds": 3.0705
+  },
+  {
+    "publisher": "Arab News",
+    "wrappers": 3,
+    "resolved": 3,
+    "body_attempts": 3,
+    "raw_extracted": 3,
+    "supported": 3,
+    "not_attempted": 0,
+    "raw_statuses": {
+      "extracted": 3
+    },
+    "access_failures": 0,
+    "median_resolution_seconds": 4.0
+  },
+  {
+    "publisher": "Gulf News",
+    "wrappers": 4,
+    "resolved": 4,
+    "body_attempts": 4,
+    "raw_extracted": 4,
+    "supported": 2,
+    "not_attempted": 0,
+    "raw_statuses": {
+      "extracted": 4
+    },
+    "access_failures": 0,
+    "median_resolution_seconds": 3.5625
+  },
+  {
+    "publisher": "Khaleej Times",
+    "wrappers": 3,
+    "resolved": 3,
+    "body_attempts": 3,
+    "raw_extracted": 3,
+    "supported": 3,
+    "not_attempted": 0,
+    "raw_statuses": {
+      "extracted": 3
+    },
+    "access_failures": 0,
+    "median_resolution_seconds": 3.359
+  },
+  {
+    "publisher": "Nature",
+    "wrappers": 6,
+    "resolved": 6,
+    "body_attempts": 6,
+    "raw_extracted": 0,
+    "supported": 0,
+    "not_attempted": 0,
+    "raw_statuses": {
+      "fetch_failed": 6
+    },
+    "access_failures": 0,
+    "median_resolution_seconds": 3.1565000000000003
+  },
+  {
+    "publisher": "Reuters",
+    "wrappers": 7,
+    "resolved": 7,
+    "body_attempts": 1,
+    "raw_extracted": 0,
+    "supported": 0,
+    "not_attempted": 6,
+    "raw_statuses": {
+      "blocked": 1
+    },
+    "access_failures": 1,
+    "median_resolution_seconds": 3.547
+  },
+  {
+    "publisher": "S&P Global",
+    "wrappers": 1,
+    "resolved": 1,
+    "body_attempts": 1,
+    "raw_extracted": 0,
+    "supported": 0,
+    "not_attempted": 0,
+    "raw_statuses": {
+      "blocked": 1
+    },
+    "access_failures": 1,
+    "median_resolution_seconds": 3.579
+  },
+  {
+    "publisher": "Saudi Gazette",
+    "wrappers": 4,
+    "resolved": 4,
+    "body_attempts": 4,
+    "raw_extracted": 4,
+    "supported": 4,
+    "not_attempted": 0,
+    "raw_statuses": {
+      "extracted": 4
+    },
+    "access_failures": 0,
+    "median_resolution_seconds": 3.9924999999999997
+  },
+  {
+    "publisher": "The National",
+    "wrappers": 4,
+    "resolved": 4,
+    "body_attempts": 4,
+    "raw_extracted": 4,
+    "supported": 4,
+    "not_attempted": 0,
+    "raw_statuses": {
+      "extracted": 4
+    },
+    "access_failures": 0,
+    "median_resolution_seconds": 3.2655
+  },
+  {
+    "publisher": "ZAWYA",
+    "wrappers": 4,
+    "resolved": 4,
+    "body_attempts": 4,
+    "raw_extracted": 4,
+    "supported": 4,
+    "not_attempted": 0,
+    "raw_statuses": {
+      "extracted": 4
+    },
+    "access_failures": 0,
+    "median_resolution_seconds": 2.5235
+  }
+]

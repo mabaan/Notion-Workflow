@@ -1,0 +1,25 @@
+{
+  "baseline_file_count": 131,
+  "changed_existing_files": [
+    ".env.example",
+    "README.md",
+    "src/research_automation/config.py",
+    "src/research_automation/models/article.py",
+    "src/research_automation/pipeline/candidate_audit.py",
+    "src/research_automation/pipeline/candidate_ranking.py",
+    "src/research_automation/pipeline/ingestion.py",
+    "src/research_automation/pipeline/luna_selection.py"
+  ],
+  "unexpected_changes": [],
+  "default_google_resolution_enabled": false,
+  "effective_google_resolution_enabled": false,
+  "default_direct_discovery_enabled": false,
+  "effective_direct_discovery_enabled": false,
+  "classification_batch_size": 100,
+  "enrichment_budgets": [
+    32,
+    48,
+    8
+  ],
+  "minimum_registered_relevance": 4
+}

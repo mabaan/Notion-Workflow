@@ -55,6 +55,23 @@ class SelectionResult:
         }
 
 
+def weekly_capacity_snapshot(
+    weekly_state: WeeklyQueueState, targets: dict[str, int], requested_limit: int,
+) -> dict[str, int]:
+    """Bound new selections by actual regional totals, including existing overflow."""
+
+    target = sum(targets.get(region, 0) for region in TARGET_REGION_ORDER)
+    existing = sum(weekly_state.region_counts.get(region, 0) for region in TARGET_REGION_ORDER)
+    remaining = max(0, target - existing)
+    return {
+        "weekly_total_target": target,
+        "existing_weekly_total": existing,
+        "remaining_weekly_capacity": remaining,
+        "requested_run_limit": requested_limit,
+        "effective_run_capacity": min(max(0, requested_limit), remaining),
+    }
+
+
 def load_weekly_queue_state(
     notion,
     settings: Settings,
@@ -119,8 +136,10 @@ def select_final_candidates(
     fallback coverage could displace a strict overflow winner or consume its
     publisher allowance. Fallback then pursues remaining coverage before overflow.
     Legacy callers keep their existing strict selection unless explicitly opted in.
+    Both tiers share the remaining total weekly capacity, including prior overflow.
     """
 
+    run_limit = weekly_capacity_snapshot(weekly_state, targets, run_limit)["effective_run_capacity"]
     arguments = dict(targets=targets, publisher_cap=publisher_cap,
                      allow_regional_overflow=allow_regional_overflow)
     strict = _select_tier(

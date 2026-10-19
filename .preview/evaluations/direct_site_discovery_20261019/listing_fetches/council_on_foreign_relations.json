@@ -1,0 +1,14 @@
+{
+  "publisher": "Council on Foreign Relations",
+  "source_url": "https://www.cfr.org",
+  "fetched_at": "2026-10-19T14:25:22.240003+00:00",
+  "requests": 1,
+  "redirects": [],
+  "http_status": 200,
+  "final_url": "https://www.cfr.org",
+  "status": "fetched",
+  "bytes": 957917,
+  "html_file": "pages\\council_on_foreign_relations.html",
+  "sha256": "bc52155ce045acc95ad8ef4476076bdf93fa3e8e57d0788765448b962f110e3c",
+  "latency_seconds": 0.803
+}

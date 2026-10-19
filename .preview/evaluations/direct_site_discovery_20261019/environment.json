@@ -1,0 +1,12 @@
+{
+  "python": "3.11.5 (tags/v3.11.5:cce6ba9, Aug 24 2023, 14:38:34) [MSC v.1936 64 bit (AMD64)]",
+  "scrapling": "0.5",
+  "cssselect": "1.6.0",
+  "interpreter": "C:\\Users\\Hi\\Documents\\GitHub\\Notion-Workflow\\.preview\\evaluations\\scrapling_retrieval_20261019\\.venv\\Scripts\\python.exe",
+  "environment_reused": true,
+  "dependency_changes": false,
+  "browsers_launched": 0,
+  "impersonation": false,
+  "stealth_headers": false,
+  "request_user_agent": "SOMA-MATER-Research/1.0"
+}

@@ -283,6 +283,9 @@ class DiscoveryService:
                         publisher.notion_page_id if publisher else hostname
                     ),
                     discovery_provider=provider_source.name,
+                    discovery_method="discovery_fallback",
+                    discovery_page=provider_source.source_url,
+                    date_provenance="discovery_provider",
                     url_hash=build_url_hash(url),
                     content_hash=build_content_hash(title, hostname),
                     image_url=(

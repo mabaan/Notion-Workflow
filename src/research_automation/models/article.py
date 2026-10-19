@@ -31,6 +31,13 @@ class Article:
     url_resolution_status: str = "not_attempted"
     evidence_retrieval_status: str = "not_attempted"
     article_text: str = ""
+    discovery_method: str = ""
+    discovery_page: str = ""
+    date_provenance: str = ""
+    date_precision: str = ""
+    feed_wrapper_replaced: bool = False
+    discovery_origins: list[dict] = field(default_factory=list)
+    google_news_resolution: dict = field(default_factory=dict)
 
 
 @dataclass

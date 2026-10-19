@@ -21,6 +21,8 @@ from research_automation.pipeline.candidate_audit import write_candidate_audit
 from research_automation.pipeline.collect import CollectionResult, collect_articles
 from research_automation.pipeline.deduplicate import SeenArticleStore
 from research_automation.pipeline.discovery import DiscoveryService
+from research_automation.pipeline.direct_site_discovery import supplement_articles
+from research_automation.pipeline.google_news_resolver import GoogleNewsResolvingRetriever
 from research_automation.pipeline.luna_selection import (
     classify_luna_candidates, enrich_luna_candidates, finish_luna_evaluation,
 )
@@ -30,6 +32,7 @@ from research_automation.pipeline.selection import (
     WeeklyQueueState,
     load_weekly_queue_state,
     select_final_candidates,
+    weekly_capacity_snapshot,
 )
 from research_automation.pipeline.source_health import (
     select_due_sources,
@@ -72,6 +75,9 @@ class IngestionReport:
     audit_path: Path | None = None
     selection_mode: str = "deterministic"
     enrichment_budget: dict[str, int] = field(default_factory=dict)
+    direct_site_discovery: dict = field(default_factory=dict)
+    google_news_url_resolution_enabled: bool = False
+    weekly_capacity: dict[str, int] = field(default_factory=dict)
 
 
 def run_ingestion(
@@ -84,11 +90,14 @@ def run_ingestion(
     collector: Callable[[list], CollectionResult] = collect_articles,
     discovery_factory: Callable[[Settings, list], DiscoveryService] = DiscoveryService,
     retrieve_article: Callable[[Article], ArticleRetrievalResult] | None = None,
+    direct_collector: Callable | None = None,
     output: Callable[[str], None] = print,
 ) -> IngestionReport:
     """Evaluate the complete bounded pool before creating any Article Queue page."""
 
     settings.validate()
+    if settings.direct_site_discovery_enabled and not options.dry_run:
+        raise ValueError("DIRECT_SITE_DISCOVERY_ENABLED is shadow-only and requires --dry-run")
     if options.no_enrich and not options.dry_run:
         raise ValueError("--no-enrich is read-only and requires --dry-run")
     requested_limit = options.limit if options.limit is not None else settings.max_articles_per_run
@@ -100,6 +109,10 @@ def run_ingestion(
     notion = notion or NotionClient(token=settings.notion_token)
 
     sources = load_active_sources(notion, settings)
+    if settings.google_news_url_resolution_enabled and retrieve_article is not None:
+        retrieve_article = GoogleNewsResolvingRetriever(
+            retrieve_article, sources, max_resolution_attempts=settings.article_enrichment_max_budget,
+        )
     due_sources = select_due_sources(sources, now, all_sources=options.all_sources)
     due_ids = {source.notion_page_id for source in due_sources}
     skipped_due = [
@@ -108,27 +121,52 @@ def run_ingestion(
         if source.source_type == "Publisher" and source.notion_page_id not in due_ids
     ]
 
-    dataset_meeting_page_id: str | None
-    if options.dry_run:
-        dataset = find_dataset_meeting_for_week(
-            notion,
-            settings,
-            workweek,
-        )
-        dataset_meeting_page_id = dataset.get("id") if dataset else None
-    else:
-        dataset_meeting_page_id = ensure_current_weekly_pages(
-            notion, settings, reference_date=workweek.start
-        ).dataset_meeting_id
-
+    # Read existing queue capacity before weekly setup can create/update pages.
+    dataset = find_dataset_meeting_for_week(notion, settings, workweek)
+    dataset_meeting_page_id = dataset.get("id") if dataset else None
     weekly_state = load_weekly_queue_state(
         notion, settings, dataset_meeting_page_id
     )
     initial_deficits = target_deficits(
         weekly_state.region_counts, settings.weekly_region_targets
     )
+    capacity = weekly_capacity_snapshot(weekly_state, settings.weekly_region_targets, requested_limit)
+    run_limit = min(run_limit, capacity["remaining_weekly_capacity"])
+    capacity["effective_run_capacity"] = run_limit
+    if run_limit == 0:
+        report = IngestionReport(
+            existing_region_counts=dict(weekly_state.region_counts), initial_deficits=initial_deficits,
+            due_sources=[source.name for source in due_sources], skipped_sources=skipped_due,
+            attempts=[], collected_count=0, discovered_count=0, evaluation=CandidateEvaluation(),
+            selection=select_final_candidates(
+                [], weekly_state=weekly_state, targets=settings.weekly_region_targets,
+                run_limit=0, publisher_cap=settings.max_articles_per_publisher_per_week,
+            ),
+            provider_requests={"brave": 0, "newsapi": 0}, dry_run=options.dry_run,
+            selection_mode=settings.article_selection_mode, weekly_capacity=capacity,
+            enrichment_budget={
+                "initial": settings.enrichment_initial_budget,
+                "maximum": settings.article_enrichment_max_budget,
+                "backfill_batch": settings.article_enrichment_backfill_batch,
+                "attempted": 0,
+            } if settings.article_selection_mode == "luna" else {},
+            google_news_url_resolution_enabled=settings.google_news_url_resolution_enabled,
+        )
+        return _complete_ingestion_report(report, settings, now, output)
+    if not options.dry_run:
+        dataset_meeting_page_id = ensure_current_weekly_pages(
+            notion, settings, reference_date=workweek.start,
+        ).dataset_meeting_id
 
     collection = collector(due_sources)
+    articles = collection.articles
+    direct_site_metrics = {}
+    if settings.direct_site_discovery_enabled:
+        supplement = (direct_collector or supplement_articles)(
+            articles, due_sources, now=now, freshness_days=settings.article_freshness_days,
+        )
+        articles = supplement.articles
+        direct_site_metrics = {"enabled": True, "shadow_only": True, "sources": supplement.sources}
     if not options.dry_run:
         for attempt in collection.attempts:
             try:
@@ -148,7 +186,7 @@ def run_ingestion(
     )
     if settings.article_selection_mode == "luna":
         evaluation, selection, discovered, discovery = _evaluate_luna_ingestion(
-            settings, options, articles=collection.articles, sources=sources,
+            settings, options, articles=articles, sources=sources,
             classifier=article_classifier, enrich=enrich_callable, retrieve=retrieve_article,
             now=now, excluded_urls=excluded_urls, store=store,
             weekly_state=weekly_state, deficits=initial_deficits, run_limit=run_limit,
@@ -157,7 +195,7 @@ def run_ingestion(
     else:
         attempted_urls: set[str] = set()
         feed_evaluation = evaluate_candidate_pool(
-            collection.articles,
+            articles,
             deficits=initial_deficits,
             settings=settings,
             enrich=enrich_callable,
@@ -313,7 +351,16 @@ def run_ingestion(
                 "attempted": sum(result.enrichment_attempted for result in evaluation.results),
             } if settings.article_selection_mode == "luna" else {}
         ),
+        direct_site_discovery=direct_site_metrics,
+        google_news_url_resolution_enabled=settings.google_news_url_resolution_enabled,
+        weekly_capacity=capacity,
     )
+    return _complete_ingestion_report(report, settings, now, output)
+
+
+def _complete_ingestion_report(report, settings, now, output):
+    """Keep the same local audit/console trail for active and full-week runs."""
+
     try:
         report.audit_path = write_candidate_audit(report, settings.candidate_audit_directory, now)
     except OSError:
@@ -339,6 +386,17 @@ def print_ingestion_report(
             f"requests without usage={classification.requests_without_usage}"
         )
     output("Existing weekly counts: " + _format_regions(report.existing_region_counts))
+    if report.weekly_capacity:
+        for label, key in (
+            ("Weekly article target", "weekly_total_target"),
+            ("Existing weekly total", "existing_weekly_total"),
+            ("Remaining weekly capacity", "remaining_weekly_capacity"),
+            ("Requested run limit", "requested_run_limit"),
+            ("Effective run capacity", "effective_run_capacity"),
+        ):
+            output(f"{label}: {report.weekly_capacity[key]}")
+        if report.weekly_capacity["remaining_weekly_capacity"] == 0:
+            output("Weekly article capacity exhausted; collection, classification and enrichment skipped.")
     output("Regional deficits: " + _format_regions(report.initial_deficits))
     output("Due sources: " + (", ".join(report.due_sources) or "none"))
     output("Skipped sources: " + (", ".join(report.skipped_sources) or "none"))
@@ -350,6 +408,35 @@ def print_ingestion_report(
         )
     output(f"Number collected from due feeds: {report.collected_count}")
     output(f"Number collected from discovery: {report.discovered_count}")
+    if report.google_news_url_resolution_enabled:
+        from research_automation.pipeline.candidate_audit import google_news_resolution_metrics
+        resolution = google_news_resolution_metrics(report)
+        output("Google News URL resolution: " + "; ".join(
+            f"{key}={resolution[key]}" for key in (
+                "wrappers_reaching_enrichment", "attempted", "resolved", "failed", "rate_limited",
+                "google_429_responses", "request_count", "cache_hits", "median_latency_seconds",
+                "skipped_after_resolution_cap", "publisher_access_refusals", "publisher_bodies_recovered",
+            )
+        ))
+        output("Publisher bodies are raw ArticleRetriever extractions; completeness is unverified.")
+        output(f"Selected Google-wrapper evidence: {resolution['selected_evidence']}")
+    if report.direct_site_discovery:
+        from research_automation.pipeline.candidate_audit import acquisition_metrics
+        metrics = acquisition_metrics(report)
+        output("Direct-site supplementation: enabled (shadow only)")
+        for publisher, counts in report.direct_site_discovery["sources"].items():
+            direct = metrics["direct_by_publisher"].get(publisher, {})
+            output(
+                f"Direct-site {publisher}: status={counts['status']}; "
+                f"feed={counts['feed_candidates_collected']}; found={counts['direct_candidates_discovered']}; "
+                f"recent={counts['recent_direct_candidates_accepted']}; "
+                f"matches={counts['direct_feed_headline_matches']}; "
+                f"wrappers_replaced={counts['wrappers_replaced_by_direct_urls']}; "
+                f"direct_only={counts['direct_only_candidates']}; duplicates_removed={counts['duplicates_removed']}; "
+                f"Luna={direct.get('luna_attempted', 0)}; enrichment={direct.get('enrichment_attempted', 0)}"
+            )
+        for method, counts in metrics["by_method"].items():
+            output(f"Acquisition {method}: {counts}")
     if report.audit_path:
         output(f"Local candidate audit: {report.audit_path}")
     for reason, count in sorted(report.evaluation.rejection_counts.items()):
@@ -420,7 +507,7 @@ def _evaluate_luna_ingestion(
 ):
     """Classify RSS completely, assess a bounded pool, then backfill if needed."""
 
-    enabled = not options.no_enrich and any(deficits.values())
+    enabled = run_limit > 0 and not options.no_enrich and any(deficits.values())
     classifier = (classifier or ArticleClassifier(settings)) if enabled else None
     evaluation = classify_luna_candidates(
         articles, settings=settings, classifier=classifier, now=now,

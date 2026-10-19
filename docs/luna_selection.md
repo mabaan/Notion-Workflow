@@ -38,6 +38,25 @@ prompt diffs, all regression scenarios, validation and a Luna/Sol dry-run comman
 
 ## Current final selection: strict and fallback tiers
 
+Both tiers now share a total weekly capacity derived from the sum of the four
+configured regional targets (12 by default). Remaining capacity is that total
+minus the actual existing Global/UAE/KSA/Egypt counts, clamped to zero; existing
+regional overflow consumes capacity too. Effective run capacity is the minimum
+of remaining weekly capacity, requested `--limit`, and the existing
+`MAX_ARTICLES_PER_RUN` bound. For counts 6/1/1/1, `--limit 12` allows at most three
+new articles, even though the positive regional shortages sum to six. Luna's
+regional coverage preferences and quality overflow remain unchanged within that
+shared capacity; regions do not gain hard ceilings.
+
+Each ingestion loads the current week's Dataset Meeting queue before weekly setup
+can write. A full/overfull week skips setup writes, collection, classification,
+retrieval, enrichment and discovery, while still producing a local diagnostic
+audit. When space remains, the existing bounded enrichment search stops once
+enough unique strict winners fill effective capacity; fallback still runs only
+after the existing assessment decisions. Console, JSON and Markdown record the
+weekly target, existing total, remaining capacity, requested limit and effective
+capacity. No new environment setting or Notion property is added.
+
 Final Luna selection now preserves all winners from the existing strict coverage
 and quality-overflow selection, then uses spare run capacity for already-enriched
 fallback candidates. Strict relevance remains **4 for registered publishers and 5

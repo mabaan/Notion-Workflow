@@ -1,0 +1,77 @@
+[
+  {
+    "publisher": "AGBI",
+    "recommendation": "KEEP_GOOGLE_NEWS_RSS",
+    "reason": "Transparent static GET returned 405; stopped. Earlier accessibility is not reproducible with this request profile."
+  },
+  {
+    "publisher": "Arab News",
+    "recommendation": "NEEDS_MORE_TESTING",
+    "reason": "2/2 direct bodies worked; matched Google wrapper failed. But 34 dated recent links versus 50 feed stories, only 8 recent exact matches, and no listing snippets. Test coverage across repeated snapshots before replacing the feed."
+  },
+  {
+    "publisher": "Council on Foreign Relations",
+    "recommendation": "KEEP_GOOGLE_NEWS_RSS",
+    "reason": "Good listing dates and both recent feed headlines present, but 0/2 direct bodies extracted. Saved HTML contains prose; the existing retriever still fails, so direct discovery alone does not fix this source."
+  },
+  {
+    "publisher": "Fast Company Middle East",
+    "recommendation": "NEEDS_MORE_TESTING",
+    "reason": "2/2 direct bodies worked, but all 20 listing candidates lack publication dates. One recent feed headline matches an undated direct candidate; this is not a proven recent listing."
+  },
+  {
+    "publisher": "Gulf News",
+    "recommendation": "NEEDS_MORE_TESTING",
+    "reason": "Strong embedded metadata: all 23 candidates have dates and snippets. But 0/2 direct bodies extracted (one too large, one insufficient); exact headline overlap is zero. Resolve extraction/coverage uncertainty in a separate task."
+  },
+  {
+    "publisher": "Khaleej Times",
+    "recommendation": "NEEDS_MORE_TESTING",
+    "reason": "2/2 direct bodies worked versus a failed matched wrapper. Only 12 dated recent links versus 42 feed stories; 13 direct candidates remain undated."
+  },
+  {
+    "publisher": "Nature",
+    "recommendation": "KEEP_GOOGLE_NEWS_RSS",
+    "reason": "Five day-dated recent homepage items do not match the two recent mission-filtered feed headlines. The sampled article has explicit paywall metadata; no unqualified body recovery demonstrated."
+  },
+  {
+    "publisher": "Reuters",
+    "recommendation": "KEEP_GOOGLE_NEWS_RSS",
+    "reason": "Direct static unavailable from the prior explicit refusal. Excluded: zero direct-site or article requests in this benchmark."
+  },
+  {
+    "publisher": "S&P Global",
+    "recommendation": "KEEP_GOOGLE_NEWS_RSS",
+    "reason": "Direct static unavailable from the prior explicit refusal. Excluded: zero direct-site or article requests in this benchmark."
+  },
+  {
+    "publisher": "Saudi Gazette",
+    "recommendation": "NEEDS_MORE_TESTING",
+    "reason": "2/2 direct bodies worked versus a failed matched wrapper. Recent counts are close (17 versus 20), but only one headline matches; the homepage also exposes many older features. Counts alone do not establish comparable coverage."
+  },
+  {
+    "publisher": "Saudi Press Agency",
+    "recommendation": "KEEP_GOOGLE_NEWS_RSS",
+    "reason": "Static 200 is an empty Next.js root with zero anchors. Embedded mainNews has seven English records and timestamps but no explicit article URLs. Validate a public route in a future experiment; no guessed URL or API was requested."
+  },
+  {
+    "publisher": "Smart Water Magazine",
+    "recommendation": "KEEP_GOOGLE_NEWS_RSS",
+    "reason": "Fresh transparent static GET returned 429; no retry. Current feed had no recent entries either. Preserve acquisition and reassess access/freshness later."
+  },
+  {
+    "publisher": "The Guardian International",
+    "recommendation": "KEEP_NATIVE_RSS",
+    "reason": "Existing world RSS already supplies direct URLs, real snippets and exact dates. Homepage and world feed have different section coverage; there is no Google-wrapper problem to fix."
+  },
+  {
+    "publisher": "The National",
+    "recommendation": "NEEDS_MORE_TESTING",
+    "reason": "2/2 direct bodies worked versus a failed matched wrapper. Homepage redirects to /uae/ and all 50 dates come from literal URL paths, not listing publication timestamps. Only two recent headline matches; verify breadth and date reliability before replacement."
+  },
+  {
+    "publisher": "ZAWYA",
+    "recommendation": "KEEP_GOOGLE_NEWS_RSS",
+    "reason": "Only 1/12 direct candidates has a date versus 83 recent feed stories. The sampled article requires an account and has explicit non-free metadata; the retriever raw success is not accepted as full evidence."
+  }
+]

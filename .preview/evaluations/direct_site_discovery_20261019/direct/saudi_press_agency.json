@@ -1,0 +1,26 @@
+{
+  "publisher": "Saudi Press Agency",
+  "fetched_at": "2026-10-19T14:25:23.043311+00:00",
+  "total_anchors": 0,
+  "considered": 0,
+  "accepted": [],
+  "duplicate_links": 0,
+  "rejected": {},
+  "cap_reached": false,
+  "structured_article_records": 0,
+  "parse_latency_seconds": 0.0019,
+  "fetch": {
+    "publisher": "Saudi Press Agency",
+    "source_url": "https://www.spa.gov.sa/en",
+    "fetched_at": "2026-10-19T14:25:23.043311+00:00",
+    "requests": 1,
+    "redirects": [],
+    "http_status": 200,
+    "final_url": "https://www.spa.gov.sa/en",
+    "status": "fetched",
+    "bytes": 164443,
+    "html_file": "pages\\saudi_press_agency.html",
+    "sha256": "c9a6556d4d069ebb498cad31356a37ba36a55e549081ee16834875b6b535a2fb",
+    "latency_seconds": 0.569
+  }
+}

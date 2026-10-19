@@ -44,6 +44,8 @@ class Settings:
     llm_provider: str = "openai"
     llm_model: str = "gpt-6-luna"
     article_selection_mode: str = "deterministic"
+    direct_site_discovery_enabled: bool = False
+    google_news_url_resolution_enabled: bool = False
     article_enrichment_budget: int = 32
     article_enrichment_initial_budget: int | None = None
     article_enrichment_max_budget: int = 48
@@ -218,6 +220,15 @@ def _env_int(name: str, default: int) -> int:
         raise ValueError(f"{name} must be an integer; received {raw_value!r}") from exc
 
 
+def _env_bool(name: str, default: bool = False) -> bool:
+    raw = os.getenv(name, str(default)).strip().lower()
+    if raw in {"true", "1", "yes"}:
+        return True
+    if raw in {"false", "0", "no", ""}:
+        return False
+    raise ValueError(f"{name} must be true or false")
+
+
 def _publisher_cap() -> int:
     current = os.getenv("MAX_ARTICLES_PER_PUBLISHER_PER_WEEK", "").strip()
     if current:
@@ -257,6 +268,8 @@ def load_settings() -> Settings:
         llm_provider=os.getenv("LLM_PROVIDER", "openai"),
         llm_model=os.getenv("LLM_MODEL", "gpt-6-luna"),
         article_selection_mode=os.getenv("ARTICLE_SELECTION_MODE", "deterministic").strip().lower(),
+        direct_site_discovery_enabled=_env_bool("DIRECT_SITE_DISCOVERY_ENABLED"),
+        google_news_url_resolution_enabled=_env_bool("GOOGLE_NEWS_URL_RESOLUTION_ENABLED"),
         article_enrichment_budget=_env_int("ARTICLE_ENRICHMENT_BUDGET", 32),
         article_enrichment_initial_budget=(
             _env_int("ARTICLE_ENRICHMENT_INITIAL_BUDGET", 32)

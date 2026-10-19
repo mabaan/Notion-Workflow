@@ -1,0 +1,14 @@
+{
+  "publisher": "Gulf News",
+  "source_url": "https://gulfnews.com",
+  "fetched_at": "2026-10-19T14:25:22.596340+00:00",
+  "requests": 1,
+  "redirects": [],
+  "http_status": 200,
+  "final_url": "https://gulfnews.com",
+  "status": "fetched",
+  "bytes": 1300113,
+  "html_file": "pages\\gulf_news.html",
+  "sha256": "b162d89e10fbc1cdb1f8550d1f507f5a245c6dc5bb2c4a324f58ccb77c40db77",
+  "latency_seconds": 0.085
+}

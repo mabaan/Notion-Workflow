@@ -172,11 +172,15 @@ def evaluate_candidate_pool(
                     except Exception:
                         result.article.evidence_retrieval_status = "fetch_failed"
                     _refresh_article_identity(result.article)
-                if (
+                duplicate_url = (
                     result.article.canonical_url in excluded
                     or result.article.canonical_url in finalized_urls
                     or result.article.canonical_url in attempted
-                ):
+                )
+                if result.article.google_news_resolution.get("status") == "resolved":
+                    # Check prior identity before recording both resolved aliases.
+                    attempted.update((original_url, clean_url(result.article.url), result.article.canonical_url))
+                if duplicate_url:
                     evaluation.reject(result, "duplicate URL")
                     continue
                 if _is_self_published(result.article):

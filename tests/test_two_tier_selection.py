@@ -230,7 +230,9 @@ def test_two_tier_dry_run_audit_and_console_use_existing_enrichments(factory, tm
             return EnrichedArticle("Supported facts", "Mission consequence", score,
                                    editorial_significance=significance, region=["Global"])
 
-    settings = replace(_settings(tmp_path / "state"), article_selection_mode="luna")
+    settings = replace(_settings(tmp_path / "state"), article_selection_mode="luna",
+                       article_queue_weekly_target_global=3, article_queue_weekly_target_uae=4,
+                       article_queue_weekly_target_ksa=3, article_queue_weekly_target_egypt=2)
     settings.local_state_path.mkdir()
     settings.seen_articles_path.write_text('{"old-hash": {"notion_page_id": "old-page"}}', encoding="utf-8")
     before = settings.seen_articles_path.read_bytes()
@@ -290,8 +292,11 @@ def test_unknown_publisher_production_path_retains_threshold_five(factory, score
     assert run.report.evaluation.results[0].required_relevance_score == 5
 
 
-def test_fallback_does_not_shorten_strict_enrichment_opportunities(factory):
-    run = factory([article(f"feed-{i:03}") for i in range(60)], llm=Enricher(score=3, significance=4))
+def test_fallback_does_not_shorten_strict_enrichment_opportunities(factory, tmp_path):
+    settings = replace(_settings(tmp_path / "state"), article_selection_mode="luna",
+                       article_queue_weekly_target_global=3, article_queue_weekly_target_uae=4,
+                       article_queue_weekly_target_ksa=3, article_queue_weekly_target_egypt=2)
+    run = factory([article(f"feed-{i:03}") for i in range(60)], settings=settings, llm=Enricher(score=3, significance=4))
     assert len(run.llm.calls) == 48
     assert len({title for title, _ in run.llm.calls}) == 48
     assert run.report.enrichment_budget == {"initial": 32, "maximum": 48, "backfill_batch": 8, "attempted": 48}

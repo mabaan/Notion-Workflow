@@ -130,7 +130,12 @@ def enrich_luna_candidates(
             except Exception:
                 article.evidence_retrieval_status = "fetch_failed"
             _refresh_article_identity(article)
-        if article.canonical_url in excluded_urls or article.canonical_url in attempted_urls:
+        duplicate_url = article.canonical_url in excluded_urls or article.canonical_url in attempted_urls
+        if article.google_news_resolution.get("status") == "resolved":
+            # Test prior identity first, then retain every attempted alias, even
+            # when this publisher URL is already processed or self-published.
+            attempted_urls.update((original, clean_url(article.url), article.canonical_url))
+        if duplicate_url:
             _reject(evaluation, result, "duplicate URL")
             continue
         if _is_self_published(article):

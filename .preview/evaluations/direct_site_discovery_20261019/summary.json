@@ -1,0 +1,13 @@
+{
+  "candidate_urls": 338,
+  "publishers_with_candidates": 10,
+  "recent_candidates": 181,
+  "listing_http_requests": 19,
+  "feed_fetches": 13,
+  "article_http_requests": 35,
+  "direct_attempts": 18,
+  "direct_raw_extracted": 14,
+  "direct_supported_extracted": 12,
+  "wrapper_attempts": 5,
+  "api_cost_usd": 0
+}

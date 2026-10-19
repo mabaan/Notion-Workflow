@@ -7,10 +7,13 @@ from datetime import datetime
 from dataclasses import asdict
 import json
 from pathlib import Path
+from statistics import median
 from uuid import uuid4
 
 from research_automation.utils.hashing import build_url_hash
 from research_automation.utils.urls import url_hostname
+from research_automation.pipeline.direct_site_discovery import acquisition_method
+from research_automation.utils.evidence import is_feed_content
 
 
 def _canonical_id(url):
@@ -53,6 +56,91 @@ def _decision_stage(result, selected: bool, *, fallback_enabled: bool = False) -
     return "qualified_not_selected" if result.eligible else "metadata_rejection"
 
 
+def acquisition_metrics(report) -> dict:
+    """Count candidate identities once across phases, preserving raw statuses."""
+    groups = defaultdict(list)
+    for result in report.evaluation.results:
+        groups[result.candidate_id or str(id(result.article))].append(result)
+    methods = ("rss", "google_news_rss", "direct_site", "discovery_fallback")
+
+    def empty():
+        return dict(candidates=0, luna_attempted=0, enrichment_attempted=0, enriched=0,
+                    retriever_attempted=0, retriever_extracted=0, retrieval_statuses={}, selected=0)
+
+    by_method, by_publisher = {method: empty() for method in methods}, {}
+    winners = {id(result) for result in report.selection.winners}
+    for results in groups.values():
+        result = max(results, key=lambda r: (r.enrichment_attempted, r.classification_attempted, not bool(r.objective_cleanup_reason)))
+        article = result.article
+        method = acquisition_method(article)
+        counters = [by_method.setdefault(method, empty())]
+        if method == "direct_site":
+            counters.append(by_publisher.setdefault(article.source_name, empty()))
+        status = article.evidence_retrieval_status
+        for counts in counters:
+            counts["candidates"] += 1
+            counts["luna_attempted"] += int(any(r.classification_attempted for r in results))
+            counts["enrichment_attempted"] += int(any(r.enrichment_attempted for r in results))
+            counts["enriched"] += int(any(r.enrichment is not None for r in results))
+            counts["retriever_attempted"] += int(status != "not_attempted" and not is_feed_content(status))
+            counts["retriever_extracted"] += int(status == "extracted")
+            counts["retrieval_statuses"][status] = counts["retrieval_statuses"].get(status, 0) + 1
+            counts["selected"] += int(any(id(r) in winners for r in results))
+    return {"by_method": by_method, "direct_by_publisher": by_publisher}
+
+
+def google_news_resolution_metrics(report) -> dict:
+    """Count input identities once; separate actual requests from cached/skipped work.
+
+    'Extracted' is the existing retriever's outcome, not proof of a complete or
+    independently supported body. No second fetch is performed for a baseline.
+    """
+    groups = defaultdict(list)
+    for result in report.evaluation.results:
+        groups[result.candidate_id or str(id(result.article))].append(result)
+    rows = []
+    for results in groups.values():
+        result = max(results, key=lambda r: (r.enrichment_attempted, bool(r.article.google_news_resolution)))
+        if result.article.google_news_resolution:
+            rows.append((result.article.google_news_resolution, result.article,
+                         any(r.enrichment_attempted for r in results)))
+    latencies = [info["latency_seconds"] for info, _, _ in rows if info["attempted"]]
+
+    def evidence_bucket(article):
+        status = article.evidence_retrieval_status
+        return "publisher_extracted" if status == "extracted" else ("feed_content" if is_feed_content(status) else "metadata_only")
+
+    selected = Counter(evidence_bucket(w.article) for w in report.selection.winners)
+    resolved_selected = Counter(evidence_bucket(w.article) for w in report.selection.winners
+                                if w.article.google_news_resolution.get("status") == "resolved")
+    return {
+        "enabled": getattr(report, "google_news_url_resolution_enabled", False),
+        "wrappers_reaching_retrieval": len(rows),
+        "wrappers_reaching_enrichment": sum(enriched for _, _, enriched in rows),
+        "attempted": sum(info["attempted"] for info, _, _ in rows),
+        "resolved": sum(info["status"] == "resolved" for info, _, _ in rows),
+        "failed": sum(info["status"] != "resolved" for info, _, _ in rows),
+        "rate_limited": sum(info["status"] == "rate_limited" for info, _, _ in rows),
+        "google_429_responses": sum(info["http_429_count"] for info, _, _ in rows),
+        "request_count": sum(info["request_count"] for info, _, _ in rows),
+        "cache_hits": sum(info["cache_hit"] for info, _, _ in rows),
+        "skipped_after_resolution_cap": sum(info["failure_reason"] == "resolution_attempt_budget_exhausted"
+                                            for info, _, _ in rows),
+        "median_latency_seconds": round(median(latencies), 3) if latencies else None,
+        "publisher_access_refusals": sum(info["status"] == "resolved" and
+            article.evidence_retrieval_status == "blocked" for info, article, _ in rows),
+        "evidence_transitions": dict(Counter(
+            info["evidence_status_before"] + " -> " + info["evidence_status_after"] for info, _, _ in rows)),
+        "publisher_bodies_recovered": sum(info["status"] == "resolved" and
+            article.evidence_retrieval_status == "extracted" for info, article, _ in rows),
+        "supported_article_bodies_recovered": None,
+        "body_evidence_basis": "Raw ArticleRetriever extracted status; completeness and support are unverified.",
+        "baseline_note": "Before is the stored pre-retrieval status, not a control wrapper fetch. No causal uplift measured.",
+        "selected_evidence": {key: selected[key] for key in ("publisher_extracted", "feed_content", "metadata_only")},
+        "selected_resolved_evidence": {key: resolved_selected[key] for key in ("publisher_extracted", "feed_content", "metadata_only")},
+    }
+
+
 def build_candidate_audit(report) -> dict:
     """Keep phase observations separate from unique input-URL identities."""
 
@@ -88,7 +176,18 @@ def build_candidate_audit(report) -> dict:
             "canonical_id": _canonical_id(article.canonical_url),
             "title": article.title,
             "publisher": article.source_name,
-            "source_type": "discovery" if article.discovery_provider else "RSS",
+            "source_type": "direct_site" if acquisition_method(article) == "direct_site" else ("discovery" if article.discovery_provider else "RSS"),
+            "discovery_method": acquisition_method(article),
+            "discovery_page": article.discovery_page,
+            "date_provenance": article.date_provenance,
+            "date_precision": article.date_precision,
+            "canonical_url": article.canonical_url,
+            "google_news_resolution": dict(article.google_news_resolution),
+            "feed_wrapper_replaced": article.feed_wrapper_replaced,
+            "discovery_origins": [
+                {key: value for key, value in origin.items() if key != "snippet"}
+                for origin in article.discovery_origins
+            ],
             "registered_publisher": bool(article.source_page_id),
             "region": result.target_region,
             "region_assignment_basis": result.region_assignment_basis,
@@ -160,9 +259,26 @@ def build_candidate_audit(report) -> dict:
 
     final_by_id = {row["candidate_id"]: row for row in rows}
     unique_by_region = Counter(row["region"] or "Unassigned" for row in final_by_id.values())
+    acquisition = acquisition_metrics(report)
+    hybrid = getattr(report, "direct_site_discovery", {})
     return {
         "dry_run": report.dry_run,
         "selection_mode": getattr(report, "selection_mode", "deterministic"),
+        "weekly_capacity": dict(getattr(report, "weekly_capacity", {})),
+        "google_news_url_resolution": google_news_resolution_metrics(report),
+        "acquisition_metrics": acquisition["by_method"],
+        "direct_site_discovery": {
+            **hybrid,
+            "sources": {
+                publisher: {
+                    **counts,
+                    **{key: 0 for key in ("candidates", "luna_attempted", "enrichment_attempted", "enriched", "retriever_attempted", "retriever_extracted", "selected")},
+                    "retrieval_statuses": {},
+                    **acquisition["direct_by_publisher"].get(publisher, {}),
+                }
+                for publisher, counts in hybrid.get("sources", {}).items()
+            },
+        } if hybrid else {"enabled": False},
         "enrichment_budget": getattr(report, "enrichment_budget", {}),
         "classification_reports": [
             {
@@ -213,6 +329,13 @@ def write_candidate_audit(report, directory: Path, now: datetime) -> Path:
         "# Ingestion candidate audit", "",
         f"Mode: {'dry run' if report.dry_run else 'live'}. Full metadata details: [{json_path.name}]({json_path.name}).",
         f"Strict selections: {audit['selection_counts']['strict']}; fallback selections: {audit['selection_counts']['fallback']}; total selections: {audit['selection_counts']['total']}.",
+        *[f"{label}: {audit['weekly_capacity'][key]}" for label, key in (
+            ("Weekly article target", "weekly_total_target"),
+            ("Existing weekly total", "existing_weekly_total"),
+            ("Remaining weekly capacity", "remaining_weekly_capacity"),
+            ("Requested run limit", "requested_run_limit"),
+            ("Effective run capacity", "effective_run_capacity"),
+        ) if key in audit["weekly_capacity"]],
         "",
         f"Unique input candidates: {audit['unique_input_candidates']}; evaluation records: {audit['evaluation_records']}; reconsidered across phases: {audit['reconsidered_across_phases']}.",
         "Input identities use original URL hashes; canonical aliases are counted separately. Phase counts include reconsiderations; they are not unique article counts.",
@@ -223,6 +346,40 @@ def write_candidate_audit(report, directory: Path, now: datetime) -> Path:
     keys = ("phase", "region", "evaluated_records", "shortlisted", "deferred", "enrichment_attempted", "enriched", "qualified", "selected")
     for stage in audit["counts_by_phase_and_region"]:
         lines.append("| " + " | ".join(cell(stage.get(key, 0)) for key in keys) + " |")
+    if audit["direct_site_discovery"].get("enabled"):
+        lines += ["", "## Direct-site supplement (shadow only)", "",
+                  "| Publisher | Status | Feed | Found | Recent | Headline matches | Wrappers replaced | Direct only | Duplicates removed | Luna | Enrichment | Extracted | Selected |",
+                  "|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|"]
+        for publisher, counts in audit["direct_site_discovery"]["sources"].items():
+            values = [publisher] + [counts.get(key, 0) for key in (
+                "status", "feed_candidates_collected", "direct_candidates_discovered", "recent_direct_candidates_accepted",
+                "direct_feed_headline_matches", "wrappers_replaced_by_direct_urls", "direct_only_candidates", "duplicates_removed",
+                "luna_attempted", "enrichment_attempted", "retriever_extracted", "selected",
+            )]
+            lines.append("| " + " | ".join(cell(value) for value in values) + " |")
+        lines += ["", "Acquisition counts below use unique candidate identities, not phase observations. Retrieval statuses are the existing retriever's raw outcomes, not independent proof of body completeness.", ""]
+        for method, counts in audit["acquisition_metrics"].items():
+            lines.append(f"- {method}: {counts}")
+        lines += ["", "| Title | Method | Wrapper replaced | Canonical URL | Discovery page | Date provenance / precision |", "|---|---|---|---|---|---|"]
+        for row in audit["candidates"]:
+            values = (row["title"], row["discovery_method"], row["feed_wrapper_replaced"], row["canonical_url"],
+                      row["discovery_page"], f"{row['date_provenance']} / {row['date_precision']}")
+            lines.append("| " + " | ".join(cell(value) for value in values) + " |")
+    resolution = audit["google_news_url_resolution"]
+    if resolution["enabled"]:
+        lines += ["", "## Google News URL resolution", "",
+                  "```json", json.dumps(resolution, ensure_ascii=False, indent=2), "```", "",
+                  "| Title | Acquisition | Attempted / cache | Resolution | Publisher host | Requests / seconds | Failure | Evidence before / after |",
+                  "|---|---|---|---|---|---|---|---|---|"]
+        for row in audit["candidates"]:
+            info = row["google_news_resolution"]
+            if not info:
+                continue
+            values = (row["title"], info["original_acquisition_method"],
+                      f"{info['attempted']} / {info['cache_hit']}", info["status"], info["resolved_hostname"],
+                      f"{info['request_count']} / {info['latency_seconds']}", info["failure_reason"],
+                      f"{info['evidence_status_before']} / {info['evidence_status_after']}")
+            lines.append("| " + " | ".join(cell(value) for value in values) + " |")
     lines += ["", "Shortlist capacity counts model attempts, including failed calls; duplicates rejected before enrichment are skipped and backfilled without charging a model attempt.", "", "| Decision stage | Evaluation records |", "|---|---:|"]
     for stage, count in sorted(audit["decision_stage_counts"].items()):
         lines.append(f"| {stage} | {count} |")

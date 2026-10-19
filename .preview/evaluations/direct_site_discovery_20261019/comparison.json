@@ -1,0 +1,802 @@
+[
+  {
+    "publisher": "AGBI",
+    "collection_method": "Google News RSS",
+    "direct_fetch_status": "fetch_failed",
+    "feed_fetch_status": "fetched",
+    "direct_latency_seconds": 0.059,
+    "listing_fetch_latency_seconds": 0.059,
+    "parse_latency_seconds": null,
+    "feed_latency_seconds": 1.771,
+    "considered": 0,
+    "direct_duplicate_links": 0,
+    "feed_duplicate_links": 0,
+    "rejected": {},
+    "direct": {
+      "total": 0,
+      "recent": 0,
+      "recent_exact": 0,
+      "boundary_uncertain": 0,
+      "dates": 0,
+      "titles": 0,
+      "snippets": 0,
+      "wrappers": 0,
+      "direct": 0,
+      "date_sources": {}
+    },
+    "feed": {
+      "total": 100,
+      "recent": 11,
+      "recent_exact": 11,
+      "boundary_uncertain": 0,
+      "dates": 100,
+      "titles": 100,
+      "snippets": 0,
+      "wrappers": 100,
+      "direct": 0,
+      "date_sources": {
+        "rss_published": 100
+      }
+    },
+    "overlap": 0,
+    "unique_direct": 0,
+    "unique_feed": 11,
+    "overlap_all_dates": 0,
+    "recent_feed_matches_undated_direct": 0,
+    "match_method": "NFKC/case/punctuation normalization, exact equality; publisher suffix removed",
+    "overlap_titles": []
+  },
+  {
+    "publisher": "Arab News",
+    "collection_method": "Google News RSS",
+    "direct_fetch_status": "fetched",
+    "feed_fetch_status": "fetched",
+    "direct_latency_seconds": 0.392,
+    "listing_fetch_latency_seconds": 0.356,
+    "parse_latency_seconds": 0.0363,
+    "feed_latency_seconds": 1.768,
+    "considered": 86,
+    "direct_duplicate_links": 36,
+    "feed_duplicate_links": 0,
+    "rejected": {
+      "non_article_path": 96,
+      "navigation": 87,
+      "external_or_unsafe": 15,
+      "no_usable_headline": 22
+    },
+    "direct": {
+      "total": 50,
+      "recent": 34,
+      "recent_exact": 34,
+      "boundary_uncertain": 0,
+      "dates": 34,
+      "titles": 50,
+      "snippets": 0,
+      "wrappers": 0,
+      "direct": 50,
+      "date_sources": {
+        "unknown": 16,
+        "listing_card": 34
+      }
+    },
+    "feed": {
+      "total": 100,
+      "recent": 50,
+      "recent_exact": 50,
+      "boundary_uncertain": 0,
+      "dates": 100,
+      "titles": 100,
+      "snippets": 0,
+      "wrappers": 100,
+      "direct": 0,
+      "date_sources": {
+        "rss_published": 100
+      }
+    },
+    "overlap": 8,
+    "unique_direct": 26,
+    "unique_feed": 42,
+    "overlap_all_dates": 12,
+    "recent_feed_matches_undated_direct": 3,
+    "match_method": "NFKC/case/punctuation normalization, exact equality; publisher suffix removed",
+    "overlap_titles": [
+      "ambition knows no age no impossibilities 80 year old egyptian ezzeldin bahader aims for football world record",
+      "egypt enters the war",
+      "gcc chief houthis criminal behavior calls for firm international stance",
+      "saudi campaign provides specialized eye care to thousands of poorest bangladeshis",
+      "saudi defense minister discusses regional developments with uae president in abu dhabi",
+      "washington post denies netanyahu s claims on west bank journalist attack",
+      "why the houthis could pose a greater threat than al qaeda and daesh",
+      "world food programme says ending aid for half million in gaza due to funding shortfall"
+    ]
+  },
+  {
+    "publisher": "Council on Foreign Relations",
+    "collection_method": "Google News RSS",
+    "direct_fetch_status": "fetched",
+    "feed_fetch_status": "fetched",
+    "direct_latency_seconds": 0.839,
+    "listing_fetch_latency_seconds": 0.803,
+    "parse_latency_seconds": 0.0359,
+    "feed_latency_seconds": 1.768,
+    "considered": 57,
+    "direct_duplicate_links": 15,
+    "feed_duplicate_links": 0,
+    "rejected": {
+      "non_article_path": 30,
+      "navigation": 23,
+      "external_or_unsafe": 13,
+      "no_usable_headline": 6
+    },
+    "direct": {
+      "total": 42,
+      "recent": 6,
+      "recent_exact": 6,
+      "boundary_uncertain": 0,
+      "dates": 42,
+      "titles": 42,
+      "snippets": 11,
+      "wrappers": 0,
+      "direct": 42,
+      "date_sources": {
+        "listing_card": 42
+      }
+    },
+    "feed": {
+      "total": 100,
+      "recent": 2,
+      "recent_exact": 2,
+      "boundary_uncertain": 0,
+      "dates": 100,
+      "titles": 100,
+      "snippets": 0,
+      "wrappers": 100,
+      "direct": 0,
+      "date_sources": {
+        "rss_published": 100
+      }
+    },
+    "overlap": 2,
+    "unique_direct": 4,
+    "unique_feed": 0,
+    "overlap_all_dates": 3,
+    "recent_feed_matches_undated_direct": 0,
+    "match_method": "NFKC/case/punctuation normalization, exact equality; publisher suffix removed",
+    "overlap_titles": [
+      "the victory of asymmetry in the iran war",
+      "ukraine s attacks on russian data centers lay bare a global risk to ai"
+    ]
+  },
+  {
+    "publisher": "Fast Company Middle East",
+    "collection_method": "Google News RSS",
+    "direct_fetch_status": "fetched",
+    "feed_fetch_status": "fetched",
+    "direct_latency_seconds": 0.582,
+    "listing_fetch_latency_seconds": 0.559,
+    "parse_latency_seconds": 0.0232,
+    "feed_latency_seconds": 1.694,
+    "considered": 27,
+    "direct_duplicate_links": 7,
+    "feed_duplicate_links": 0,
+    "rejected": {
+      "navigation": 97,
+      "external_or_unsafe": 18,
+      "non_article_path": 20,
+      "no_usable_headline": 16
+    },
+    "direct": {
+      "total": 20,
+      "recent": 0,
+      "recent_exact": 0,
+      "boundary_uncertain": 0,
+      "dates": 0,
+      "titles": 20,
+      "snippets": 0,
+      "wrappers": 0,
+      "direct": 20,
+      "date_sources": {
+        "unknown": 20
+      }
+    },
+    "feed": {
+      "total": 100,
+      "recent": 1,
+      "recent_exact": 1,
+      "boundary_uncertain": 0,
+      "dates": 100,
+      "titles": 100,
+      "snippets": 0,
+      "wrappers": 100,
+      "direct": 0,
+      "date_sources": {
+        "rss_published": 100
+      }
+    },
+    "overlap": 0,
+    "unique_direct": 0,
+    "unique_feed": 1,
+    "overlap_all_dates": 2,
+    "recent_feed_matches_undated_direct": 1,
+    "match_method": "NFKC/case/punctuation normalization, exact equality; publisher suffix removed",
+    "overlap_titles": []
+  },
+  {
+    "publisher": "Gulf News",
+    "collection_method": "Google News RSS",
+    "direct_fetch_status": "fetched",
+    "feed_fetch_status": "fetched",
+    "direct_latency_seconds": 0.129,
+    "listing_fetch_latency_seconds": 0.085,
+    "parse_latency_seconds": 0.0435,
+    "feed_latency_seconds": 1.682,
+    "considered": 23,
+    "direct_duplicate_links": 0,
+    "feed_duplicate_links": 0,
+    "rejected": {
+      "navigation": 70,
+      "non_article_path": 5,
+      "external_or_unsafe": 10
+    },
+    "direct": {
+      "total": 23,
+      "recent": 21,
+      "recent_exact": 21,
+      "boundary_uncertain": 0,
+      "dates": 23,
+      "titles": 23,
+      "snippets": 23,
+      "wrappers": 0,
+      "direct": 23,
+      "date_sources": {
+        "embedded_article_json": 23
+      }
+    },
+    "feed": {
+      "total": 100,
+      "recent": 29,
+      "recent_exact": 29,
+      "boundary_uncertain": 0,
+      "dates": 100,
+      "titles": 99,
+      "snippets": 0,
+      "wrappers": 100,
+      "direct": 0,
+      "date_sources": {
+        "rss_published": 100
+      }
+    },
+    "overlap": 0,
+    "unique_direct": 21,
+    "unique_feed": 29,
+    "overlap_all_dates": 0,
+    "recent_feed_matches_undated_direct": 0,
+    "match_method": "NFKC/case/punctuation normalization, exact equality; publisher suffix removed",
+    "overlap_titles": []
+  },
+  {
+    "publisher": "Khaleej Times",
+    "collection_method": "Google News RSS",
+    "direct_fetch_status": "fetched",
+    "feed_fetch_status": "fetched",
+    "direct_latency_seconds": 0.11,
+    "listing_fetch_latency_seconds": 0.08,
+    "parse_latency_seconds": 0.0295,
+    "feed_latency_seconds": 1.124,
+    "considered": 45,
+    "direct_duplicate_links": 20,
+    "feed_duplicate_links": 0,
+    "rejected": {
+      "navigation": 109,
+      "external_or_unsafe": 27,
+      "non_article_path": 22
+    },
+    "direct": {
+      "total": 25,
+      "recent": 12,
+      "recent_exact": 12,
+      "boundary_uncertain": 0,
+      "dates": 12,
+      "titles": 25,
+      "snippets": 0,
+      "wrappers": 0,
+      "direct": 25,
+      "date_sources": {
+        "listing_card": 12,
+        "unknown": 13
+      }
+    },
+    "feed": {
+      "total": 100,
+      "recent": 42,
+      "recent_exact": 42,
+      "boundary_uncertain": 0,
+      "dates": 100,
+      "titles": 100,
+      "snippets": 0,
+      "wrappers": 100,
+      "direct": 0,
+      "date_sources": {
+        "rss_published": 100
+      }
+    },
+    "overlap": 2,
+    "unique_direct": 10,
+    "unique_feed": 40,
+    "overlap_all_dates": 4,
+    "recent_feed_matches_undated_direct": 2,
+    "match_method": "NFKC/case/punctuation normalization, exact equality; publisher suffix removed",
+    "overlap_titles": [
+      "dubai s new shared housing law why your rent could actually go up in 2026",
+      "online insults in uae can land you in jail cost up to dh500 000 fine"
+    ]
+  },
+  {
+    "publisher": "Nature",
+    "collection_method": "Google News RSS",
+    "direct_fetch_status": "fetched",
+    "feed_fetch_status": "fetched",
+    "direct_latency_seconds": 1.459,
+    "listing_fetch_latency_seconds": 1.439,
+    "parse_latency_seconds": 0.0202,
+    "feed_latency_seconds": 1.62,
+    "considered": 26,
+    "direct_duplicate_links": 1,
+    "feed_duplicate_links": 0,
+    "rejected": {
+      "non_article_path": 22,
+      "external_or_unsafe": 29,
+      "navigation": 67
+    },
+    "direct": {
+      "total": 25,
+      "recent": 5,
+      "recent_exact": 0,
+      "boundary_uncertain": 3,
+      "dates": 24,
+      "titles": 25,
+      "snippets": 13,
+      "wrappers": 0,
+      "direct": 25,
+      "date_sources": {
+        "unknown": 1,
+        "listing_card": 24
+      }
+    },
+    "feed": {
+      "total": 100,
+      "recent": 2,
+      "recent_exact": 2,
+      "boundary_uncertain": 0,
+      "dates": 100,
+      "titles": 99,
+      "snippets": 0,
+      "wrappers": 100,
+      "direct": 0,
+      "date_sources": {
+        "rss_published": 100
+      }
+    },
+    "overlap": 0,
+    "unique_direct": 5,
+    "unique_feed": 2,
+    "overlap_all_dates": 2,
+    "recent_feed_matches_undated_direct": 0,
+    "match_method": "NFKC/case/punctuation normalization, exact equality; publisher suffix removed",
+    "overlap_titles": []
+  },
+  {
+    "publisher": "Reuters",
+    "collection_method": "Google News RSS",
+    "direct_fetch_status": "excluded_prior_refusal",
+    "feed_fetch_status": "not_tested",
+    "direct_latency_seconds": null,
+    "listing_fetch_latency_seconds": null,
+    "parse_latency_seconds": null,
+    "feed_latency_seconds": null,
+    "considered": 0,
+    "direct_duplicate_links": 0,
+    "feed_duplicate_links": 0,
+    "rejected": {},
+    "direct": {
+      "total": 0,
+      "recent": 0,
+      "recent_exact": 0,
+      "boundary_uncertain": 0,
+      "dates": 0,
+      "titles": 0,
+      "snippets": 0,
+      "wrappers": 0,
+      "direct": 0,
+      "date_sources": {}
+    },
+    "feed": {
+      "total": 0,
+      "recent": 0,
+      "recent_exact": 0,
+      "boundary_uncertain": 0,
+      "dates": 0,
+      "titles": 0,
+      "snippets": 0,
+      "wrappers": 0,
+      "direct": 0,
+      "date_sources": {}
+    },
+    "overlap": 0,
+    "unique_direct": 0,
+    "unique_feed": 0,
+    "overlap_all_dates": 0,
+    "recent_feed_matches_undated_direct": 0,
+    "match_method": "NFKC/case/punctuation normalization, exact equality; publisher suffix removed",
+    "overlap_titles": []
+  },
+  {
+    "publisher": "S&P Global",
+    "collection_method": "Google News RSS",
+    "direct_fetch_status": "excluded_prior_refusal",
+    "feed_fetch_status": "not_tested",
+    "direct_latency_seconds": null,
+    "listing_fetch_latency_seconds": null,
+    "parse_latency_seconds": null,
+    "feed_latency_seconds": null,
+    "considered": 0,
+    "direct_duplicate_links": 0,
+    "feed_duplicate_links": 0,
+    "rejected": {},
+    "direct": {
+      "total": 0,
+      "recent": 0,
+      "recent_exact": 0,
+      "boundary_uncertain": 0,
+      "dates": 0,
+      "titles": 0,
+      "snippets": 0,
+      "wrappers": 0,
+      "direct": 0,
+      "date_sources": {}
+    },
+    "feed": {
+      "total": 0,
+      "recent": 0,
+      "recent_exact": 0,
+      "boundary_uncertain": 0,
+      "dates": 0,
+      "titles": 0,
+      "snippets": 0,
+      "wrappers": 0,
+      "direct": 0,
+      "date_sources": {}
+    },
+    "overlap": 0,
+    "unique_direct": 0,
+    "unique_feed": 0,
+    "overlap_all_dates": 0,
+    "recent_feed_matches_undated_direct": 0,
+    "match_method": "NFKC/case/punctuation normalization, exact equality; publisher suffix removed",
+    "overlap_titles": []
+  },
+  {
+    "publisher": "Saudi Gazette",
+    "collection_method": "Google News RSS",
+    "direct_fetch_status": "fetched",
+    "feed_fetch_status": "fetched",
+    "direct_latency_seconds": 0.788,
+    "listing_fetch_latency_seconds": 0.766,
+    "parse_latency_seconds": 0.0223,
+    "feed_latency_seconds": 1.472,
+    "considered": 48,
+    "direct_duplicate_links": 7,
+    "feed_duplicate_links": 0,
+    "rejected": {
+      "non_article_path": 24,
+      "navigation": 45,
+      "external_or_unsafe": 15,
+      "no_usable_headline": 1
+    },
+    "direct": {
+      "total": 41,
+      "recent": 17,
+      "recent_exact": 17,
+      "boundary_uncertain": 0,
+      "dates": 38,
+      "titles": 41,
+      "snippets": 1,
+      "wrappers": 0,
+      "direct": 41,
+      "date_sources": {
+        "listing_card": 38,
+        "unknown": 3
+      }
+    },
+    "feed": {
+      "total": 100,
+      "recent": 20,
+      "recent_exact": 20,
+      "boundary_uncertain": 0,
+      "dates": 100,
+      "titles": 100,
+      "snippets": 0,
+      "wrappers": 100,
+      "direct": 0,
+      "date_sources": {
+        "rss_published": 100
+      }
+    },
+    "overlap": 1,
+    "unique_direct": 16,
+    "unique_feed": 19,
+    "overlap_all_dates": 1,
+    "recent_feed_matches_undated_direct": 0,
+    "match_method": "NFKC/case/punctuation normalization, exact equality; publisher suffix removed",
+    "overlap_titles": [
+      "two saudi national guard officers die in helicopter crash in najran"
+    ]
+  },
+  {
+    "publisher": "Saudi Press Agency",
+    "collection_method": "Google News RSS",
+    "direct_fetch_status": "fetched",
+    "feed_fetch_status": "fetched",
+    "direct_latency_seconds": 0.571,
+    "listing_fetch_latency_seconds": 0.569,
+    "parse_latency_seconds": 0.0019,
+    "feed_latency_seconds": 0.961,
+    "considered": 0,
+    "direct_duplicate_links": 0,
+    "feed_duplicate_links": 0,
+    "rejected": {},
+    "direct": {
+      "total": 0,
+      "recent": 0,
+      "recent_exact": 0,
+      "boundary_uncertain": 0,
+      "dates": 0,
+      "titles": 0,
+      "snippets": 0,
+      "wrappers": 0,
+      "direct": 0,
+      "date_sources": {}
+    },
+    "feed": {
+      "total": 100,
+      "recent": 42,
+      "recent_exact": 42,
+      "boundary_uncertain": 0,
+      "dates": 100,
+      "titles": 100,
+      "snippets": 0,
+      "wrappers": 100,
+      "direct": 0,
+      "date_sources": {
+        "rss_published": 100
+      }
+    },
+    "overlap": 0,
+    "unique_direct": 0,
+    "unique_feed": 42,
+    "overlap_all_dates": 0,
+    "recent_feed_matches_undated_direct": 0,
+    "match_method": "NFKC/case/punctuation normalization, exact equality; publisher suffix removed",
+    "overlap_titles": []
+  },
+  {
+    "publisher": "Smart Water Magazine",
+    "collection_method": "Google News RSS",
+    "direct_fetch_status": "blocked",
+    "feed_fetch_status": "fetched",
+    "direct_latency_seconds": 0.107,
+    "listing_fetch_latency_seconds": 0.107,
+    "parse_latency_seconds": null,
+    "feed_latency_seconds": 1.599,
+    "considered": 0,
+    "direct_duplicate_links": 0,
+    "feed_duplicate_links": 0,
+    "rejected": {},
+    "direct": {
+      "total": 0,
+      "recent": 0,
+      "recent_exact": 0,
+      "boundary_uncertain": 0,
+      "dates": 0,
+      "titles": 0,
+      "snippets": 0,
+      "wrappers": 0,
+      "direct": 0,
+      "date_sources": {}
+    },
+    "feed": {
+      "total": 100,
+      "recent": 0,
+      "recent_exact": 0,
+      "boundary_uncertain": 0,
+      "dates": 100,
+      "titles": 100,
+      "snippets": 0,
+      "wrappers": 100,
+      "direct": 0,
+      "date_sources": {
+        "rss_published": 100
+      }
+    },
+    "overlap": 0,
+    "unique_direct": 0,
+    "unique_feed": 0,
+    "overlap_all_dates": 0,
+    "recent_feed_matches_undated_direct": 0,
+    "match_method": "NFKC/case/punctuation normalization, exact equality; publisher suffix removed",
+    "overlap_titles": []
+  },
+  {
+    "publisher": "The Guardian International",
+    "collection_method": "RSS",
+    "direct_fetch_status": "fetched",
+    "feed_fetch_status": "fetched",
+    "direct_latency_seconds": 0.087,
+    "listing_fetch_latency_seconds": 0.052,
+    "parse_latency_seconds": 0.0346,
+    "feed_latency_seconds": 0.251,
+    "considered": 54,
+    "direct_duplicate_links": 4,
+    "feed_duplicate_links": 0,
+    "rejected": {
+      "non_article_path": 8,
+      "navigation": 115,
+      "external_or_unsafe": 4
+    },
+    "direct": {
+      "total": 50,
+      "recent": 49,
+      "recent_exact": 23,
+      "boundary_uncertain": 1,
+      "dates": 50,
+      "titles": 50,
+      "snippets": 0,
+      "wrappers": 0,
+      "direct": 50,
+      "date_sources": {
+        "literal_url_date": 27,
+        "listing_card": 23
+      }
+    },
+    "feed": {
+      "total": 45,
+      "recent": 38,
+      "recent_exact": 38,
+      "boundary_uncertain": 0,
+      "dates": 45,
+      "titles": 45,
+      "snippets": 45,
+      "wrappers": 0,
+      "direct": 45,
+      "date_sources": {
+        "rss_published": 45
+      }
+    },
+    "overlap": 6,
+    "unique_direct": 43,
+    "unique_feed": 32,
+    "overlap_all_dates": 6,
+    "recent_feed_matches_undated_direct": 0,
+    "match_method": "NFKC/case/punctuation normalization, exact equality; publisher suffix removed",
+    "overlap_titles": [
+      "4 000 people minding our own business four decades on falklands again face a hostile argentina",
+      "albania accused of rushing through trump linked resort in formerly protected landscape",
+      "french prime minister calls for local and partial curfews after riots",
+      "this is not poker alberta goes to polls in referendum that has exposed divisions not least among separatists",
+      "three deaths from float crushes raise safety concerns over japanese festivals",
+      "us gave us no warning of russian strikes on kyiv power plants zelenskyy says"
+    ]
+  },
+  {
+    "publisher": "The National",
+    "collection_method": "Google News RSS",
+    "direct_fetch_status": "fetched",
+    "feed_fetch_status": "fetched",
+    "direct_latency_seconds": 0.262,
+    "listing_fetch_latency_seconds": 0.184,
+    "parse_latency_seconds": 0.0784,
+    "feed_latency_seconds": 1.121,
+    "considered": 56,
+    "direct_duplicate_links": 6,
+    "feed_duplicate_links": 0,
+    "rejected": {
+      "navigation": 189,
+      "non_article_path": 71,
+      "no_usable_headline": 35,
+      "external_or_unsafe": 150
+    },
+    "direct": {
+      "total": 50,
+      "recent": 36,
+      "recent_exact": 0,
+      "boundary_uncertain": 4,
+      "dates": 50,
+      "titles": 50,
+      "snippets": 0,
+      "wrappers": 0,
+      "direct": 50,
+      "date_sources": {
+        "literal_url_date": 50
+      }
+    },
+    "feed": {
+      "total": 100,
+      "recent": 28,
+      "recent_exact": 28,
+      "boundary_uncertain": 0,
+      "dates": 100,
+      "titles": 100,
+      "snippets": 0,
+      "wrappers": 100,
+      "direct": 0,
+      "date_sources": {
+        "rss_published": 100
+      }
+    },
+    "overlap": 2,
+    "unique_direct": 34,
+    "unique_feed": 26,
+    "overlap_all_dates": 2,
+    "recent_feed_matches_undated_direct": 0,
+    "match_method": "NFKC/case/punctuation normalization, exact equality; publisher suffix removed",
+    "overlap_titles": [
+      "public art abu dhabi biennial artists locations dates and what to know",
+      "who is tiger shroff and what do we know about the shooting of the bollywood star"
+    ]
+  },
+  {
+    "publisher": "ZAWYA",
+    "collection_method": "Google News RSS",
+    "direct_fetch_status": "fetched",
+    "feed_fetch_status": "fetched",
+    "direct_latency_seconds": 0.608,
+    "listing_fetch_latency_seconds": 0.59,
+    "parse_latency_seconds": 0.0184,
+    "feed_latency_seconds": 0.96,
+    "considered": 13,
+    "direct_duplicate_links": 1,
+    "feed_duplicate_links": 0,
+    "rejected": {
+      "navigation": 121,
+      "non_article_path": 23,
+      "no_usable_headline": 1,
+      "external_or_unsafe": 2
+    },
+    "direct": {
+      "total": 12,
+      "recent": 1,
+      "recent_exact": 1,
+      "boundary_uncertain": 0,
+      "dates": 1,
+      "titles": 12,
+      "snippets": 1,
+      "wrappers": 0,
+      "direct": 12,
+      "date_sources": {
+        "listing_card": 1,
+        "unknown": 11
+      }
+    },
+    "feed": {
+      "total": 100,
+      "recent": 83,
+      "recent_exact": 83,
+      "boundary_uncertain": 0,
+      "dates": 100,
+      "titles": 100,
+      "snippets": 0,
+      "wrappers": 100,
+      "direct": 0,
+      "date_sources": {
+        "rss_published": 100
+      }
+    },
+    "overlap": 0,
+    "unique_direct": 1,
+    "unique_feed": 83,
+    "overlap_all_dates": 0,
+    "recent_feed_matches_undated_direct": 0,
+    "match_method": "NFKC/case/punctuation normalization, exact equality; publisher suffix removed",
+    "overlap_titles": []
+  }
+]
