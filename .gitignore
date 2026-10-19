@@ -1,6 +1,7 @@
 .env
 .local_state/
-.preview/ingestion_audits/
+# Generated audits, previews, evaluation captures and one-off run scripts
+.preview/
 .venv/
 __pycache__/
 *.py[cod]

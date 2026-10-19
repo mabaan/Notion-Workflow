@@ -105,53 +105,14 @@ HTTP retrieval. These are the existing retriever's raw statuses, **not** the
 benchmark's independent page/paywall checks or a guarantee of complete evidence.
 The terminal prints these counters only when the feature is enabled.
 
-## Offline verification
+## Validation and shadow use
 
-`tests/test_hybrid_discovery.py` covers the ten requested scenarios, plus explicit
-request/anchor/article limits, source allowlisting, redirect and access failures,
-relative and National path dates, cutoff ambiguity, conservative matching,
-preservation of direct/native feed metadata and processed-wrapper exclusion.
-Configuration tests verify the default-off flag and invalid-value rejection.
-Full ingestion tests use mocked classification/enrichment/retrieval and assert
-zero Notion or ingestion-state writes. No paid live run is part of this change.
+[Hybrid discovery tests](../tests/test_hybrid_discovery.py) cover bounds, source
+allowlisting, date provenance, conservative feed/direct matching, failure
+isolation and zero-write integration. Configuration tests cover the flag.
 
-```powershell
-.\.venv\Scripts\python.exe -X utf8 -m pytest -q
-git diff --check
-```
-
-## Next shadow run (not executed by this implementation)
-
-This command collects configured feeds and permitted listing pages and makes
-paid classifier/enrichment calls, while preserving Notion and ingestion state:
-
-```powershell
-$env:ARTICLE_SELECTION_MODE = "luna"
-$env:DIRECT_SITE_DISCOVERY_ENABLED = "true"
-$env:CLASSIFICATION_MODEL = "gpt-6-luna"
-$env:LLM_MODEL = "gpt-6-sol"
-.\.venv\Scripts\python.exe -X utf8 scripts\run_daily_ingestion_local.py --dry-run --all-sources --limit 12
-```
-
-No batch, enrichment, discovery or final-selection allowance is overridden by
-that command. JSON/Markdown results remain under `.preview/ingestion_audits/`.
-Set `$env:DIRECT_SITE_DISCOVERY_ENABLED = "false"` to restore the default path.
-
-## Implementation files
-
-- `.env.example`: documents the opt-in flag, without editing `.env`.
-- `src/research_automation/config.py`: loads the default-off boolean.
-- `src/research_automation/models/article.py`: in-memory acquisition provenance.
-- `src/research_automation/sources/rss.py`: labels feed acquisition metadata.
-- `src/research_automation/pipeline/discovery.py`: labels existing provider results.
-- `src/research_automation/pipeline/direct_site_discovery.py`: bounded listing,
-  freshness and conservative feed/direct merge.
-- `src/research_automation/pipeline/ingestion.py`: shadow-only guard and integration
-  before classification; console counters.
-- `src/research_automation/pipeline/candidate_audit.py`: provenance and acquisition
-  metrics in JSON/Markdown audits.
-- `tests/test_hybrid_discovery.py` and `tests/test_config.py`: offline regressions.
-- `README.md` and this document: usage, bounds and limitations.
-
-The earlier discovery benchmark script, tests and saved artifacts are retained
-unchanged. No source adapter is replaced and no Notion schema is modified.
+Use the [README ingestion settings and dry-run command](../README.md#run-ingestion),
+setting `DIRECT_SITE_DISCOVERY_ENABLED=true` before launching. This enables listing
+collection and can incur model costs; it still requires `--dry-run` and preserves
+Notion and ingestion state. Batch, enrichment and selection allowances are unchanged.
+Set the flag back to `false` to restore ordinary feed collection.

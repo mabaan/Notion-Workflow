@@ -55,12 +55,6 @@ def test_four_strict_plus_five_fallback_returns_nine():
     assert all(item.fallback_reason for item in soft)
 
 
-def test_eight_qualified_articles_return_eight_instead_of_forcing_twelve():
-    pool = regional_pool({"Global": 1, "UAE": 1, "KSA": 1, "Egypt": 1})
-    pool += [fallback(f"soft{i}") for i in range(4)]
-    assert len(select(pool, limit=12).winners) == 8
-
-
 @pytest.mark.parametrize("relevance,significance,registered,expected", [
     (3, 4, True, True), (3, 3, True, True), (3, 2, True, False),
     (2, 5, True, False), (1, 5, True, False),

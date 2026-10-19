@@ -7,7 +7,6 @@ from __future__ import annotations
 
 import argparse
 from dataclasses import asdict, replace
-from hashlib import sha256
 import json
 import os
 from pathlib import Path

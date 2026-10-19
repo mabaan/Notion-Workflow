@@ -99,24 +99,13 @@ control fetch: before/after transitions do not prove causal recovery or uplift.
 Publisher refusals count the existing retriever's `blocked` category; other raw
 failures and partial/paywall text retain existing semantics.
 
-## Next controlled shadow run
+## Usage
 
-This implementation was verified offline. No paid shadow run was executed.
-The following command performs a real read-only ingestion with API calls, but no
-Notion or persistent ingestion-state writes. It retains current batch/budget
-settings (100 articles per classification batch; 32/48/8 enrichment defaults).
-
-```powershell
-$env:ARTICLE_SELECTION_MODE = "luna"
-$env:GOOGLE_NEWS_URL_RESOLUTION_ENABLED = "true"
-$env:DIRECT_SITE_DISCOVERY_ENABLED = "false"
-$env:CLASSIFICATION_MODEL = "gpt-6-luna"
-$env:LLM_MODEL = "gpt-6-sol"
-.\.venv\Scripts\python.exe -X utf8 scripts\run_daily_ingestion_local.py --dry-run --all-sources --limit 12
-```
-
-Set `$env:GOOGLE_NEWS_URL_RESOLUTION_ENABLED = "false"` to restore the original
-retrieval path. No other flag or budget override is required.
+Use the [README ingestion settings and dry-run command](../README.md#run-ingestion)
+with `GOOGLE_NEWS_URL_RESOLUTION_ENABLED=true`. The setting defaults to `false`;
+set it back to `false` to restore the original retrieval path. Existing batch,
+enrichment and discovery limits still apply. Resolution can make network requests
+but adds no model stage.
 
 The unofficial protocol may change, rate limits can still occur, destination
 path heuristics can reject unusual legitimate URLs, and missing/stale publisher

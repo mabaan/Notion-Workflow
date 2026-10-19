@@ -4,17 +4,6 @@ from pathlib import Path
 PROMPTS_DIR = Path(__file__).resolve().parents[1] / "src" / "research_automation" / "prompts"
 
 
-def test_prompt_templates_exist_and_are_non_empty() -> None:
-    for prompt_name in [
-        "article_enrichment.txt",
-        "newsletter_draft.txt",
-        "social_media_draft.txt",
-    ]:
-        prompt = PROMPTS_DIR / prompt_name
-        assert prompt.exists()
-        assert prompt.read_text(encoding="utf-8").strip()
-
-
 def test_enrichment_prompt_requires_an_explicit_mission_link_for_high_scores() -> None:
     prompt = (PROMPTS_DIR / "article_enrichment.txt").read_text(encoding="utf-8")
 

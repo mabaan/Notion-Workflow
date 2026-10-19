@@ -1,6 +1,6 @@
 # Metadata classifier
 
-This reusable component now powers the opt-in `ARTICLE_SELECTION_MODE=luna` ingestion path. The default remains `deterministic` for rollback. See [controlled Luna selection](luna_selection.md) for allocation, discovery, coverage overflow, audit fields and the dry-run command. The historical evaluation sections below describe the independent Step 1/2 experiments, before integration.
+This reusable component now powers the opt-in `ARTICLE_SELECTION_MODE=luna` ingestion path. The default remains `deterministic` for rollback. See [controlled Luna selection](luna_selection.md) for allocation, discovery, coverage overflow, audit fields and the dry-run command.
 
 `ArticleClassifier.classify()` accepts `ClassificationInput` records containing a caller-supplied stable ID, title, RSS snippet, publisher, publication datetime and source-region hints. It sends only those fields. Titles and snippets are JSON data in the user message; trusted instructions and the editorial rubric stay in the system message. Publisher/discovery regions are explicitly labelled hints, never geographic proof. No article is fetched.
 
@@ -46,7 +46,7 @@ An explicitly unknown publication date can be represented by `None` and is sent 
 
 ## Configuration
 
-These settings reuse `OPENAI_API_KEY`. Luna ingestion requires both `CLASSIFICATION_MODEL` and `LLM_MODEL` to be `gpt-6-luna`; the independent component retains older verified profiles for historical experiments.
+These settings reuse `OPENAI_API_KEY`. Luna ingestion requires `CLASSIFICATION_MODEL=gpt-6-luna`; enrichment accepts `LLM_MODEL=gpt-6-luna` or `gpt-6-sol`. The independent component retains older verified profiles for historical experiments.
 
 | Environment variable | Default | Meaning |
 |---|---|---|
@@ -77,32 +77,17 @@ There is exactly one `ClassificationOutcome` per submitted ID. Failed outcomes c
 
 Mock HTTP tests cover default/custom batches, all-input coverage, reversed response/input order, strict field/ID validation, retries, truncated output, context/byte limits, Unicode metadata, isolated failures, authentication/rate-limit failures, usage accounting, objective prechecks and untrusted-data prompt boundaries. They use the real SDK with `httpx.MockTransport`; no live classification or Notion calls are made.
 
-Metadata can omit important facts, and prompt instructions cannot guarantee model judgment or immunity to adversarial text. Step 1 used only offline tests; the Step 2 experiments below measure some editorial behavior and full 100-article throughput, using provisional reference labels. Population recall/precision remain unestablished. Binary recovery can increase requests on malformed responses. Byte/output estimates are conservative heuristics with runtime size recovery. The current opt-in integration retains Borderline and unresolved operational failures for bounded detailed assessment; unassessed failures stay explicit in the audit.
+Metadata can omit important facts, and prompt instructions cannot guarantee model judgment or immunity to adversarial text. Offline tests verify request and selection mechanics; historical experiments use provisional reference labels and saved metadata. Population recall/precision remain unestablished. Binary recovery can increase requests on malformed responses. Byte/output estimates are conservative heuristics with runtime size recovery. The current opt-in integration retains Borderline and unresolved operational failures for bounded detailed assessment; unassessed failures stay explicit in the audit.
 
-## Controlled evaluation (Step 2)
+## Offline benchmark
 
-The tracked `tests/fixtures/article_classifier_benchmark.json` freezes saved metadata, provenance and provisional analyst reference labels. Only ten RSS descriptions survive; missing descriptions stay empty. Missing-date supplements and user-described scenarios are separate from the 25 dated historical articles used for the primary comparison. Prior model outputs are not reference labels.
+`tests/fixtures/article_classifier_benchmark.json` retains saved metadata,
+provenance and provisional analyst labels. Missing descriptions stay empty;
+missing-date supplements and user-described scenarios remain separate from dated
+historical articles. Prior model outputs are not reference labels.
 
-`scripts/evaluate_article_classifier.py` runs the actual legacy shortlist offline by default. `--live` explicitly enables a classification-only comparison with mini at a 100-article ceiling, mini repartitioned into 18/17, and nano at a 100-article ceiling. The available sample contains 35 articles, so neither full 100 nor full 50 throughput is established. No production ingestion or Notion clients run.
-
-The shared HTTP guard permits at most six network requests, 160,000 conservatively reserved tokens and $0.25 estimated reserved cost, including retries and failures. Every send is reserved and journaled first; unused reservations are not refunded. Pricing assumptions, usage, latency, actual model snapshots and persistent-state hashes are saved. These estimates are not a provider billing cap. The verified model families were callable during the experiment, but their official pages now mark them Deprecated; lifecycle must be checked before future deployment.
-
-Use a new child directory under `.preview/evaluations/` for each run; existing manifests prevent accidental rerun spending. `--report-only` regenerates quantitative comparison tables and metrics from captured outputs without network access. A future run needs its own narrative assessment. The initial report is at `.preview/evaluations/article_classifier_2026-10-18/report.md`; its recommendation is **NO-GO for production replacement**, based on more false positives and region errors without demonstrated recall improvement. Production behavior and classifier prompt remain unchanged.
-
-### Requested Luna rerun with shared enrichment
-
-`--model gpt-6-luna` runs both classifier batch configurations with the requested model; the default legacy comparison plan is preserved for reproducibility. Luna uses 16,384 maximum completion tokens (including reasoning) and a 120-second timeout for this evaluation only. Its verified cache-write price is included in budget reservations and usage estimates; if cache-write usage is absent, remaining input is conservatively priced at the cache-write rate.
-
-The Luna experiment is captured under `.preview/evaluations/article_classifier_luna_2026-10-18/`. `python -m scripts.evaluate_enriched_selection --live --source PATH` then enriches the union of the two screens' retained **dated primary** articles using the existing Luna enrichment prompt/parser. One bounded enrichment per distinct ID is reused across paths. Both receive identical original metadata/source hints; classifier-assigned regions are evaluated separately and cannot bias the shared enrichment. Missing-date supplements/user scenarios remain diagnostic only. No full text is fetched.
-
-The enrichment phase permits at most 25 additional requests, 320,000 reserved tokens, and the lesser of $0.20 or the remaining $0.25 combined cost ceiling. Singleton outputs are capped at 4,096 tokens including reasoning, SDK retries are disabled, and failures remain explicit. Combined phase ceilings are 31 requests, 480,000 reserved tokens and $0.25 estimated reserved cost. Existing manifests prevent accidental repeated spending; omit `--live` to replay the captured enrichment scores offline.
-
-The offline comparison applies unchanged registered/unregistered relevance thresholds (4/5), 70/20/10 queue scoring, regional quotas, publisher caps and event deduplication in an empty historical weekly state. It reports qualification separately from final quota-constrained allocation. No production integration, default model change, persistent-state mutation or Notion operation occurs.
-
-### Larger follow-up evaluation
-
-`python -m scripts.evaluate_luna_followup --live` consumes the separately frozen `.preview/evaluations/luna_followup_2026-10-19/snapshot_reference.json`. It requires 100 distinct metadata records and a preselected 20-ID enrichment panel. The sample combines 70 publisher-balanced broad-feed records with 30 explicitly identified mission-focused records; it is not a population-representative accuracy estimate. The provisional reference labels are frozen before any model calls. Original RSS descriptions are preserved, including headline repetitions.
-
-The fixed experiment repeats the identical 100-article request twice, then classifies the same pool as two 50-article batches. It also repeats the original 35-record classifier benchmark, enriches all 20 panel articles once for shared scoring (including articles rejected by either screen, to diagnose missed opportunities), and repeats the unchanged Veal enrichment four times. The 20-article allocation result is a panel-only sensitivity check, not a simulation of all 100 articles after enrichment. Repeated calls are measurements, not a new production voting stage.
-
-A single shared HTTP guard caps the complete follow-up at 30 requests, 700,000 reserved tokens and $0.25 estimated reserved cost. Offline preflight serializes every planned request and verifies that full 100/50 batches fit before sending. Existing manifests prevent repeated spending; omit `--live` to recompute analysis from captured results. Source Registry/feed collection used only read operations outside this model runner. No full ingestion, source-status update, Notion write, full-article fetch, schema change or persistent ingestion-state mutation occurs.
+`scripts/evaluate_article_classifier.py` runs the deterministic baseline offline
+by default. Other retained tools compare shared enrichment, batch consistency
+and evidence retrieval. Historical captures are local artifacts rather than
+source files; see [evaluation tools and artifact handling](evaluation.md) for
+inputs, output locations and replay requirements.

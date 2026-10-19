@@ -1,8 +1,10 @@
-# Research Automation
+# SOMA MATER Research Automation
 
-Local Python automation for a Notion-based research workflow. The project validates and schedules a Notion Source Registry, builds a bounded article candidate pool, ranks every shortlisted candidate before writing, and generates weekly newsletter and social draft content from human-approved items only.
+Python automation for collecting and curating Food & Water Security and Net Zero
+Transition news, especially in MENA. Qualified articles enter a Notion Article
+Queue for human approval before newsletter and social drafts are generated.
 
-## Local Setup
+## Setup
 
 ```powershell
 python -m venv .venv
@@ -11,45 +13,70 @@ python -m pip install -e ".[dev]"
 copy .env.example .env
 ```
 
-Required `.env` values include the five Notion database IDs, Notion and OpenAI credentials, and the runtime/selection settings documented in `.env.example`. Never commit `.env` or real secrets.
+Fill in the Notion integration token, five database IDs and OpenAI credentials.
+Use the keys in [.env.example](.env.example) and see [Notion setup](docs/notion_setup.md).
+Keep `.env` and `.local_state/` private and local.
 
-## Scripts
+## Run ingestion
+
+The current Luna/Sol workflow uses these explicit session settings. The shipped
+selection default remains `deterministic` for rollback.
 
 ```powershell
-.\.venv\Scripts\python -m pytest
-.\.venv\Scripts\python scripts\test_notion_connection.py
-.\.venv\Scripts\python scripts\inspect_notion_database.py source_registry
-.\.venv\Scripts\python scripts\run_weekly_setup_local.py
-.\.venv\Scripts\python scripts\run_daily_ingestion_local.py --dry-run
-.\.venv\Scripts\python scripts\run_daily_ingestion_local.py --dry-run --all-sources
-.\.venv\Scripts\python scripts\run_daily_ingestion_local.py --limit 5
-.\.venv\Scripts\python scripts\run_weekly_drafts_local.py
+$env:ARTICLE_SELECTION_MODE = "luna"
+$env:GOOGLE_NEWS_URL_RESOLUTION_ENABLED = "true"
+$env:DIRECT_SITE_DISCOVERY_ENABLED = "false"
+$env:CLASSIFICATION_MODEL = "gpt-6-luna"
+$env:LLM_MODEL = "gpt-6-sol"
+
+# Review the same selection path without Notion or ingestion-state writes.
+.\.venv\Scripts\python.exe -X utf8 scripts\run_daily_ingestion_local.py --dry-run --all-sources --limit 12
+
+# Save qualified winners to Article Queue for human review.
+.\.venv\Scripts\python.exe -X utf8 scripts\run_daily_ingestion_local.py --all-sources --limit 12
 ```
 
-## Workflow
+Dry runs can make paid model/discovery requests. `--all-sources` bypasses publisher
+scheduling; existing queue counts, processed history and weekly caps still apply.
+`--limit` is a maximum. A full week skips collection and model work. There is no
+CLI switch to ignore existing queue/history. `--dry-run --no-enrich` provides
+metadata diagnostics without classification or enrichment model calls.
 
-1. The revised Source Registry schema is validated before ingestion.
-2. Due `Publisher` rows are selected from `Check Frequency`; `Discovery Provider` rows are demand-triggered only.
-3. Due feeds are fetched concurrently with bounded HTTP retries and per-source health outcomes.
-4. The default `ARTICLE_SELECTION_MODE=deterministic` follows the legacy steps below. Opt-in `luna` uses objective cleanup, batched GPT-6 Luna metadata classification, a merged bounded enrichment pool and regional coverage with quality-based overflow. See [controlled Luna selection and dry run](docs/luna_selection.md).
-   In deterministic mode, URLs are normalized, deduplicated, assigned to exact quota regions, and filtered for freshness, topic, and geography.
-5. Up to six candidates per deficient region are shortlisted initially and at most eight are attempted per execution. Direct mission signals precede contextual matches; within each tier, mission specificity, publisher quality and concrete developments precede recency and snippet length, while retaining publisher diversity. Expansion reserves up to two available attempts for metadata-eligible discovery results and returns unused capacity to RSS.
-6. The final queue score is 70% LLM relevance, 20% editorial significance and 10% publisher `Editorial Quality`. Registered publishers require relevance 4; unregistered publishers require 5.
-7. Selection enforces weekly targets of Global 3, UAE 4, KSA 3, and Egypt 2, with a hard two-per-publisher weekly cap and same-event suppression.
-8. Only final winners are written as complete Article Queue pages. The weekly target and per-execution ceiling are both 12 pages.
-9. Dry runs load current weekly state and perform no Notion or ingestion-state writes. Both live runs and dry runs write metadata-only candidate diagnostics outside ingestion state.
-10. Human editors approve stories in Notion, after which the unchanged weekly draft flow uses approved articles.
+## Selection
 
-`--no-enrich` is diagnostic-only and requires `--dry-run`; it can never create live queue pages.
+1. Load weekly queue state and remaining capacity; fetch due publisher RSS feeds.
+2. In Luna mode, apply objective validity, freshness, URL deduplication and
+   processed/self-published exclusions, then classify all eligible metadata in
+   batches of 100. No keyword editorial gate runs in this path.
+3. Merge classifications and allocate detailed enrichment: 32 initial attempts,
+   backfill in batches of 8, and at most 48 attempts across RSS and discovery.
+   Resolve Google News URLs only at allocated retrieval opportunities when enabled.
+4. Select strict winners first: relevance at least 4 for registered publishers,
+   5 for unregistered publishers. Already-enriched registered stories with
+   relevance and significance at least 3 can fill remaining capacity via fallback.
+5. Rank by 70% final relevance, 20% editorial significance and 10% publisher quality.
+   Enforce event deduplication, two articles per publisher per week, regional
+   coverage preferences and the total weekly capacity of 12 by default.
+6. Write complete winners to Article Queue and record successful URLs locally.
+   Weekly drafting subsequently uses only human-approved articles.
 
-An optional four-publisher direct-listing supplement is available for shadow dry
-runs only. `DIRECT_SITE_DISCOVERY_ENABLED=false` remains the default; see
-[hybrid discovery bounds, provenance and Luna/Sol command](docs/hybrid_discovery.md).
+See [architecture](docs/architecture.md), [Luna selection](docs/luna_selection.md),
+[classifier](docs/article_classifier.md), [Google News resolution](docs/google_news_resolution.md)
+and [optional direct-site shadow discovery](docs/hybrid_discovery.md).
+The [deterministic routing policy](docs/candidate_selection_routing.md) documents
+the rollback path.
 
-Google News URL resolution is separately opt-in and default-off. It runs only
-immediately before detailed-enrichment evidence retrieval; see
-[resolver bounds, fallback, audit metrics and shadow command](docs/google_news_resolution.md).
+## Other commands
 
-Candidate audits are saved as timestamped Markdown and JSON files in ignored `.preview/ingestion_audits/` (beside the configured local-state directory). The console prints the Markdown path. Each phase observation records assignment and ordering reasons, origin and publisher registration, signals, shortlist/attempt status and available scores. Audits distinguish unique original-URL identities from reconsiderations across phases and canonical aliases; stage counts are explicitly per phase. They contain no article bodies, API credentials, snippets or raw provider errors. Audit output is diagnostic only and is never used for deduplication or scheduling. Audit write failures are logged without stopping ingestion.
+```powershell
+.\.venv\Scripts\python.exe -m pytest -q
+.\.venv\Scripts\python.exe scripts\test_notion_connection.py
+.\.venv\Scripts\python.exe scripts\inspect_notion_database.py source_registry
+.\.venv\Scripts\python.exe scripts\run_weekly_setup_local.py
+.\.venv\Scripts\python.exe scripts\run_weekly_drafts_local.py
+```
 
-Pre-LLM duplicates are skipped and backfilled without consuming the eight-attempt ceiling; failed LLM calls still count. Audits now distinguish decision stages and include existing retrieval status and significance rationale. The [routing policy](docs/candidate_selection_routing.md) documents project location versus company nationality, other-MENA coverage in the existing Global quota, discovery query hints, and narrow topic/source exclusions.
+Generated audits, run logs, draft previews and evaluation captures belong in
+ignored `.preview/`. Tests and their small reference fixtures remain tracked.
+See [evaluation tools and artifact handling](docs/evaluation.md) for offline
+benchmarks and historical inputs.

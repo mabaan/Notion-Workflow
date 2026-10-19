@@ -10,7 +10,6 @@ from research_automation.clients.notion_client import NotionClient
 from research_automation.models.article import Article, EnrichedArticle
 from research_automation.notion_schema import (
     ARTICLE_QUEUE,
-    DATASET_MEETINGS,
     NEWSLETTERS,
     SOCIAL_MEDIA,
     NEWSLETTER_STATUS_IN_PROGRESS,
@@ -20,7 +19,6 @@ from research_automation.notion_schema import (
 from research_automation.utils import notion_properties as props
 from research_automation.utils.evidence import FEED_CONTENT_LIMITATION, is_feed_content
 from research_automation.pipeline.images import markdown_image_match
-from research_automation.utils.regions import merge_region_labels
 from research_automation.utils.urls import is_google_news_url
 
 
@@ -92,53 +90,6 @@ def create_article_queue_page(
         database_id=database_id,
         properties=properties,
         children=children,
-    )
-
-
-def update_article_enrichment(
-    notion: NotionClient,
-    page_id: str,
-    enriched: EnrichedArticle,
-    processed_at: datetime,
-    *,
-    base_regions: list[str] | None = None,
-) -> None:
-    """Update an Article Queue page with enrichment output."""
-
-    notion.update_page(
-        page_id,
-        {
-            ARTICLE_QUEUE["summary"]: props.rich_text(enriched.summary),
-            ARTICLE_QUEUE["why_it_matters"]: props.rich_text(enriched.why_it_matters),
-            ARTICLE_QUEUE["relevance_score"]: props.number(enriched.relevance_score),
-            ARTICLE_QUEUE["newsletter_angle"]: props.rich_text(
-                enriched.newsletter_angle
-            ),
-            ARTICLE_QUEUE["sns_hook"]: props.rich_text(enriched.sns_hook),
-            ARTICLE_QUEUE["topic"]: props.multi_select(enriched.topic),
-            ARTICLE_QUEUE["region"]: props.multi_select(
-                merge_region_labels(base_regions or [], enriched.region)
-            ),
-            ARTICLE_QUEUE["processed"]: props.checkbox(True),
-            ARTICLE_QUEUE["last_processed"]: props.date_value(processed_at),
-            ARTICLE_QUEUE["error_notes"]: props.rich_text(""),
-        },
-    )
-
-
-def update_article_error(
-    notion: NotionClient,
-    page_id: str,
-    error_message: str,
-) -> None:
-    """Record an enrichment error on an article page."""
-
-    notion.update_page(
-        page_id,
-        {
-            ARTICLE_QUEUE["processed"]: props.checkbox(False),
-            ARTICLE_QUEUE["error_notes"]: props.rich_text(error_message),
-        },
     )
 
 

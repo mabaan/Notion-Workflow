@@ -328,16 +328,6 @@ def _unsplash_image_results(results: list[dict[str, Any]]) -> list[str]:
     return _unique_image_urls(image_urls)
 
 
-def _best_image_result(
-    results: list[dict[str, Any]],
-    canonical_url: str,
-    page_url_key: str,
-    image_key: str,
-) -> str:
-    image_urls = _image_result_candidates(results, canonical_url, page_url_key, image_key)
-    return image_urls[0] if image_urls else ""
-
-
 def _image_result_candidates(
     results: list[dict[str, Any]],
     canonical_url: str,

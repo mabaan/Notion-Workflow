@@ -24,11 +24,3 @@ class DraftArticle:
     evidence_retrieval_status: str = ""
     resolved_publisher_url: str = ""
     image_provider: str = ""
-
-
-@dataclass
-class GeneratedDraft:
-    """Generated draft content."""
-
-    title: str
-    content: str

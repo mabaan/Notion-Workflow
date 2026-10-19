@@ -19,13 +19,3 @@ def strip_html(text: str) -> str:
     """Remove basic HTML tags and decode entities."""
 
     return normalize_whitespace(html.unescape(_HTML_TAG_RE.sub(" ", text)))
-
-
-def truncate(text: str, max_length: int) -> str:
-    """Truncate text to a maximum length."""
-
-    if max_length < 0:
-        raise ValueError("max_length must be non-negative")
-    if len(text) <= max_length:
-        return text
-    return text[:max_length].rstrip()

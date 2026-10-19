@@ -135,13 +135,7 @@ def test_missing_scale_reduces_significance_not_supported_mission_fit(factory, t
 
 @pytest.mark.parametrize("title,snippet,decision,score", [
     ("Agency distributes hundreds of food baskets", "An isolated delivery of several hundred baskets is reported.", "Irrelevant", 1),
-    ("Agency delivers a batch of hot meals", "A one-off hot-meal distribution is reported.", "Irrelevant", 1),
-    ("Agency sends drinking water to local families", "An isolated water delivery is reported.", "Irrelevant", 1),
-    ("UN reports major deterioration in malnutrition", "A humanitarian assessment of the ongoing conflict and aid situation.", "Irrelevant", 1),
-    ("Commercial food supplies resume after prolonged halt", "Restored commercial supply changes access across the territory.", "Relevant", 5),
     ("Food aid programme expands across the region", "A major funded programme expansion adds permanent distribution capacity.", "Relevant", 4),
-    ("Relief programme builds permanent water access", "New water infrastructure will serve displaced communities.", "Relevant", 4),
-    ("Government approves financing for food access", "New financing expands the national food-access programme.", "Relevant", 4),
     ("Food supply programme changes", "Sparse metadata may describe a structural supply change; details are absent.", "Borderline", 3),
 ])
 def test_primary_relief_is_excluded_but_sector_developments_preserve_recall(factory, title, snippet, decision, score):

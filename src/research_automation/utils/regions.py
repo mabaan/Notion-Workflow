@@ -126,15 +126,6 @@ def primary_target_region(labels: Iterable[str]) -> str | None:
     return None
 
 
-def infer_target_region_from_text(text: str) -> str | None:
-    """Use a unique dominant region; fixed iteration order cannot settle a tie."""
-
-    counts = region_mention_counts(text)
-    maximum = max(counts.values(), default=0)
-    leaders = [region for region, count in counts.items() if count == maximum and count]
-    return leaders[0] if len(leaders) == 1 else None
-
-
 def region_mention_counts(text: str) -> dict[str, int]:
     """Match whole geographic names, counting overlapping aliases only once."""
 
