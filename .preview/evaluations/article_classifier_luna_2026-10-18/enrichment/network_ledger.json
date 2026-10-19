@@ -1,0 +1,573 @@
+{
+  "limits": {
+    "max_requests": 25,
+    "max_reserved_tokens": 320000,
+    "max_reserved_usd": 0.2
+  },
+  "requests": [
+    {
+      "request_number": 1,
+      "model": "gpt-6-luna",
+      "reserved_input_tokens": 6953,
+      "reserved_output_tokens": 4096,
+      "reserved_usd": 0.002917125,
+      "article_ids": [
+        "oct15-bahrain"
+      ],
+      "status": 200,
+      "usage": {
+        "prompt_tokens": 1153,
+        "completion_tokens": 534,
+        "total_tokens": 1687,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 1150,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 257,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "estimated_usd": 0.00041105,
+      "returned_model": "gpt-6-luna",
+      "cache_write_cost_assumed": false,
+      "latency_seconds": 7.534886799985543
+    },
+    {
+      "request_number": 2,
+      "model": "gpt-6-luna",
+      "reserved_input_tokens": 6957,
+      "reserved_output_tokens": 4096,
+      "reserved_usd": 0.002917625,
+      "article_ids": [
+        "oct15-hormuz"
+      ],
+      "status": 200,
+      "usage": {
+        "prompt_tokens": 1150,
+        "completion_tokens": 529,
+        "total_tokens": 1679,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 1147,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 244,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "estimated_usd": 0.000408175,
+      "returned_model": "gpt-6-luna",
+      "cache_write_cost_assumed": false,
+      "latency_seconds": 5.928418600000441
+    },
+    {
+      "request_number": 3,
+      "model": "gpt-6-luna",
+      "reserved_input_tokens": 6901,
+      "reserved_output_tokens": 4096,
+      "reserved_usd": 0.002910625,
+      "article_ids": [
+        "oct16-battery_definition"
+      ],
+      "status": 200,
+      "usage": {
+        "prompt_tokens": 1134,
+        "completion_tokens": 378,
+        "total_tokens": 1512,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 1131,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 183,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "estimated_usd": 0.000330675,
+      "returned_model": "gpt-6-luna",
+      "cache_write_cost_assumed": false,
+      "latency_seconds": 6.04076680005528
+    },
+    {
+      "request_number": 4,
+      "model": "gpt-6-luna",
+      "reserved_input_tokens": 6934,
+      "reserved_output_tokens": 4096,
+      "reserved_usd": 0.00291475,
+      "article_ids": [
+        "oct16-battery_science"
+      ],
+      "status": 200,
+      "usage": {
+        "prompt_tokens": 1141,
+        "completion_tokens": 554,
+        "total_tokens": 1695,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 1138,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 311,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "estimated_usd": 0.00041955000000000003,
+      "returned_model": "gpt-6-luna",
+      "cache_write_cost_assumed": false,
+      "latency_seconds": 7.746128199971281
+    },
+    {
+      "request_number": 5,
+      "model": "gpt-6-luna",
+      "reserved_input_tokens": 6995,
+      "reserved_output_tokens": 4096,
+      "reserved_usd": 0.002922375,
+      "article_ids": [
+        "oct16-commission"
+      ],
+      "status": 200,
+      "usage": {
+        "prompt_tokens": 1148,
+        "completion_tokens": 337,
+        "total_tokens": 1485,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 1145,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 115,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "estimated_usd": 0.000311925,
+      "returned_model": "gpt-6-luna",
+      "cache_write_cost_assumed": false,
+      "latency_seconds": 4.493513900029939
+    },
+    {
+      "request_number": 6,
+      "model": "gpt-6-luna",
+      "reserved_input_tokens": 6917,
+      "reserved_output_tokens": 4096,
+      "reserved_usd": 0.002912625,
+      "article_ids": [
+        "oct16-gerd"
+      ],
+      "status": 200,
+      "usage": {
+        "prompt_tokens": 1144,
+        "completion_tokens": 435,
+        "total_tokens": 1579,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 1141,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 168,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "estimated_usd": 0.000360425,
+      "returned_model": "gpt-6-luna",
+      "cache_write_cost_assumed": false,
+      "latency_seconds": 6.171134500007611
+    },
+    {
+      "request_number": 7,
+      "model": "gpt-6-luna",
+      "reserved_input_tokens": 6937,
+      "reserved_output_tokens": 4096,
+      "reserved_usd": 0.002915125,
+      "article_ids": [
+        "oct16-harvests"
+      ],
+      "status": 200,
+      "usage": {
+        "prompt_tokens": 1148,
+        "completion_tokens": 532,
+        "total_tokens": 1680,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 1145,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 238,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "estimated_usd": 0.000409425,
+      "returned_model": "gpt-6-luna",
+      "cache_write_cost_assumed": false,
+      "latency_seconds": 6.815183099999558
+    },
+    {
+      "request_number": 8,
+      "model": "gpt-6-luna",
+      "reserved_input_tokens": 6945,
+      "reserved_output_tokens": 4096,
+      "reserved_usd": 0.002916125,
+      "article_ids": [
+        "oct16-iraq"
+      ],
+      "status": 200,
+      "usage": {
+        "prompt_tokens": 1151,
+        "completion_tokens": 445,
+        "total_tokens": 1596,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 1148,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 207,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "estimated_usd": 0.0003663,
+      "returned_model": "gpt-6-luna",
+      "cache_write_cost_assumed": false,
+      "latency_seconds": 6.208919299999252
+    },
+    {
+      "request_number": 9,
+      "model": "gpt-6-luna",
+      "reserved_input_tokens": 6928,
+      "reserved_output_tokens": 4096,
+      "reserved_usd": 0.002914,
+      "article_ids": [
+        "oct16-libya"
+      ],
+      "status": 200,
+      "usage": {
+        "prompt_tokens": 1145,
+        "completion_tokens": 412,
+        "total_tokens": 1557,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 1142,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 169,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "estimated_usd": 0.00034905,
+      "returned_model": "gpt-6-luna",
+      "cache_write_cost_assumed": false,
+      "latency_seconds": 5.509352600027341
+    },
+    {
+      "request_number": 10,
+      "model": "gpt-6-luna",
+      "reserved_input_tokens": 6958,
+      "reserved_output_tokens": 4096,
+      "reserved_usd": 0.00291775,
+      "article_ids": [
+        "oct16-qatar"
+      ],
+      "status": 200,
+      "usage": {
+        "prompt_tokens": 1149,
+        "completion_tokens": 437,
+        "total_tokens": 1586,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 1146,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 172,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "estimated_usd": 0.00036205,
+      "returned_model": "gpt-6-luna",
+      "cache_write_cost_assumed": false,
+      "latency_seconds": 5.7855016000103205
+    },
+    {
+      "request_number": 11,
+      "model": "gpt-6-luna",
+      "reserved_input_tokens": 6918,
+      "reserved_output_tokens": 4096,
+      "reserved_usd": 0.00291275,
+      "article_ids": [
+        "oct16-veal"
+      ],
+      "status": 200,
+      "usage": {
+        "prompt_tokens": 1144,
+        "completion_tokens": 510,
+        "total_tokens": 1654,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 1141,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 255,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "estimated_usd": 0.00039792500000000004,
+      "returned_model": "gpt-6-luna",
+      "cache_write_cost_assumed": false,
+      "latency_seconds": 7.0185280999867246
+    },
+    {
+      "request_number": 12,
+      "model": "gpt-6-luna",
+      "reserved_input_tokens": 7336,
+      "reserved_output_tokens": 4096,
+      "reserved_usd": 0.002965,
+      "article_ids": [
+        "rss-00"
+      ],
+      "status": 200,
+      "usage": {
+        "prompt_tokens": 1234,
+        "completion_tokens": 695,
+        "total_tokens": 1929,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 1231,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 312,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "estimated_usd": 0.000501675,
+      "returned_model": "gpt-6-luna",
+      "cache_write_cost_assumed": false,
+      "latency_seconds": 9.034795400046278
+    },
+    {
+      "request_number": 13,
+      "model": "gpt-6-luna",
+      "reserved_input_tokens": 7333,
+      "reserved_output_tokens": 4096,
+      "reserved_usd": 0.002964625,
+      "article_ids": [
+        "rss-01"
+      ],
+      "status": 200,
+      "usage": {
+        "prompt_tokens": 1239,
+        "completion_tokens": 668,
+        "total_tokens": 1907,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 1236,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 294,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "estimated_usd": 0.0004888000000000001,
+      "returned_model": "gpt-6-luna",
+      "cache_write_cost_assumed": false,
+      "latency_seconds": 9.046330799988937
+    },
+    {
+      "request_number": 14,
+      "model": "gpt-6-luna",
+      "reserved_input_tokens": 7290,
+      "reserved_output_tokens": 4096,
+      "reserved_usd": 0.00295925,
+      "article_ids": [
+        "rss-02"
+      ],
+      "status": 200,
+      "usage": {
+        "prompt_tokens": 1229,
+        "completion_tokens": 735,
+        "total_tokens": 1964,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 1226,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 389,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "estimated_usd": 0.00052105,
+      "returned_model": "gpt-6-luna",
+      "cache_write_cost_assumed": false,
+      "latency_seconds": 9.861975400010124
+    },
+    {
+      "request_number": 15,
+      "model": "gpt-6-luna",
+      "reserved_input_tokens": 7307,
+      "reserved_output_tokens": 4096,
+      "reserved_usd": 0.002961375,
+      "article_ids": [
+        "rss-05"
+      ],
+      "status": 200,
+      "usage": {
+        "prompt_tokens": 1229,
+        "completion_tokens": 668,
+        "total_tokens": 1897,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 1226,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 296,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "estimated_usd": 0.00048755,
+      "returned_model": "gpt-6-luna",
+      "cache_write_cost_assumed": false,
+      "latency_seconds": 7.907562599983066
+    },
+    {
+      "request_number": 16,
+      "model": "gpt-6-luna",
+      "reserved_input_tokens": 7276,
+      "reserved_output_tokens": 4096,
+      "reserved_usd": 0.0029575,
+      "article_ids": [
+        "rss-07"
+      ],
+      "status": 200,
+      "usage": {
+        "prompt_tokens": 1223,
+        "completion_tokens": 571,
+        "total_tokens": 1794,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 1220,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 213,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "estimated_usd": 0.00043830000000000003,
+      "returned_model": "gpt-6-luna",
+      "cache_write_cost_assumed": false,
+      "latency_seconds": 6.9405153000261635
+    },
+    {
+      "request_number": 17,
+      "model": "gpt-6-luna",
+      "reserved_input_tokens": 7277,
+      "reserved_output_tokens": 4096,
+      "reserved_usd": 0.002957625,
+      "article_ids": [
+        "rss-08"
+      ],
+      "status": 200,
+      "usage": {
+        "prompt_tokens": 1221,
+        "completion_tokens": 586,
+        "total_tokens": 1807,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 1218,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 219,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "estimated_usd": 0.00044555,
+      "returned_model": "gpt-6-luna",
+      "cache_write_cost_assumed": false,
+      "latency_seconds": 6.981229099968914
+    },
+    {
+      "request_number": 18,
+      "model": "gpt-6-luna",
+      "reserved_input_tokens": 7291,
+      "reserved_output_tokens": 4096,
+      "reserved_usd": 0.002959375,
+      "article_ids": [
+        "rss-09"
+      ],
+      "status": 200,
+      "usage": {
+        "prompt_tokens": 1227,
+        "completion_tokens": 665,
+        "total_tokens": 1892,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 1224,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 303,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "estimated_usd": 0.0004858,
+      "returned_model": "gpt-6-luna",
+      "cache_write_cost_assumed": false,
+      "latency_seconds": 7.096703899966087
+    }
+  ],
+  "requests_sent": 18,
+  "denied_locally": 0,
+  "reserved_tokens": 201181,
+  "reserved_usd": 0.052795625000000006,
+  "known_estimated_usd": 0.007495275000000001,
+  "requests_with_unknown_cost": 0
+}

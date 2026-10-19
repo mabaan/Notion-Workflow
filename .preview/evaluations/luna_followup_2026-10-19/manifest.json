@@ -1,0 +1,50 @@
+{
+  "model": "gpt-6-luna",
+  "reasoning_effort": "medium",
+  "limits": {
+    "max_requests": 30,
+    "max_reserved_tokens": 700000,
+    "max_reserved_usd": 0.25
+  },
+  "plan": [
+    [
+      "fresh100-a",
+      100
+    ],
+    [
+      "fresh100-b",
+      100
+    ],
+    [
+      "fresh50",
+      50
+    ],
+    [
+      "historical-repeat",
+      100
+    ]
+  ],
+  "snapshot_sha256": "24e839b6d2fdf6e2845beba1531da5633d30204f2c43f1be99825d0d9d943cdc",
+  "historical_sha256": "74bcd57168d9034f242564e82f5cd28969d71880f55fc83fc6485d1f2ba84796",
+  "classifier_prompt_sha256": "8b8964d1465958e23c2e28a42b00b235f0551a8295da7051630977887a9dfcf0",
+  "enrichment_prompt_sha256": "cc5fc8d8b18984997235b8100fa90fa585200790d8d16d45c68f7abedd8c5f5f",
+  "runner_sha256": "7a655013cd373b7e35b6eb62dc396784c91a378c2e0447538339969b0ee30de9",
+  "reference_frozen_before_live": true,
+  "pricing": {
+    "input": 0.1,
+    "cached_input": 0.01,
+    "cache_write": 0.125,
+    "output": 0.5
+  },
+  "pricing_verified_date": "2026-10-19",
+  "state_before": {
+    ".local_state\\article_assets.json": "08c3607affdeea3b47b6b5bf73a9e06870a1195ce02634ec22b52137d7885574",
+    ".local_state\\seen_articles.json": "27ff85b22aa51887cfa8fa6442b418991661551e56967d2a7427460f5758b7e0"
+  },
+  "latency_seconds": 407.16436150000663,
+  "state_after": {
+    ".local_state\\article_assets.json": "08c3607affdeea3b47b6b5bf73a9e06870a1195ce02634ec22b52137d7885574",
+    ".local_state\\seen_articles.json": "27ff85b22aa51887cfa8fa6442b418991661551e56967d2a7427460f5758b7e0"
+  },
+  "persistent_state_unchanged": true
+}

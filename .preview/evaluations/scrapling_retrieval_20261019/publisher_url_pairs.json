@@ -1,0 +1,40 @@
+{
+  "source_audit": ".preview\\ingestion_audits\\20261019T131713503320Z_0b40c7fc.json",
+  "articles": [
+    {
+      "article_id": "3b79db9df82297eafe109c5dfabef83e7dde1f832082f1c961dea22890f5a189",
+      "title": "IMF cuts 2026 growth forecasts for Gulf economies due to prolonged Hormuz closure - The National",
+      "publisher": "The National",
+      "url": "https://www.thenationalnews.com/business/economy/2026/10/13/imf-cuts-2026-growth-forecasts-for-gulf-economies-due-to-prolonged-hormuz-closure/",
+      "url_provenance": "Exact-headline primary publisher search result, fixed before direct-URL benchmark; same article, not a new discovery",
+      "snippet": "IMF cuts 2026 growth forecasts for Gulf economies due to prolonged Hormuz closure The National",
+      "original_retrieval_status": "insufficient_content",
+      "selected": false,
+      "enriched": true,
+      "classification": "Borderline",
+      "final_reason": "relevance below 4",
+      "publication_date": "2026-10-13T03:29:21+00:00",
+      "stratum": "publisher_url_diagnostic",
+      "original_wrapper_url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPdVVZZjdIcTlSQzJKUUtpTkZlTlJ1cWp1N0JkWkh2Q3FZZ1YzRVJqX3htQkphN0wycjhyaEtVUzd5TmtxS3k3bTJwNWUxOVVGLVMxVEZ3T05PQ0VicWtTRXpCYm9FaU9wcjhrNmFXOHRxeU5vV242cGU0bXN5RXQ0VTNwWExWTHhCZEdSb3RydklyX1pWYVctWU1BNjE5aXlYMXN2VkVmbTJDb3dpM0FIN29JYThRZGZidDZBMlA1M0V5Z3lEY2ZnczZqd3NKLVhVWGxSZEVuYVdKdw?oc=5",
+      "case_id": "3b79db9df82297eafe109c5dfabef83e7dde1f832082f1c961dea22890f5a189:publisher-url"
+    },
+    {
+      "article_id": "11603c34d246144b924a42271c51ea0e6d04696e38eeda970c53ee8525cdb3e5",
+      "title": "Greenland takes a step toward banning deep-sea mining - Arab News",
+      "publisher": "Arab News",
+      "url": "https://www.arabnews.com/world/greenland-takes-a-step-toward-banning-deep-sea-mining-3006601",
+      "url_provenance": "Exact-headline primary publisher search result, fixed before direct-URL benchmark; same article, not a new discovery",
+      "snippet": "Greenland takes a step toward banning deep-sea mining Arab News",
+      "original_retrieval_status": "insufficient_content",
+      "selected": false,
+      "enriched": true,
+      "classification": "Borderline",
+      "final_reason": "relevance below 4",
+      "publication_date": "2026-10-15T19:44:15+00:00",
+      "stratum": "publisher_url_diagnostic",
+      "original_wrapper_url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQdVBISlVfZFJIMzBTeml5ZlQ4ZFNVY096ajI0QW01MVVVcXd0NGtUaFdJR1VPWTFxN0FBNmRxeXU0Z1BPaEQ0ZTZMbS1zY2tMcExZQUtmQUlaeEYzVGhkXzJ4RFoyWGNUZXFWN3lhQWdLLVNocHlieGhfX3JqN2JoRktTcXY5Y3czak53SjJUYktQYkZ5Szg4?oc=5",
+      "case_id": "11603c34d246144b924a42271c51ea0e6d04696e38eeda970c53ee8525cdb3e5:publisher-url"
+    }
+  ],
+  "caveat": "Secondary same-story URL-resolution diagnostic, reported separately. A gain versus the wrapper is not a Scrapling extraction gain."
+}

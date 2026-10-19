@@ -10,6 +10,7 @@ from typing import Any
 from openai import OpenAI
 
 from research_automation.models.article import Article, EnrichedArticle
+from research_automation.models.editorial import validate_editorial_fields
 from research_automation.utils.evidence import FEED_CONTENT_LIMITATION, is_feed_content
 
 
@@ -76,11 +77,13 @@ class LlmClient:
                 "company_topics": ", ".join(self.company_topics) or "Unknown",
                 "geographic_scope": (
                     "MENA, GCC, UAE, Saudi Arabia/KSA, Egypt, and genuinely global "
-                    "systemic developments with clear relevance to those regions."
+                    "systemic developments with substantial mission-linked climate "
+                    "or transition significance, even when no MENA country is named."
                 ),
             },
         )
         payload = self._generate_json(prompt)
+        validate_editorial_fields(payload)
 
         relevance_score = _bounded_score(payload.get("relevance_score"), default=1)
         editorial_significance = _bounded_score(
@@ -101,6 +104,8 @@ class LlmClient:
             significance_reason=_coerce_string(
                 payload.get("significance_reason")
             ).strip(),
+            story_type=payload["story_type"],
+            is_new_development=payload["is_new_development"],
         )
 
     def generate_newsletter_draft(
@@ -193,9 +198,9 @@ class LlmClient:
         return content
 
     def _generation_parameters(self, *, temperature: float) -> dict[str, Any]:
-        """Use Luna reasoning without incompatible sampling parameters."""
+        """Use supported reasoning without incompatible sampling parameters."""
 
-        if self.model == "gpt-6-luna":
+        if self.model in {"gpt-6-luna", "gpt-6-sol"}:
             return {"reasoning_effort": "medium"}
         return {"temperature": temperature}
 

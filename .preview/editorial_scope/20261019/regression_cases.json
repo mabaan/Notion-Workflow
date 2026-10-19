@@ -1,0 +1,173 @@
+{
+  "provenance": "User-supplied headlines plus synthetic boundary scenarios; fixed mocked model outputs, not recovered snippets or live predictions.",
+  "cases": [
+    {
+      "title": "GERD Explained 2026: Ethiopia, Egypt and the Nile Dam Dispute",
+      "story_type": "explainer_background",
+      "is_new_development": false,
+      "expected": "Reject"
+    },
+    {
+      "title": "Egypt and Ethiopia agree new GERD operating rules",
+      "story_type": "policy_regulation",
+      "is_new_development": true,
+      "expected": "Keep subject to existing quality/constraints"
+    },
+    {
+      "title": "US ambassador to Israel calls West Bank settler attack on American photojournalist 'terror'",
+      "story_type": "politics_diplomacy",
+      "is_new_development": true,
+      "expected": "Reject"
+    },
+    {
+      "title": "Israeli settlers attack European diplomats in West Bank",
+      "story_type": "conflict_security",
+      "is_new_development": true,
+      "expected": "Reject"
+    },
+    {
+      "title": "Gaza humanitarian food distribution reaches more families",
+      "story_type": "humanitarian_relief",
+      "is_new_development": true,
+      "expected": "Reject"
+    },
+    {
+      "title": "Gaza conflict report mentions hunger among civilians",
+      "story_type": "conflict_security",
+      "is_new_development": true,
+      "expected": "Reject"
+    },
+    {
+      "title": "UN says Gaza malnutrition gains fragile as commercial supplies halt",
+      "story_type": "humanitarian_relief",
+      "is_new_development": true,
+      "expected": "Reject"
+    },
+    {
+      "title": "Hormuz shipping disruption is starting to hit harvests, UN agency says",
+      "story_type": "supply_disruption",
+      "is_new_development": true,
+      "expected": "Keep subject to existing quality/constraints"
+    },
+    {
+      "title": "Saudi Reef in Jazan: Over SAR1.2 Billion in Support to Boost Production, Empower Beneficiaries",
+      "story_type": "investment_financing",
+      "is_new_development": true,
+      "expected": "Keep subject to existing quality/constraints"
+    },
+    {
+      "title": "UAE to grow more food locally under strategy update | AGBI",
+      "story_type": "policy_regulation",
+      "is_new_development": true,
+      "expected": "Keep subject to existing quality/constraints"
+    },
+    {
+      "title": "Brazilian Amazon deforestation falls to lowest on record as pivotal vote looms",
+      "story_type": "development",
+      "is_new_development": true,
+      "expected": "Keep subject to existing quality/constraints"
+    },
+    {
+      "title": "Revealed: VW, Ford and Tesla batteries linked to destructive deforestation of indigenous lands",
+      "story_type": "investigation",
+      "is_new_development": true,
+      "expected": "Keep subject to existing quality/constraints"
+    },
+    {
+      "title": "The global water conversation is changing",
+      "story_type": "commentary_opinion",
+      "is_new_development": false,
+      "expected": "Reject"
+    },
+    {
+      "title": "Regional agricultural festival celebrates another season",
+      "story_type": "routine_event",
+      "is_new_development": true,
+      "expected": "Reject"
+    },
+    {
+      "title": "New investment expands desalination capacity",
+      "story_type": "investment_financing",
+      "is_new_development": true,
+      "expected": "Keep subject to existing quality/constraints"
+    },
+    {
+      "title": "Utility commissions new battery-storage project",
+      "story_type": "infrastructure_project",
+      "is_new_development": true,
+      "expected": "Keep subject to existing quality/constraints"
+    },
+    {
+      "title": "Political speech praises sustainability without a new measure",
+      "story_type": "politics_diplomacy",
+      "is_new_development": false,
+      "expected": "Reject"
+    },
+    {
+      "title": "Government adopts a concrete sustainability regulation",
+      "story_type": "policy_regulation",
+      "is_new_development": true,
+      "expected": "Keep subject to existing quality/constraints"
+    },
+    {
+      "title": "Literature review surveys familiar membrane research",
+      "story_type": "research_result",
+      "is_new_development": false,
+      "expected": "Reject"
+    },
+    {
+      "title": "New field trial establishes practical water-treatment result",
+      "story_type": "research_result",
+      "is_new_development": true,
+      "expected": "Keep subject to existing quality/constraints"
+    },
+    {
+      "title": "New systemic climate measurement establishes material change",
+      "story_type": "research_result",
+      "is_new_development": true,
+      "expected": "Keep subject to existing quality/constraints"
+    },
+    {
+      "title": "Agricultural fair announces signed cold-storage financing",
+      "story_type": "investment_financing",
+      "is_new_development": true,
+      "expected": "Keep subject to existing quality/constraints"
+    },
+    {
+      "title": "Flood destroys irrigation capacity across a major growing region",
+      "story_type": "supply_disruption",
+      "is_new_development": true,
+      "expected": "Keep subject to existing quality/constraints"
+    },
+    {
+      "title": "Conflict closes fertilizer supply route and cuts agricultural output",
+      "story_type": "supply_disruption",
+      "is_new_development": true,
+      "expected": "Keep subject to existing quality/constraints"
+    },
+    {
+      "title": "Gaza commercial supply stoppage causes a documented material loss of staple production",
+      "story_type": "supply_disruption",
+      "is_new_development": true,
+      "expected": "Keep subject to existing quality/constraints"
+    },
+    {
+      "title": "Explainer also reports a distinct new desalination agreement",
+      "story_type": "explainer_background",
+      "is_new_development": true,
+      "expected": "Keep subject to existing quality/constraints"
+    },
+    {
+      "title": "Commentary reports a substantive newly adopted storage rule",
+      "story_type": "commentary_opinion",
+      "is_new_development": true,
+      "expected": "Keep subject to existing quality/constraints"
+    },
+    {
+      "title": "Research review establishes an important new quantitative result",
+      "story_type": "research_result",
+      "is_new_development": true,
+      "expected": "Keep subject to existing quality/constraints"
+    }
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "proposal_only": true,
+  "notion_writes": 0,
+  "publication_ready": false,
+  "items": [
+    {
+      "rank": 1,
+      "id": "C03",
+      "title": "Brazilian Amazon deforestation falls to lowest on record as pivotal vote looms",
+      "action": "Add provisionally",
+      "region": "Global",
+      "recommendation": "Strong",
+      "genuinely_new_development": "Yes",
+      "evidence_sufficient_for_editor_review": "Partial",
+      "evidence_sufficient_for_publication": false,
+      "editorial_angle": "What a reported record low in Amazon deforestation means for the global climate outlook.",
+      "verification_needed": [
+        "Confirm the measurement period, record and source.",
+        "Verify the reported percentage fall."
+      ],
+      "existing_notion_url": null,
+      "publisher_url": null
+    },
+    {
+      "rank": 2,
+      "id": "C04",
+      "title": "Revealed: VW, Ford and Tesla batteries linked to destructive deforestation of indigenous lands",
+      "action": "Add provisionally",
+      "region": "Global",
+      "recommendation": "Acceptable",
+      "genuinely_new_development": "Yes",
+      "evidence_sufficient_for_editor_review": "Partial",
+      "evidence_sufficient_for_publication": false,
+      "editorial_angle": "Deforestation risk and traceability in major EV battery supply chains.",
+      "verification_needed": [
+        "Review the investigation and tracing method.",
+        "Verify the scale and limits of the company links."
+      ],
+      "existing_notion_url": null,
+      "publisher_url": null
+    },
+    {
+      "rank": 3,
+      "id": "Q01",
+      "title": "Saudi Reef in Jazan: Over SAR1.2 Billion in Support to Boost Production, Empower Beneficiaries - وكالة الأنباء السعودية",
+      "action": "Retain",
+      "region": "KSA",
+      "recommendation": "Acceptable",
+      "genuinely_new_development": "Unclear",
+      "evidence_sufficient_for_editor_review": "Partial",
+      "evidence_sufficient_for_publication": false,
+      "editorial_angle": "Whether Jazan production support represents fresh, material Saudi food-sector financing.",
+      "verification_needed": [
+        "Establish funding timeframe and recipients.",
+        "Identify products and output effects."
+      ],
+      "existing_notion_url": "https://app.notion.com/p/Saudi-Reef-in-Jazan-Over-SAR1-2-Billion-in-Support-to-Boost-Production-Empower-Beneficiaries-3fec995b334781389048d180f002fd38",
+      "publisher_url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE1FMWp6ckFKMHBQdEk5MGVySk1WLXUzQVRUbTNLeDlPRXQ5bkpXU29EMWRjQVFCdnVOSDhBOU55UUZZTGkzRVJ3WE9B?oc=5"
+    },
+    {
+      "rank": 4,
+      "id": "Q03",
+      "title": "Hormuz shipping disruption is starting to hit harvests, UN agency says - Arab News",
+      "action": "Retain",
+      "region": "Global",
+      "recommendation": "Acceptable",
+      "genuinely_new_development": "Unclear",
+      "evidence_sufficient_for_editor_review": "Partial",
+      "evidence_sufficient_for_publication": false,
+      "editorial_angle": "Observed harvest effects attributed to Hormuz shipping disruption—not hypothetical supply vulnerability.",
+      "verification_needed": [
+        "Locate and date the UN assessment.",
+        "Confirm affected crops, mechanism and scale."
+      ],
+      "existing_notion_url": "https://app.notion.com/p/Hormuz-shipping-disruption-is-starting-to-hit-harvests-UN-agency-says-Arab-News-3fec995b334781cfb6b4fec824c38cd5",
+      "publisher_url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPMF94azRMeWMtY05iU3BpQzZoanNWRlJKRG1xVnVyWEgxU2lKeU1sc0dmZVV6aFJOX1l4VnNFRTgzdHFpd2lfcTg2SURXV2g0ZWFhV2FiWnN5US1mNXdCUm93ZVd1T2lIalV6SHdZdnRweGFJSlluT01yR2RUV1hwRE9NZGp3bkZCWVJqOUxHSVhvUS1mVklxck9jZ0RGZ0phV2ltMjlfekNzcXFpVmhXQkhYNzk?oc=5"
+    },
+    {
+      "rank": 5,
+      "id": "Q04",
+      "title": "UN says Gaza malnutrition gains fragile as commercial supplies halt - Arab News",
+      "action": "Retain",
+      "region": "Global",
+      "recommendation": "Acceptable",
+      "genuinely_new_development": "Yes",
+      "evidence_sufficient_for_editor_review": "Partial",
+      "evidence_sufficient_for_publication": false,
+      "editorial_angle": "The food-access and malnutrition implications of Gaza’s reported commercial-supply halt.",
+      "verification_needed": [
+        "Verify UN findings and the halt’s duration.",
+        "Resolve overlap with C27."
+      ],
+      "existing_notion_url": "https://app.notion.com/p/UN-says-Gaza-malnutrition-gains-fragile-as-commercial-supplies-halt-Arab-News-3fec995b33478195bd34c980d0395454",
+      "publisher_url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxONWxEcklqdkwyYnlDaW1wZVNVN2pSOGtlcE41SzlrcVByYU5mdl9nemdOa2daVHpULWJQN3dSLVFFSU5wcm1DVGloUTlLMkdWREFrSGsyQ05CVGVSZnBxeDI0QXZEZjNCNGd3N1pHdC1KeV9vSDlNeVBzVGg0SldDWGVaLUY2UmkybndRMXFhR19STVhZWENQaXJscW5aRVhiNVRQSUVtaDVoamtzaVlLYUFR?oc=5"
+    },
+    {
+      "rank": 6,
+      "id": "Q05",
+      "title": "Israeli settlers attack European diplomats in West Bank",
+      "action": "Retain",
+      "region": "Global",
+      "recommendation": "Acceptable",
+      "genuinely_new_development": "Yes",
+      "evidence_sufficient_for_editor_review": "Partial",
+      "evidence_sufficient_for_publication": false,
+      "editorial_angle": "Documented harvest losses and agricultural-land access, rather than diplomatic reactions alone.",
+      "verification_needed": [
+        "Verify attacks, crop damage and counts.",
+        "Confirm the content and date of access restrictions."
+      ],
+      "existing_notion_url": "https://app.notion.com/p/Israeli-settlers-attack-European-diplomats-in-West-Bank-3fec995b33478118ba6ae44ac1743b6e",
+      "publisher_url": "https://www.theguardian.com/world/2026/oct/17/israeli-settlers-attack-european-diplomats-in-west-bank"
+    },
+    {
+      "rank": 7,
+      "id": "Q07",
+      "title": "UAE to grow more food locally under strategy update | AGBI",
+      "action": "Retain",
+      "region": "UAE",
+      "recommendation": "Acceptable",
+      "genuinely_new_development": "Unclear",
+      "evidence_sufficient_for_editor_review": "Partial",
+      "evidence_sufficient_for_publication": false,
+      "editorial_angle": "Whether the UAE strategy update establishes a new, actionable domestic-crop target.",
+      "verification_needed": [
+        "Confirm official target and adoption status.",
+        "Check implementation and timeline."
+      ],
+      "existing_notion_url": "https://app.notion.com/p/UAE-to-grow-more-food-locally-under-strategy-update-AGBI-3fec995b334781ab8313eeffca184157",
+      "publisher_url": "https://agbi.com/agriculture/2026/10/uae-to-grow-more-food-locally-under-strategy-update"
+    }
+  ]
+}

@@ -8,6 +8,7 @@ from pathlib import Path
 from typing import Callable
 
 from research_automation.clients.llm_client import LlmClient
+from research_automation.clients.article_classifier import ArticleClassifier
 from research_automation.clients.notion_client import NotionClient
 from research_automation.config import Settings
 from research_automation.models.article import Article
@@ -20,6 +21,9 @@ from research_automation.pipeline.candidate_audit import write_candidate_audit
 from research_automation.pipeline.collect import CollectionResult, collect_articles
 from research_automation.pipeline.deduplicate import SeenArticleStore
 from research_automation.pipeline.discovery import DiscoveryService
+from research_automation.pipeline.luna_selection import (
+    classify_luna_candidates, enrich_luna_candidates, finish_luna_evaluation,
+)
 from research_automation.pipeline.notion_write import create_article_queue_page
 from research_automation.pipeline.selection import (
     SelectionResult,
@@ -66,6 +70,8 @@ class IngestionReport:
     provider_requests: dict[str, int] = field(default_factory=dict)
     dry_run: bool = False
     audit_path: Path | None = None
+    selection_mode: str = "deterministic"
+    enrichment_budget: dict[str, int] = field(default_factory=dict)
 
 
 def run_ingestion(
@@ -74,6 +80,7 @@ def run_ingestion(
     *,
     notion=None,
     llm_client=None,
+    article_classifier=None,
     collector: Callable[[list], CollectionResult] = collect_articles,
     discovery_factory: Callable[[Settings, list], DiscoveryService] = DiscoveryService,
     retrieve_article: Callable[[Article], ArticleRetrievalResult] | None = None,
@@ -139,76 +146,85 @@ def run_ingestion(
         if any(initial_deficits.values())
         else None
     )
-    attempted_urls: set[str] = set()
-    feed_evaluation = evaluate_candidate_pool(
-        collection.articles,
-        deficits=initial_deficits,
-        settings=settings,
-        enrich=enrich_callable,
-        retrieve=retrieve_article,
-        now=now,
-        excluded_urls=excluded_urls,
-        phase_ceiling_per_region=settings.article_shortlist_initial_per_region,
-        attempted_urls=attempted_urls,
-    )
-    feed_selection = select_final_candidates(
-        [result for result in feed_evaluation.results if result.eligible],
-        weekly_state=weekly_state,
-        targets=settings.weekly_region_targets,
-        run_limit=run_limit,
-        publisher_cap=settings.max_articles_per_publisher_per_week,
-    )
+    if settings.article_selection_mode == "luna":
+        evaluation, selection, discovered, discovery = _evaluate_luna_ingestion(
+            settings, options, articles=collection.articles, sources=sources,
+            classifier=article_classifier, enrich=enrich_callable, retrieve=retrieve_article,
+            now=now, excluded_urls=excluded_urls, store=store,
+            weekly_state=weekly_state, deficits=initial_deficits, run_limit=run_limit,
+            discovery_factory=discovery_factory,
+        )
+    else:
+        attempted_urls: set[str] = set()
+        feed_evaluation = evaluate_candidate_pool(
+            collection.articles,
+            deficits=initial_deficits,
+            settings=settings,
+            enrich=enrich_callable,
+            retrieve=retrieve_article,
+            now=now,
+            excluded_urls=excluded_urls,
+            phase_ceiling_per_region=settings.article_shortlist_initial_per_region,
+            attempted_urls=attempted_urls,
+        )
+        feed_selection = select_final_candidates(
+            [result for result in feed_evaluation.results if result.eligible],
+            weekly_state=weekly_state,
+            targets=settings.weekly_region_targets,
+            run_limit=run_limit,
+            publisher_cap=settings.max_articles_per_publisher_per_week,
+        )
 
-    discovery = discovery_factory(settings, sources)
-    expansion_evaluation = CandidateEvaluation()
-    discovered = []
-    if (
-        any(feed_selection.shortages.values())
-        and len(feed_selection.winners) < run_limit
-        and not options.no_enrich
-    ):
-        known_hashes = set(store.records)
-        known_hashes.update(
-            result.article.url_hash for result in feed_evaluation.results
-            if result.article.url_hash
-        )
-        discovered = discovery.discover_articles(
-            feed_selection.shortages,
-            max_per_region=settings.article_shortlist_max_per_region,
-            excluded_hashes=known_hashes,
-        )
-        deferred_feed_articles = [
-            result.article
-            for result in feed_evaluation.results
-            if result.rejection_reason == "shortlist deferred"
-            and feed_selection.shortages.get(result.target_region or "", 0) > 0
-        ]
-        expansion_pool = [*deferred_feed_articles, *discovered]
-        if expansion_pool:
-            expansion_evaluation = evaluate_candidate_pool(
-                expansion_pool,
-                deficits=feed_selection.shortages,
-                settings=settings,
-                enrich=enrich_callable,
-                retrieve=retrieve_article,
-                now=now,
-                excluded_urls=excluded_urls,
-                already_shortlisted=feed_evaluation.shortlisted_counts,
-                first_batch_size=2,
-                stop_when_qualified=False,
-                reserve_discovery=True,
-                attempted_urls=attempted_urls,
-                phase="expansion",
+        discovery = discovery_factory(settings, sources)
+        expansion_evaluation = CandidateEvaluation()
+        discovered = []
+        if (
+            any(feed_selection.shortages.values())
+            and len(feed_selection.winners) < run_limit
+            and not options.no_enrich
+        ):
+            known_hashes = set(store.records)
+            known_hashes.update(
+                result.article.url_hash for result in feed_evaluation.results
+                if result.article.url_hash
             )
+            discovered = discovery.discover_articles(
+                feed_selection.shortages,
+                max_per_region=settings.article_shortlist_max_per_region,
+                excluded_hashes=known_hashes,
+            )
+            deferred_feed_articles = [
+                result.article
+                for result in feed_evaluation.results
+                if result.rejection_reason == "shortlist deferred"
+                and feed_selection.shortages.get(result.target_region or "", 0) > 0
+            ]
+            expansion_pool = [*deferred_feed_articles, *discovered]
+            if expansion_pool:
+                expansion_evaluation = evaluate_candidate_pool(
+                    expansion_pool,
+                    deficits=feed_selection.shortages,
+                    settings=settings,
+                    enrich=enrich_callable,
+                    retrieve=retrieve_article,
+                    now=now,
+                    excluded_urls=excluded_urls,
+                    already_shortlisted=feed_evaluation.shortlisted_counts,
+                    first_batch_size=2,
+                    stop_when_qualified=False,
+                    reserve_discovery=True,
+                    attempted_urls=attempted_urls,
+                    phase="expansion",
+                )
 
-    evaluation = _merge_evaluations(feed_evaluation, expansion_evaluation)
-    selection = select_final_candidates(
-        [result for result in evaluation.results if result.eligible],
-        weekly_state=weekly_state,
-        targets=settings.weekly_region_targets,
-        run_limit=run_limit,
-        publisher_cap=settings.max_articles_per_publisher_per_week,
-    )
+        evaluation = _merge_evaluations(feed_evaluation, expansion_evaluation)
+        selection = select_final_candidates(
+            [result for result in evaluation.results if result.eligible],
+            weekly_state=weekly_state,
+            targets=settings.weekly_region_targets,
+            run_limit=run_limit,
+            publisher_cap=settings.max_articles_per_publisher_per_week,
+        )
 
     all_attempts = [*collection.attempts, *discovery.attempts]
     if not options.dry_run:
@@ -288,6 +304,15 @@ def run_ingestion(
             "newsapi": discovery.budget.newsapi_requests,
         },
         dry_run=options.dry_run,
+        selection_mode=settings.article_selection_mode,
+        enrichment_budget=(
+            {
+                "initial": settings.enrichment_initial_budget,
+                "maximum": settings.article_enrichment_max_budget,
+                "backfill_batch": settings.article_enrichment_backfill_batch,
+                "attempted": sum(result.enrichment_attempted for result in evaluation.results),
+            } if settings.article_selection_mode == "luna" else {}
+        ),
     )
     try:
         report.audit_path = write_candidate_audit(report, settings.candidate_audit_directory, now)
@@ -304,6 +329,15 @@ def print_ingestion_report(
 ) -> None:
     """Print the dry-run/live audit trail required for safe operation."""
 
+    output(f"Article selection mode: {report.selection_mode}")
+    if report.enrichment_budget:
+        output(f"Enrichment budget: {report.enrichment_budget}")
+    for classification in report.evaluation.classification_reports:
+        output(
+            f"Classification: model={classification.model}; requests={classification.request_count}; "
+            f"usage={classification.token_usage}; unresolved={len(classification.failed_ids)}; "
+            f"requests without usage={classification.requests_without_usage}"
+        )
     output("Existing weekly counts: " + _format_regions(report.existing_region_counts))
     output("Regional deficits: " + _format_regions(report.initial_deficits))
     output("Due sources: " + (", ".join(report.due_sources) or "none"))
@@ -319,7 +353,8 @@ def print_ingestion_report(
     if report.audit_path:
         output(f"Local candidate audit: {report.audit_path}")
     for reason, count in sorted(report.evaluation.rejection_counts.items()):
-        output(f"Rejected [{reason}]: {count}")
+        label = "Strict qualification rejected" if report.selection_mode == "luna" and reason.startswith("relevance below") else "Rejected"
+        output(f"{label} [{reason}]: {count}")
     for reason, count in sorted(report.selection.rejected_by_constraint.items()):
         output(f"Constraint rejected [{reason}]: {count}")
     output(
@@ -335,8 +370,11 @@ def print_ingestion_report(
             f"relevance={enriched.relevance_score if enriched else 'n/a'}; "
             f"significance={getattr(enriched, 'editorial_significance', 'n/a') if enriched else 'n/a'}; "
             f"source_rating={winner.source_quality if winner.source_quality is not None else 'unscored'}; "
-            f"queue_score={winner.queue_score:.2f}; title={winner.article.title}"
+            f"queue_score={winner.queue_score:.2f}; selection_tier={winner.selection_tier}; "
+            f"overflow={winner.regional_overflow}; title={winner.article.title}"
         )
+        if winner.fallback_reason:
+            output(f"  Fallback reason: {winner.fallback_reason}")
     output(
         "Publisher counts: "
         + ", ".join(
@@ -346,6 +384,9 @@ def print_ingestion_report(
         or "Publisher counts: none"
     )
     output("Remaining regional shortages: " + _format_regions(report.selection.shortages))
+    output(f"Strict selections: {report.selection.tier_counts['strict']}")
+    output(f"Fallback selections: {report.selection.tier_counts['fallback']}")
+    output(f"Total selections: {len(report.selection.winners)}")
     output(
         "Provider request counts: "
         + ", ".join(
@@ -373,10 +414,108 @@ def _enrichment_callable(settings, options, llm_client):
     return client.enrich_article
 
 
+def _evaluate_luna_ingestion(
+    settings, options, *, articles, sources, classifier, enrich, retrieve, now,
+    excluded_urls, store, weekly_state, deficits, run_limit, discovery_factory,
+):
+    """Classify RSS completely, assess a bounded pool, then backfill if needed."""
+
+    enabled = not options.no_enrich and any(deficits.values())
+    classifier = (classifier or ArticleClassifier(settings)) if enabled else None
+    evaluation = classify_luna_candidates(
+        articles, settings=settings, classifier=classifier, now=now,
+        excluded_urls=excluded_urls, seen_url_hashes=store.records,
+    )
+    discovery = discovery_factory(settings, sources)
+    discovered = []
+    attempted_urls: set[str] = set()
+    initial_budget = settings.enrichment_initial_budget
+    maximum_budget = settings.article_enrichment_max_budget
+    used = 0
+
+    def select():
+        return select_final_candidates(
+            [result for result in evaluation.results if result.eligible],
+            weekly_state=weekly_state, targets=settings.weekly_region_targets,
+            run_limit=run_limit, publisher_cap=settings.max_articles_per_publisher_per_week,
+            allow_regional_overflow=True,
+        )
+
+    def assess(budget, remaining_deficits, *, positive_only=False, quality_backfill=False):
+        return enrich_luna_candidates(
+            evaluation, settings=settings, deficits=remaining_deficits, budget=budget,
+            enrich=enrich, retrieve=retrieve, excluded_urls=excluded_urls,
+            attempted_urls=attempted_urls, weekly_state=weekly_state,
+            enough_candidates=lambda: len(select().winners) >= run_limit,
+            positive_only=positive_only,
+            quality_backfill=quality_backfill,
+        )
+
+    if enabled:
+        # Preserve the RSS/discovery allocation inside the initial budget.
+        used = assess((3 * initial_budget + 3) // 4, deficits)
+    selection = select()
+    if enabled and used < initial_budget and len(selection.winners) < run_limit:
+        if any(selection.shortages.values()):
+            known_hashes = set(store.records)
+            known_hashes.update(result.candidate_id for result in evaluation.results)
+            known_hashes.update(result.article.url_hash for result in evaluation.results if result.article.url_hash)
+            discovered = discovery.discover_articles(
+                selection.shortages, max_per_region=settings.article_shortlist_max_per_region,
+                excluded_hashes=known_hashes,
+            )
+            expansion = classify_luna_candidates(
+                discovered, settings=settings, classifier=classifier, now=now,
+                excluded_urls=excluded_urls, seen_url_hashes=known_hashes, phase="expansion",
+            )
+            evaluation = _merge_evaluations(evaluation, expansion)
+        # Merge every discovery batch with all deferred RSS candidates before
+        # allocating the remaining initial budget. No repeated classification.
+        used += assess(initial_budget - used, selection.shortages)
+        selection = select()
+
+    while enabled and used < maximum_budget and len(selection.winners) < run_limit:
+        if not any(
+            not result.rejection_reason and not result.enrichment_attempted
+            and result.classification is not None
+            and result.classification.decision in {"Relevant", "Borderline"}
+            for result in evaluation.results
+        ):
+            break
+        extra = assess(
+            min(settings.article_enrichment_backfill_batch, maximum_budget - used),
+            selection.shortages, positive_only=True, quality_backfill=True,
+        )
+        used += extra
+        selection = select()
+        if extra == 0:
+            break
+    finish_luna_evaluation(
+        evaluation, budget_exhausted=used >= maximum_budget,
+        coverage_filled=len(selection.winners) >= run_limit,
+    )
+    # Fallback is a final-selection step only. All assessment stop conditions,
+    # discovery decisions and budgets above continue to use strict qualification.
+    selection = select_final_candidates(
+        evaluation.results, weekly_state=weekly_state,
+        targets=settings.weekly_region_targets, run_limit=run_limit,
+        publisher_cap=settings.max_articles_per_publisher_per_week,
+        allow_regional_overflow=True, allow_fallback=True,
+    )
+    for winner in selection.winners:
+        winner.selection_reason += f"; selection tier {winner.selection_tier}"
+        if winner.fallback_reason:
+            winner.selection_reason += "; " + winner.fallback_reason
+        if winner.regional_overflow:
+            winner.selection_reason += "; regional overflow after coverage allocation"
+    return evaluation, selection, discovered, discovery
+
+
 def _merge_evaluations(*evaluations: CandidateEvaluation) -> CandidateEvaluation:
     merged = CandidateEvaluation()
     for evaluation in evaluations:
         merged.results.extend(evaluation.results)
+        merged.classification_reports.extend(evaluation.classification_reports)
         for target, source in (
             (merged.rejection_counts, evaluation.rejection_counts),
             (merged.shortlisted_counts, evaluation.shortlisted_counts),

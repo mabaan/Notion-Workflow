@@ -1,0 +1,36 @@
+{
+  "id": "chatcmpl-EaT5JeiQljbj9FvRMP3X8os0QM1RE",
+  "object": "chat.completion",
+  "created": 1792360317,
+  "model": "gpt-6-luna",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"summary\": \"SARCO says a memorandum of understanding to develop a green hydrogen project in Saudi Arabia has expired. The available information does not specify the project’s scale or next steps.\",\n  \"why_it_matters\": \"The proposed project concerns green hydrogen in Saudi Arabia, connecting it to the net zero and energy transition; the expired MoU makes its progress uncertain.\",\n  \"relevance_score\": 4,\n  \"editorial_significance\": 2,\n  \"significance_reason\": \"The MoU’s expiration is a concrete setback or change in status, but no project scale, investment, or subsequent plans are reported.\",\n  \"factual_points\": [\n    \"SARCO says the MoU to develop a green hydrogen project in Saudi Arabia has expired.\"\n  ],\n  \"topic\": [\n    \"Green hydrogen\",\n    \"Energy transition\",\n    \"Net zero\"\n  ],\n  \"region\": [\n    \"Saudi Arabia\",\n    \"GCC\",\n    \"MENA\"\n  ],\n  \"newsletter_angle\": \"A Saudi green hydrogen project’s development MoU has expired, with the project’s scale and future plans unclear.\",\n  \"sns_hook\": \"SARCO says its MoU to develop a green hydrogen project in Saudi Arabia has expired. No details on scale or next steps were available.\"\n}",
+        "refusal": null,
+        "annotations": []
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1332,
+    "completion_tokens": 419,
+    "total_tokens": 1751,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 1329,
+      "audio_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 142,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+    }
+  },
+  "service_tier": "default",
+  "system_fingerprint": null
+}

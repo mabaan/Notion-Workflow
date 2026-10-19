@@ -1,0 +1,36 @@
+{
+  "id": "chatcmpl-EaT6DwYuWZaXdqNZvrFnRhNlaI2xk",
+  "object": "chat.completion",
+  "created": 1792360373,
+  "model": "gpt-6-luna",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"summary\": \"A Saudi Press Agency headline reports more than SAR1.2 billion in support for Saudi Reef in Jazan, aimed at boosting production and empowering beneficiaries. The headline does not specify the activities funded or the support’s timeframe.\",\n  \"why_it_matters\": \"The production-support focus in Saudi Arabia may connect to agriculture and food security, but the supplied headline does not identify the production sectors or establish the scale of any food-security impact.\",\n  \"relevance_score\": 3,\n  \"editorial_significance\": 3,\n  \"significance_reason\": \"The reported support exceeds SAR1.2 billion, but the headline provides no timeframe, allocation details, or measurable results.\",\n  \"factual_points\": [\n    \"The headline reports over SAR1.2 billion in support for Saudi Reef in Jazan.\",\n    \"The stated aims are to boost production and empower beneficiaries.\",\n    \"The headline does not specify what production is being supported or when the funding will be provided.\"\n  ],\n  \"topic\": [\n    \"Agriculture\",\n    \"Food Security\",\n    \"Saudi Arabia\"\n  ],\n  \"region\": [\n    \"KSA\",\n    \"Jazan\"\n  ],\n  \"newsletter_angle\": \"A large support figure tied to production in Jazan could be relevant to food security, but details on the funded activities and expected outputs are not available in the supplied material.\",\n  \"sns_hook\": \"Saudi Reef in Jazan: the headline reports more than SAR1.2 billion in support to boost production, but leaves the funded sectors and expected results unspecified.\"\n}",
+        "refusal": null,
+        "annotations": []
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1251,
+    "completion_tokens": 734,
+    "total_tokens": 1985,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 1248,
+      "audio_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 399,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+    }
+  },
+  "service_tier": "default",
+  "system_fingerprint": null
+}

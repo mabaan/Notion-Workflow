@@ -43,6 +43,7 @@ def test_llm_enrichment_falls_back_to_snippet_and_preserves_factual_points(
         captured["prompt"] = prompt
         return {
             "summary": "A battery facility is proposed in Egypt.",
+            "story_type": "infrastructure_project", "is_new_development": True,
             "why_it_matters": "It would add regional battery capacity.",
             "relevance_score": 5,
             "factual_points": [
@@ -86,6 +87,7 @@ def test_llm_enrichment_uses_extracted_article_content(monkeypatch) -> None:
         captured["prompt"] = prompt
         return {
             "summary": "Negotiations could double the project's capacity.",
+            "story_type": "infrastructure_project", "is_new_development": True,
             "why_it_matters": "The proposal would expand solar generation.",
             "relevance_score": 5,
             "factual_points": [

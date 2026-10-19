@@ -1,0 +1,717 @@
+{
+  "additional_reviews": [
+    {
+      "id": "C01",
+      "recommendation": "Reject",
+      "region": "Global",
+      "reason": "Development-bank support for transition minerals could be systemic, but the supplied evidence identifies no commitment, financing mechanism, project or scale.",
+      "genuinely_new_development": "Unclear",
+      "novelty_reason": "“Step up support” does not establish what changed.",
+      "evidence_sufficient_for_editor_review": "No",
+      "evidence_sufficient_for_publication": false,
+      "evidence_reason": "Headline and AI audit notes only; no publisher text or commitment details.",
+      "verification_checks": [
+        "Identify the banks and the action announced.",
+        "Check financing amounts, terms and affected minerals."
+      ]
+    },
+    {
+      "id": "C02",
+      "recommendation": "Reject",
+      "region": "UAE",
+      "reason": "The UAE bond pricing is concrete, but its green label alone does not establish financing for a relevant transition use.",
+      "genuinely_new_development": "Yes",
+      "novelty_reason": "The headline reports a bond pricing.",
+      "evidence_sufficient_for_editor_review": "No",
+      "evidence_sufficient_for_publication": false,
+      "evidence_reason": "Older exact-ID RSS text repeats the headline; size and use of proceeds are unavailable.",
+      "verification_checks": [
+        "Confirm issuance size and date.",
+        "Inspect the eligible uses of proceeds."
+      ]
+    },
+    {
+      "id": "C03",
+      "recommendation": "Strong",
+      "region": "Global",
+      "reason": "A reported record-low annual Amazon deforestation result is a measurable change with systemic climate and land-use significance.",
+      "genuinely_new_development": "Yes",
+      "novelty_reason": "The headline reports a new record result, rather than merely an election outlook.",
+      "evidence_sufficient_for_editor_review": "Partial",
+      "evidence_sufficient_for_publication": false,
+      "evidence_reason": "The record claim appears in the headline; the 41.8% figure comes only from an AI audit note. No publisher text is retained.",
+      "verification_checks": [
+        "Confirm the reporting period, source and definition of “lowest on record.”",
+        "Verify the 41.8% figure and comparison baseline.",
+        "Separate measured change from speculation about the vote."
+      ]
+    },
+    {
+      "id": "C04",
+      "recommendation": "Acceptable",
+      "region": "Global",
+      "reason": "A new investigation alleging deforestation links across major EV battery supply chains has a credible systemic transition-materials angle, subject to checking the tracing evidence.",
+      "genuinely_new_development": "Yes",
+      "novelty_reason": "The headline presents newly revealed supply-chain findings, not a routine sector explainer.",
+      "evidence_sufficient_for_editor_review": "Partial",
+      "evidence_sufficient_for_publication": false,
+      "evidence_reason": "The headline names the companies and allegation; forest-clearing and nickel-flow detail is AI-derived, with no publisher text supplied.",
+      "verification_checks": [
+        "Inspect the investigation’s sourcing and chain-of-custody method.",
+        "Distinguish company supply-chain links from links to specific batteries.",
+        "Verify the location, scale and timing of clearing."
+      ]
+    },
+    {
+      "id": "C05",
+      "recommendation": "Reject",
+      "region": "Global",
+      "reason": "China-focused water-risk analysis lacks a demonstrated MENA application or sufficiently systemic new food-and-water development.",
+      "genuinely_new_development": "Unclear",
+      "novelty_reason": "An AI note mentions survey findings, but no new investment or operational change.",
+      "evidence_sufficient_for_editor_review": "No",
+      "evidence_sufficient_for_publication": false,
+      "evidence_reason": "Survey scope and results are unavailable outside AI notes.",
+      "verification_checks": [
+        "Identify the survey and its date.",
+        "Check whether findings establish material food-system consequences."
+      ]
+    },
+    {
+      "id": "C06",
+      "recommendation": "Reject",
+      "region": "UAE",
+      "reason": "A first free-range label is a local food-sector distinction, without demonstrated production capacity or food-security significance.",
+      "genuinely_new_development": "Yes",
+      "novelty_reason": "The headline reports a newly awarded label.",
+      "evidence_sufficient_for_editor_review": "No",
+      "evidence_sufficient_for_publication": false,
+      "evidence_reason": "Only the headline and AI notes are available; production effects are unspecified.",
+      "verification_checks": [
+        "Confirm what authority issued the label.",
+        "Check production scale and whether output changed."
+      ]
+    },
+    {
+      "id": "C07",
+      "recommendation": "Reject",
+      "region": "UAE",
+      "reason": "Three Sharjah bus routes are a local access change; a material net-zero effect is not established.",
+      "genuinely_new_development": "Yes",
+      "novelty_reason": "The headline reports a route launch.",
+      "evidence_sufficient_for_editor_review": "No",
+      "evidence_sufficient_for_publication": false,
+      "evidence_reason": "No retained publisher detail on operations, uptake or emissions.",
+      "verification_checks": [
+        "Confirm routes and start date.",
+        "Check expected ridership or mode shift."
+      ]
+    },
+    {
+      "id": "C08",
+      "recommendation": "Reject",
+      "region": "UAE",
+      "reason": "A Dubai rail-to-metro link is tangible, but the supplied evidence does not establish a commercially or transition-significant deployment.",
+      "genuinely_new_development": "Yes",
+      "novelty_reason": "The headline reports a direct station link.",
+      "evidence_sufficient_for_editor_review": "No",
+      "evidence_sufficient_for_publication": false,
+      "evidence_reason": "Older exact-ID RSS description repeats the headline; operating status and impact remain unverified.",
+      "verification_checks": [
+        "Confirm what physically opened and when.",
+        "Check service status, capacity and expected mode shift."
+      ]
+    },
+    {
+      "id": "C09",
+      "recommendation": "Reject",
+      "region": "Global",
+      "reason": "A call for Gulf grid integration reports no new interconnection, policy or investment; clean-energy consequences are unspecified.",
+      "genuinely_new_development": "No",
+      "novelty_reason": "The headline frames an argument about a need, not an action.",
+      "evidence_sufficient_for_editor_review": "No",
+      "evidence_sufficient_for_publication": false,
+      "evidence_reason": "Older RSS text repeats the headline; no publisher body is supplied.",
+      "verification_checks": [
+        "Check for an actual newly agreed grid measure.",
+        "Establish its transition role, if any."
+      ]
+    },
+    {
+      "id": "C10",
+      "recommendation": "Reject",
+      "region": "UAE",
+      "reason": "The UAE water call to action identifies no policy, investment or infrastructure change.",
+      "genuinely_new_development": "No",
+      "novelty_reason": "The title is an appeal rather than a reported development.",
+      "evidence_sufficient_for_editor_review": "No",
+      "evidence_sufficient_for_publication": false,
+      "evidence_reason": "Older RSS description merely repeats the title.",
+      "verification_checks": [
+        "Check whether the article reports a specific newly adopted measure."
+      ]
+    },
+    {
+      "id": "C11",
+      "recommendation": "Reject",
+      "region": "Global",
+      "reason": "Water-reuse membrane research could matter eventually, but practical performance, deployment and systemic application are not supplied.",
+      "genuinely_new_development": "Unclear",
+      "novelty_reason": "A research title alone does not establish a consequential new result.",
+      "evidence_sufficient_for_editor_review": "No",
+      "evidence_sufficient_for_publication": false,
+      "evidence_reason": "No paper findings or publisher text are retained.",
+      "verification_checks": [
+        "Review measured removal and energy performance.",
+        "Check pilot or commercial validation."
+      ]
+    },
+    {
+      "id": "C12",
+      "recommendation": "Reject",
+      "region": "Global",
+      "reason": "Research opportunities at facilities are not a reported water-treatment finding or deployment.",
+      "genuinely_new_development": "No",
+      "novelty_reason": "The title describes opportunities, not a new outcome.",
+      "evidence_sufficient_for_editor_review": "No",
+      "evidence_sufficient_for_publication": false,
+      "evidence_reason": "No findings or practical application are supplied.",
+      "verification_checks": [
+        "Check whether the article contains a specific new applied result."
+      ]
+    },
+    {
+      "id": "C13",
+      "recommendation": "Reject",
+      "region": "Egypt",
+      "reason": "Egyptian food-waste economics is relevant, but no substantive finding or policy consequence is available.",
+      "genuinely_new_development": "Unclear",
+      "novelty_reason": "Publication of a study does not by itself establish an important new finding.",
+      "evidence_sufficient_for_editor_review": "No",
+      "evidence_sufficient_for_publication": false,
+      "evidence_reason": "Results and methods are absent; extraction status is not supplied text.",
+      "verification_checks": [
+        "Read the study’s results and methods.",
+        "Check the magnitude and policy relevance of any findings."
+      ]
+    },
+    {
+      "id": "C14",
+      "recommendation": "Reject",
+      "region": "Global",
+      "reason": "Fertilizer access directly concerns food security, but the supplied account establishes no new material disruption or implemented response.",
+      "genuinely_new_development": "Unclear",
+      "novelty_reason": "An institutional approach is described without a dated deployment or outcome.",
+      "evidence_sufficient_for_editor_review": "No",
+      "evidence_sufficient_for_publication": false,
+      "evidence_reason": "Disruption and response detail exists only in AI notes.",
+      "verification_checks": [
+        "Check for a newly funded or deployed fertilizer-access programme.",
+        "Verify affected supply and geography."
+      ]
+    },
+    {
+      "id": "C15",
+      "recommendation": "Reject",
+      "region": "Egypt",
+      "reason": "The reported pipeline flows concern oil logistics, with no demonstrated food, water or transition consequence for Egypt.",
+      "genuinely_new_development": "No",
+      "novelty_reason": "The AI note dates the flow change to April; October metadata does not make it a new October event.",
+      "evidence_sufficient_for_editor_review": "No",
+      "evidence_sufficient_for_publication": false,
+      "evidence_reason": "The flow figures and arrangements are AI-derived and no publisher text is retained.",
+      "verification_checks": [
+        "Confirm dates and sources of the flow figures.",
+        "Identify any distinct recent mission-relevant action."
+      ]
+    },
+    {
+      "id": "C16",
+      "recommendation": "Reject",
+      "region": "Global",
+      "reason": "Retrospective oil-shipping losses and a proposed corridor blueprint lack a direct, reported food, water or net-zero consequence.",
+      "genuinely_new_development": "No",
+      "novelty_reason": "The cited disruption occurred in April–May; a long-term proposal is not a new infrastructure milestone.",
+      "evidence_sufficient_for_editor_review": "No",
+      "evidence_sufficient_for_publication": false,
+      "evidence_reason": "Figures and blueprint characterization are AI-derived, without publisher text.",
+      "verification_checks": [
+        "Check timing of any actual corridor commitment.",
+        "Establish a direct mission-sector consequence."
+      ]
+    },
+    {
+      "id": "C17",
+      "recommendation": "Reject",
+      "region": "UAE",
+      "reason": "Retail refrigeration is food infrastructure, but this appears to warn of a vulnerability rather than report a material UAE supply incident.",
+      "genuinely_new_development": "No",
+      "novelty_reason": "No confirmed attack or response is identified.",
+      "evidence_sufficient_for_editor_review": "No",
+      "evidence_sufficient_for_publication": false,
+      "evidence_reason": "Older RSS text repeats the headline; an actual incident cannot be established.",
+      "verification_checks": [
+        "Check whether a UAE incident occurred.",
+        "Verify any food loss or operational response."
+      ]
+    },
+    {
+      "id": "C18",
+      "recommendation": "Reject",
+      "region": "KSA",
+      "reason": "General Saudi sustainability messaging lacks a newly reported net-zero measure; the rehabilitation total is not established as a new outcome.",
+      "genuinely_new_development": "No",
+      "novelty_reason": "The meeting reportedly produced no new investment or policy change.",
+      "evidence_sufficient_for_editor_review": "No",
+      "evidence_sufficient_for_publication": false,
+      "evidence_reason": "The rehabilitation figure appears only in an AI note.",
+      "verification_checks": [
+        "Date and source the rehabilitation total.",
+        "Check for a newly adopted measure."
+      ]
+    },
+    {
+      "id": "C19",
+      "recommendation": "Reject",
+      "region": "Egypt",
+      "reason": "The title asks whether processed-food exports could help Egypt; it reports no export, investment or food-production change.",
+      "genuinely_new_development": "No",
+      "novelty_reason": "A question about potential benefits is not a reported event.",
+      "evidence_sufficient_for_editor_review": "No",
+      "evidence_sufficient_for_publication": false,
+      "evidence_reason": "Fetch failed and no publisher text is supplied.",
+      "verification_checks": [
+        "Check for a dated export or capacity change."
+      ]
+    },
+    {
+      "id": "C20",
+      "recommendation": "Reject",
+      "region": "Global",
+      "reason": "An olive-oil waste literature review supplies no new deployed circular-economy measure or consequential finding.",
+      "genuinely_new_development": "No",
+      "novelty_reason": "The title explicitly identifies a literature review.",
+      "evidence_sufficient_for_editor_review": "No",
+      "evidence_sufficient_for_publication": false,
+      "evidence_reason": "No specific new result or MENA application is supplied.",
+      "verification_checks": [
+        "Check whether the review identifies a genuinely new material finding."
+      ]
+    },
+    {
+      "id": "C21",
+      "recommendation": "Reject",
+      "region": "Global",
+      "reason": "A fivefold minerals goal could be important, but neither what it measures nor its transition-materials relevance is established.",
+      "genuinely_new_development": "Unclear",
+      "novelty_reason": "The headline suggests a new goal but gives no baseline, target metric or implementation.",
+      "evidence_sufficient_for_editor_review": "No",
+      "evidence_sufficient_for_publication": false,
+      "evidence_reason": "Older exact-ID RSS text repeats the headline; retrieval was not attempted.",
+      "verification_checks": [
+        "Identify the World Bank goal and its metric.",
+        "Check whether it concerns critical transition minerals.",
+        "Compare its announcement with C01."
+      ]
+    },
+    {
+      "id": "C22",
+      "recommendation": "Reject",
+      "region": "KSA",
+      "reason": "A substantial Saudi power contract is reported, but its technology and role in the net-zero transition are wholly unspecified.",
+      "genuinely_new_development": "Yes",
+      "novelty_reason": "The headline reports a newly secured project.",
+      "evidence_sufficient_for_editor_review": "No",
+      "evidence_sufficient_for_publication": false,
+      "evidence_reason": "The older RSS description adds nothing to the headline; no project specifications are supplied.",
+      "verification_checks": [
+        "Identify generation technology and project scope.",
+        "Verify contract value and award status.",
+        "Establish any transition role rather than assuming one."
+      ]
+    },
+    {
+      "id": "C23",
+      "recommendation": "Reject",
+      "region": "UAE",
+      "reason": "The tree-planting target is concrete, but its net-zero or water-security impact and implementation are not established.",
+      "genuinely_new_development": "Unclear",
+      "novelty_reason": "The headline gives a 2040 target, not evidence of planting or a dated new strategy adoption.",
+      "evidence_sufficient_for_editor_review": "No",
+      "evidence_sufficient_for_publication": false,
+      "evidence_reason": "No publisher text, baseline or implementation detail is supplied.",
+      "verification_checks": [
+        "Confirm when and by whom the target was adopted.",
+        "Check water demand, funding and quantified climate claims."
+      ]
+    },
+    {
+      "id": "C24",
+      "recommendation": "Reject",
+      "region": "Out of Scope/Unclear",
+      "reason": "Agritech and resilience calls at a forum are not an adopted food-security policy or project; the event location is unspecified.",
+      "genuinely_new_development": "No",
+      "novelty_reason": "Experts called for action; no resulting action is identified.",
+      "evidence_sufficient_for_editor_review": "No",
+      "evidence_sufficient_for_publication": false,
+      "evidence_reason": "Older RSS text repeats the title and supplies no measures.",
+      "verification_checks": [
+        "Establish the event location.",
+        "Check for a specific adopted measure."
+      ]
+    },
+    {
+      "id": "C25",
+      "recommendation": "Reject",
+      "region": "Out of Scope/Unclear",
+      "reason": "European car-emissions negotiations are transition-related, but no agreed measure or demonstrated MENA or global systemic consequence is supplied.",
+      "genuinely_new_development": "Yes",
+      "novelty_reason": "A reported near-deal is a negotiating development, not enacted regulation.",
+      "evidence_sufficient_for_editor_review": "No",
+      "evidence_sufficient_for_publication": false,
+      "evidence_reason": "Older RSS description repeats the headline; terms and likely effects are unavailable.",
+      "verification_checks": [
+        "Confirm the proposed terms and negotiating status.",
+        "Assess whether effects are genuinely systemic."
+      ]
+    },
+    {
+      "id": "C26",
+      "recommendation": "Reject",
+      "region": "Out of Scope/Unclear",
+      "reason": "A possible UK tariff is not enacted transition policy, and no MENA or systemic effect is demonstrated.",
+      "genuinely_new_development": "Unclear",
+      "novelty_reason": "Leaving an option open does not establish a policy change.",
+      "evidence_sufficient_for_editor_review": "No",
+      "evidence_sufficient_for_publication": false,
+      "evidence_reason": "Only a headline and AI assessment are supplied.",
+      "verification_checks": [
+        "Check whether a tariff decision followed.",
+        "Establish material transition effects."
+      ]
+    },
+    {
+      "id": "C27",
+      "recommendation": "Reject",
+      "region": "Global",
+      "reason": "A halt to Gaza commercial goods is serious, but this record does not specify a food consequence; Q04 supplies the clearer food-access angle on a possibly overlapping halt.",
+      "genuinely_new_development": "Yes",
+      "novelty_reason": "The headline reports a current halt to commercial entry.",
+      "evidence_sufficient_for_editor_review": "Partial",
+      "evidence_sufficient_for_publication": false,
+      "evidence_reason": "Older RSS text repeats the headline; affected goods, duration and overlap with Q04 are unresolved.",
+      "verification_checks": [
+        "Confirm whether food imports stopped and for how long.",
+        "Determine whether Q04 describes the same halt."
+      ]
+    },
+    {
+      "id": "C28",
+      "recommendation": "Reject",
+      "region": "Global",
+      "reason": "The headline indicates harm to Syrian farmers, but does not establish a material agricultural-production or food-supply consequence.",
+      "genuinely_new_development": "Unclear",
+      "novelty_reason": "“Takes toll” does not date or quantify a distinct change.",
+      "evidence_sufficient_for_editor_review": "No",
+      "evidence_sufficient_for_publication": false,
+      "evidence_reason": "Older RSS description repeats the headline; the nature and scale of harm are absent.",
+      "verification_checks": [
+        "Confirm land, crop or water access lost.",
+        "Check the number of farmers and production affected."
+      ]
+    },
+    {
+      "id": "C29",
+      "recommendation": "Reject",
+      "region": "Global",
+      "reason": "Burning olive trees directly harms agriculture, but the reported incident has no established material production or livelihood scale.",
+      "genuinely_new_development": "Yes",
+      "novelty_reason": "The headline describes a specific attack.",
+      "evidence_sufficient_for_editor_review": "No",
+      "evidence_sufficient_for_publication": false,
+      "evidence_reason": "Older RSS text repeats the headline; tree losses and harvest consequences are unavailable.",
+      "verification_checks": [
+        "Verify trees and cultivated area lost.",
+        "Determine harvest and livelihood effects.",
+        "Check overlap with the West Bank Queue reports."
+      ]
+    },
+    {
+      "id": "C30",
+      "recommendation": "Reject",
+      "region": "Global",
+      "reason": "The West Bank olive-harvest feature signals risk to farmers but does not establish a new material agricultural disruption.",
+      "genuinely_new_development": "No",
+      "novelty_reason": "The title anticipates a difficult harvest rather than identifying a distinct new outcome.",
+      "evidence_sufficient_for_editor_review": "No",
+      "evidence_sufficient_for_publication": false,
+      "evidence_reason": "Older RSS description repeats the headline; no crop-loss evidence is supplied.",
+      "verification_checks": [
+        "Check documented access restrictions or crop losses.",
+        "Distinguish any incidents from Q02 and Q05."
+      ]
+    },
+    {
+      "id": "C31",
+      "recommendation": "Reject",
+      "region": "Egypt",
+      "reason": "Egypt’s Nile water-security stake is direct, but this is an explainer without a new dam-governance development and duplicates Q06.",
+      "genuinely_new_development": "No",
+      "novelty_reason": "No new negotiation, rule or operating milestone is identified.",
+      "evidence_sufficient_for_editor_review": "No",
+      "evidence_sufficient_for_publication": false,
+      "evidence_reason": "The matching Queue record contains AI-derived context, not a new verified event.",
+      "verification_checks": [
+        "Check for a separately dated water-governance action.",
+        "Confirm the exact-ID match with Q06."
+      ]
+    }
+  ],
+  "existing_queue_reviews": [
+    {
+      "id": "Q01",
+      "recommendation": "Acceptable",
+      "region": "KSA",
+      "reason": "Reported SAR1.2 billion support for production in Jazan is substantial and potentially relevant to Saudi food supply, although products and whether this is fresh funding remain unclear.",
+      "genuinely_new_development": "Unclear",
+      "novelty_reason": "The headline may describe cumulative support rather than a new allocation.",
+      "evidence_sufficient_for_editor_review": "Partial",
+      "evidence_sufficient_for_publication": false,
+      "evidence_reason": "Amount and production aim appear in the title; stored notes are AI-derived and no publisher text is retained.",
+      "verification_checks": [
+        "Determine whether SAR1.2 billion is new or cumulative, and over what period.",
+        "Identify supported products, recipients and measured output."
+      ]
+    },
+    {
+      "id": "Q02",
+      "recommendation": "Reject",
+      "region": "Global",
+      "reason": "The principal news is condemnation of an attack on a journalist; agricultural disruption is reported in AI notes but a material new food-system consequence is not established.",
+      "genuinely_new_development": "Yes",
+      "novelty_reason": "The condemnation and reported attack are dated developments, but not substantive food-system developments on this evidence.",
+      "evidence_sufficient_for_editor_review": "Partial",
+      "evidence_sufficient_for_publication": false,
+      "evidence_reason": "The agricultural context is in stored AI notes, not retained publisher text; the broader harvest impact is unquantified.",
+      "verification_checks": [
+        "Confirm the incident and its location.",
+        "Verify any distinct, material harvesting impact.",
+        "Distinguish the incident from Q05."
+      ]
+    },
+    {
+      "id": "Q03",
+      "recommendation": "Acceptable",
+      "region": "Global",
+      "reason": "The headline attributes an actual effect on harvests to Hormuz shipping disruption, directly linking a MENA chokepoint to food production.",
+      "genuinely_new_development": "Unclear",
+      "novelty_reason": "“Starting to hit” implies an emerging consequence, but the timing of the underlying disruption and assessment is unavailable.",
+      "evidence_sufficient_for_editor_review": "Partial",
+      "evidence_sufficient_for_publication": false,
+      "evidence_reason": "Only a headline and AI-derived notes are supplied; crops, locations and magnitude are unknown.",
+      "verification_checks": [
+        "Identify the UN agency, assessment date and mechanism.",
+        "Verify affected crops, geographies and observed losses.",
+        "Separate current harvest effects from earlier shipping disruption."
+      ]
+    },
+    {
+      "id": "Q04",
+      "recommendation": "Acceptable",
+      "region": "Global",
+      "reason": "The headline directly connects halted Gaza commercial supplies with fragile malnutrition gains, making food access—not generic conflict—the editorial issue.",
+      "genuinely_new_development": "Yes",
+      "novelty_reason": "A reported supply halt is a concrete access change; the date and duration still need checking.",
+      "evidence_sufficient_for_editor_review": "Partial",
+      "evidence_sufficient_for_publication": false,
+      "evidence_reason": "The food-access link is explicit in the title, but no UN statement or publisher body is retained.",
+      "verification_checks": [
+        "Verify the UN statement and malnutrition evidence.",
+        "Confirm which supplies halted and for how long.",
+        "Check whether C27 reports the same halt."
+      ]
+    },
+    {
+      "id": "Q05",
+      "recommendation": "Acceptable",
+      "region": "Global",
+      "reason": "Stored notes describe attacks on olive harvesters, damaged trees and land-access restrictions: a potentially material agricultural consequence beyond the attack on diplomats.",
+      "genuinely_new_development": "Yes",
+      "novelty_reason": "The reported Taybeh harvest attack is specific; the timing of broader restrictions needs confirmation.",
+      "evidence_sufficient_for_editor_review": "Partial",
+      "evidence_sufficient_for_publication": false,
+      "evidence_reason": "Scale, access-rule and crop-damage claims appear only in AI-derived Notion notes; no publisher text is available.",
+      "verification_checks": [
+        "Verify the harvest attack and its date.",
+        "Source the tree-damage and attack counts independently from the stored notes.",
+        "Check the scope and effective date of the reported land-access rules."
+      ]
+    },
+    {
+      "id": "Q06",
+      "recommendation": "Reject",
+      "region": "Egypt",
+      "reason": "GERD is central to Egypt’s water security, but this explainer identifies no recent negotiation, operating rule or infrastructure change.",
+      "genuinely_new_development": "No",
+      "novelty_reason": "Stored notes date inauguration to 2025 and other diplomatic positions to earlier in 2026.",
+      "evidence_sufficient_for_editor_review": "No",
+      "evidence_sufficient_for_publication": false,
+      "evidence_reason": "The retrospective details are AI-derived; extraction status does not supply publisher text.",
+      "verification_checks": [
+        "Check for a genuinely new dated operating or negotiating decision.",
+        "Verify any dam figures before separate use."
+      ]
+    },
+    {
+      "id": "Q07",
+      "recommendation": "Acceptable",
+      "region": "UAE",
+      "reason": "A reported update to the UAE food-security strategy and local-crop goal is directly relevant to domestic production policy, if the goal is an actual new measure.",
+      "genuinely_new_development": "Unclear",
+      "novelty_reason": "The title says the strategy is being updated; the claimed half-local goal comes from AI-derived notes and its adoption status is unknown.",
+      "evidence_sufficient_for_editor_review": "Partial",
+      "evidence_sufficient_for_publication": false,
+      "evidence_reason": "Publisher retrieval failed; the target and policy detail cannot be verified from supplied publisher text.",
+      "verification_checks": [
+        "Confirm the official update, date and adoption status.",
+        "Verify the half-local-crops target and its denominator.",
+        "Identify implementation, resources and timeline."
+      ]
+    }
+  ],
+  "ranked_additional_ids": [
+    "C03",
+    "C04"
+  ],
+  "duplicate_event_groups": [
+    {
+      "group_id": "D01",
+      "label": "Multilateral minerals support",
+      "member_ids": [
+        "C01",
+        "C21"
+      ],
+      "relationship": "Possible same event",
+      "reason": "The development-bank support report and World Bank fivefold goal may refer to the same initiative; neither supplied record establishes their scope.",
+      "representative_id": "C01"
+    },
+    {
+      "group_id": "D02",
+      "label": "Etihad Rail station access",
+      "member_ids": [
+        "C07",
+        "C08"
+      ],
+      "relationship": "Related, distinct developments",
+      "reason": "Sharjah bus routes to Al Dhaid and a Dubai Metro connection concern different locations and access measures.",
+      "representative_id": "C08"
+    },
+    {
+      "group_id": "D03",
+      "label": "Gaza commercial-supply halt",
+      "member_ids": [
+        "C27",
+        "Q04"
+      ],
+      "relationship": "Possible same event",
+      "reason": "Both describe halted Gaza commercial supplies; Q04 adds a reported malnutrition consequence, but a separate halt is not demonstrated.",
+      "representative_id": "Q04"
+    },
+    {
+      "group_id": "D04",
+      "label": "West Bank olive-harvest reporting",
+      "member_ids": [
+        "C29",
+        "C30",
+        "Q02",
+        "Q05"
+      ],
+      "relationship": "Related, distinct developments",
+      "reason": "The records cover a tree-burning attack, a harvest feature, an attack on a photojournalist and an attack involving diplomats. Shared harvest context does not establish that the specific attacks are the same.",
+      "representative_id": "Q05"
+    },
+    {
+      "group_id": "D05",
+      "label": "GERD explainer",
+      "member_ids": [
+        "C31",
+        "Q06"
+      ],
+      "relationship": "Same event",
+      "reason": "The matching title concerns the same retrospective dam-dispute explainer, not an additional development.",
+      "representative_id": "Q06"
+    }
+  ],
+  "recommended_morning_queue": [
+    {
+      "id": "C03",
+      "action": "Add provisionally",
+      "editorial_angle": "What a reported record low in Amazon deforestation means for the global climate outlook.",
+      "verification_needed": [
+        "Confirm the measurement period, record and source.",
+        "Verify the reported percentage fall."
+      ]
+    },
+    {
+      "id": "C04",
+      "action": "Add provisionally",
+      "editorial_angle": "Deforestation risk and traceability in major EV battery supply chains.",
+      "verification_needed": [
+        "Review the investigation and tracing method.",
+        "Verify the scale and limits of the company links."
+      ]
+    },
+    {
+      "id": "Q01",
+      "action": "Retain",
+      "editorial_angle": "Whether Jazan production support represents fresh, material Saudi food-sector financing.",
+      "verification_needed": [
+        "Establish funding timeframe and recipients.",
+        "Identify products and output effects."
+      ]
+    },
+    {
+      "id": "Q03",
+      "action": "Retain",
+      "editorial_angle": "Observed harvest effects attributed to Hormuz shipping disruption—not hypothetical supply vulnerability.",
+      "verification_needed": [
+        "Locate and date the UN assessment.",
+        "Confirm affected crops, mechanism and scale."
+      ]
+    },
+    {
+      "id": "Q04",
+      "action": "Retain",
+      "editorial_angle": "The food-access and malnutrition implications of Gaza’s reported commercial-supply halt.",
+      "verification_needed": [
+        "Verify UN findings and the halt’s duration.",
+        "Resolve overlap with C27."
+      ]
+    },
+    {
+      "id": "Q05",
+      "action": "Retain",
+      "editorial_angle": "Documented harvest losses and agricultural-land access, rather than diplomatic reactions alone.",
+      "verification_needed": [
+        "Verify attacks, crop damage and counts.",
+        "Confirm the content and date of access restrictions."
+      ]
+    },
+    {
+      "id": "Q07",
+      "action": "Retain",
+      "editorial_angle": "Whether the UAE strategy update establishes a new, actionable domestic-crop target.",
+      "verification_needed": [
+        "Confirm official target and adoption status.",
+        "Check implementation and timeline."
+      ]
+    }
+  ],
+  "overall_assessment": "Two additional reports merit human review. Retain five existing items provisionally; hold or reject Q02 and Q06. The seven-item proposal is not publication approval, and no possibly overlapping Gaza report is added twice.",
+  "evidence_limitations": [
+    "No latest-run publisher text is supplied; “extracted” is a retrieval status, not available source evidence.",
+    "Latest audit rationales and stored Notion facts are AI-derived. Their quantitative claims and detailed consequences require source checks.",
+    "Older exact-ID RSS descriptions are dated metadata, often repeating headlines, not latest-run article bodies.",
+    "Every proposed item lacks sufficient supplied publisher evidence for publication."
+  ]
+}

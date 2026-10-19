@@ -1,0 +1,1244 @@
+{
+  "limits": {
+    "max_requests": 30,
+    "max_reserved_tokens": 700000,
+    "max_reserved_usd": 0.25
+  },
+  "requests": [
+    {
+      "request_number": 1,
+      "model": "gpt-6-luna",
+      "reserved_input_tokens": 57456,
+      "reserved_output_tokens": 32768,
+      "reserved_usd": 0.023566,
+      "article_ids": [
+        "0015db728f0f8b16ebc936ab4c98d84cc1f748a810796176dd282fd2e9784a52",
+        "002117e3270f55e3cfec2678b8642654cd4f888b3c67bd885f3c44cc92057927",
+        "00539a484b9d4a6f500a9ece4a5020fc0f438ee32dd0b9165386c52a893b4286",
+        "005b14300d39e84d3766e1cf8acf90c2301b7b7e3ccef5ab8b28f30466aaa8f8",
+        "00c63cd61222f71464cb234c01efb4035c79a5742b82f4eb6f2d3040b7b74140",
+        "01c4153bbe04078a3d9d0e8d9783f7896d27e3252f3793eb1d4fe896eabb349b",
+        "02137ae9fbaf7018758bdfe0e5997a16fd0bb487711bd61dc8d961824e58fcf2",
+        "021495e570e6ab2c98fb44e199bc3380cc06b0c4bf68e685148aace9c250f002",
+        "021bd427ae89203d2f51f8bec8f1425b80d4baa14bd75ada603b4570d1955fb6",
+        "02809c703cac5a45727dc8fea7112c20e1ce691cb7265b4e2cc373fe4d6cab44",
+        "0293ddca8e540055a337c48e5344bccff7eaf6ffd9f75743155271fa88ed72a8",
+        "031ecd0010d1b400d6d0f6cf91e64cab060226fd835c4598428006d7f9dfe578",
+        "03477cf3f5b84ad6eb35202a0251dde7808e99a6c0f5bfc1d7fdd77cd76a83dd",
+        "03694acf12963025abea7aca6480e64aa0e11498da05e7f1687417f269e67d29",
+        "03cc433495d103dc3d2ec0b7fbc4f379c549f4975d41d398974f5b3078a824ec",
+        "03cd3b3904bd06156104154321bdff275f3fca02601a8d9a070c11c0600d8349",
+        "0413ed4bff7b6b50f3a4af119c2ad64b2a0221cad057a472556017df30d56269",
+        "044d258145c09a5c50cd6236d317da8a5da81ac9552e453d59206e4eabeb9a9e",
+        "047442c79e90a37274826927015e157950fd587c2d528a1fdc290f1ab2a1546d",
+        "04d136ccf2f10948892880fd88bbc8348fe13b667ced1667dc12248793963e8d",
+        "05f3c8db8f016e15e1fa777910c7ab2dec6d6f18965bcb20d3604f990d0cf752",
+        "061cc3ae804a6ec0270e0ffd3dc5e147e2e475799ca0c35ac44f9f9358233735",
+        "06562ae88440680a35d4ad70b9a6acdd95b7fab8ff52bed8a93cd6d7242487ff",
+        "0740ccb196f9359fe0f12e5db890ab1ed90c0cf807a4b2b8ca31b37713664394",
+        "07655901ab133c3498f3a0ed530555b19be13e0eb6df9a6f80a3f44edc57530b",
+        "08c4a2e207610138e31c547dfd33b1cdcaf441a13e8c6d953daa0220ae84fdaa",
+        "099e9086499fbdd20596e3704ca857d6e771c03a3830d6564e56bb98e9d6656a",
+        "09d598acd86f95b54bd04c8a9d32d8987f695ceddc7fb8220356850efbce65ae",
+        "0a1fc0e2a77dade420459e2f3221faf8e6cb0133e7292542c805fbed225ce4b8",
+        "0a574484114dd7b351493987484f33033d0226dcc99d153214894a192bf8e334",
+        "0ade8ea0064868bc07e7d91c42f6a6e6053c048fec06febb7d9ca10883d05ab0",
+        "0b0eb64d67a7a2974df54119bc60b478fb41a98e5202ff195b5230238d298084",
+        "0c68b8ccbad5febc782481a42a6e3962139f39830d154021c34c5aa9f028b19d",
+        "0d40838afdc0790d36b87f77c1083ff412768ac71dae7c150c5e00c452b89dff",
+        "0d40de5e8eefb6d8845d591cbb660fa51962843c8bc89b303aca31c1a16a7306",
+        "0d99f6669958fe51c0c57e6cfac30e7b7885ae1fa9be3beac0a3fa63c37de6a1",
+        "0e18dbd4fc3a1b3e13209b645f2175b844133a703b153ab85937728a698f6ff4",
+        "0ebf12995cf54c6c4d5d52c8f6ed0b56707886c25c68ba1ca1add34a3315326d",
+        "0f6d4d7b6a1cbfa8e9b45385d7bd43afbd6db2e92f6869ba8e990bb3d747f866",
+        "10276cae948daa5048817cafef25db3a16a49cbe6651ceb55785f32d61ef1a3e",
+        "11603c34d246144b924a42271c51ea0e6d04696e38eeda970c53ee8525cdb3e5",
+        "11750816d2b1e6eecb36c504fbe7a481a0f890d4c27cfb66c29f864d73b55d0b",
+        "11d93829ffa620ec4176231e47af32665721839d2d1e6bfac9d864c6cdeb7555",
+        "12acae011b58b9993a666ad0e796f4cb9065b9d340ba97a2b160ce4205ede3d8",
+        "136340e04b369a8243282ca3574d5bdd571113ef3848d3fcc7aa128b4257dbea",
+        "1392542245a1db88bb9a68a374730b804eda5f57f38fc4fa748800321a02597e",
+        "1423750434eb720f423e8a9a87044708614098c4bb636b2e8cb0650462068b6b",
+        "1445c509c803df43d3b756ea7613cbe05f149699e30fab73e69938f1d0c9b247",
+        "1487dba652bf18142287123d6561131af1edf59f2119f58bd459166724b8dfbc",
+        "14d300a88d592dd4e5e21ee70169db089388a7b6c104b52213688a7114ae52b5",
+        "1524c7ad5c438ab78b3442eaee7058c5db8905e74b38fe35907dd0846c5c5e48",
+        "15617f0ad1de91aa2bbcb14e82635b641a7de7a48931cdfbc800429c40dfe1d9",
+        "15df033f684511636f788a803442b131e8600bcdcb9c50228b57ae72bc6ee85d",
+        "1604bb9579f7a2b0be6a679715c4d15f0377f81f146fac905040c139872d430c",
+        "16db3e4dd8af7a8183da087f0f11a324a8326adf01e6902b75ed4a6b2e554c7d",
+        "17d949e1b0630d1dd455cfd72d6f5e000d5e7d146779d18bc0f8a5f4e1ac6070",
+        "18411ef2dbcc2c9d8384458138cf098c17fc29e2a826a7ee793075688e7e072e",
+        "18e24dc9badcedb6110e2cba030ca0b646b7c2f203728aed9d61358dc5e0dacb",
+        "1967ed99f2e9da46880d4a3b5a5778fc0f1b208c02de9fdfe769c68f7811cda8",
+        "1a30e2758ade599e3deaed227b3919ce3fb8a9db5d005732ee5d96fa2a53862d",
+        "21d4bd6f05a0a5496620399d3fb29bbb6557c9a9e98325e161cd2ea0227afb02",
+        "22604ac075e7cfb7118deaec7b30fb3a31a738b82f02176893e209472c9d9561",
+        "258370b50d7e5acabf88f7f84b86aea3eb99f7124102ee3cdf1616cb47666e66",
+        "261f8ce773b9530195c1e65f89f99b5484aff13dd2ec0388634ad98af05e1cc2",
+        "263157683bfe481aaf92e3262235941470bab64132165c033eec63f6378b9d88",
+        "295b835ea1b72d49c1a644414cdbf1fec52c070c67f6f4a04a45d35291a51c20",
+        "297731ea188a4f3c4357e4c07c0a98099f03124a3f80701bb7c67bfd13ec7683",
+        "2b3f0ec05fa4ad52f4eb66d06069db48aac876a925b8c37e37b373ab68deffe5",
+        "2bd785b2e4e47c94373f5aaee020c9c4fdcffe59e3b51555e364b67c84806d91",
+        "2cbb33fd30a2c80d0ce2a8a378c9b600cfc3110813837518b1472b6e78220b37",
+        "2e445b429a5bb2951190da4ab48653079218e6b2b2f0d85bbba71cd468673ee7",
+        "2efa5068c401706598d8fdf0a4a5e37d969ddea9bdb318503edf045aeefbd856",
+        "43d6f50ce4038700c5afb7d7423defca4a75650705552c6c681dfc10af78af28",
+        "4b1b60f368a1c1e3ba7d3e9db5fe7e48b8d875d5f6ea975c183e3a15508dad72",
+        "5df84ebf307fdb51d585496de791295c1fe86d7fc39b63b8e3a791ec3584d780",
+        "613e5e23ee7a456c635a8f20ea19385e8dc250767bc6a29d58086f7ec54f0623",
+        "69637e17914334e03834eb350110d0d0bd53eb3a4bad354c8479920c0c3799f6",
+        "6a6335d0efbc40aa4668ad2fcbf00aadd4840349db0ccea438ac7ded4f83f148",
+        "6f25044cf412a9122a09ea29e969fafb5d6eb470b368db24ba6fcb891908a062",
+        "905cd20a5becab64485f52672224ae0bea6e9e70f8c4fa53e77a309ce7ac1bb1",
+        "90e898810eca447f6b47528aaa13428b40d47f61edb2736a2a417d212e6b0141",
+        "926d261a3dea3a6d16827689d69b99279a165109264109b90fb66e9bf8f6bc18",
+        "a64dd8e909a2ba0cef4133e2e6ac75669c1ad49f81758effe911374891707b0f",
+        "aa8f3a5131b54d2c7857d295fc9f20a9f8f1f7048422aa00705a03fb76158955",
+        "ad2bda609d4df3eb07f5587ab24027163c10dc5e7f32aa182f6bfb7ea3967a2f",
+        "ae539e398162fa078c34964e0ac8a2e2947dd863f46e81af1f0dbdbe70eddf4e",
+        "b019929436115b60f2428ae7259b9cc23e2d122b39878a81cddb483a8cb8a412",
+        "b12f9a595c0c7b49c90080f420229e59f355a6714c9cad2bf7651c3032ca8418",
+        "b63ec18bbf4993257cba0d005e4b7fa8c78f880283fdcbaa23b4bf48d661cb7f",
+        "b74158cf6a65318922408c8725d33cbdfe4047f5aa30dba4a3fef34634bbd453",
+        "bd2bdff65098010579f1643a184429b9e064c0427da6c9a68a4a52529b2e4b24",
+        "c545046a97083fdaa3b0c38201ebdeaf5dbcb88c6c783ce4cdc9ca7d397c8735",
+        "c972a2f5aa272ca3b0b8afe4dddf5e7d94d1aa9ad5d683f0031f5c5b5d3c33f8",
+        "ceef5c73d936c9c7f0023d704b5ecf3cb76fb035d01b0186335ec8c71b3728b9",
+        "d8da0d09824599d68c7aed19df473e3cf03d1818802e46d95e30007d583782b0",
+        "e00535e9363c2fb7d09ca79d0a191365b06bbe63e55fb7e613517d5ba7915cdd",
+        "e522718e9411a264067dbfc6b6dcaf76c85d02b9d3c65089f0887c3f26d9e2be",
+        "ea8f13b3c44fb8037fea919bd23007b46e663d285192bdfe6ebc3c649a662231",
+        "f69c38fa54f884e09184a7d7639193bb94022461b9bcabc921f1f37fa3195e70",
+        "fd2c4af45bbf3e8d914aafdef618d1de2b27732f97bac810396da4112456a4df"
+      ],
+      "status": 200,
+      "usage": {
+        "prompt_tokens": 18340,
+        "completion_tokens": 10099,
+        "total_tokens": 28439,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 18337,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1090,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "estimated_usd": 0.007341925,
+      "returned_model": "gpt-6-luna",
+      "cache_write_cost_assumed": false,
+      "latency_seconds": 72.34763100004056
+    },
+    {
+      "request_number": 2,
+      "model": "gpt-6-luna",
+      "reserved_input_tokens": 57456,
+      "reserved_output_tokens": 32768,
+      "reserved_usd": 0.023566,
+      "article_ids": [
+        "0015db728f0f8b16ebc936ab4c98d84cc1f748a810796176dd282fd2e9784a52",
+        "002117e3270f55e3cfec2678b8642654cd4f888b3c67bd885f3c44cc92057927",
+        "00539a484b9d4a6f500a9ece4a5020fc0f438ee32dd0b9165386c52a893b4286",
+        "005b14300d39e84d3766e1cf8acf90c2301b7b7e3ccef5ab8b28f30466aaa8f8",
+        "00c63cd61222f71464cb234c01efb4035c79a5742b82f4eb6f2d3040b7b74140",
+        "01c4153bbe04078a3d9d0e8d9783f7896d27e3252f3793eb1d4fe896eabb349b",
+        "02137ae9fbaf7018758bdfe0e5997a16fd0bb487711bd61dc8d961824e58fcf2",
+        "021495e570e6ab2c98fb44e199bc3380cc06b0c4bf68e685148aace9c250f002",
+        "021bd427ae89203d2f51f8bec8f1425b80d4baa14bd75ada603b4570d1955fb6",
+        "02809c703cac5a45727dc8fea7112c20e1ce691cb7265b4e2cc373fe4d6cab44",
+        "0293ddca8e540055a337c48e5344bccff7eaf6ffd9f75743155271fa88ed72a8",
+        "031ecd0010d1b400d6d0f6cf91e64cab060226fd835c4598428006d7f9dfe578",
+        "03477cf3f5b84ad6eb35202a0251dde7808e99a6c0f5bfc1d7fdd77cd76a83dd",
+        "03694acf12963025abea7aca6480e64aa0e11498da05e7f1687417f269e67d29",
+        "03cc433495d103dc3d2ec0b7fbc4f379c549f4975d41d398974f5b3078a824ec",
+        "03cd3b3904bd06156104154321bdff275f3fca02601a8d9a070c11c0600d8349",
+        "0413ed4bff7b6b50f3a4af119c2ad64b2a0221cad057a472556017df30d56269",
+        "044d258145c09a5c50cd6236d317da8a5da81ac9552e453d59206e4eabeb9a9e",
+        "047442c79e90a37274826927015e157950fd587c2d528a1fdc290f1ab2a1546d",
+        "04d136ccf2f10948892880fd88bbc8348fe13b667ced1667dc12248793963e8d",
+        "05f3c8db8f016e15e1fa777910c7ab2dec6d6f18965bcb20d3604f990d0cf752",
+        "061cc3ae804a6ec0270e0ffd3dc5e147e2e475799ca0c35ac44f9f9358233735",
+        "06562ae88440680a35d4ad70b9a6acdd95b7fab8ff52bed8a93cd6d7242487ff",
+        "0740ccb196f9359fe0f12e5db890ab1ed90c0cf807a4b2b8ca31b37713664394",
+        "07655901ab133c3498f3a0ed530555b19be13e0eb6df9a6f80a3f44edc57530b",
+        "08c4a2e207610138e31c547dfd33b1cdcaf441a13e8c6d953daa0220ae84fdaa",
+        "099e9086499fbdd20596e3704ca857d6e771c03a3830d6564e56bb98e9d6656a",
+        "09d598acd86f95b54bd04c8a9d32d8987f695ceddc7fb8220356850efbce65ae",
+        "0a1fc0e2a77dade420459e2f3221faf8e6cb0133e7292542c805fbed225ce4b8",
+        "0a574484114dd7b351493987484f33033d0226dcc99d153214894a192bf8e334",
+        "0ade8ea0064868bc07e7d91c42f6a6e6053c048fec06febb7d9ca10883d05ab0",
+        "0b0eb64d67a7a2974df54119bc60b478fb41a98e5202ff195b5230238d298084",
+        "0c68b8ccbad5febc782481a42a6e3962139f39830d154021c34c5aa9f028b19d",
+        "0d40838afdc0790d36b87f77c1083ff412768ac71dae7c150c5e00c452b89dff",
+        "0d40de5e8eefb6d8845d591cbb660fa51962843c8bc89b303aca31c1a16a7306",
+        "0d99f6669958fe51c0c57e6cfac30e7b7885ae1fa9be3beac0a3fa63c37de6a1",
+        "0e18dbd4fc3a1b3e13209b645f2175b844133a703b153ab85937728a698f6ff4",
+        "0ebf12995cf54c6c4d5d52c8f6ed0b56707886c25c68ba1ca1add34a3315326d",
+        "0f6d4d7b6a1cbfa8e9b45385d7bd43afbd6db2e92f6869ba8e990bb3d747f866",
+        "10276cae948daa5048817cafef25db3a16a49cbe6651ceb55785f32d61ef1a3e",
+        "11603c34d246144b924a42271c51ea0e6d04696e38eeda970c53ee8525cdb3e5",
+        "11750816d2b1e6eecb36c504fbe7a481a0f890d4c27cfb66c29f864d73b55d0b",
+        "11d93829ffa620ec4176231e47af32665721839d2d1e6bfac9d864c6cdeb7555",
+        "12acae011b58b9993a666ad0e796f4cb9065b9d340ba97a2b160ce4205ede3d8",
+        "136340e04b369a8243282ca3574d5bdd571113ef3848d3fcc7aa128b4257dbea",
+        "1392542245a1db88bb9a68a374730b804eda5f57f38fc4fa748800321a02597e",
+        "1423750434eb720f423e8a9a87044708614098c4bb636b2e8cb0650462068b6b",
+        "1445c509c803df43d3b756ea7613cbe05f149699e30fab73e69938f1d0c9b247",
+        "1487dba652bf18142287123d6561131af1edf59f2119f58bd459166724b8dfbc",
+        "14d300a88d592dd4e5e21ee70169db089388a7b6c104b52213688a7114ae52b5",
+        "1524c7ad5c438ab78b3442eaee7058c5db8905e74b38fe35907dd0846c5c5e48",
+        "15617f0ad1de91aa2bbcb14e82635b641a7de7a48931cdfbc800429c40dfe1d9",
+        "15df033f684511636f788a803442b131e8600bcdcb9c50228b57ae72bc6ee85d",
+        "1604bb9579f7a2b0be6a679715c4d15f0377f81f146fac905040c139872d430c",
+        "16db3e4dd8af7a8183da087f0f11a324a8326adf01e6902b75ed4a6b2e554c7d",
+        "17d949e1b0630d1dd455cfd72d6f5e000d5e7d146779d18bc0f8a5f4e1ac6070",
+        "18411ef2dbcc2c9d8384458138cf098c17fc29e2a826a7ee793075688e7e072e",
+        "18e24dc9badcedb6110e2cba030ca0b646b7c2f203728aed9d61358dc5e0dacb",
+        "1967ed99f2e9da46880d4a3b5a5778fc0f1b208c02de9fdfe769c68f7811cda8",
+        "1a30e2758ade599e3deaed227b3919ce3fb8a9db5d005732ee5d96fa2a53862d",
+        "21d4bd6f05a0a5496620399d3fb29bbb6557c9a9e98325e161cd2ea0227afb02",
+        "22604ac075e7cfb7118deaec7b30fb3a31a738b82f02176893e209472c9d9561",
+        "258370b50d7e5acabf88f7f84b86aea3eb99f7124102ee3cdf1616cb47666e66",
+        "261f8ce773b9530195c1e65f89f99b5484aff13dd2ec0388634ad98af05e1cc2",
+        "263157683bfe481aaf92e3262235941470bab64132165c033eec63f6378b9d88",
+        "295b835ea1b72d49c1a644414cdbf1fec52c070c67f6f4a04a45d35291a51c20",
+        "297731ea188a4f3c4357e4c07c0a98099f03124a3f80701bb7c67bfd13ec7683",
+        "2b3f0ec05fa4ad52f4eb66d06069db48aac876a925b8c37e37b373ab68deffe5",
+        "2bd785b2e4e47c94373f5aaee020c9c4fdcffe59e3b51555e364b67c84806d91",
+        "2cbb33fd30a2c80d0ce2a8a378c9b600cfc3110813837518b1472b6e78220b37",
+        "2e445b429a5bb2951190da4ab48653079218e6b2b2f0d85bbba71cd468673ee7",
+        "2efa5068c401706598d8fdf0a4a5e37d969ddea9bdb318503edf045aeefbd856",
+        "43d6f50ce4038700c5afb7d7423defca4a75650705552c6c681dfc10af78af28",
+        "4b1b60f368a1c1e3ba7d3e9db5fe7e48b8d875d5f6ea975c183e3a15508dad72",
+        "5df84ebf307fdb51d585496de791295c1fe86d7fc39b63b8e3a791ec3584d780",
+        "613e5e23ee7a456c635a8f20ea19385e8dc250767bc6a29d58086f7ec54f0623",
+        "69637e17914334e03834eb350110d0d0bd53eb3a4bad354c8479920c0c3799f6",
+        "6a6335d0efbc40aa4668ad2fcbf00aadd4840349db0ccea438ac7ded4f83f148",
+        "6f25044cf412a9122a09ea29e969fafb5d6eb470b368db24ba6fcb891908a062",
+        "905cd20a5becab64485f52672224ae0bea6e9e70f8c4fa53e77a309ce7ac1bb1",
+        "90e898810eca447f6b47528aaa13428b40d47f61edb2736a2a417d212e6b0141",
+        "926d261a3dea3a6d16827689d69b99279a165109264109b90fb66e9bf8f6bc18",
+        "a64dd8e909a2ba0cef4133e2e6ac75669c1ad49f81758effe911374891707b0f",
+        "aa8f3a5131b54d2c7857d295fc9f20a9f8f1f7048422aa00705a03fb76158955",
+        "ad2bda609d4df3eb07f5587ab24027163c10dc5e7f32aa182f6bfb7ea3967a2f",
+        "ae539e398162fa078c34964e0ac8a2e2947dd863f46e81af1f0dbdbe70eddf4e",
+        "b019929436115b60f2428ae7259b9cc23e2d122b39878a81cddb483a8cb8a412",
+        "b12f9a595c0c7b49c90080f420229e59f355a6714c9cad2bf7651c3032ca8418",
+        "b63ec18bbf4993257cba0d005e4b7fa8c78f880283fdcbaa23b4bf48d661cb7f",
+        "b74158cf6a65318922408c8725d33cbdfe4047f5aa30dba4a3fef34634bbd453",
+        "bd2bdff65098010579f1643a184429b9e064c0427da6c9a68a4a52529b2e4b24",
+        "c545046a97083fdaa3b0c38201ebdeaf5dbcb88c6c783ce4cdc9ca7d397c8735",
+        "c972a2f5aa272ca3b0b8afe4dddf5e7d94d1aa9ad5d683f0031f5c5b5d3c33f8",
+        "ceef5c73d936c9c7f0023d704b5ecf3cb76fb035d01b0186335ec8c71b3728b9",
+        "d8da0d09824599d68c7aed19df473e3cf03d1818802e46d95e30007d583782b0",
+        "e00535e9363c2fb7d09ca79d0a191365b06bbe63e55fb7e613517d5ba7915cdd",
+        "e522718e9411a264067dbfc6b6dcaf76c85d02b9d3c65089f0887c3f26d9e2be",
+        "ea8f13b3c44fb8037fea919bd23007b46e663d285192bdfe6ebc3c649a662231",
+        "f69c38fa54f884e09184a7d7639193bb94022461b9bcabc921f1f37fa3195e70",
+        "fd2c4af45bbf3e8d914aafdef618d1de2b27732f97bac810396da4112456a4df"
+      ],
+      "status": 200,
+      "usage": {
+        "prompt_tokens": 18340,
+        "completion_tokens": 10515,
+        "total_tokens": 28855,
+        "prompt_tokens_details": {
+          "cached_tokens": 18337,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1490,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "estimated_usd": 0.00544117,
+      "returned_model": "gpt-6-luna",
+      "cache_write_cost_assumed": false,
+      "latency_seconds": 73.27951139997458
+    },
+    {
+      "request_number": 3,
+      "model": "gpt-6-luna",
+      "reserved_input_tokens": 31634,
+      "reserved_output_tokens": 32768,
+      "reserved_usd": 0.02033825,
+      "article_ids": [
+        "0015db728f0f8b16ebc936ab4c98d84cc1f748a810796176dd282fd2e9784a52",
+        "002117e3270f55e3cfec2678b8642654cd4f888b3c67bd885f3c44cc92057927",
+        "00539a484b9d4a6f500a9ece4a5020fc0f438ee32dd0b9165386c52a893b4286",
+        "005b14300d39e84d3766e1cf8acf90c2301b7b7e3ccef5ab8b28f30466aaa8f8",
+        "00c63cd61222f71464cb234c01efb4035c79a5742b82f4eb6f2d3040b7b74140",
+        "01c4153bbe04078a3d9d0e8d9783f7896d27e3252f3793eb1d4fe896eabb349b",
+        "02137ae9fbaf7018758bdfe0e5997a16fd0bb487711bd61dc8d961824e58fcf2",
+        "021495e570e6ab2c98fb44e199bc3380cc06b0c4bf68e685148aace9c250f002",
+        "021bd427ae89203d2f51f8bec8f1425b80d4baa14bd75ada603b4570d1955fb6",
+        "02809c703cac5a45727dc8fea7112c20e1ce691cb7265b4e2cc373fe4d6cab44",
+        "0293ddca8e540055a337c48e5344bccff7eaf6ffd9f75743155271fa88ed72a8",
+        "031ecd0010d1b400d6d0f6cf91e64cab060226fd835c4598428006d7f9dfe578",
+        "03477cf3f5b84ad6eb35202a0251dde7808e99a6c0f5bfc1d7fdd77cd76a83dd",
+        "03694acf12963025abea7aca6480e64aa0e11498da05e7f1687417f269e67d29",
+        "03cc433495d103dc3d2ec0b7fbc4f379c549f4975d41d398974f5b3078a824ec",
+        "03cd3b3904bd06156104154321bdff275f3fca02601a8d9a070c11c0600d8349",
+        "0413ed4bff7b6b50f3a4af119c2ad64b2a0221cad057a472556017df30d56269",
+        "044d258145c09a5c50cd6236d317da8a5da81ac9552e453d59206e4eabeb9a9e",
+        "047442c79e90a37274826927015e157950fd587c2d528a1fdc290f1ab2a1546d",
+        "04d136ccf2f10948892880fd88bbc8348fe13b667ced1667dc12248793963e8d",
+        "05f3c8db8f016e15e1fa777910c7ab2dec6d6f18965bcb20d3604f990d0cf752",
+        "061cc3ae804a6ec0270e0ffd3dc5e147e2e475799ca0c35ac44f9f9358233735",
+        "06562ae88440680a35d4ad70b9a6acdd95b7fab8ff52bed8a93cd6d7242487ff",
+        "0740ccb196f9359fe0f12e5db890ab1ed90c0cf807a4b2b8ca31b37713664394",
+        "07655901ab133c3498f3a0ed530555b19be13e0eb6df9a6f80a3f44edc57530b",
+        "08c4a2e207610138e31c547dfd33b1cdcaf441a13e8c6d953daa0220ae84fdaa",
+        "099e9086499fbdd20596e3704ca857d6e771c03a3830d6564e56bb98e9d6656a",
+        "09d598acd86f95b54bd04c8a9d32d8987f695ceddc7fb8220356850efbce65ae",
+        "0a1fc0e2a77dade420459e2f3221faf8e6cb0133e7292542c805fbed225ce4b8",
+        "0a574484114dd7b351493987484f33033d0226dcc99d153214894a192bf8e334",
+        "0ade8ea0064868bc07e7d91c42f6a6e6053c048fec06febb7d9ca10883d05ab0",
+        "0b0eb64d67a7a2974df54119bc60b478fb41a98e5202ff195b5230238d298084",
+        "0c68b8ccbad5febc782481a42a6e3962139f39830d154021c34c5aa9f028b19d",
+        "0d40838afdc0790d36b87f77c1083ff412768ac71dae7c150c5e00c452b89dff",
+        "0d40de5e8eefb6d8845d591cbb660fa51962843c8bc89b303aca31c1a16a7306",
+        "0d99f6669958fe51c0c57e6cfac30e7b7885ae1fa9be3beac0a3fa63c37de6a1",
+        "0e18dbd4fc3a1b3e13209b645f2175b844133a703b153ab85937728a698f6ff4",
+        "0ebf12995cf54c6c4d5d52c8f6ed0b56707886c25c68ba1ca1add34a3315326d",
+        "0f6d4d7b6a1cbfa8e9b45385d7bd43afbd6db2e92f6869ba8e990bb3d747f866",
+        "10276cae948daa5048817cafef25db3a16a49cbe6651ceb55785f32d61ef1a3e",
+        "11603c34d246144b924a42271c51ea0e6d04696e38eeda970c53ee8525cdb3e5",
+        "11750816d2b1e6eecb36c504fbe7a481a0f890d4c27cfb66c29f864d73b55d0b",
+        "11d93829ffa620ec4176231e47af32665721839d2d1e6bfac9d864c6cdeb7555",
+        "12acae011b58b9993a666ad0e796f4cb9065b9d340ba97a2b160ce4205ede3d8",
+        "136340e04b369a8243282ca3574d5bdd571113ef3848d3fcc7aa128b4257dbea",
+        "1392542245a1db88bb9a68a374730b804eda5f57f38fc4fa748800321a02597e",
+        "1423750434eb720f423e8a9a87044708614098c4bb636b2e8cb0650462068b6b",
+        "1445c509c803df43d3b756ea7613cbe05f149699e30fab73e69938f1d0c9b247",
+        "1487dba652bf18142287123d6561131af1edf59f2119f58bd459166724b8dfbc",
+        "14d300a88d592dd4e5e21ee70169db089388a7b6c104b52213688a7114ae52b5"
+      ],
+      "status": 200,
+      "usage": {
+        "prompt_tokens": 9493,
+        "completion_tokens": 7366,
+        "total_tokens": 16859,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 9490,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 2829,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "estimated_usd": 0.00486955,
+      "returned_model": "gpt-6-luna",
+      "cache_write_cost_assumed": false,
+      "latency_seconds": 57.05336289998377
+    },
+    {
+      "request_number": 4,
+      "model": "gpt-6-luna",
+      "reserved_input_tokens": 31312,
+      "reserved_output_tokens": 32768,
+      "reserved_usd": 0.020298,
+      "article_ids": [
+        "1524c7ad5c438ab78b3442eaee7058c5db8905e74b38fe35907dd0846c5c5e48",
+        "15617f0ad1de91aa2bbcb14e82635b641a7de7a48931cdfbc800429c40dfe1d9",
+        "15df033f684511636f788a803442b131e8600bcdcb9c50228b57ae72bc6ee85d",
+        "1604bb9579f7a2b0be6a679715c4d15f0377f81f146fac905040c139872d430c",
+        "16db3e4dd8af7a8183da087f0f11a324a8326adf01e6902b75ed4a6b2e554c7d",
+        "17d949e1b0630d1dd455cfd72d6f5e000d5e7d146779d18bc0f8a5f4e1ac6070",
+        "18411ef2dbcc2c9d8384458138cf098c17fc29e2a826a7ee793075688e7e072e",
+        "18e24dc9badcedb6110e2cba030ca0b646b7c2f203728aed9d61358dc5e0dacb",
+        "1967ed99f2e9da46880d4a3b5a5778fc0f1b208c02de9fdfe769c68f7811cda8",
+        "1a30e2758ade599e3deaed227b3919ce3fb8a9db5d005732ee5d96fa2a53862d",
+        "21d4bd6f05a0a5496620399d3fb29bbb6557c9a9e98325e161cd2ea0227afb02",
+        "22604ac075e7cfb7118deaec7b30fb3a31a738b82f02176893e209472c9d9561",
+        "258370b50d7e5acabf88f7f84b86aea3eb99f7124102ee3cdf1616cb47666e66",
+        "261f8ce773b9530195c1e65f89f99b5484aff13dd2ec0388634ad98af05e1cc2",
+        "263157683bfe481aaf92e3262235941470bab64132165c033eec63f6378b9d88",
+        "295b835ea1b72d49c1a644414cdbf1fec52c070c67f6f4a04a45d35291a51c20",
+        "297731ea188a4f3c4357e4c07c0a98099f03124a3f80701bb7c67bfd13ec7683",
+        "2b3f0ec05fa4ad52f4eb66d06069db48aac876a925b8c37e37b373ab68deffe5",
+        "2bd785b2e4e47c94373f5aaee020c9c4fdcffe59e3b51555e364b67c84806d91",
+        "2cbb33fd30a2c80d0ce2a8a378c9b600cfc3110813837518b1472b6e78220b37",
+        "2e445b429a5bb2951190da4ab48653079218e6b2b2f0d85bbba71cd468673ee7",
+        "2efa5068c401706598d8fdf0a4a5e37d969ddea9bdb318503edf045aeefbd856",
+        "43d6f50ce4038700c5afb7d7423defca4a75650705552c6c681dfc10af78af28",
+        "4b1b60f368a1c1e3ba7d3e9db5fe7e48b8d875d5f6ea975c183e3a15508dad72",
+        "5df84ebf307fdb51d585496de791295c1fe86d7fc39b63b8e3a791ec3584d780",
+        "613e5e23ee7a456c635a8f20ea19385e8dc250767bc6a29d58086f7ec54f0623",
+        "69637e17914334e03834eb350110d0d0bd53eb3a4bad354c8479920c0c3799f6",
+        "6a6335d0efbc40aa4668ad2fcbf00aadd4840349db0ccea438ac7ded4f83f148",
+        "6f25044cf412a9122a09ea29e969fafb5d6eb470b368db24ba6fcb891908a062",
+        "905cd20a5becab64485f52672224ae0bea6e9e70f8c4fa53e77a309ce7ac1bb1",
+        "90e898810eca447f6b47528aaa13428b40d47f61edb2736a2a417d212e6b0141",
+        "926d261a3dea3a6d16827689d69b99279a165109264109b90fb66e9bf8f6bc18",
+        "a64dd8e909a2ba0cef4133e2e6ac75669c1ad49f81758effe911374891707b0f",
+        "aa8f3a5131b54d2c7857d295fc9f20a9f8f1f7048422aa00705a03fb76158955",
+        "ad2bda609d4df3eb07f5587ab24027163c10dc5e7f32aa182f6bfb7ea3967a2f",
+        "ae539e398162fa078c34964e0ac8a2e2947dd863f46e81af1f0dbdbe70eddf4e",
+        "b019929436115b60f2428ae7259b9cc23e2d122b39878a81cddb483a8cb8a412",
+        "b12f9a595c0c7b49c90080f420229e59f355a6714c9cad2bf7651c3032ca8418",
+        "b63ec18bbf4993257cba0d005e4b7fa8c78f880283fdcbaa23b4bf48d661cb7f",
+        "b74158cf6a65318922408c8725d33cbdfe4047f5aa30dba4a3fef34634bbd453",
+        "bd2bdff65098010579f1643a184429b9e064c0427da6c9a68a4a52529b2e4b24",
+        "c545046a97083fdaa3b0c38201ebdeaf5dbcb88c6c783ce4cdc9ca7d397c8735",
+        "c972a2f5aa272ca3b0b8afe4dddf5e7d94d1aa9ad5d683f0031f5c5b5d3c33f8",
+        "ceef5c73d936c9c7f0023d704b5ecf3cb76fb035d01b0186335ec8c71b3728b9",
+        "d8da0d09824599d68c7aed19df473e3cf03d1818802e46d95e30007d583782b0",
+        "e00535e9363c2fb7d09ca79d0a191365b06bbe63e55fb7e613517d5ba7915cdd",
+        "e522718e9411a264067dbfc6b6dcaf76c85d02b9d3c65089f0887c3f26d9e2be",
+        "ea8f13b3c44fb8037fea919bd23007b46e663d285192bdfe6ebc3c649a662231",
+        "f69c38fa54f884e09184a7d7639193bb94022461b9bcabc921f1f37fa3195e70",
+        "fd2c4af45bbf3e8d914aafdef618d1de2b27732f97bac810396da4112456a4df"
+      ],
+      "status": 200,
+      "usage": {
+        "prompt_tokens": 9645,
+        "completion_tokens": 6501,
+        "total_tokens": 16146,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 9642,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1814,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "estimated_usd": 0.0044560500000000005,
+      "returned_model": "gpt-6-luna",
+      "cache_write_cost_assumed": false,
+      "latency_seconds": 52.970711899979506
+    },
+    {
+      "request_number": 5,
+      "model": "gpt-6-luna",
+      "reserved_input_tokens": 19026,
+      "reserved_output_tokens": 16384,
+      "reserved_usd": 0.01057025,
+      "article_ids": [
+        "diagnostic-economy",
+        "diagnostic-egypt-green",
+        "diagnostic-foreign-water",
+        "diagnostic-landscape",
+        "diagnostic-saudi-weather",
+        "diagnostic-uae-strategy",
+        "diagnostic-water-science",
+        "oct15-bahrain",
+        "oct15-hormuz",
+        "oct15-istanbul",
+        "oct16-battery_definition",
+        "oct16-battery_science",
+        "oct16-commission",
+        "oct16-crypto",
+        "oct16-flights",
+        "oct16-gerd",
+        "oct16-harvests",
+        "oct16-iraq",
+        "oct16-libya",
+        "oct16-negation",
+        "oct16-qatar",
+        "oct16-veal",
+        "rss-00",
+        "rss-01",
+        "rss-02",
+        "rss-03",
+        "rss-04",
+        "rss-05",
+        "rss-06",
+        "rss-07",
+        "rss-08",
+        "rss-09",
+        "saved-egypt-battery",
+        "saved-sharjah",
+        "user-west-bank"
+      ],
+      "status": 200,
+      "usage": {
+        "prompt_tokens": 4267,
+        "completion_tokens": 4016,
+        "total_tokens": 8283,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 4264,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1888,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "estimated_usd": 0.0025413000000000002,
+      "returned_model": "gpt-6-luna",
+      "cache_write_cost_assumed": false,
+      "latency_seconds": 33.18377810000675
+    },
+    {
+      "request_number": 6,
+      "model": "gpt-6-luna",
+      "reserved_input_tokens": 7292,
+      "reserved_output_tokens": 4096,
+      "reserved_usd": 0.0029595,
+      "article_ids": [
+        "b63ec18bbf4993257cba0d005e4b7fa8c78f880283fdcbaa23b4bf48d661cb7f"
+      ],
+      "status": 200,
+      "usage": {
+        "prompt_tokens": 1354,
+        "completion_tokens": 478,
+        "total_tokens": 1832,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 1351,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 211,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "estimated_usd": 0.000408175,
+      "returned_model": "gpt-6-luna",
+      "cache_write_cost_assumed": false,
+      "latency_seconds": 4.657032499962952
+    },
+    {
+      "request_number": 7,
+      "model": "gpt-6-luna",
+      "reserved_input_tokens": 7322,
+      "reserved_output_tokens": 4096,
+      "reserved_usd": 0.00296325,
+      "article_ids": [
+        "10276cae948daa5048817cafef25db3a16a49cbe6651ceb55785f32d61ef1a3e"
+      ],
+      "status": 200,
+      "usage": {
+        "prompt_tokens": 1382,
+        "completion_tokens": 592,
+        "total_tokens": 1974,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 1379,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 303,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "estimated_usd": 0.000468675,
+      "returned_model": "gpt-6-luna",
+      "cache_write_cost_assumed": false,
+      "latency_seconds": 5.322531900019385
+    },
+    {
+      "request_number": 8,
+      "model": "gpt-6-luna",
+      "reserved_input_tokens": 7266,
+      "reserved_output_tokens": 4096,
+      "reserved_usd": 0.00295625,
+      "article_ids": [
+        "c972a2f5aa272ca3b0b8afe4dddf5e7d94d1aa9ad5d683f0031f5c5b5d3c33f8"
+      ],
+      "status": 200,
+      "usage": {
+        "prompt_tokens": 1340,
+        "completion_tokens": 381,
+        "total_tokens": 1721,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 1337,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 126,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "estimated_usd": 0.000357925,
+      "returned_model": "gpt-6-luna",
+      "cache_write_cost_assumed": false,
+      "latency_seconds": 3.6274476000107825
+    },
+    {
+      "request_number": 9,
+      "model": "gpt-6-luna",
+      "reserved_input_tokens": 7245,
+      "reserved_output_tokens": 4096,
+      "reserved_usd": 0.002953625,
+      "article_ids": [
+        "5df84ebf307fdb51d585496de791295c1fe86d7fc39b63b8e3a791ec3584d780"
+      ],
+      "status": 200,
+      "usage": {
+        "prompt_tokens": 1332,
+        "completion_tokens": 419,
+        "total_tokens": 1751,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 1329,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 142,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "estimated_usd": 0.000375925,
+      "returned_model": "gpt-6-luna",
+      "cache_write_cost_assumed": false,
+      "latency_seconds": 4.195350900001358
+    },
+    {
+      "request_number": 10,
+      "model": "gpt-6-luna",
+      "reserved_input_tokens": 7338,
+      "reserved_output_tokens": 4096,
+      "reserved_usd": 0.00296525,
+      "article_ids": [
+        "b12f9a595c0c7b49c90080f420229e59f355a6714c9cad2bf7651c3032ca8418"
+      ],
+      "status": 200,
+      "usage": {
+        "prompt_tokens": 1384,
+        "completion_tokens": 366,
+        "total_tokens": 1750,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 1381,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 107,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "estimated_usd": 0.000355925,
+      "returned_model": "gpt-6-luna",
+      "cache_write_cost_assumed": false,
+      "latency_seconds": 3.690460499958135
+    },
+    {
+      "request_number": 11,
+      "model": "gpt-6-luna",
+      "reserved_input_tokens": 7181,
+      "reserved_output_tokens": 4096,
+      "reserved_usd": 0.002945625,
+      "article_ids": [
+        "926d261a3dea3a6d16827689d69b99279a165109264109b90fb66e9bf8f6bc18"
+      ],
+      "status": 200,
+      "usage": {
+        "prompt_tokens": 1322,
+        "completion_tokens": 532,
+        "total_tokens": 1854,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 1319,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 267,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "estimated_usd": 0.000431175,
+      "returned_model": "gpt-6-luna",
+      "cache_write_cost_assumed": false,
+      "latency_seconds": 4.851047800038941
+    },
+    {
+      "request_number": 12,
+      "model": "gpt-6-luna",
+      "reserved_input_tokens": 7359,
+      "reserved_output_tokens": 4096,
+      "reserved_usd": 0.002967875,
+      "article_ids": [
+        "b019929436115b60f2428ae7259b9cc23e2d122b39878a81cddb483a8cb8a412"
+      ],
+      "status": 200,
+      "usage": {
+        "prompt_tokens": 1385,
+        "completion_tokens": 486,
+        "total_tokens": 1871,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 1382,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 214,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "estimated_usd": 0.00041605,
+      "returned_model": "gpt-6-luna",
+      "cache_write_cost_assumed": false,
+      "latency_seconds": 4.457288899982814
+    },
+    {
+      "request_number": 13,
+      "model": "gpt-6-luna",
+      "reserved_input_tokens": 7347,
+      "reserved_output_tokens": 4096,
+      "reserved_usd": 0.002966375,
+      "article_ids": [
+        "0e18dbd4fc3a1b3e13209b645f2175b844133a703b153ab85937728a698f6ff4"
+      ],
+      "status": 200,
+      "usage": {
+        "prompt_tokens": 1378,
+        "completion_tokens": 522,
+        "total_tokens": 1900,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 1375,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 213,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "estimated_usd": 0.000433175,
+      "returned_model": "gpt-6-luna",
+      "cache_write_cost_assumed": false,
+      "latency_seconds": 4.560341000033077
+    },
+    {
+      "request_number": 14,
+      "model": "gpt-6-luna",
+      "reserved_input_tokens": 7296,
+      "reserved_output_tokens": 4096,
+      "reserved_usd": 0.00296,
+      "article_ids": [
+        "c545046a97083fdaa3b0c38201ebdeaf5dbcb88c6c783ce4cdc9ca7d397c8735"
+      ],
+      "status": 200,
+      "usage": {
+        "prompt_tokens": 1353,
+        "completion_tokens": 487,
+        "total_tokens": 1840,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 1350,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 215,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "estimated_usd": 0.00041255,
+      "returned_model": "gpt-6-luna",
+      "cache_write_cost_assumed": false,
+      "latency_seconds": 4.515877500001807
+    },
+    {
+      "request_number": 15,
+      "model": "gpt-6-luna",
+      "reserved_input_tokens": 7191,
+      "reserved_output_tokens": 4096,
+      "reserved_usd": 0.002946875,
+      "article_ids": [
+        "aa8f3a5131b54d2c7857d295fc9f20a9f8f1f7048422aa00705a03fb76158955"
+      ],
+      "status": 200,
+      "usage": {
+        "prompt_tokens": 1241,
+        "completion_tokens": 447,
+        "total_tokens": 1688,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 1238,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 162,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "estimated_usd": 0.00037855,
+      "returned_model": "gpt-6-luna",
+      "cache_write_cost_assumed": false,
+      "latency_seconds": 4.4835386000340804
+    },
+    {
+      "request_number": 16,
+      "model": "gpt-6-luna",
+      "reserved_input_tokens": 7218,
+      "reserved_output_tokens": 4096,
+      "reserved_usd": 0.00295025,
+      "article_ids": [
+        "905cd20a5becab64485f52672224ae0bea6e9e70f8c4fa53e77a309ce7ac1bb1"
+      ],
+      "status": 200,
+      "usage": {
+        "prompt_tokens": 1317,
+        "completion_tokens": 467,
+        "total_tokens": 1784,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 1314,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 195,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "estimated_usd": 0.00039805,
+      "returned_model": "gpt-6-luna",
+      "cache_write_cost_assumed": false,
+      "latency_seconds": 5.008687900030054
+    },
+    {
+      "request_number": 17,
+      "model": "gpt-6-luna",
+      "reserved_input_tokens": 7202,
+      "reserved_output_tokens": 4096,
+      "reserved_usd": 0.00294825,
+      "article_ids": [
+        "fd2c4af45bbf3e8d914aafdef618d1de2b27732f97bac810396da4112456a4df"
+      ],
+      "status": 200,
+      "usage": {
+        "prompt_tokens": 1316,
+        "completion_tokens": 531,
+        "total_tokens": 1847,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 1313,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 283,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "estimated_usd": 0.000429925,
+      "returned_model": "gpt-6-luna",
+      "cache_write_cost_assumed": false,
+      "latency_seconds": 5.0283972000470385
+    },
+    {
+      "request_number": 18,
+      "model": "gpt-6-luna",
+      "reserved_input_tokens": 7302,
+      "reserved_output_tokens": 4096,
+      "reserved_usd": 0.00296075,
+      "article_ids": [
+        "03cd3b3904bd06156104154321bdff275f3fca02601a8d9a070c11c0600d8349"
+      ],
+      "status": 200,
+      "usage": {
+        "prompt_tokens": 1359,
+        "completion_tokens": 466,
+        "total_tokens": 1825,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 1356,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 213,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "estimated_usd": 0.00040280000000000003,
+      "returned_model": "gpt-6-luna",
+      "cache_write_cost_assumed": false,
+      "latency_seconds": 5.079298299970105
+    },
+    {
+      "request_number": 19,
+      "model": "gpt-6-luna",
+      "reserved_input_tokens": 7340,
+      "reserved_output_tokens": 4096,
+      "reserved_usd": 0.0029655,
+      "article_ids": [
+        "bd2bdff65098010579f1643a184429b9e064c0427da6c9a68a4a52529b2e4b24"
+      ],
+      "status": 200,
+      "usage": {
+        "prompt_tokens": 1352,
+        "completion_tokens": 574,
+        "total_tokens": 1926,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 1349,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 310,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "estimated_usd": 0.00045592500000000004,
+      "returned_model": "gpt-6-luna",
+      "cache_write_cost_assumed": false,
+      "latency_seconds": 5.52906739996979
+    },
+    {
+      "request_number": 20,
+      "model": "gpt-6-luna",
+      "reserved_input_tokens": 7225,
+      "reserved_output_tokens": 4096,
+      "reserved_usd": 0.002951125,
+      "article_ids": [
+        "e00535e9363c2fb7d09ca79d0a191365b06bbe63e55fb7e613517d5ba7915cdd"
+      ],
+      "status": 200,
+      "usage": {
+        "prompt_tokens": 1236,
+        "completion_tokens": 408,
+        "total_tokens": 1644,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 1233,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 151,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "estimated_usd": 0.000358425,
+      "returned_model": "gpt-6-luna",
+      "cache_write_cost_assumed": false,
+      "latency_seconds": 4.01312419999158
+    },
+    {
+      "request_number": 21,
+      "model": "gpt-6-luna",
+      "reserved_input_tokens": 7227,
+      "reserved_output_tokens": 4096,
+      "reserved_usd": 0.002951375,
+      "article_ids": [
+        "295b835ea1b72d49c1a644414cdbf1fec52c070c67f6f4a04a45d35291a51c20"
+      ],
+      "status": 200,
+      "usage": {
+        "prompt_tokens": 1251,
+        "completion_tokens": 734,
+        "total_tokens": 1985,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 1248,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 399,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "estimated_usd": 0.0005233,
+      "returned_model": "gpt-6-luna",
+      "cache_write_cost_assumed": false,
+      "latency_seconds": 6.5127983999555
+    },
+    {
+      "request_number": 22,
+      "model": "gpt-6-luna",
+      "reserved_input_tokens": 7306,
+      "reserved_output_tokens": 4096,
+      "reserved_usd": 0.00296125,
+      "article_ids": [
+        "0d99f6669958fe51c0c57e6cfac30e7b7885ae1fa9be3beac0a3fa63c37de6a1"
+      ],
+      "status": 200,
+      "usage": {
+        "prompt_tokens": 1345,
+        "completion_tokens": 558,
+        "total_tokens": 1903,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 1342,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 297,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "estimated_usd": 0.00044705,
+      "returned_model": "gpt-6-luna",
+      "cache_write_cost_assumed": false,
+      "latency_seconds": 5.436108299996704
+    },
+    {
+      "request_number": 23,
+      "model": "gpt-6-luna",
+      "reserved_input_tokens": 7213,
+      "reserved_output_tokens": 4096,
+      "reserved_usd": 0.002949625,
+      "article_ids": [
+        "ea8f13b3c44fb8037fea919bd23007b46e663d285192bdfe6ebc3c649a662231"
+      ],
+      "status": 200,
+      "usage": {
+        "prompt_tokens": 1326,
+        "completion_tokens": 487,
+        "total_tokens": 1813,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 1323,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 243,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "estimated_usd": 0.000409175,
+      "returned_model": "gpt-6-luna",
+      "cache_write_cost_assumed": false,
+      "latency_seconds": 4.448817699973006
+    },
+    {
+      "request_number": 24,
+      "model": "gpt-6-luna",
+      "reserved_input_tokens": 7262,
+      "reserved_output_tokens": 4096,
+      "reserved_usd": 0.00295575,
+      "article_ids": [
+        "4b1b60f368a1c1e3ba7d3e9db5fe7e48b8d875d5f6ea975c183e3a15508dad72"
+      ],
+      "status": 200,
+      "usage": {
+        "prompt_tokens": 1327,
+        "completion_tokens": 580,
+        "total_tokens": 1907,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 1324,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 339,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "estimated_usd": 0.0004558,
+      "returned_model": "gpt-6-luna",
+      "cache_write_cost_assumed": false,
+      "latency_seconds": 5.737434500013478
+    },
+    {
+      "request_number": 25,
+      "model": "gpt-6-luna",
+      "reserved_input_tokens": 7222,
+      "reserved_output_tokens": 4096,
+      "reserved_usd": 0.00295075,
+      "article_ids": [
+        "0293ddca8e540055a337c48e5344bccff7eaf6ffd9f75743155271fa88ed72a8"
+      ],
+      "status": 200,
+      "usage": {
+        "prompt_tokens": 1307,
+        "completion_tokens": 481,
+        "total_tokens": 1788,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 1304,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 213,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "estimated_usd": 0.0004038,
+      "returned_model": "gpt-6-luna",
+      "cache_write_cost_assumed": false,
+      "latency_seconds": 4.964131999993697
+    },
+    {
+      "request_number": 26,
+      "model": "gpt-6-luna",
+      "reserved_input_tokens": 6918,
+      "reserved_output_tokens": 4096,
+      "reserved_usd": 0.00291275,
+      "article_ids": [
+        "oct16-veal"
+      ],
+      "status": 200,
+      "usage": {
+        "prompt_tokens": 1144,
+        "completion_tokens": 495,
+        "total_tokens": 1639,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 1141,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 249,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "estimated_usd": 0.000390425,
+      "returned_model": "gpt-6-luna",
+      "cache_write_cost_assumed": false,
+      "latency_seconds": 5.294914799975231
+    },
+    {
+      "request_number": 27,
+      "model": "gpt-6-luna",
+      "reserved_input_tokens": 6918,
+      "reserved_output_tokens": 4096,
+      "reserved_usd": 0.00291275,
+      "article_ids": [
+        "oct16-veal"
+      ],
+      "status": 200,
+      "usage": {
+        "prompt_tokens": 1144,
+        "completion_tokens": 571,
+        "total_tokens": 1715,
+        "prompt_tokens_details": {
+          "cached_tokens": 1141,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 321,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "estimated_usd": 0.00029720999999999995,
+      "returned_model": "gpt-6-luna",
+      "cache_write_cost_assumed": false,
+      "latency_seconds": 5.5298695000237785
+    },
+    {
+      "request_number": 28,
+      "model": "gpt-6-luna",
+      "reserved_input_tokens": 6918,
+      "reserved_output_tokens": 4096,
+      "reserved_usd": 0.00291275,
+      "article_ids": [
+        "oct16-veal"
+      ],
+      "status": 200,
+      "usage": {
+        "prompt_tokens": 1144,
+        "completion_tokens": 476,
+        "total_tokens": 1620,
+        "prompt_tokens_details": {
+          "cached_tokens": 1141,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 229,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "estimated_usd": 0.00024971,
+      "returned_model": "gpt-6-luna",
+      "cache_write_cost_assumed": false,
+      "latency_seconds": 4.761587599990889
+    },
+    {
+      "request_number": 29,
+      "model": "gpt-6-luna",
+      "reserved_input_tokens": 6918,
+      "reserved_output_tokens": 4096,
+      "reserved_usd": 0.00291275,
+      "article_ids": [
+        "oct16-veal"
+      ],
+      "status": 200,
+      "usage": {
+        "prompt_tokens": 1144,
+        "completion_tokens": 687,
+        "total_tokens": 1831,
+        "prompt_tokens_details": {
+          "cached_tokens": 1141,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 442,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "estimated_usd": 0.00035520999999999996,
+      "returned_model": "gpt-6-luna",
+      "cache_write_cost_assumed": false,
+      "latency_seconds": 6.2585630000103265
+    }
+  ],
+  "requests_sent": 29,
+  "denied_locally": 0,
+  "reserved_tokens": 615670,
+  "reserved_usd": 0.16911874999999998,
+  "known_estimated_usd": 0.034264924999999995,
+  "requests_with_unknown_cost": 0
+}

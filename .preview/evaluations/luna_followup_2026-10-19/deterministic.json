@@ -1,0 +1,1315 @@
+{
+  "rows": {
+    "021bd427ae89203d2f51f8bec8f1425b80d4baa14bd75ada603b4570d1955fb6": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": false,
+      "gate_reason": "no company-topic match",
+      "retained": false,
+      "region": "KSA",
+      "region_basis": "title geography: KSA",
+      "rank": null,
+      "initial_six": false,
+      "matched_topics": []
+    },
+    "002117e3270f55e3cfec2678b8642654cd4f888b3c67bd885f3c44cc92057927": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": false,
+      "gate_reason": "no company-topic match",
+      "retained": false,
+      "region": "KSA",
+      "region_basis": "source-region fallback",
+      "rank": null,
+      "initial_six": false,
+      "matched_topics": []
+    },
+    "0015db728f0f8b16ebc936ab4c98d84cc1f748a810796176dd282fd2e9784a52": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": false,
+      "gate_reason": "no company-topic match",
+      "retained": false,
+      "region": "UAE",
+      "region_basis": "source-region fallback",
+      "rank": null,
+      "initial_six": false,
+      "matched_topics": []
+    },
+    "005b14300d39e84d3766e1cf8acf90c2301b7b7e3ccef5ab8b28f30466aaa8f8": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": false,
+      "gate_reason": "no company-topic match",
+      "retained": false,
+      "region": null,
+      "region_basis": "ambiguous regional geography",
+      "rank": null,
+      "initial_six": false,
+      "matched_topics": []
+    },
+    "00539a484b9d4a6f500a9ece4a5020fc0f438ee32dd0b9165386c52a893b4286": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": false,
+      "gate_reason": "no company-topic match",
+      "retained": false,
+      "region": "KSA",
+      "region_basis": "source-region fallback",
+      "rank": null,
+      "initial_six": false,
+      "matched_topics": []
+    },
+    "4b1b60f368a1c1e3ba7d3e9db5fe7e48b8d875d5f6ea975c183e3a15508dad72": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": false,
+      "gate_reason": "outside geographic mandate",
+      "retained": false,
+      "region": null,
+      "region_basis": "explicit foreign-local geography; publisher fallback blocked",
+      "rank": null,
+      "initial_six": false,
+      "matched_topics": [
+        "water security"
+      ]
+    },
+    "01c4153bbe04078a3d9d0e8d9783f7896d27e3252f3793eb1d4fe896eabb349b": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": false,
+      "gate_reason": "no company-topic match",
+      "retained": false,
+      "region": null,
+      "region_basis": "explicit foreign-local geography; publisher fallback blocked",
+      "rank": null,
+      "initial_six": false,
+      "matched_topics": []
+    },
+    "03477cf3f5b84ad6eb35202a0251dde7808e99a6c0f5bfc1d7fdd77cd76a83dd": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": false,
+      "gate_reason": "no company-topic match",
+      "retained": false,
+      "region": null,
+      "region_basis": "no exact regional evidence",
+      "rank": null,
+      "initial_six": false,
+      "matched_topics": []
+    },
+    "04d136ccf2f10948892880fd88bbc8348fe13b667ced1667dc12248793963e8d": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": false,
+      "gate_reason": "no company-topic match",
+      "retained": false,
+      "region": "Global",
+      "region_basis": "title geography: Iran; other MENA coverage routed to Global",
+      "rank": null,
+      "initial_six": false,
+      "matched_topics": []
+    },
+    "047442c79e90a37274826927015e157950fd587c2d528a1fdc290f1ab2a1546d": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": false,
+      "gate_reason": "no company-topic match",
+      "retained": false,
+      "region": "KSA",
+      "region_basis": "source-region fallback",
+      "rank": null,
+      "initial_six": false,
+      "matched_topics": []
+    },
+    "031ecd0010d1b400d6d0f6cf91e64cab060226fd835c4598428006d7f9dfe578": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": false,
+      "gate_reason": "no company-topic match",
+      "retained": false,
+      "region": "UAE",
+      "region_basis": "source-region fallback",
+      "rank": null,
+      "initial_six": false,
+      "matched_topics": []
+    },
+    "02137ae9fbaf7018758bdfe0e5997a16fd0bb487711bd61dc8d961824e58fcf2": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": false,
+      "gate_reason": "no company-topic match",
+      "retained": false,
+      "region": "Global",
+      "region_basis": "project/event subject: Lebanon; other MENA coverage routed to Global",
+      "rank": null,
+      "initial_six": false,
+      "matched_topics": []
+    },
+    "00c63cd61222f71464cb234c01efb4035c79a5742b82f4eb6f2d3040b7b74140": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": false,
+      "gate_reason": "no company-topic match",
+      "retained": false,
+      "region": "KSA",
+      "region_basis": "title geography: KSA",
+      "rank": null,
+      "initial_six": false,
+      "matched_topics": []
+    },
+    "ad2bda609d4df3eb07f5587ab24027163c10dc5e7f32aa182f6bfb7ea3967a2f": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": true,
+      "gate_reason": "",
+      "retained": true,
+      "region": "Global",
+      "region_basis": "source-region fallback",
+      "rank": 7,
+      "initial_six": false,
+      "matched_topics": [
+        "water security"
+      ]
+    },
+    "021495e570e6ab2c98fb44e199bc3380cc06b0c4bf68e685148aace9c250f002": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": true,
+      "gate_reason": "",
+      "retained": true,
+      "region": "KSA",
+      "region_basis": "title geography: KSA",
+      "rank": 7,
+      "initial_six": false,
+      "matched_topics": [
+        "energy transition",
+        "trade"
+      ]
+    },
+    "05f3c8db8f016e15e1fa777910c7ab2dec6d6f18965bcb20d3604f990d0cf752": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": false,
+      "gate_reason": "no company-topic match",
+      "retained": false,
+      "region": "UAE",
+      "region_basis": "title geography: UAE",
+      "rank": null,
+      "initial_six": false,
+      "matched_topics": []
+    },
+    "11750816d2b1e6eecb36c504fbe7a481a0f890d4c27cfb66c29f864d73b55d0b": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": true,
+      "gate_reason": "",
+      "retained": false,
+      "region": "Global",
+      "region_basis": "title geography: Iran; other MENA coverage routed to Global",
+      "rank": 11,
+      "initial_six": false,
+      "matched_topics": [
+        "net zero transition",
+        "energy transition"
+      ]
+    },
+    "09d598acd86f95b54bd04c8a9d32d8987f695ceddc7fb8220356850efbce65ae": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": true,
+      "gate_reason": "",
+      "retained": true,
+      "region": "Global",
+      "region_basis": "title geography: Israel; other MENA coverage routed to Global",
+      "rank": 2,
+      "initial_six": true,
+      "matched_topics": [
+        "food security",
+        "agri-food"
+      ]
+    },
+    "0ade8ea0064868bc07e7d91c42f6a6e6053c048fec06febb7d9ca10883d05ab0": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": false,
+      "gate_reason": "no company-topic match",
+      "retained": false,
+      "region": "UAE",
+      "region_basis": "title geography: UAE",
+      "rank": null,
+      "initial_six": false,
+      "matched_topics": []
+    },
+    "0293ddca8e540055a337c48e5344bccff7eaf6ffd9f75743155271fa88ed72a8": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": true,
+      "gate_reason": "",
+      "retained": false,
+      "region": "Global",
+      "region_basis": "source-region fallback",
+      "rank": 12,
+      "initial_six": false,
+      "matched_topics": [
+        "energy transition",
+        "trade"
+      ]
+    },
+    "02809c703cac5a45727dc8fea7112c20e1ce691cb7265b4e2cc373fe4d6cab44": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": false,
+      "gate_reason": "no company-topic match",
+      "retained": false,
+      "region": "KSA",
+      "region_basis": "source-region fallback",
+      "rank": null,
+      "initial_six": false,
+      "matched_topics": []
+    },
+    "b74158cf6a65318922408c8725d33cbdfe4047f5aa30dba4a3fef34634bbd453": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": true,
+      "gate_reason": "",
+      "retained": true,
+      "region": "Egypt",
+      "region_basis": "project/event subject: Egypt",
+      "rank": 1,
+      "initial_six": true,
+      "matched_topics": [
+        "water security"
+      ]
+    },
+    "03cc433495d103dc3d2ec0b7fbc4f379c549f4975d41d398974f5b3078a824ec": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": false,
+      "gate_reason": "no company-topic match",
+      "retained": false,
+      "region": "Global",
+      "region_basis": "title geography: Iran; other MENA coverage routed to Global",
+      "rank": null,
+      "initial_six": false,
+      "matched_topics": []
+    },
+    "06562ae88440680a35d4ad70b9a6acdd95b7fab8ff52bed8a93cd6d7242487ff": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": false,
+      "gate_reason": "no company-topic match",
+      "retained": false,
+      "region": null,
+      "region_basis": "no exact regional evidence",
+      "rank": null,
+      "initial_six": false,
+      "matched_topics": []
+    },
+    "21d4bd6f05a0a5496620399d3fb29bbb6557c9a9e98325e161cd2ea0227afb02": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": false,
+      "gate_reason": "no company-topic match",
+      "retained": false,
+      "region": "KSA",
+      "region_basis": "title geography: KSA",
+      "rank": null,
+      "initial_six": false,
+      "matched_topics": []
+    },
+    "0a1fc0e2a77dade420459e2f3221faf8e6cb0133e7292542c805fbed225ce4b8": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": false,
+      "gate_reason": "no company-topic match",
+      "retained": false,
+      "region": "Global",
+      "region_basis": "title geography: Israel; other MENA coverage routed to Global",
+      "rank": null,
+      "initial_six": false,
+      "matched_topics": []
+    },
+    "17d949e1b0630d1dd455cfd72d6f5e000d5e7d146779d18bc0f8a5f4e1ac6070": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": false,
+      "gate_reason": "no company-topic match",
+      "retained": false,
+      "region": "UAE",
+      "region_basis": "project/event subject: UAE",
+      "rank": null,
+      "initial_six": false,
+      "matched_topics": []
+    },
+    "03694acf12963025abea7aca6480e64aa0e11498da05e7f1687417f269e67d29": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": false,
+      "gate_reason": "no company-topic match",
+      "retained": false,
+      "region": "Global",
+      "region_basis": "source-region fallback",
+      "rank": null,
+      "initial_six": false,
+      "matched_topics": []
+    },
+    "0d40838afdc0790d36b87f77c1083ff412768ac71dae7c150c5e00c452b89dff": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": false,
+      "gate_reason": "no company-topic match",
+      "retained": false,
+      "region": "KSA",
+      "region_basis": "title geography: KSA",
+      "rank": null,
+      "initial_six": false,
+      "matched_topics": []
+    },
+    "f69c38fa54f884e09184a7d7639193bb94022461b9bcabc921f1f37fa3195e70": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": true,
+      "gate_reason": "",
+      "retained": true,
+      "region": "Global",
+      "region_basis": "source-region fallback",
+      "rank": 3,
+      "initial_six": true,
+      "matched_topics": [
+        "water security"
+      ]
+    },
+    "0413ed4bff7b6b50f3a4af119c2ad64b2a0221cad057a472556017df30d56269": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": false,
+      "gate_reason": "no company-topic match",
+      "retained": false,
+      "region": "Global",
+      "region_basis": "title geography: Iraq; other MENA coverage routed to Global",
+      "rank": null,
+      "initial_six": false,
+      "matched_topics": []
+    },
+    "07655901ab133c3498f3a0ed530555b19be13e0eb6df9a6f80a3f44edc57530b": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": false,
+      "gate_reason": "no company-topic match",
+      "retained": false,
+      "region": null,
+      "region_basis": "no exact regional evidence",
+      "rank": null,
+      "initial_six": false,
+      "matched_topics": []
+    },
+    "22604ac075e7cfb7118deaec7b30fb3a31a738b82f02176893e209472c9d9561": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": false,
+      "gate_reason": "no company-topic match",
+      "retained": false,
+      "region": null,
+      "region_basis": "no exact regional evidence",
+      "rank": null,
+      "initial_six": false,
+      "matched_topics": []
+    },
+    "0b0eb64d67a7a2974df54119bc60b478fb41a98e5202ff195b5230238d298084": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": false,
+      "gate_reason": "no company-topic match",
+      "retained": false,
+      "region": "Global",
+      "region_basis": "title geography: Iran; other MENA coverage routed to Global",
+      "rank": null,
+      "initial_six": false,
+      "matched_topics": []
+    },
+    "18411ef2dbcc2c9d8384458138cf098c17fc29e2a826a7ee793075688e7e072e": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": false,
+      "gate_reason": "no company-topic match",
+      "retained": false,
+      "region": "UAE",
+      "region_basis": "title geography: UAE",
+      "rank": null,
+      "initial_six": false,
+      "matched_topics": []
+    },
+    "061cc3ae804a6ec0270e0ffd3dc5e147e2e475799ca0c35ac44f9f9358233735": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": false,
+      "gate_reason": "no company-topic match",
+      "retained": false,
+      "region": null,
+      "region_basis": "explicit foreign-local geography; publisher fallback blocked",
+      "rank": null,
+      "initial_six": false,
+      "matched_topics": []
+    },
+    "1392542245a1db88bb9a68a374730b804eda5f57f38fc4fa748800321a02597e": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": false,
+      "gate_reason": "no company-topic match",
+      "retained": false,
+      "region": "KSA",
+      "region_basis": "title geography: KSA",
+      "rank": null,
+      "initial_six": false,
+      "matched_topics": []
+    },
+    "044d258145c09a5c50cd6236d317da8a5da81ac9552e453d59206e4eabeb9a9e": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": true,
+      "gate_reason": "",
+      "retained": true,
+      "region": "Global",
+      "region_basis": "title geography: Palestine; other MENA coverage routed to Global",
+      "rank": 5,
+      "initial_six": true,
+      "matched_topics": [
+        "food security",
+        "agri-food"
+      ]
+    },
+    "0a574484114dd7b351493987484f33033d0226dcc99d153214894a192bf8e334": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": false,
+      "gate_reason": "no company-topic match",
+      "retained": false,
+      "region": null,
+      "region_basis": "no exact regional evidence",
+      "rank": null,
+      "initial_six": false,
+      "matched_topics": []
+    },
+    "261f8ce773b9530195c1e65f89f99b5484aff13dd2ec0388634ad98af05e1cc2": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": false,
+      "gate_reason": "no company-topic match",
+      "retained": false,
+      "region": "KSA",
+      "region_basis": "title geography: KSA",
+      "rank": null,
+      "initial_six": false,
+      "matched_topics": []
+    },
+    "11603c34d246144b924a42271c51ea0e6d04696e38eeda970c53ee8525cdb3e5": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": false,
+      "gate_reason": "no company-topic match",
+      "retained": false,
+      "region": "KSA",
+      "region_basis": "source-region fallback",
+      "rank": null,
+      "initial_six": false,
+      "matched_topics": []
+    },
+    "1a30e2758ade599e3deaed227b3919ce3fb8a9db5d005732ee5d96fa2a53862d": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": false,
+      "gate_reason": "no company-topic match",
+      "retained": false,
+      "region": "UAE",
+      "region_basis": "title geography: UAE",
+      "rank": null,
+      "initial_six": false,
+      "matched_topics": []
+    },
+    "0740ccb196f9359fe0f12e5db890ab1ed90c0cf807a4b2b8ca31b37713664394": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": false,
+      "gate_reason": "outside geographic mandate",
+      "retained": false,
+      "region": null,
+      "region_basis": "explicit foreign-local geography; publisher fallback blocked",
+      "rank": null,
+      "initial_six": false,
+      "matched_topics": [
+        "net zero transition"
+      ]
+    },
+    "1445c509c803df43d3b756ea7613cbe05f149699e30fab73e69938f1d0c9b247": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": false,
+      "gate_reason": "no company-topic match",
+      "retained": false,
+      "region": "KSA",
+      "region_basis": "source-region fallback",
+      "rank": null,
+      "initial_six": false,
+      "matched_topics": []
+    },
+    "099e9086499fbdd20596e3704ca857d6e771c03a3830d6564e56bb98e9d6656a": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": false,
+      "gate_reason": "no company-topic match",
+      "retained": false,
+      "region": "UAE",
+      "region_basis": "source-region fallback",
+      "rank": null,
+      "initial_six": false,
+      "matched_topics": []
+    },
+    "0ebf12995cf54c6c4d5d52c8f6ed0b56707886c25c68ba1ca1add34a3315326d": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": false,
+      "gate_reason": "no company-topic match",
+      "retained": false,
+      "region": "Global",
+      "region_basis": "title geography: Oman; other MENA coverage routed to Global",
+      "rank": null,
+      "initial_six": false,
+      "matched_topics": []
+    },
+    "2b3f0ec05fa4ad52f4eb66d06069db48aac876a925b8c37e37b373ab68deffe5": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": false,
+      "gate_reason": "no company-topic match",
+      "retained": false,
+      "region": "Global",
+      "region_basis": "project/event subject: Iraq; other MENA coverage routed to Global",
+      "rank": null,
+      "initial_six": false,
+      "matched_topics": []
+    },
+    "11d93829ffa620ec4176231e47af32665721839d2d1e6bfac9d864c6cdeb7555": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": false,
+      "gate_reason": "no company-topic match",
+      "retained": false,
+      "region": "KSA",
+      "region_basis": "source-region fallback",
+      "rank": null,
+      "initial_six": false,
+      "matched_topics": []
+    },
+    "258370b50d7e5acabf88f7f84b86aea3eb99f7124102ee3cdf1616cb47666e66": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": false,
+      "gate_reason": "no company-topic match",
+      "retained": false,
+      "region": "UAE",
+      "region_basis": "source-region fallback",
+      "rank": null,
+      "initial_six": false,
+      "matched_topics": []
+    },
+    "08c4a2e207610138e31c547dfd33b1cdcaf441a13e8c6d953daa0220ae84fdaa": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": false,
+      "gate_reason": "outside geographic mandate",
+      "retained": false,
+      "region": null,
+      "region_basis": "explicit foreign-local geography; publisher fallback blocked",
+      "rank": null,
+      "initial_six": false,
+      "matched_topics": [
+        "energy transition"
+      ]
+    },
+    "15df033f684511636f788a803442b131e8600bcdcb9c50228b57ae72bc6ee85d": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": false,
+      "gate_reason": "no company-topic match",
+      "retained": false,
+      "region": null,
+      "region_basis": "ambiguous regional geography",
+      "rank": null,
+      "initial_six": false,
+      "matched_topics": []
+    },
+    "0c68b8ccbad5febc782481a42a6e3962139f39830d154021c34c5aa9f028b19d": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": false,
+      "gate_reason": "no company-topic match",
+      "retained": false,
+      "region": "UAE",
+      "region_basis": "source-region fallback",
+      "rank": null,
+      "initial_six": false,
+      "matched_topics": []
+    },
+    "1487dba652bf18142287123d6561131af1edf59f2119f58bd459166724b8dfbc": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": false,
+      "gate_reason": "no company-topic match",
+      "retained": false,
+      "region": "UAE",
+      "region_basis": "title geography: UAE",
+      "rank": null,
+      "initial_six": false,
+      "matched_topics": []
+    },
+    "2bd785b2e4e47c94373f5aaee020c9c4fdcffe59e3b51555e364b67c84806d91": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": false,
+      "gate_reason": "no company-topic match",
+      "retained": false,
+      "region": "KSA",
+      "region_basis": "title geography: KSA",
+      "rank": null,
+      "initial_six": false,
+      "matched_topics": []
+    },
+    "12acae011b58b9993a666ad0e796f4cb9065b9d340ba97a2b160ce4205ede3d8": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": false,
+      "gate_reason": "no company-topic match",
+      "retained": false,
+      "region": "Global",
+      "region_basis": "title geography: Lebanon; other MENA coverage routed to Global",
+      "rank": null,
+      "initial_six": false,
+      "matched_topics": []
+    },
+    "263157683bfe481aaf92e3262235941470bab64132165c033eec63f6378b9d88": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": false,
+      "gate_reason": "no company-topic match",
+      "retained": false,
+      "region": null,
+      "region_basis": "ambiguous regional geography",
+      "rank": null,
+      "initial_six": false,
+      "matched_topics": []
+    },
+    "136340e04b369a8243282ca3574d5bdd571113ef3848d3fcc7aa128b4257dbea": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": false,
+      "gate_reason": "no company-topic match",
+      "retained": false,
+      "region": "Global",
+      "region_basis": "title geography: Israel; other MENA coverage routed to Global",
+      "rank": null,
+      "initial_six": false,
+      "matched_topics": []
+    },
+    "1604bb9579f7a2b0be6a679715c4d15f0377f81f146fac905040c139872d430c": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": false,
+      "gate_reason": "no company-topic match",
+      "retained": false,
+      "region": "KSA",
+      "region_basis": "project/event subject: KSA",
+      "rank": null,
+      "initial_six": false,
+      "matched_topics": []
+    },
+    "0d40de5e8eefb6d8845d591cbb660fa51962843c8bc89b303aca31c1a16a7306": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": false,
+      "gate_reason": "consumer finance or passenger travel without a direct mission consequence",
+      "retained": false,
+      "region": "KSA",
+      "region_basis": "title geography: KSA",
+      "rank": null,
+      "initial_six": false,
+      "matched_topics": []
+    },
+    "14d300a88d592dd4e5e21ee70169db089388a7b6c104b52213688a7114ae52b5": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": false,
+      "gate_reason": "no exact target region",
+      "retained": false,
+      "region": null,
+      "region_basis": "no exact regional evidence",
+      "rank": null,
+      "initial_six": false,
+      "matched_topics": [
+        "resilience",
+        "regulation"
+      ]
+    },
+    "2cbb33fd30a2c80d0ce2a8a378c9b600cfc3110813837518b1472b6e78220b37": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": false,
+      "gate_reason": "no company-topic match",
+      "retained": false,
+      "region": null,
+      "region_basis": "no exact regional evidence",
+      "rank": null,
+      "initial_six": false,
+      "matched_topics": []
+    },
+    "1524c7ad5c438ab78b3442eaee7058c5db8905e74b38fe35907dd0846c5c5e48": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": false,
+      "gate_reason": "no company-topic match",
+      "retained": false,
+      "region": "KSA",
+      "region_basis": "source-region fallback",
+      "rank": null,
+      "initial_six": false,
+      "matched_topics": []
+    },
+    "297731ea188a4f3c4357e4c07c0a98099f03124a3f80701bb7c67bfd13ec7683": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": false,
+      "gate_reason": "no company-topic match",
+      "retained": false,
+      "region": "UAE",
+      "region_basis": "source-region fallback",
+      "rank": null,
+      "initial_six": false,
+      "matched_topics": []
+    },
+    "1423750434eb720f423e8a9a87044708614098c4bb636b2e8cb0650462068b6b": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": false,
+      "gate_reason": "no company-topic match",
+      "retained": false,
+      "region": "Global",
+      "region_basis": "title geography: Iran; other MENA coverage routed to Global",
+      "rank": null,
+      "initial_six": false,
+      "matched_topics": []
+    },
+    "18e24dc9badcedb6110e2cba030ca0b646b7c2f203728aed9d61358dc5e0dacb": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": false,
+      "gate_reason": "no company-topic match",
+      "retained": false,
+      "region": "KSA",
+      "region_basis": "dominant article geography: KSA",
+      "rank": null,
+      "initial_six": false,
+      "matched_topics": []
+    },
+    "0f6d4d7b6a1cbfa8e9b45385d7bd43afbd6db2e92f6869ba8e990bb3d747f866": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": false,
+      "gate_reason": "no company-topic match",
+      "retained": false,
+      "region": "UAE",
+      "region_basis": "source-region fallback",
+      "rank": null,
+      "initial_six": false,
+      "matched_topics": []
+    },
+    "16db3e4dd8af7a8183da087f0f11a324a8326adf01e6902b75ed4a6b2e554c7d": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": false,
+      "gate_reason": "no company-topic match",
+      "retained": false,
+      "region": null,
+      "region_basis": "no exact regional evidence",
+      "rank": null,
+      "initial_six": false,
+      "matched_topics": []
+    },
+    "2e445b429a5bb2951190da4ab48653079218e6b2b2f0d85bbba71cd468673ee7": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": false,
+      "gate_reason": "no company-topic match",
+      "retained": false,
+      "region": null,
+      "region_basis": "no exact regional evidence",
+      "rank": null,
+      "initial_six": false,
+      "matched_topics": []
+    },
+    "15617f0ad1de91aa2bbcb14e82635b641a7de7a48931cdfbc800429c40dfe1d9": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": false,
+      "gate_reason": "no company-topic match",
+      "retained": false,
+      "region": "Global",
+      "region_basis": "title geography: Iran; other MENA coverage routed to Global",
+      "rank": null,
+      "initial_six": false,
+      "matched_topics": []
+    },
+    "2efa5068c401706598d8fdf0a4a5e37d969ddea9bdb318503edf045aeefbd856": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": false,
+      "gate_reason": "consumer finance or passenger travel without a direct mission consequence",
+      "retained": false,
+      "region": "UAE",
+      "region_basis": "source-region fallback",
+      "rank": null,
+      "initial_six": false,
+      "matched_topics": []
+    },
+    "b63ec18bbf4993257cba0d005e4b7fa8c78f880283fdcbaa23b4bf48d661cb7f": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": true,
+      "gate_reason": "",
+      "retained": true,
+      "region": "Global",
+      "region_basis": "project/event subject: Oman; other MENA coverage routed to Global",
+      "rank": 8,
+      "initial_six": false,
+      "matched_topics": [
+        "net zero transition",
+        "energy transition"
+      ]
+    },
+    "ae539e398162fa078c34964e0ac8a2e2947dd863f46e81af1f0dbdbe70eddf4e": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": true,
+      "gate_reason": "",
+      "retained": false,
+      "region": "Global",
+      "region_basis": "project/event subject: Oman; other MENA coverage routed to Global",
+      "rank": 9,
+      "initial_six": false,
+      "matched_topics": [
+        "net zero transition",
+        "energy transition"
+      ]
+    },
+    "10276cae948daa5048817cafef25db3a16a49cbe6651ceb55785f32d61ef1a3e": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": true,
+      "gate_reason": "",
+      "retained": true,
+      "region": "Global",
+      "region_basis": "project/event subject: Morocco; other MENA coverage routed to Global",
+      "rank": 6,
+      "initial_six": true,
+      "matched_topics": [
+        "net zero transition",
+        "energy transition"
+      ]
+    },
+    "1967ed99f2e9da46880d4a3b5a5778fc0f1b208c02de9fdfe769c68f7811cda8": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": true,
+      "gate_reason": "",
+      "retained": true,
+      "region": "Global",
+      "region_basis": "title geography: Bahrain; other MENA coverage routed to Global",
+      "rank": 1,
+      "initial_six": true,
+      "matched_topics": [
+        "food security"
+      ]
+    },
+    "c972a2f5aa272ca3b0b8afe4dddf5e7d94d1aa9ad5d683f0031f5c5b5d3c33f8": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": true,
+      "gate_reason": "",
+      "retained": true,
+      "region": "KSA",
+      "region_basis": "project/event subject: KSA",
+      "rank": 2,
+      "initial_six": true,
+      "matched_topics": [
+        "net zero transition",
+        "energy transition"
+      ]
+    },
+    "5df84ebf307fdb51d585496de791295c1fe86d7fc39b63b8e3a791ec3584d780": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": true,
+      "gate_reason": "",
+      "retained": true,
+      "region": "KSA",
+      "region_basis": "explicit project/event location: KSA",
+      "rank": 4,
+      "initial_six": true,
+      "matched_topics": [
+        "net zero transition",
+        "energy transition"
+      ]
+    },
+    "03cd3b3904bd06156104154321bdff275f3fca02601a8d9a070c11c0600d8349": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": false,
+      "gate_reason": "no company-topic match",
+      "retained": false,
+      "region": "Egypt",
+      "region_basis": "title geography: Egypt",
+      "rank": null,
+      "initial_six": false,
+      "matched_topics": []
+    },
+    "b12f9a595c0c7b49c90080f420229e59f355a6714c9cad2bf7651c3032ca8418": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": false,
+      "gate_reason": "no company-topic match",
+      "retained": false,
+      "region": "UAE",
+      "region_basis": "title geography: UAE",
+      "rank": null,
+      "initial_six": false,
+      "matched_topics": []
+    },
+    "926d261a3dea3a6d16827689d69b99279a165109264109b90fb66e9bf8f6bc18": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": false,
+      "gate_reason": "no company-topic match",
+      "retained": false,
+      "region": "KSA",
+      "region_basis": "project/event subject: KSA",
+      "rank": null,
+      "initial_six": false,
+      "matched_topics": []
+    },
+    "b019929436115b60f2428ae7259b9cc23e2d122b39878a81cddb483a8cb8a412": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": false,
+      "gate_reason": "no company-topic match",
+      "retained": false,
+      "region": "Global",
+      "region_basis": "title geography: Qatar; other MENA coverage routed to Global",
+      "rank": null,
+      "initial_six": false,
+      "matched_topics": []
+    },
+    "613e5e23ee7a456c635a8f20ea19385e8dc250767bc6a29d58086f7ec54f0623": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": true,
+      "gate_reason": "",
+      "retained": false,
+      "region": "Global",
+      "region_basis": "title geography: Oman; other MENA coverage routed to Global",
+      "rank": 10,
+      "initial_six": false,
+      "matched_topics": [
+        "net zero transition",
+        "energy transition"
+      ]
+    },
+    "d8da0d09824599d68c7aed19df473e3cf03d1818802e46d95e30007d583782b0": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": false,
+      "gate_reason": "no company-topic match",
+      "retained": false,
+      "region": null,
+      "region_basis": "no exact regional evidence",
+      "rank": null,
+      "initial_six": false,
+      "matched_topics": []
+    },
+    "0e18dbd4fc3a1b3e13209b645f2175b844133a703b153ab85937728a698f6ff4": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": true,
+      "gate_reason": "",
+      "retained": true,
+      "region": "UAE",
+      "region_basis": "title geography: UAE",
+      "rank": 2,
+      "initial_six": true,
+      "matched_topics": [
+        "net zero transition"
+      ]
+    },
+    "c545046a97083fdaa3b0c38201ebdeaf5dbcb88c6c783ce4cdc9ca7d397c8735": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": true,
+      "gate_reason": "",
+      "retained": true,
+      "region": "UAE",
+      "region_basis": "title geography: UAE",
+      "rank": 1,
+      "initial_six": true,
+      "matched_topics": [
+        "food security",
+        "agri-food"
+      ]
+    },
+    "bd2bdff65098010579f1643a184429b9e064c0427da6c9a68a4a52529b2e4b24": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": false,
+      "gate_reason": "no company-topic match",
+      "retained": false,
+      "region": "UAE",
+      "region_basis": "title geography: UAE",
+      "rank": null,
+      "initial_six": false,
+      "matched_topics": []
+    },
+    "e522718e9411a264067dbfc6b6dcaf76c85d02b9d3c65089f0887c3f26d9e2be": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": false,
+      "gate_reason": "no company-topic match",
+      "retained": false,
+      "region": "UAE",
+      "region_basis": "title geography: UAE",
+      "rank": null,
+      "initial_six": false,
+      "matched_topics": []
+    },
+    "0d99f6669958fe51c0c57e6cfac30e7b7885ae1fa9be3beac0a3fa63c37de6a1": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": false,
+      "gate_reason": "no company-topic match",
+      "retained": false,
+      "region": "UAE",
+      "region_basis": "source-region fallback",
+      "rank": null,
+      "initial_six": false,
+      "matched_topics": []
+    },
+    "43d6f50ce4038700c5afb7d7423defca4a75650705552c6c681dfc10af78af28": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": true,
+      "gate_reason": "",
+      "retained": true,
+      "region": "KSA",
+      "region_basis": "source-region fallback",
+      "rank": 6,
+      "initial_six": true,
+      "matched_topics": [
+        "food security",
+        "agri-food"
+      ]
+    },
+    "e00535e9363c2fb7d09ca79d0a191365b06bbe63e55fb7e613517d5ba7915cdd": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": true,
+      "gate_reason": "",
+      "retained": true,
+      "region": "KSA",
+      "region_basis": "source-region fallback",
+      "rank": 5,
+      "initial_six": true,
+      "matched_topics": [
+        "net zero transition",
+        "energy transition"
+      ]
+    },
+    "aa8f3a5131b54d2c7857d295fc9f20a9f8f1f7048422aa00705a03fb76158955": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": true,
+      "gate_reason": "",
+      "retained": true,
+      "region": "KSA",
+      "region_basis": "source-region fallback",
+      "rank": 3,
+      "initial_six": true,
+      "matched_topics": [
+        "water security"
+      ]
+    },
+    "295b835ea1b72d49c1a644414cdbf1fec52c070c67f6f4a04a45d35291a51c20": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": false,
+      "gate_reason": "no company-topic match",
+      "retained": false,
+      "region": "KSA",
+      "region_basis": "title geography: KSA",
+      "rank": null,
+      "initial_six": false,
+      "matched_topics": []
+    },
+    "6a6335d0efbc40aa4668ad2fcbf00aadd4840349db0ccea438ac7ded4f83f148": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": true,
+      "gate_reason": "",
+      "retained": true,
+      "region": "Global",
+      "region_basis": "title geography: Palestine; other MENA coverage routed to Global",
+      "rank": 4,
+      "initial_six": true,
+      "matched_topics": [
+        "water security"
+      ]
+    },
+    "90e898810eca447f6b47528aaa13428b40d47f61edb2736a2a417d212e6b0141": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": true,
+      "gate_reason": "",
+      "retained": true,
+      "region": "KSA",
+      "region_basis": "title geography: KSA",
+      "rank": 1,
+      "initial_six": true,
+      "matched_topics": [
+        "food security",
+        "agri-food"
+      ]
+    },
+    "905cd20a5becab64485f52672224ae0bea6e9e70f8c4fa53e77a309ce7ac1bb1": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": true,
+      "gate_reason": "",
+      "retained": true,
+      "region": "Egypt",
+      "region_basis": "project/event subject: Egypt",
+      "rank": 2,
+      "initial_six": true,
+      "matched_topics": [
+        "water security"
+      ]
+    },
+    "fd2c4af45bbf3e8d914aafdef618d1de2b27732f97bac810396da4112456a4df": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": true,
+      "gate_reason": "",
+      "retained": false,
+      "region": "Global",
+      "region_basis": "title geography: Iraq; other MENA coverage routed to Global",
+      "rank": 13,
+      "initial_six": false,
+      "matched_topics": [
+        "energy transition"
+      ]
+    },
+    "ceef5c73d936c9c7f0023d704b5ecf3cb76fb035d01b0186335ec8c71b3728b9": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": false,
+      "gate_reason": "no company-topic match",
+      "retained": false,
+      "region": "Global",
+      "region_basis": "source-region fallback",
+      "rank": null,
+      "initial_six": false,
+      "matched_topics": []
+    },
+    "a64dd8e909a2ba0cef4133e2e6ac75669c1ad49f81758effe911374891707b0f": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": false,
+      "gate_reason": "outside geographic mandate",
+      "retained": false,
+      "region": null,
+      "region_basis": "explicit foreign-local geography; publisher fallback blocked",
+      "rank": null,
+      "initial_six": false,
+      "matched_topics": [
+        "net zero transition",
+        "energy transition",
+        "trade"
+      ]
+    },
+    "6f25044cf412a9122a09ea29e969fafb5d6eb470b368db24ba6fcb891908a062": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": false,
+      "gate_reason": "outside geographic mandate",
+      "retained": false,
+      "region": null,
+      "region_basis": "explicit foreign-local geography; publisher fallback blocked",
+      "rank": null,
+      "initial_six": false,
+      "matched_topics": [
+        "net zero transition"
+      ]
+    },
+    "69637e17914334e03834eb350110d0d0bd53eb3a4bad354c8479920c0c3799f6": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": true,
+      "gate_reason": "",
+      "retained": false,
+      "region": "Global",
+      "region_basis": "source-region fallback",
+      "rank": 14,
+      "initial_six": false,
+      "matched_topics": [
+        "energy transition",
+        "trade",
+        "supply chains"
+      ]
+    },
+    "ea8f13b3c44fb8037fea919bd23007b46e663d285192bdfe6ebc3c649a662231": {
+      "objective_eligible": true,
+      "objective_reason": "",
+      "editorial_gate_pass": false,
+      "gate_reason": "no exact target region",
+      "retained": false,
+      "region": null,
+      "region_basis": "no exact regional evidence",
+      "rank": null,
+      "initial_six": false,
+      "matched_topics": [
+        "food security",
+        "agri-food"
+      ]
+    }
+  },
+  "latency_seconds": 0.323367600038182,
+  "settings": {
+    "article_freshness_days": 7,
+    "discovery_topics": [
+      "food security",
+      "water security",
+      "net zero transition",
+      "energy transition",
+      "trade",
+      "resilience",
+      "regulation",
+      "supply chains",
+      "desalination",
+      "agri-food"
+    ],
+    "article_shortlist_initial_per_region": 6,
+    "article_shortlist_max_per_region": 8,
+    "minimum_article_relevance_score": 4
+  },
+  "quotas": {
+    "Global": 3,
+    "UAE": 4,
+    "KSA": 3,
+    "Egypt": 2
+  },
+  "method": "Actual unchanged prepare/rank/allocation; enrichment disabled; all four deficits open; 8-per-region ceiling. No final queue selection simulated."
+}

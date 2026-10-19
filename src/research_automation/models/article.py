@@ -47,3 +47,5 @@ class EnrichedArticle:
     factual_points: list[str] = field(default_factory=list)
     editorial_significance: int = 3
     significance_reason: str = ""
+    story_type: str = "other"
+    is_new_development: bool | str = "unclear"

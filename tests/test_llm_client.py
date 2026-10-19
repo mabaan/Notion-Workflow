@@ -8,7 +8,7 @@ import pytest
 import research_automation.clients.llm_client as llm_module
 
 
-@pytest.mark.parametrize("model", ["gpt-6-luna", "gpt-4.1-mini"])
+@pytest.mark.parametrize("model", ["gpt-6-luna", "gpt-6-sol", "gpt-4.1-mini"])
 @pytest.mark.parametrize("json_output", [True, False])
 def test_generation_preserves_output_contract_and_model_parameters(
     monkeypatch, model: str, json_output: bool
@@ -19,7 +19,7 @@ def test_generation_preserves_output_contract_and_model_parameters(
     def respond(request: httpx.Request) -> httpx.Response:
         payload = json.loads(request.content)
         requests.append(payload)
-        if model.startswith("gpt-6-luna"):
+        if model in {"gpt-6-luna", "gpt-6-sol"}:
             assert "temperature" not in payload
             assert payload["reasoning_effort"] == "medium"
         else:

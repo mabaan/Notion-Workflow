@@ -1,0 +1,1529 @@
+{
+  "paths": {
+    "deterministic": {
+      "screened_in": [
+        "0e18dbd4fc3a1b3e13209b645f2175b844133a703b153ab85937728a698f6ff4",
+        "10276cae948daa5048817cafef25db3a16a49cbe6651ceb55785f32d61ef1a3e",
+        "5df84ebf307fdb51d585496de791295c1fe86d7fc39b63b8e3a791ec3584d780",
+        "905cd20a5becab64485f52672224ae0bea6e9e70f8c4fa53e77a309ce7ac1bb1",
+        "aa8f3a5131b54d2c7857d295fc9f20a9f8f1f7048422aa00705a03fb76158955",
+        "b63ec18bbf4993257cba0d005e4b7fa8c78f880283fdcbaa23b4bf48d661cb7f",
+        "c545046a97083fdaa3b0c38201ebdeaf5dbcb88c6c783ce4cdc9ca7d397c8735",
+        "c972a2f5aa272ca3b0b8afe4dddf5e7d94d1aa9ad5d683f0031f5c5b5d3c33f8",
+        "e00535e9363c2fb7d09ca79d0a191365b06bbe63e55fb7e613517d5ba7915cdd"
+      ],
+      "qualified_ids": [
+        "0e18dbd4fc3a1b3e13209b645f2175b844133a703b153ab85937728a698f6ff4",
+        "10276cae948daa5048817cafef25db3a16a49cbe6651ceb55785f32d61ef1a3e",
+        "5df84ebf307fdb51d585496de791295c1fe86d7fc39b63b8e3a791ec3584d780",
+        "905cd20a5becab64485f52672224ae0bea6e9e70f8c4fa53e77a309ce7ac1bb1",
+        "aa8f3a5131b54d2c7857d295fc9f20a9f8f1f7048422aa00705a03fb76158955",
+        "b63ec18bbf4993257cba0d005e4b7fa8c78f880283fdcbaa23b4bf48d661cb7f",
+        "c545046a97083fdaa3b0c38201ebdeaf5dbcb88c6c783ce4cdc9ca7d397c8735",
+        "c972a2f5aa272ca3b0b8afe4dddf5e7d94d1aa9ad5d683f0031f5c5b5d3c33f8",
+        "e00535e9363c2fb7d09ca79d0a191365b06bbe63e55fb7e613517d5ba7915cdd"
+      ],
+      "unresolved": [],
+      "rows": {
+        "4b1b60f368a1c1e3ba7d3e9db5fe7e48b8d875d5f6ea975c183e3a15508dad72": {
+          "screen_retained": false,
+          "required_relevance": 4,
+          "region": null,
+          "enrichment_relevance": null,
+          "editorial_significance": null,
+          "queue_score": null,
+          "qualified": false,
+          "status": "screen rejected",
+          "final_winner": false
+        },
+        "0293ddca8e540055a337c48e5344bccff7eaf6ffd9f75743155271fa88ed72a8": {
+          "screen_retained": false,
+          "required_relevance": 4,
+          "region": "Global",
+          "enrichment_relevance": null,
+          "editorial_significance": null,
+          "queue_score": null,
+          "qualified": false,
+          "status": "screen rejected",
+          "final_winner": false
+        },
+        "b63ec18bbf4993257cba0d005e4b7fa8c78f880283fdcbaa23b4bf48d661cb7f": {
+          "screen_retained": true,
+          "required_relevance": 4,
+          "region": "Global",
+          "enrichment_relevance": 4,
+          "editorial_significance": 2,
+          "queue_score": 70.0,
+          "qualified": true,
+          "status": "qualified",
+          "final_winner": false
+        },
+        "10276cae948daa5048817cafef25db3a16a49cbe6651ceb55785f32d61ef1a3e": {
+          "screen_retained": true,
+          "required_relevance": 4,
+          "region": "Global",
+          "enrichment_relevance": 5,
+          "editorial_significance": 4,
+          "queue_score": 92.0,
+          "qualified": true,
+          "status": "qualified",
+          "final_winner": true
+        },
+        "c972a2f5aa272ca3b0b8afe4dddf5e7d94d1aa9ad5d683f0031f5c5b5d3c33f8": {
+          "screen_retained": true,
+          "required_relevance": 4,
+          "region": "KSA",
+          "enrichment_relevance": 4,
+          "editorial_significance": 3,
+          "queue_score": 74.0,
+          "qualified": true,
+          "status": "qualified",
+          "final_winner": false
+        },
+        "5df84ebf307fdb51d585496de791295c1fe86d7fc39b63b8e3a791ec3584d780": {
+          "screen_retained": true,
+          "required_relevance": 4,
+          "region": "KSA",
+          "enrichment_relevance": 4,
+          "editorial_significance": 2,
+          "queue_score": 70.0,
+          "qualified": true,
+          "status": "qualified",
+          "final_winner": false
+        },
+        "03cd3b3904bd06156104154321bdff275f3fca02601a8d9a070c11c0600d8349": {
+          "screen_retained": false,
+          "required_relevance": 4,
+          "region": "Egypt",
+          "enrichment_relevance": null,
+          "editorial_significance": null,
+          "queue_score": null,
+          "qualified": false,
+          "status": "screen rejected",
+          "final_winner": false
+        },
+        "b12f9a595c0c7b49c90080f420229e59f355a6714c9cad2bf7651c3032ca8418": {
+          "screen_retained": false,
+          "required_relevance": 4,
+          "region": "UAE",
+          "enrichment_relevance": null,
+          "editorial_significance": null,
+          "queue_score": null,
+          "qualified": false,
+          "status": "screen rejected",
+          "final_winner": false
+        },
+        "926d261a3dea3a6d16827689d69b99279a165109264109b90fb66e9bf8f6bc18": {
+          "screen_retained": false,
+          "required_relevance": 4,
+          "region": "KSA",
+          "enrichment_relevance": null,
+          "editorial_significance": null,
+          "queue_score": null,
+          "qualified": false,
+          "status": "screen rejected",
+          "final_winner": false
+        },
+        "b019929436115b60f2428ae7259b9cc23e2d122b39878a81cddb483a8cb8a412": {
+          "screen_retained": false,
+          "required_relevance": 4,
+          "region": "Global",
+          "enrichment_relevance": null,
+          "editorial_significance": null,
+          "queue_score": null,
+          "qualified": false,
+          "status": "screen rejected",
+          "final_winner": false
+        },
+        "0e18dbd4fc3a1b3e13209b645f2175b844133a703b153ab85937728a698f6ff4": {
+          "screen_retained": true,
+          "required_relevance": 4,
+          "region": "UAE",
+          "enrichment_relevance": 4,
+          "editorial_significance": 3,
+          "queue_score": 74.0,
+          "qualified": true,
+          "status": "qualified",
+          "final_winner": true
+        },
+        "c545046a97083fdaa3b0c38201ebdeaf5dbcb88c6c783ce4cdc9ca7d397c8735": {
+          "screen_retained": true,
+          "required_relevance": 4,
+          "region": "UAE",
+          "enrichment_relevance": 5,
+          "editorial_significance": 3,
+          "queue_score": 88.0,
+          "qualified": true,
+          "status": "qualified",
+          "final_winner": true
+        },
+        "bd2bdff65098010579f1643a184429b9e064c0427da6c9a68a4a52529b2e4b24": {
+          "screen_retained": false,
+          "required_relevance": 4,
+          "region": "UAE",
+          "enrichment_relevance": null,
+          "editorial_significance": null,
+          "queue_score": null,
+          "qualified": false,
+          "status": "screen rejected",
+          "final_winner": false
+        },
+        "0d99f6669958fe51c0c57e6cfac30e7b7885ae1fa9be3beac0a3fa63c37de6a1": {
+          "screen_retained": false,
+          "required_relevance": 4,
+          "region": "UAE",
+          "enrichment_relevance": null,
+          "editorial_significance": null,
+          "queue_score": null,
+          "qualified": false,
+          "status": "screen rejected",
+          "final_winner": false
+        },
+        "e00535e9363c2fb7d09ca79d0a191365b06bbe63e55fb7e613517d5ba7915cdd": {
+          "screen_retained": true,
+          "required_relevance": 4,
+          "region": "KSA",
+          "enrichment_relevance": 4,
+          "editorial_significance": 2,
+          "queue_score": 71.0,
+          "qualified": true,
+          "status": "qualified",
+          "final_winner": true
+        },
+        "aa8f3a5131b54d2c7857d295fc9f20a9f8f1f7048422aa00705a03fb76158955": {
+          "screen_retained": true,
+          "required_relevance": 4,
+          "region": "KSA",
+          "enrichment_relevance": 5,
+          "editorial_significance": 3,
+          "queue_score": 89.0,
+          "qualified": true,
+          "status": "qualified",
+          "final_winner": true
+        },
+        "295b835ea1b72d49c1a644414cdbf1fec52c070c67f6f4a04a45d35291a51c20": {
+          "screen_retained": false,
+          "required_relevance": 4,
+          "region": "KSA",
+          "enrichment_relevance": null,
+          "editorial_significance": null,
+          "queue_score": null,
+          "qualified": false,
+          "status": "screen rejected",
+          "final_winner": false
+        },
+        "905cd20a5becab64485f52672224ae0bea6e9e70f8c4fa53e77a309ce7ac1bb1": {
+          "screen_retained": true,
+          "required_relevance": 4,
+          "region": "Egypt",
+          "enrichment_relevance": 4,
+          "editorial_significance": 3,
+          "queue_score": 74.0,
+          "qualified": true,
+          "status": "qualified",
+          "final_winner": true
+        },
+        "fd2c4af45bbf3e8d914aafdef618d1de2b27732f97bac810396da4112456a4df": {
+          "screen_retained": false,
+          "required_relevance": 4,
+          "region": "Global",
+          "enrichment_relevance": null,
+          "editorial_significance": null,
+          "queue_score": null,
+          "qualified": false,
+          "status": "screen rejected",
+          "final_winner": false
+        },
+        "ea8f13b3c44fb8037fea919bd23007b46e663d285192bdfe6ebc3c649a662231": {
+          "screen_retained": false,
+          "required_relevance": 4,
+          "region": null,
+          "enrichment_relevance": null,
+          "editorial_significance": null,
+          "queue_score": null,
+          "qualified": false,
+          "status": "screen rejected",
+          "final_winner": false
+        }
+      },
+      "final_winner_ids": [
+        "c545046a97083fdaa3b0c38201ebdeaf5dbcb88c6c783ce4cdc9ca7d397c8735",
+        "0e18dbd4fc3a1b3e13209b645f2175b844133a703b153ab85937728a698f6ff4",
+        "905cd20a5becab64485f52672224ae0bea6e9e70f8c4fa53e77a309ce7ac1bb1",
+        "10276cae948daa5048817cafef25db3a16a49cbe6651ceb55785f32d61ef1a3e",
+        "aa8f3a5131b54d2c7857d295fc9f20a9f8f1f7048422aa00705a03fb76158955",
+        "e00535e9363c2fb7d09ca79d0a191365b06bbe63e55fb7e613517d5ba7915cdd"
+      ],
+      "qualified_metrics": {
+        "articles": 20,
+        "binary_articles": 16,
+        "positives": 12,
+        "negatives": 4,
+        "true_positives": 8,
+        "false_positives": [],
+        "false_negatives": [
+          "926d261a3dea3a6d16827689d69b99279a165109264109b90fb66e9bf8f6bc18",
+          "b019929436115b60f2428ae7259b9cc23e2d122b39878a81cddb483a8cb8a412",
+          "b12f9a595c0c7b49c90080f420229e59f355a6714c9cad2bf7651c3032ca8418",
+          "fd2c4af45bbf3e8d914aafdef618d1de2b27732f97bac810396da4112456a4df"
+        ],
+        "true_negatives": 4,
+        "precision": 1.0,
+        "recall": 0.6666666666666666,
+        "borderline_total": 4,
+        "borderline_retained": 1,
+        "region_checked": 16,
+        "wrong_regions": [
+          "bd2bdff65098010579f1643a184429b9e064c0427da6c9a68a4a52529b2e4b24"
+        ],
+        "region_accuracy": 0.9375,
+        "unresolved": [],
+        "classified_positive_coverage": 0.6666666666666666
+      },
+      "final_metrics": {
+        "articles": 20,
+        "binary_articles": 16,
+        "positives": 12,
+        "negatives": 4,
+        "true_positives": 5,
+        "false_positives": [],
+        "false_negatives": [
+          "5df84ebf307fdb51d585496de791295c1fe86d7fc39b63b8e3a791ec3584d780",
+          "926d261a3dea3a6d16827689d69b99279a165109264109b90fb66e9bf8f6bc18",
+          "b019929436115b60f2428ae7259b9cc23e2d122b39878a81cddb483a8cb8a412",
+          "b12f9a595c0c7b49c90080f420229e59f355a6714c9cad2bf7651c3032ca8418",
+          "b63ec18bbf4993257cba0d005e4b7fa8c78f880283fdcbaa23b4bf48d661cb7f",
+          "c972a2f5aa272ca3b0b8afe4dddf5e7d94d1aa9ad5d683f0031f5c5b5d3c33f8",
+          "fd2c4af45bbf3e8d914aafdef618d1de2b27732f97bac810396da4112456a4df"
+        ],
+        "true_negatives": 4,
+        "precision": 1.0,
+        "recall": 0.4166666666666667,
+        "borderline_total": 4,
+        "borderline_retained": 1,
+        "region_checked": 16,
+        "wrong_regions": [
+          "bd2bdff65098010579f1643a184429b9e064c0427da6c9a68a4a52529b2e4b24"
+        ],
+        "region_accuracy": 0.9375,
+        "unresolved": [],
+        "classified_positive_coverage": 0.4166666666666667
+      },
+      "final_ranking": [
+        {
+          "article_id": "10276cae948daa5048817cafef25db3a16a49cbe6651ceb55785f32d61ef1a3e",
+          "region": "Global",
+          "queue_score": 92.0
+        },
+        {
+          "article_id": "aa8f3a5131b54d2c7857d295fc9f20a9f8f1f7048422aa00705a03fb76158955",
+          "region": "KSA",
+          "queue_score": 89.0
+        },
+        {
+          "article_id": "c545046a97083fdaa3b0c38201ebdeaf5dbcb88c6c783ce4cdc9ca7d397c8735",
+          "region": "UAE",
+          "queue_score": 88.0
+        },
+        {
+          "article_id": "0e18dbd4fc3a1b3e13209b645f2175b844133a703b153ab85937728a698f6ff4",
+          "region": "UAE",
+          "queue_score": 74.0
+        },
+        {
+          "article_id": "905cd20a5becab64485f52672224ae0bea6e9e70f8c4fa53e77a309ce7ac1bb1",
+          "region": "Egypt",
+          "queue_score": 74.0
+        },
+        {
+          "article_id": "c972a2f5aa272ca3b0b8afe4dddf5e7d94d1aa9ad5d683f0031f5c5b5d3c33f8",
+          "region": "KSA",
+          "queue_score": 74.0
+        },
+        {
+          "article_id": "e00535e9363c2fb7d09ca79d0a191365b06bbe63e55fb7e613517d5ba7915cdd",
+          "region": "KSA",
+          "queue_score": 71.0
+        },
+        {
+          "article_id": "5df84ebf307fdb51d585496de791295c1fe86d7fc39b63b8e3a791ec3584d780",
+          "region": "KSA",
+          "queue_score": 70.0
+        },
+        {
+          "article_id": "b63ec18bbf4993257cba0d005e4b7fa8c78f880283fdcbaa23b4bf48d661cb7f",
+          "region": "Global",
+          "queue_score": 70.0
+        }
+      ],
+      "shortages": {
+        "Global": 2,
+        "UAE": 2,
+        "KSA": 1,
+        "Egypt": 1
+      },
+      "rejected_by_constraint": {}
+    },
+    "fresh100-a": {
+      "screened_in": [
+        "03cd3b3904bd06156104154321bdff275f3fca02601a8d9a070c11c0600d8349",
+        "0d99f6669958fe51c0c57e6cfac30e7b7885ae1fa9be3beac0a3fa63c37de6a1",
+        "0e18dbd4fc3a1b3e13209b645f2175b844133a703b153ab85937728a698f6ff4",
+        "10276cae948daa5048817cafef25db3a16a49cbe6651ceb55785f32d61ef1a3e",
+        "295b835ea1b72d49c1a644414cdbf1fec52c070c67f6f4a04a45d35291a51c20",
+        "5df84ebf307fdb51d585496de791295c1fe86d7fc39b63b8e3a791ec3584d780",
+        "905cd20a5becab64485f52672224ae0bea6e9e70f8c4fa53e77a309ce7ac1bb1",
+        "926d261a3dea3a6d16827689d69b99279a165109264109b90fb66e9bf8f6bc18",
+        "aa8f3a5131b54d2c7857d295fc9f20a9f8f1f7048422aa00705a03fb76158955",
+        "b019929436115b60f2428ae7259b9cc23e2d122b39878a81cddb483a8cb8a412",
+        "b12f9a595c0c7b49c90080f420229e59f355a6714c9cad2bf7651c3032ca8418",
+        "b63ec18bbf4993257cba0d005e4b7fa8c78f880283fdcbaa23b4bf48d661cb7f",
+        "bd2bdff65098010579f1643a184429b9e064c0427da6c9a68a4a52529b2e4b24",
+        "c545046a97083fdaa3b0c38201ebdeaf5dbcb88c6c783ce4cdc9ca7d397c8735",
+        "c972a2f5aa272ca3b0b8afe4dddf5e7d94d1aa9ad5d683f0031f5c5b5d3c33f8",
+        "e00535e9363c2fb7d09ca79d0a191365b06bbe63e55fb7e613517d5ba7915cdd",
+        "fd2c4af45bbf3e8d914aafdef618d1de2b27732f97bac810396da4112456a4df"
+      ],
+      "qualified_ids": [
+        "0e18dbd4fc3a1b3e13209b645f2175b844133a703b153ab85937728a698f6ff4",
+        "10276cae948daa5048817cafef25db3a16a49cbe6651ceb55785f32d61ef1a3e",
+        "5df84ebf307fdb51d585496de791295c1fe86d7fc39b63b8e3a791ec3584d780",
+        "905cd20a5becab64485f52672224ae0bea6e9e70f8c4fa53e77a309ce7ac1bb1",
+        "926d261a3dea3a6d16827689d69b99279a165109264109b90fb66e9bf8f6bc18",
+        "aa8f3a5131b54d2c7857d295fc9f20a9f8f1f7048422aa00705a03fb76158955",
+        "b019929436115b60f2428ae7259b9cc23e2d122b39878a81cddb483a8cb8a412",
+        "b12f9a595c0c7b49c90080f420229e59f355a6714c9cad2bf7651c3032ca8418",
+        "b63ec18bbf4993257cba0d005e4b7fa8c78f880283fdcbaa23b4bf48d661cb7f",
+        "c545046a97083fdaa3b0c38201ebdeaf5dbcb88c6c783ce4cdc9ca7d397c8735",
+        "c972a2f5aa272ca3b0b8afe4dddf5e7d94d1aa9ad5d683f0031f5c5b5d3c33f8",
+        "e00535e9363c2fb7d09ca79d0a191365b06bbe63e55fb7e613517d5ba7915cdd",
+        "fd2c4af45bbf3e8d914aafdef618d1de2b27732f97bac810396da4112456a4df"
+      ],
+      "unresolved": [],
+      "rows": {
+        "4b1b60f368a1c1e3ba7d3e9db5fe7e48b8d875d5f6ea975c183e3a15508dad72": {
+          "screen_retained": false,
+          "required_relevance": 4,
+          "region": "Out of Scope/Unclear",
+          "enrichment_relevance": null,
+          "editorial_significance": null,
+          "queue_score": null,
+          "qualified": false,
+          "status": "screen rejected",
+          "final_winner": false
+        },
+        "0293ddca8e540055a337c48e5344bccff7eaf6ffd9f75743155271fa88ed72a8": {
+          "screen_retained": false,
+          "required_relevance": 4,
+          "region": "Out of Scope/Unclear",
+          "enrichment_relevance": null,
+          "editorial_significance": null,
+          "queue_score": null,
+          "qualified": false,
+          "status": "screen rejected",
+          "final_winner": false
+        },
+        "b63ec18bbf4993257cba0d005e4b7fa8c78f880283fdcbaa23b4bf48d661cb7f": {
+          "screen_retained": true,
+          "required_relevance": 4,
+          "region": "Global",
+          "enrichment_relevance": 4,
+          "editorial_significance": 2,
+          "queue_score": 70.0,
+          "qualified": true,
+          "status": "qualified",
+          "final_winner": false
+        },
+        "10276cae948daa5048817cafef25db3a16a49cbe6651ceb55785f32d61ef1a3e": {
+          "screen_retained": true,
+          "required_relevance": 4,
+          "region": "Global",
+          "enrichment_relevance": 5,
+          "editorial_significance": 4,
+          "queue_score": 92.0,
+          "qualified": true,
+          "status": "qualified",
+          "final_winner": false
+        },
+        "c972a2f5aa272ca3b0b8afe4dddf5e7d94d1aa9ad5d683f0031f5c5b5d3c33f8": {
+          "screen_retained": true,
+          "required_relevance": 4,
+          "region": "KSA",
+          "enrichment_relevance": 4,
+          "editorial_significance": 3,
+          "queue_score": 74.0,
+          "qualified": true,
+          "status": "qualified",
+          "final_winner": false
+        },
+        "5df84ebf307fdb51d585496de791295c1fe86d7fc39b63b8e3a791ec3584d780": {
+          "screen_retained": true,
+          "required_relevance": 4,
+          "region": "KSA",
+          "enrichment_relevance": 4,
+          "editorial_significance": 2,
+          "queue_score": 70.0,
+          "qualified": true,
+          "status": "qualified",
+          "final_winner": false
+        },
+        "03cd3b3904bd06156104154321bdff275f3fca02601a8d9a070c11c0600d8349": {
+          "screen_retained": true,
+          "required_relevance": 4,
+          "region": "Egypt",
+          "enrichment_relevance": 2,
+          "editorial_significance": 2,
+          "queue_score": 42.0,
+          "qualified": false,
+          "status": "below unchanged relevance threshold",
+          "final_winner": false
+        },
+        "b12f9a595c0c7b49c90080f420229e59f355a6714c9cad2bf7651c3032ca8418": {
+          "screen_retained": true,
+          "required_relevance": 4,
+          "region": "UAE",
+          "enrichment_relevance": 4,
+          "editorial_significance": 2,
+          "queue_score": 70.0,
+          "qualified": true,
+          "status": "qualified",
+          "final_winner": true
+        },
+        "926d261a3dea3a6d16827689d69b99279a165109264109b90fb66e9bf8f6bc18": {
+          "screen_retained": true,
+          "required_relevance": 4,
+          "region": "KSA",
+          "enrichment_relevance": 5,
+          "editorial_significance": 4,
+          "queue_score": 92.0,
+          "qualified": true,
+          "status": "qualified",
+          "final_winner": false
+        },
+        "b019929436115b60f2428ae7259b9cc23e2d122b39878a81cddb483a8cb8a412": {
+          "screen_retained": true,
+          "required_relevance": 4,
+          "region": "Global",
+          "enrichment_relevance": 5,
+          "editorial_significance": 3,
+          "queue_score": 88.0,
+          "qualified": true,
+          "status": "qualified",
+          "final_winner": false
+        },
+        "0e18dbd4fc3a1b3e13209b645f2175b844133a703b153ab85937728a698f6ff4": {
+          "screen_retained": true,
+          "required_relevance": 4,
+          "region": "UAE",
+          "enrichment_relevance": 4,
+          "editorial_significance": 3,
+          "queue_score": 74.0,
+          "qualified": true,
+          "status": "qualified",
+          "final_winner": true
+        },
+        "c545046a97083fdaa3b0c38201ebdeaf5dbcb88c6c783ce4cdc9ca7d397c8735": {
+          "screen_retained": true,
+          "required_relevance": 4,
+          "region": "UAE",
+          "enrichment_relevance": 5,
+          "editorial_significance": 3,
+          "queue_score": 88.0,
+          "qualified": true,
+          "status": "qualified",
+          "final_winner": true
+        },
+        "bd2bdff65098010579f1643a184429b9e064c0427da6c9a68a4a52529b2e4b24": {
+          "screen_retained": true,
+          "required_relevance": 4,
+          "region": "Out of Scope/Unclear",
+          "enrichment_relevance": 2,
+          "editorial_significance": 2,
+          "queue_score": 42.0,
+          "qualified": false,
+          "status": "below unchanged relevance threshold",
+          "final_winner": false
+        },
+        "0d99f6669958fe51c0c57e6cfac30e7b7885ae1fa9be3beac0a3fa63c37de6a1": {
+          "screen_retained": true,
+          "required_relevance": 4,
+          "region": "Out of Scope/Unclear",
+          "enrichment_relevance": 2,
+          "editorial_significance": 2,
+          "queue_score": 42.0,
+          "qualified": false,
+          "status": "below unchanged relevance threshold",
+          "final_winner": false
+        },
+        "e00535e9363c2fb7d09ca79d0a191365b06bbe63e55fb7e613517d5ba7915cdd": {
+          "screen_retained": true,
+          "required_relevance": 4,
+          "region": "KSA",
+          "enrichment_relevance": 4,
+          "editorial_significance": 2,
+          "queue_score": 71.0,
+          "qualified": true,
+          "status": "qualified",
+          "final_winner": true
+        },
+        "aa8f3a5131b54d2c7857d295fc9f20a9f8f1f7048422aa00705a03fb76158955": {
+          "screen_retained": true,
+          "required_relevance": 4,
+          "region": "KSA",
+          "enrichment_relevance": 5,
+          "editorial_significance": 3,
+          "queue_score": 89.0,
+          "qualified": true,
+          "status": "qualified",
+          "final_winner": true
+        },
+        "295b835ea1b72d49c1a644414cdbf1fec52c070c67f6f4a04a45d35291a51c20": {
+          "screen_retained": true,
+          "required_relevance": 4,
+          "region": "KSA",
+          "enrichment_relevance": 3,
+          "editorial_significance": 3,
+          "queue_score": 61.0,
+          "qualified": false,
+          "status": "below unchanged relevance threshold",
+          "final_winner": false
+        },
+        "905cd20a5becab64485f52672224ae0bea6e9e70f8c4fa53e77a309ce7ac1bb1": {
+          "screen_retained": true,
+          "required_relevance": 4,
+          "region": "Egypt",
+          "enrichment_relevance": 4,
+          "editorial_significance": 3,
+          "queue_score": 74.0,
+          "qualified": true,
+          "status": "qualified",
+          "final_winner": true
+        },
+        "fd2c4af45bbf3e8d914aafdef618d1de2b27732f97bac810396da4112456a4df": {
+          "screen_retained": true,
+          "required_relevance": 4,
+          "region": "Global",
+          "enrichment_relevance": 4,
+          "editorial_significance": 3,
+          "queue_score": 74.0,
+          "qualified": true,
+          "status": "qualified",
+          "final_winner": false
+        },
+        "ea8f13b3c44fb8037fea919bd23007b46e663d285192bdfe6ebc3c649a662231": {
+          "screen_retained": false,
+          "required_relevance": 4,
+          "region": "Out of Scope/Unclear",
+          "enrichment_relevance": null,
+          "editorial_significance": null,
+          "queue_score": null,
+          "qualified": false,
+          "status": "screen rejected",
+          "final_winner": false
+        }
+      },
+      "final_winner_ids": [
+        "905cd20a5becab64485f52672224ae0bea6e9e70f8c4fa53e77a309ce7ac1bb1",
+        "c545046a97083fdaa3b0c38201ebdeaf5dbcb88c6c783ce4cdc9ca7d397c8735",
+        "0e18dbd4fc3a1b3e13209b645f2175b844133a703b153ab85937728a698f6ff4",
+        "b12f9a595c0c7b49c90080f420229e59f355a6714c9cad2bf7651c3032ca8418",
+        "aa8f3a5131b54d2c7857d295fc9f20a9f8f1f7048422aa00705a03fb76158955",
+        "e00535e9363c2fb7d09ca79d0a191365b06bbe63e55fb7e613517d5ba7915cdd"
+      ],
+      "qualified_metrics": {
+        "articles": 20,
+        "binary_articles": 16,
+        "positives": 12,
+        "negatives": 4,
+        "true_positives": 12,
+        "false_positives": [],
+        "false_negatives": [],
+        "true_negatives": 4,
+        "precision": 1.0,
+        "recall": 1.0,
+        "borderline_total": 4,
+        "borderline_retained": 1,
+        "region_checked": 16,
+        "wrong_regions": [],
+        "region_accuracy": 1.0,
+        "unresolved": [],
+        "classified_positive_coverage": 1.0
+      },
+      "final_metrics": {
+        "articles": 20,
+        "binary_articles": 16,
+        "positives": 12,
+        "negatives": 4,
+        "true_positives": 5,
+        "false_positives": [],
+        "false_negatives": [
+          "10276cae948daa5048817cafef25db3a16a49cbe6651ceb55785f32d61ef1a3e",
+          "5df84ebf307fdb51d585496de791295c1fe86d7fc39b63b8e3a791ec3584d780",
+          "926d261a3dea3a6d16827689d69b99279a165109264109b90fb66e9bf8f6bc18",
+          "b019929436115b60f2428ae7259b9cc23e2d122b39878a81cddb483a8cb8a412",
+          "b63ec18bbf4993257cba0d005e4b7fa8c78f880283fdcbaa23b4bf48d661cb7f",
+          "c972a2f5aa272ca3b0b8afe4dddf5e7d94d1aa9ad5d683f0031f5c5b5d3c33f8",
+          "fd2c4af45bbf3e8d914aafdef618d1de2b27732f97bac810396da4112456a4df"
+        ],
+        "true_negatives": 4,
+        "precision": 1.0,
+        "recall": 0.4166666666666667,
+        "borderline_total": 4,
+        "borderline_retained": 1,
+        "region_checked": 16,
+        "wrong_regions": [],
+        "region_accuracy": 1.0,
+        "unresolved": [],
+        "classified_positive_coverage": 0.4166666666666667
+      },
+      "final_ranking": [
+        {
+          "article_id": "10276cae948daa5048817cafef25db3a16a49cbe6651ceb55785f32d61ef1a3e",
+          "region": "Global",
+          "queue_score": 92.0
+        },
+        {
+          "article_id": "926d261a3dea3a6d16827689d69b99279a165109264109b90fb66e9bf8f6bc18",
+          "region": "KSA",
+          "queue_score": 92.0
+        },
+        {
+          "article_id": "aa8f3a5131b54d2c7857d295fc9f20a9f8f1f7048422aa00705a03fb76158955",
+          "region": "KSA",
+          "queue_score": 89.0
+        },
+        {
+          "article_id": "b019929436115b60f2428ae7259b9cc23e2d122b39878a81cddb483a8cb8a412",
+          "region": "Global",
+          "queue_score": 88.0
+        },
+        {
+          "article_id": "c545046a97083fdaa3b0c38201ebdeaf5dbcb88c6c783ce4cdc9ca7d397c8735",
+          "region": "UAE",
+          "queue_score": 88.0
+        },
+        {
+          "article_id": "0e18dbd4fc3a1b3e13209b645f2175b844133a703b153ab85937728a698f6ff4",
+          "region": "UAE",
+          "queue_score": 74.0
+        },
+        {
+          "article_id": "905cd20a5becab64485f52672224ae0bea6e9e70f8c4fa53e77a309ce7ac1bb1",
+          "region": "Egypt",
+          "queue_score": 74.0
+        },
+        {
+          "article_id": "c972a2f5aa272ca3b0b8afe4dddf5e7d94d1aa9ad5d683f0031f5c5b5d3c33f8",
+          "region": "KSA",
+          "queue_score": 74.0
+        },
+        {
+          "article_id": "fd2c4af45bbf3e8d914aafdef618d1de2b27732f97bac810396da4112456a4df",
+          "region": "Global",
+          "queue_score": 74.0
+        },
+        {
+          "article_id": "e00535e9363c2fb7d09ca79d0a191365b06bbe63e55fb7e613517d5ba7915cdd",
+          "region": "KSA",
+          "queue_score": 71.0
+        },
+        {
+          "article_id": "5df84ebf307fdb51d585496de791295c1fe86d7fc39b63b8e3a791ec3584d780",
+          "region": "KSA",
+          "queue_score": 70.0
+        },
+        {
+          "article_id": "b12f9a595c0c7b49c90080f420229e59f355a6714c9cad2bf7651c3032ca8418",
+          "region": "UAE",
+          "queue_score": 70.0
+        },
+        {
+          "article_id": "b63ec18bbf4993257cba0d005e4b7fa8c78f880283fdcbaa23b4bf48d661cb7f",
+          "region": "Global",
+          "queue_score": 70.0
+        }
+      ],
+      "shortages": {
+        "Global": 3,
+        "UAE": 1,
+        "KSA": 1,
+        "Egypt": 1
+      },
+      "rejected_by_constraint": {}
+    },
+    "fresh100-b": {
+      "screened_in": [
+        "03cd3b3904bd06156104154321bdff275f3fca02601a8d9a070c11c0600d8349",
+        "0d99f6669958fe51c0c57e6cfac30e7b7885ae1fa9be3beac0a3fa63c37de6a1",
+        "0e18dbd4fc3a1b3e13209b645f2175b844133a703b153ab85937728a698f6ff4",
+        "10276cae948daa5048817cafef25db3a16a49cbe6651ceb55785f32d61ef1a3e",
+        "295b835ea1b72d49c1a644414cdbf1fec52c070c67f6f4a04a45d35291a51c20",
+        "5df84ebf307fdb51d585496de791295c1fe86d7fc39b63b8e3a791ec3584d780",
+        "905cd20a5becab64485f52672224ae0bea6e9e70f8c4fa53e77a309ce7ac1bb1",
+        "926d261a3dea3a6d16827689d69b99279a165109264109b90fb66e9bf8f6bc18",
+        "aa8f3a5131b54d2c7857d295fc9f20a9f8f1f7048422aa00705a03fb76158955",
+        "b019929436115b60f2428ae7259b9cc23e2d122b39878a81cddb483a8cb8a412",
+        "b12f9a595c0c7b49c90080f420229e59f355a6714c9cad2bf7651c3032ca8418",
+        "b63ec18bbf4993257cba0d005e4b7fa8c78f880283fdcbaa23b4bf48d661cb7f",
+        "c545046a97083fdaa3b0c38201ebdeaf5dbcb88c6c783ce4cdc9ca7d397c8735",
+        "c972a2f5aa272ca3b0b8afe4dddf5e7d94d1aa9ad5d683f0031f5c5b5d3c33f8",
+        "e00535e9363c2fb7d09ca79d0a191365b06bbe63e55fb7e613517d5ba7915cdd",
+        "fd2c4af45bbf3e8d914aafdef618d1de2b27732f97bac810396da4112456a4df"
+      ],
+      "qualified_ids": [
+        "0e18dbd4fc3a1b3e13209b645f2175b844133a703b153ab85937728a698f6ff4",
+        "10276cae948daa5048817cafef25db3a16a49cbe6651ceb55785f32d61ef1a3e",
+        "5df84ebf307fdb51d585496de791295c1fe86d7fc39b63b8e3a791ec3584d780",
+        "905cd20a5becab64485f52672224ae0bea6e9e70f8c4fa53e77a309ce7ac1bb1",
+        "926d261a3dea3a6d16827689d69b99279a165109264109b90fb66e9bf8f6bc18",
+        "aa8f3a5131b54d2c7857d295fc9f20a9f8f1f7048422aa00705a03fb76158955",
+        "b019929436115b60f2428ae7259b9cc23e2d122b39878a81cddb483a8cb8a412",
+        "b12f9a595c0c7b49c90080f420229e59f355a6714c9cad2bf7651c3032ca8418",
+        "b63ec18bbf4993257cba0d005e4b7fa8c78f880283fdcbaa23b4bf48d661cb7f",
+        "c545046a97083fdaa3b0c38201ebdeaf5dbcb88c6c783ce4cdc9ca7d397c8735",
+        "c972a2f5aa272ca3b0b8afe4dddf5e7d94d1aa9ad5d683f0031f5c5b5d3c33f8",
+        "e00535e9363c2fb7d09ca79d0a191365b06bbe63e55fb7e613517d5ba7915cdd",
+        "fd2c4af45bbf3e8d914aafdef618d1de2b27732f97bac810396da4112456a4df"
+      ],
+      "unresolved": [],
+      "rows": {
+        "4b1b60f368a1c1e3ba7d3e9db5fe7e48b8d875d5f6ea975c183e3a15508dad72": {
+          "screen_retained": false,
+          "required_relevance": 4,
+          "region": "Out of Scope/Unclear",
+          "enrichment_relevance": null,
+          "editorial_significance": null,
+          "queue_score": null,
+          "qualified": false,
+          "status": "screen rejected",
+          "final_winner": false
+        },
+        "0293ddca8e540055a337c48e5344bccff7eaf6ffd9f75743155271fa88ed72a8": {
+          "screen_retained": false,
+          "required_relevance": 4,
+          "region": "Out of Scope/Unclear",
+          "enrichment_relevance": null,
+          "editorial_significance": null,
+          "queue_score": null,
+          "qualified": false,
+          "status": "screen rejected",
+          "final_winner": false
+        },
+        "b63ec18bbf4993257cba0d005e4b7fa8c78f880283fdcbaa23b4bf48d661cb7f": {
+          "screen_retained": true,
+          "required_relevance": 4,
+          "region": "Global",
+          "enrichment_relevance": 4,
+          "editorial_significance": 2,
+          "queue_score": 70.0,
+          "qualified": true,
+          "status": "qualified",
+          "final_winner": false
+        },
+        "10276cae948daa5048817cafef25db3a16a49cbe6651ceb55785f32d61ef1a3e": {
+          "screen_retained": true,
+          "required_relevance": 4,
+          "region": "Global",
+          "enrichment_relevance": 5,
+          "editorial_significance": 4,
+          "queue_score": 92.0,
+          "qualified": true,
+          "status": "qualified",
+          "final_winner": true
+        },
+        "c972a2f5aa272ca3b0b8afe4dddf5e7d94d1aa9ad5d683f0031f5c5b5d3c33f8": {
+          "screen_retained": true,
+          "required_relevance": 4,
+          "region": "KSA",
+          "enrichment_relevance": 4,
+          "editorial_significance": 3,
+          "queue_score": 74.0,
+          "qualified": true,
+          "status": "qualified",
+          "final_winner": false
+        },
+        "5df84ebf307fdb51d585496de791295c1fe86d7fc39b63b8e3a791ec3584d780": {
+          "screen_retained": true,
+          "required_relevance": 4,
+          "region": "KSA",
+          "enrichment_relevance": 4,
+          "editorial_significance": 2,
+          "queue_score": 70.0,
+          "qualified": true,
+          "status": "qualified",
+          "final_winner": false
+        },
+        "03cd3b3904bd06156104154321bdff275f3fca02601a8d9a070c11c0600d8349": {
+          "screen_retained": true,
+          "required_relevance": 4,
+          "region": "Egypt",
+          "enrichment_relevance": 2,
+          "editorial_significance": 2,
+          "queue_score": 42.0,
+          "qualified": false,
+          "status": "below unchanged relevance threshold",
+          "final_winner": false
+        },
+        "b12f9a595c0c7b49c90080f420229e59f355a6714c9cad2bf7651c3032ca8418": {
+          "screen_retained": true,
+          "required_relevance": 4,
+          "region": "UAE",
+          "enrichment_relevance": 4,
+          "editorial_significance": 2,
+          "queue_score": 70.0,
+          "qualified": true,
+          "status": "qualified",
+          "final_winner": true
+        },
+        "926d261a3dea3a6d16827689d69b99279a165109264109b90fb66e9bf8f6bc18": {
+          "screen_retained": true,
+          "required_relevance": 4,
+          "region": "KSA",
+          "enrichment_relevance": 5,
+          "editorial_significance": 4,
+          "queue_score": 92.0,
+          "qualified": true,
+          "status": "qualified",
+          "final_winner": false
+        },
+        "b019929436115b60f2428ae7259b9cc23e2d122b39878a81cddb483a8cb8a412": {
+          "screen_retained": true,
+          "required_relevance": 4,
+          "region": "Global",
+          "enrichment_relevance": 5,
+          "editorial_significance": 3,
+          "queue_score": 88.0,
+          "qualified": true,
+          "status": "qualified",
+          "final_winner": false
+        },
+        "0e18dbd4fc3a1b3e13209b645f2175b844133a703b153ab85937728a698f6ff4": {
+          "screen_retained": true,
+          "required_relevance": 4,
+          "region": "UAE",
+          "enrichment_relevance": 4,
+          "editorial_significance": 3,
+          "queue_score": 74.0,
+          "qualified": true,
+          "status": "qualified",
+          "final_winner": true
+        },
+        "c545046a97083fdaa3b0c38201ebdeaf5dbcb88c6c783ce4cdc9ca7d397c8735": {
+          "screen_retained": true,
+          "required_relevance": 4,
+          "region": "UAE",
+          "enrichment_relevance": 5,
+          "editorial_significance": 3,
+          "queue_score": 88.0,
+          "qualified": true,
+          "status": "qualified",
+          "final_winner": true
+        },
+        "bd2bdff65098010579f1643a184429b9e064c0427da6c9a68a4a52529b2e4b24": {
+          "screen_retained": false,
+          "required_relevance": 4,
+          "region": "Out of Scope/Unclear",
+          "enrichment_relevance": null,
+          "editorial_significance": null,
+          "queue_score": null,
+          "qualified": false,
+          "status": "screen rejected",
+          "final_winner": false
+        },
+        "0d99f6669958fe51c0c57e6cfac30e7b7885ae1fa9be3beac0a3fa63c37de6a1": {
+          "screen_retained": true,
+          "required_relevance": 4,
+          "region": "Out of Scope/Unclear",
+          "enrichment_relevance": 2,
+          "editorial_significance": 2,
+          "queue_score": 42.0,
+          "qualified": false,
+          "status": "below unchanged relevance threshold",
+          "final_winner": false
+        },
+        "e00535e9363c2fb7d09ca79d0a191365b06bbe63e55fb7e613517d5ba7915cdd": {
+          "screen_retained": true,
+          "required_relevance": 4,
+          "region": "KSA",
+          "enrichment_relevance": 4,
+          "editorial_significance": 2,
+          "queue_score": 71.0,
+          "qualified": true,
+          "status": "qualified",
+          "final_winner": true
+        },
+        "aa8f3a5131b54d2c7857d295fc9f20a9f8f1f7048422aa00705a03fb76158955": {
+          "screen_retained": true,
+          "required_relevance": 4,
+          "region": "KSA",
+          "enrichment_relevance": 5,
+          "editorial_significance": 3,
+          "queue_score": 89.0,
+          "qualified": true,
+          "status": "qualified",
+          "final_winner": true
+        },
+        "295b835ea1b72d49c1a644414cdbf1fec52c070c67f6f4a04a45d35291a51c20": {
+          "screen_retained": true,
+          "required_relevance": 4,
+          "region": "KSA",
+          "enrichment_relevance": 3,
+          "editorial_significance": 3,
+          "queue_score": 61.0,
+          "qualified": false,
+          "status": "below unchanged relevance threshold",
+          "final_winner": false
+        },
+        "905cd20a5becab64485f52672224ae0bea6e9e70f8c4fa53e77a309ce7ac1bb1": {
+          "screen_retained": true,
+          "required_relevance": 4,
+          "region": "Global",
+          "enrichment_relevance": 4,
+          "editorial_significance": 3,
+          "queue_score": 74.0,
+          "qualified": true,
+          "status": "qualified",
+          "final_winner": false
+        },
+        "fd2c4af45bbf3e8d914aafdef618d1de2b27732f97bac810396da4112456a4df": {
+          "screen_retained": true,
+          "required_relevance": 4,
+          "region": "Global",
+          "enrichment_relevance": 4,
+          "editorial_significance": 3,
+          "queue_score": 74.0,
+          "qualified": true,
+          "status": "qualified",
+          "final_winner": false
+        },
+        "ea8f13b3c44fb8037fea919bd23007b46e663d285192bdfe6ebc3c649a662231": {
+          "screen_retained": false,
+          "required_relevance": 4,
+          "region": "Out of Scope/Unclear",
+          "enrichment_relevance": null,
+          "editorial_significance": null,
+          "queue_score": null,
+          "qualified": false,
+          "status": "screen rejected",
+          "final_winner": false
+        }
+      },
+      "final_winner_ids": [
+        "c545046a97083fdaa3b0c38201ebdeaf5dbcb88c6c783ce4cdc9ca7d397c8735",
+        "0e18dbd4fc3a1b3e13209b645f2175b844133a703b153ab85937728a698f6ff4",
+        "b12f9a595c0c7b49c90080f420229e59f355a6714c9cad2bf7651c3032ca8418",
+        "10276cae948daa5048817cafef25db3a16a49cbe6651ceb55785f32d61ef1a3e",
+        "aa8f3a5131b54d2c7857d295fc9f20a9f8f1f7048422aa00705a03fb76158955",
+        "e00535e9363c2fb7d09ca79d0a191365b06bbe63e55fb7e613517d5ba7915cdd"
+      ],
+      "qualified_metrics": {
+        "articles": 20,
+        "binary_articles": 16,
+        "positives": 12,
+        "negatives": 4,
+        "true_positives": 12,
+        "false_positives": [],
+        "false_negatives": [],
+        "true_negatives": 4,
+        "precision": 1.0,
+        "recall": 1.0,
+        "borderline_total": 4,
+        "borderline_retained": 1,
+        "region_checked": 16,
+        "wrong_regions": [],
+        "region_accuracy": 1.0,
+        "unresolved": [],
+        "classified_positive_coverage": 1.0
+      },
+      "final_metrics": {
+        "articles": 20,
+        "binary_articles": 16,
+        "positives": 12,
+        "negatives": 4,
+        "true_positives": 5,
+        "false_positives": [],
+        "false_negatives": [
+          "5df84ebf307fdb51d585496de791295c1fe86d7fc39b63b8e3a791ec3584d780",
+          "905cd20a5becab64485f52672224ae0bea6e9e70f8c4fa53e77a309ce7ac1bb1",
+          "926d261a3dea3a6d16827689d69b99279a165109264109b90fb66e9bf8f6bc18",
+          "b019929436115b60f2428ae7259b9cc23e2d122b39878a81cddb483a8cb8a412",
+          "b63ec18bbf4993257cba0d005e4b7fa8c78f880283fdcbaa23b4bf48d661cb7f",
+          "c972a2f5aa272ca3b0b8afe4dddf5e7d94d1aa9ad5d683f0031f5c5b5d3c33f8",
+          "fd2c4af45bbf3e8d914aafdef618d1de2b27732f97bac810396da4112456a4df"
+        ],
+        "true_negatives": 4,
+        "precision": 1.0,
+        "recall": 0.4166666666666667,
+        "borderline_total": 4,
+        "borderline_retained": 1,
+        "region_checked": 16,
+        "wrong_regions": [],
+        "region_accuracy": 1.0,
+        "unresolved": [],
+        "classified_positive_coverage": 0.4166666666666667
+      },
+      "final_ranking": [
+        {
+          "article_id": "10276cae948daa5048817cafef25db3a16a49cbe6651ceb55785f32d61ef1a3e",
+          "region": "Global",
+          "queue_score": 92.0
+        },
+        {
+          "article_id": "926d261a3dea3a6d16827689d69b99279a165109264109b90fb66e9bf8f6bc18",
+          "region": "KSA",
+          "queue_score": 92.0
+        },
+        {
+          "article_id": "aa8f3a5131b54d2c7857d295fc9f20a9f8f1f7048422aa00705a03fb76158955",
+          "region": "KSA",
+          "queue_score": 89.0
+        },
+        {
+          "article_id": "b019929436115b60f2428ae7259b9cc23e2d122b39878a81cddb483a8cb8a412",
+          "region": "Global",
+          "queue_score": 88.0
+        },
+        {
+          "article_id": "c545046a97083fdaa3b0c38201ebdeaf5dbcb88c6c783ce4cdc9ca7d397c8735",
+          "region": "UAE",
+          "queue_score": 88.0
+        },
+        {
+          "article_id": "0e18dbd4fc3a1b3e13209b645f2175b844133a703b153ab85937728a698f6ff4",
+          "region": "UAE",
+          "queue_score": 74.0
+        },
+        {
+          "article_id": "905cd20a5becab64485f52672224ae0bea6e9e70f8c4fa53e77a309ce7ac1bb1",
+          "region": "Global",
+          "queue_score": 74.0
+        },
+        {
+          "article_id": "c972a2f5aa272ca3b0b8afe4dddf5e7d94d1aa9ad5d683f0031f5c5b5d3c33f8",
+          "region": "KSA",
+          "queue_score": 74.0
+        },
+        {
+          "article_id": "fd2c4af45bbf3e8d914aafdef618d1de2b27732f97bac810396da4112456a4df",
+          "region": "Global",
+          "queue_score": 74.0
+        },
+        {
+          "article_id": "e00535e9363c2fb7d09ca79d0a191365b06bbe63e55fb7e613517d5ba7915cdd",
+          "region": "KSA",
+          "queue_score": 71.0
+        },
+        {
+          "article_id": "5df84ebf307fdb51d585496de791295c1fe86d7fc39b63b8e3a791ec3584d780",
+          "region": "KSA",
+          "queue_score": 70.0
+        },
+        {
+          "article_id": "b12f9a595c0c7b49c90080f420229e59f355a6714c9cad2bf7651c3032ca8418",
+          "region": "UAE",
+          "queue_score": 70.0
+        },
+        {
+          "article_id": "b63ec18bbf4993257cba0d005e4b7fa8c78f880283fdcbaa23b4bf48d661cb7f",
+          "region": "Global",
+          "queue_score": 70.0
+        }
+      ],
+      "shortages": {
+        "Global": 2,
+        "UAE": 1,
+        "KSA": 1,
+        "Egypt": 2
+      },
+      "rejected_by_constraint": {}
+    },
+    "fresh50": {
+      "screened_in": [
+        "03cd3b3904bd06156104154321bdff275f3fca02601a8d9a070c11c0600d8349",
+        "0d99f6669958fe51c0c57e6cfac30e7b7885ae1fa9be3beac0a3fa63c37de6a1",
+        "0e18dbd4fc3a1b3e13209b645f2175b844133a703b153ab85937728a698f6ff4",
+        "10276cae948daa5048817cafef25db3a16a49cbe6651ceb55785f32d61ef1a3e",
+        "295b835ea1b72d49c1a644414cdbf1fec52c070c67f6f4a04a45d35291a51c20",
+        "5df84ebf307fdb51d585496de791295c1fe86d7fc39b63b8e3a791ec3584d780",
+        "905cd20a5becab64485f52672224ae0bea6e9e70f8c4fa53e77a309ce7ac1bb1",
+        "926d261a3dea3a6d16827689d69b99279a165109264109b90fb66e9bf8f6bc18",
+        "aa8f3a5131b54d2c7857d295fc9f20a9f8f1f7048422aa00705a03fb76158955",
+        "b019929436115b60f2428ae7259b9cc23e2d122b39878a81cddb483a8cb8a412",
+        "b12f9a595c0c7b49c90080f420229e59f355a6714c9cad2bf7651c3032ca8418",
+        "b63ec18bbf4993257cba0d005e4b7fa8c78f880283fdcbaa23b4bf48d661cb7f",
+        "bd2bdff65098010579f1643a184429b9e064c0427da6c9a68a4a52529b2e4b24",
+        "c545046a97083fdaa3b0c38201ebdeaf5dbcb88c6c783ce4cdc9ca7d397c8735",
+        "c972a2f5aa272ca3b0b8afe4dddf5e7d94d1aa9ad5d683f0031f5c5b5d3c33f8",
+        "e00535e9363c2fb7d09ca79d0a191365b06bbe63e55fb7e613517d5ba7915cdd",
+        "fd2c4af45bbf3e8d914aafdef618d1de2b27732f97bac810396da4112456a4df"
+      ],
+      "qualified_ids": [
+        "0e18dbd4fc3a1b3e13209b645f2175b844133a703b153ab85937728a698f6ff4",
+        "10276cae948daa5048817cafef25db3a16a49cbe6651ceb55785f32d61ef1a3e",
+        "5df84ebf307fdb51d585496de791295c1fe86d7fc39b63b8e3a791ec3584d780",
+        "905cd20a5becab64485f52672224ae0bea6e9e70f8c4fa53e77a309ce7ac1bb1",
+        "926d261a3dea3a6d16827689d69b99279a165109264109b90fb66e9bf8f6bc18",
+        "aa8f3a5131b54d2c7857d295fc9f20a9f8f1f7048422aa00705a03fb76158955",
+        "b019929436115b60f2428ae7259b9cc23e2d122b39878a81cddb483a8cb8a412",
+        "b12f9a595c0c7b49c90080f420229e59f355a6714c9cad2bf7651c3032ca8418",
+        "b63ec18bbf4993257cba0d005e4b7fa8c78f880283fdcbaa23b4bf48d661cb7f",
+        "c545046a97083fdaa3b0c38201ebdeaf5dbcb88c6c783ce4cdc9ca7d397c8735",
+        "c972a2f5aa272ca3b0b8afe4dddf5e7d94d1aa9ad5d683f0031f5c5b5d3c33f8",
+        "e00535e9363c2fb7d09ca79d0a191365b06bbe63e55fb7e613517d5ba7915cdd",
+        "fd2c4af45bbf3e8d914aafdef618d1de2b27732f97bac810396da4112456a4df"
+      ],
+      "unresolved": [],
+      "rows": {
+        "4b1b60f368a1c1e3ba7d3e9db5fe7e48b8d875d5f6ea975c183e3a15508dad72": {
+          "screen_retained": false,
+          "required_relevance": 4,
+          "region": "Out of Scope/Unclear",
+          "enrichment_relevance": null,
+          "editorial_significance": null,
+          "queue_score": null,
+          "qualified": false,
+          "status": "screen rejected",
+          "final_winner": false
+        },
+        "0293ddca8e540055a337c48e5344bccff7eaf6ffd9f75743155271fa88ed72a8": {
+          "screen_retained": false,
+          "required_relevance": 4,
+          "region": "Global",
+          "enrichment_relevance": null,
+          "editorial_significance": null,
+          "queue_score": null,
+          "qualified": false,
+          "status": "screen rejected",
+          "final_winner": false
+        },
+        "b63ec18bbf4993257cba0d005e4b7fa8c78f880283fdcbaa23b4bf48d661cb7f": {
+          "screen_retained": true,
+          "required_relevance": 4,
+          "region": "Global",
+          "enrichment_relevance": 4,
+          "editorial_significance": 2,
+          "queue_score": 70.0,
+          "qualified": true,
+          "status": "qualified",
+          "final_winner": false
+        },
+        "10276cae948daa5048817cafef25db3a16a49cbe6651ceb55785f32d61ef1a3e": {
+          "screen_retained": true,
+          "required_relevance": 4,
+          "region": "Global",
+          "enrichment_relevance": 5,
+          "editorial_significance": 4,
+          "queue_score": 92.0,
+          "qualified": true,
+          "status": "qualified",
+          "final_winner": false
+        },
+        "c972a2f5aa272ca3b0b8afe4dddf5e7d94d1aa9ad5d683f0031f5c5b5d3c33f8": {
+          "screen_retained": true,
+          "required_relevance": 4,
+          "region": "KSA",
+          "enrichment_relevance": 4,
+          "editorial_significance": 3,
+          "queue_score": 74.0,
+          "qualified": true,
+          "status": "qualified",
+          "final_winner": false
+        },
+        "5df84ebf307fdb51d585496de791295c1fe86d7fc39b63b8e3a791ec3584d780": {
+          "screen_retained": true,
+          "required_relevance": 4,
+          "region": "KSA",
+          "enrichment_relevance": 4,
+          "editorial_significance": 2,
+          "queue_score": 70.0,
+          "qualified": true,
+          "status": "qualified",
+          "final_winner": false
+        },
+        "03cd3b3904bd06156104154321bdff275f3fca02601a8d9a070c11c0600d8349": {
+          "screen_retained": true,
+          "required_relevance": 4,
+          "region": "Egypt",
+          "enrichment_relevance": 2,
+          "editorial_significance": 2,
+          "queue_score": 42.0,
+          "qualified": false,
+          "status": "below unchanged relevance threshold",
+          "final_winner": false
+        },
+        "b12f9a595c0c7b49c90080f420229e59f355a6714c9cad2bf7651c3032ca8418": {
+          "screen_retained": true,
+          "required_relevance": 4,
+          "region": "UAE",
+          "enrichment_relevance": 4,
+          "editorial_significance": 2,
+          "queue_score": 70.0,
+          "qualified": true,
+          "status": "qualified",
+          "final_winner": true
+        },
+        "926d261a3dea3a6d16827689d69b99279a165109264109b90fb66e9bf8f6bc18": {
+          "screen_retained": true,
+          "required_relevance": 4,
+          "region": "KSA",
+          "enrichment_relevance": 5,
+          "editorial_significance": 4,
+          "queue_score": 92.0,
+          "qualified": true,
+          "status": "qualified",
+          "final_winner": false
+        },
+        "b019929436115b60f2428ae7259b9cc23e2d122b39878a81cddb483a8cb8a412": {
+          "screen_retained": true,
+          "required_relevance": 4,
+          "region": "Global",
+          "enrichment_relevance": 5,
+          "editorial_significance": 3,
+          "queue_score": 88.0,
+          "qualified": true,
+          "status": "qualified",
+          "final_winner": false
+        },
+        "0e18dbd4fc3a1b3e13209b645f2175b844133a703b153ab85937728a698f6ff4": {
+          "screen_retained": true,
+          "required_relevance": 4,
+          "region": "UAE",
+          "enrichment_relevance": 4,
+          "editorial_significance": 3,
+          "queue_score": 74.0,
+          "qualified": true,
+          "status": "qualified",
+          "final_winner": true
+        },
+        "c545046a97083fdaa3b0c38201ebdeaf5dbcb88c6c783ce4cdc9ca7d397c8735": {
+          "screen_retained": true,
+          "required_relevance": 4,
+          "region": "UAE",
+          "enrichment_relevance": 5,
+          "editorial_significance": 3,
+          "queue_score": 88.0,
+          "qualified": true,
+          "status": "qualified",
+          "final_winner": true
+        },
+        "bd2bdff65098010579f1643a184429b9e064c0427da6c9a68a4a52529b2e4b24": {
+          "screen_retained": true,
+          "required_relevance": 4,
+          "region": "Out of Scope/Unclear",
+          "enrichment_relevance": 2,
+          "editorial_significance": 2,
+          "queue_score": 42.0,
+          "qualified": false,
+          "status": "below unchanged relevance threshold",
+          "final_winner": false
+        },
+        "0d99f6669958fe51c0c57e6cfac30e7b7885ae1fa9be3beac0a3fa63c37de6a1": {
+          "screen_retained": true,
+          "required_relevance": 4,
+          "region": "Out of Scope/Unclear",
+          "enrichment_relevance": 2,
+          "editorial_significance": 2,
+          "queue_score": 42.0,
+          "qualified": false,
+          "status": "below unchanged relevance threshold",
+          "final_winner": false
+        },
+        "e00535e9363c2fb7d09ca79d0a191365b06bbe63e55fb7e613517d5ba7915cdd": {
+          "screen_retained": true,
+          "required_relevance": 4,
+          "region": "KSA",
+          "enrichment_relevance": 4,
+          "editorial_significance": 2,
+          "queue_score": 71.0,
+          "qualified": true,
+          "status": "qualified",
+          "final_winner": true
+        },
+        "aa8f3a5131b54d2c7857d295fc9f20a9f8f1f7048422aa00705a03fb76158955": {
+          "screen_retained": true,
+          "required_relevance": 4,
+          "region": "KSA",
+          "enrichment_relevance": 5,
+          "editorial_significance": 3,
+          "queue_score": 89.0,
+          "qualified": true,
+          "status": "qualified",
+          "final_winner": true
+        },
+        "295b835ea1b72d49c1a644414cdbf1fec52c070c67f6f4a04a45d35291a51c20": {
+          "screen_retained": true,
+          "required_relevance": 4,
+          "region": "KSA",
+          "enrichment_relevance": 3,
+          "editorial_significance": 3,
+          "queue_score": 61.0,
+          "qualified": false,
+          "status": "below unchanged relevance threshold",
+          "final_winner": false
+        },
+        "905cd20a5becab64485f52672224ae0bea6e9e70f8c4fa53e77a309ce7ac1bb1": {
+          "screen_retained": true,
+          "required_relevance": 4,
+          "region": "Egypt",
+          "enrichment_relevance": 4,
+          "editorial_significance": 3,
+          "queue_score": 74.0,
+          "qualified": true,
+          "status": "qualified",
+          "final_winner": true
+        },
+        "fd2c4af45bbf3e8d914aafdef618d1de2b27732f97bac810396da4112456a4df": {
+          "screen_retained": true,
+          "required_relevance": 4,
+          "region": "Global",
+          "enrichment_relevance": 4,
+          "editorial_significance": 3,
+          "queue_score": 74.0,
+          "qualified": true,
+          "status": "qualified",
+          "final_winner": false
+        },
+        "ea8f13b3c44fb8037fea919bd23007b46e663d285192bdfe6ebc3c649a662231": {
+          "screen_retained": false,
+          "required_relevance": 4,
+          "region": "Out of Scope/Unclear",
+          "enrichment_relevance": null,
+          "editorial_significance": null,
+          "queue_score": null,
+          "qualified": false,
+          "status": "screen rejected",
+          "final_winner": false
+        }
+      },
+      "final_winner_ids": [
+        "905cd20a5becab64485f52672224ae0bea6e9e70f8c4fa53e77a309ce7ac1bb1",
+        "c545046a97083fdaa3b0c38201ebdeaf5dbcb88c6c783ce4cdc9ca7d397c8735",
+        "0e18dbd4fc3a1b3e13209b645f2175b844133a703b153ab85937728a698f6ff4",
+        "b12f9a595c0c7b49c90080f420229e59f355a6714c9cad2bf7651c3032ca8418",
+        "aa8f3a5131b54d2c7857d295fc9f20a9f8f1f7048422aa00705a03fb76158955",
+        "e00535e9363c2fb7d09ca79d0a191365b06bbe63e55fb7e613517d5ba7915cdd"
+      ],
+      "qualified_metrics": {
+        "articles": 20,
+        "binary_articles": 16,
+        "positives": 12,
+        "negatives": 4,
+        "true_positives": 12,
+        "false_positives": [],
+        "false_negatives": [],
+        "true_negatives": 4,
+        "precision": 1.0,
+        "recall": 1.0,
+        "borderline_total": 4,
+        "borderline_retained": 1,
+        "region_checked": 16,
+        "wrong_regions": [],
+        "region_accuracy": 1.0,
+        "unresolved": [],
+        "classified_positive_coverage": 1.0
+      },
+      "final_metrics": {
+        "articles": 20,
+        "binary_articles": 16,
+        "positives": 12,
+        "negatives": 4,
+        "true_positives": 5,
+        "false_positives": [],
+        "false_negatives": [
+          "10276cae948daa5048817cafef25db3a16a49cbe6651ceb55785f32d61ef1a3e",
+          "5df84ebf307fdb51d585496de791295c1fe86d7fc39b63b8e3a791ec3584d780",
+          "926d261a3dea3a6d16827689d69b99279a165109264109b90fb66e9bf8f6bc18",
+          "b019929436115b60f2428ae7259b9cc23e2d122b39878a81cddb483a8cb8a412",
+          "b63ec18bbf4993257cba0d005e4b7fa8c78f880283fdcbaa23b4bf48d661cb7f",
+          "c972a2f5aa272ca3b0b8afe4dddf5e7d94d1aa9ad5d683f0031f5c5b5d3c33f8",
+          "fd2c4af45bbf3e8d914aafdef618d1de2b27732f97bac810396da4112456a4df"
+        ],
+        "true_negatives": 4,
+        "precision": 1.0,
+        "recall": 0.4166666666666667,
+        "borderline_total": 4,
+        "borderline_retained": 1,
+        "region_checked": 16,
+        "wrong_regions": [],
+        "region_accuracy": 1.0,
+        "unresolved": [],
+        "classified_positive_coverage": 0.4166666666666667
+      },
+      "final_ranking": [
+        {
+          "article_id": "10276cae948daa5048817cafef25db3a16a49cbe6651ceb55785f32d61ef1a3e",
+          "region": "Global",
+          "queue_score": 92.0
+        },
+        {
+          "article_id": "926d261a3dea3a6d16827689d69b99279a165109264109b90fb66e9bf8f6bc18",
+          "region": "KSA",
+          "queue_score": 92.0
+        },
+        {
+          "article_id": "aa8f3a5131b54d2c7857d295fc9f20a9f8f1f7048422aa00705a03fb76158955",
+          "region": "KSA",
+          "queue_score": 89.0
+        },
+        {
+          "article_id": "b019929436115b60f2428ae7259b9cc23e2d122b39878a81cddb483a8cb8a412",
+          "region": "Global",
+          "queue_score": 88.0
+        },
+        {
+          "article_id": "c545046a97083fdaa3b0c38201ebdeaf5dbcb88c6c783ce4cdc9ca7d397c8735",
+          "region": "UAE",
+          "queue_score": 88.0
+        },
+        {
+          "article_id": "0e18dbd4fc3a1b3e13209b645f2175b844133a703b153ab85937728a698f6ff4",
+          "region": "UAE",
+          "queue_score": 74.0
+        },
+        {
+          "article_id": "905cd20a5becab64485f52672224ae0bea6e9e70f8c4fa53e77a309ce7ac1bb1",
+          "region": "Egypt",
+          "queue_score": 74.0
+        },
+        {
+          "article_id": "c972a2f5aa272ca3b0b8afe4dddf5e7d94d1aa9ad5d683f0031f5c5b5d3c33f8",
+          "region": "KSA",
+          "queue_score": 74.0
+        },
+        {
+          "article_id": "fd2c4af45bbf3e8d914aafdef618d1de2b27732f97bac810396da4112456a4df",
+          "region": "Global",
+          "queue_score": 74.0
+        },
+        {
+          "article_id": "e00535e9363c2fb7d09ca79d0a191365b06bbe63e55fb7e613517d5ba7915cdd",
+          "region": "KSA",
+          "queue_score": 71.0
+        },
+        {
+          "article_id": "5df84ebf307fdb51d585496de791295c1fe86d7fc39b63b8e3a791ec3584d780",
+          "region": "KSA",
+          "queue_score": 70.0
+        },
+        {
+          "article_id": "b12f9a595c0c7b49c90080f420229e59f355a6714c9cad2bf7651c3032ca8418",
+          "region": "UAE",
+          "queue_score": 70.0
+        },
+        {
+          "article_id": "b63ec18bbf4993257cba0d005e4b7fa8c78f880283fdcbaa23b4bf48d661cb7f",
+          "region": "Global",
+          "queue_score": 70.0
+        }
+      ],
+      "shortages": {
+        "Global": 3,
+        "UAE": 1,
+        "KSA": 1,
+        "Egypt": 1
+      },
+      "rejected_by_constraint": {}
+    }
+  },
+  "method": "Identical metadata-only Luna enrichment reused by ID across both screens. Existing 4/5 relevance thresholds, 70/20/10 weights, quotas, publisher cap and event suppression. Empty historical weekly state; no Notion reads or writes."
+}

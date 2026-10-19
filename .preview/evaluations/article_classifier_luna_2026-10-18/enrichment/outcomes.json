@@ -1,0 +1,512 @@
+{
+  "oct15-bahrain": {
+    "article_id": "oct15-bahrain",
+    "enrichment": {
+      "summary": "A Bahraini fund plans to invest in power grids across the United States and Europe. The fund, investment size, and timing are not specified.",
+      "why_it_matters": "Power grids are related to the energy transition, but the reported investments are in the United States and Europe and no specific decarbonisation or MENA impact is provided.",
+      "relevance_score": 2,
+      "topic": [
+        "Power grids",
+        "Investment",
+        "Energy"
+      ],
+      "region": [
+        "Bahrain",
+        "United States",
+        "Europe"
+      ],
+      "newsletter_angle": "A Bahraini fund is looking to invest in US and European power grids; the available information does not specify the amount or timing.",
+      "sns_hook": "A Bahraini fund plans to invest in power grids across the US and Europe, though the scale and timing are not yet clear from the available information.",
+      "factual_points": [
+        "A Bahraini fund is described as planning to invest in power grids.",
+        "The investments are intended to cover the United States and Europe."
+      ],
+      "editorial_significance": 2,
+      "significance_reason": "The title indicates planned investment in power grids across two regions, but provides no scale, timing, or specific operational impact."
+    },
+    "error": null,
+    "latency_seconds": 7.57074900000589
+  },
+  "oct15-hormuz": {
+    "article_id": "oct15-hormuz",
+    "enrichment": {
+      "summary": "A UN official warned that failing to activate a Hormuz fertilizer plan could trigger a food crisis.",
+      "why_it_matters": "The warning explicitly links a fertilizer plan in the MENA region to food security, a core SOMA MATER focus; the article details and the plan's status are unavailable.",
+      "relevance_score": 4,
+      "topic": [
+        "Food security",
+        "Fertilizer",
+        "Supply chains"
+      ],
+      "region": [
+        "MENA",
+        "Strait of Hormuz"
+      ],
+      "newsletter_angle": "A UN official links activation of a Hormuz fertilizer plan with avoiding a potential food crisis; the available report does not explain the plan or its status.",
+      "sns_hook": "A UN official warns that failure to activate a Hormuz fertilizer plan could trigger a food crisis. What the plan involves and whether it is moving forward are unclear.",
+      "factual_points": [
+        "A UN official warned that failure to activate a Hormuz fertilizer plan could trigger a food crisis."
+      ],
+      "editorial_significance": 3,
+      "significance_reason": "The warning describes a potentially serious food-security consequence, but the available information gives no details on the plan, its status, or the scale of the risk."
+    },
+    "error": null,
+    "latency_seconds": 5.9327668999903835
+  },
+  "oct16-battery_definition": {
+    "article_id": "oct16-battery_definition",
+    "enrichment": {
+      "summary": "The article’s title questions what qualifies as a battery; no further details are available.",
+      "why_it_matters": "Batteries can relate to the net zero and energy transition, but the available information does not establish that this article addresses either mission area.",
+      "relevance_score": 2,
+      "topic": [
+        "Batteries",
+        "Energy transition"
+      ],
+      "region": [
+        "Global"
+      ],
+      "newsletter_angle": "Potentially relevant to energy storage, but the article content is unavailable, so its implications cannot be assessed.",
+      "sns_hook": "Your battery may not be a battery—what the article means is unclear from the available information.",
+      "factual_points": [],
+      "editorial_significance": 1,
+      "significance_reason": "The title alone provides no evidence of a concrete development, measurable impact, or operational consequence."
+    },
+    "error": null,
+    "latency_seconds": 6.044185400009155
+  },
+  "oct16-battery_science": {
+    "article_id": "oct16-battery_science",
+    "enrichment": {
+      "summary": "A Nature article reports evidence for multi-Li+ clustering in lithium-ion battery electrolytes. Further details are unavailable.",
+      "why_it_matters": "Lithium-ion batteries relate to battery storage in the net-zero transition, but the available information does not establish practical applications or a specific connection to MENA.",
+      "relevance_score": 3,
+      "topic": [
+        "Batteries",
+        "Energy transition"
+      ],
+      "region": [
+        "Global"
+      ],
+      "newsletter_angle": "A battery-electrolyte research finding to watch; the available information does not clarify its practical implications.",
+      "sns_hook": "Nature reports evidence for multi-Li+ clustering in lithium-ion battery electrolytes. The article’s practical implications are unclear from the available information.",
+      "factual_points": [
+        "The article title reports evidence for multi-Li+ clustering in lithium-ion battery electrolytes."
+      ],
+      "editorial_significance": 2,
+      "significance_reason": "The title indicates a scientific finding about battery electrolytes, but no evidence about its scale, applications, or operational impact is available."
+    },
+    "error": null,
+    "latency_seconds": 7.749490899965167
+  },
+  "oct16-commission": {
+    "article_id": "oct16-commission",
+    "enrichment": {
+      "summary": "Saudi Arabia won two International Commission on Irrigation and Drainage awards in France.",
+      "why_it_matters": "The awards relate to irrigation, a water-security and agricultural theme, but the available information does not identify the recipients or what was recognized.",
+      "relevance_score": 3,
+      "topic": [
+        "Water security",
+        "Irrigation",
+        "Agriculture"
+      ],
+      "region": [
+        "Saudi Arabia",
+        "France"
+      ],
+      "newsletter_angle": "A Saudi irrigation-related award win, though the available information does not explain the achievement recognized.",
+      "sns_hook": "Saudi Arabia wins two International Commission on Irrigation and Drainage awards in France.",
+      "factual_points": [
+        "Saudi Arabia won two International Commission on Irrigation and Drainage awards.",
+        "The awards were in France."
+      ],
+      "editorial_significance": 2,
+      "significance_reason": "The title reports two awards, but provides no details about the recognized work or its practical impact."
+    },
+    "error": null,
+    "latency_seconds": 4.496895800053608
+  },
+  "oct16-gerd": {
+    "article_id": "oct16-gerd",
+    "enrichment": {
+      "summary": "An explainer on the Grand Ethiopian Renaissance Dam (GERD) and the Nile dam dispute involving Ethiopia and Egypt.",
+      "why_it_matters": "The dispute concerns the Nile, a critical water resource for Egypt, making it relevant to regional water security; the available information does not describe specific impacts or developments.",
+      "relevance_score": 4,
+      "topic": [
+        "Water security",
+        "Regional geopolitics"
+      ],
+      "region": [
+        "Egypt",
+        "Ethiopia",
+        "Nile Basin"
+      ],
+      "newsletter_angle": "A Nile water-security explainer focused on the GERD dispute involving Egypt and Ethiopia; the available material does not establish what is new.",
+      "sns_hook": "What is the GERD dispute between Ethiopia and Egypt? This article is presented as an explainer, but its detailed claims are unavailable.",
+      "factual_points": [
+        "The article is titled as an explainer about the GERD.",
+        "The title identifies Ethiopia and Egypt as parties to the Nile dam dispute."
+      ],
+      "editorial_significance": 2,
+      "significance_reason": "The title identifies a consequential cross-border water dispute, but no specific development, scale, or impact is provided."
+    },
+    "error": null,
+    "latency_seconds": 6.174550299998373
+  },
+  "oct16-harvests": {
+    "article_id": "oct16-harvests",
+    "enrichment": {
+      "summary": "A UN agency says shipping disruption in the Strait of Hormuz is beginning to affect harvests; the available information gives no details on locations, causes, or scale.",
+      "why_it_matters": "The reported impact on harvests connects a key shipping disruption to food security, a core SOMA MATER focus, though the extent of the impact is unclear.",
+      "relevance_score": 4,
+      "topic": [
+        "Food security",
+        "Shipping",
+        "Supply chains"
+      ],
+      "region": [
+        "MENA",
+        "Strait of Hormuz"
+      ],
+      "newsletter_angle": "Track whether disruption around Hormuz is affecting harvests and food supply chains, and seek details on the locations and scale of the reported impact.",
+      "sns_hook": "A UN agency says Hormuz shipping disruption is starting to hit harvests. The available report does not yet specify where or how much.",
+      "factual_points": [
+        "A UN agency says the Hormuz shipping disruption is starting to affect harvests.",
+        "The available information does not identify the affected harvests or quantify the impact."
+      ],
+      "editorial_significance": 3,
+      "significance_reason": "The report signals an emerging effect on harvests, but the available title provides no measure of scale or specific operational consequences."
+    },
+    "error": null,
+    "latency_seconds": 6.81850769999437
+  },
+  "oct16-iraq": {
+    "article_id": "oct16-iraq",
+    "enrichment": {
+      "summary": "Iraq is in talks with Saudi Arabia’s ACWA to increase solar capacity. The scale and terms are not available.",
+      "why_it_matters": "The talks directly concern solar energy and the energy transition in MENA, core SOMA MATER focus areas.",
+      "relevance_score": 5,
+      "topic": [
+        "Solar energy",
+        "Energy transition"
+      ],
+      "region": [
+        "Iraq",
+        "Saudi Arabia",
+        "MENA"
+      ],
+      "newsletter_angle": "Track whether Iraq’s talks with ACWA lead to a concrete solar capacity expansion.",
+      "sns_hook": "Iraq is in talks with Saudi Arabia’s ACWA about increasing solar capacity; details on scale and timing are not available.",
+      "factual_points": [
+        "Iraq is in talks with Saudi Arabia’s ACWA to increase solar capacity."
+      ],
+      "editorial_significance": 2,
+      "significance_reason": "The development is at the talks stage, and no capacity, investment, or timeline details are available."
+    },
+    "error": null,
+    "latency_seconds": 6.212501600035466
+  },
+  "oct16-libya": {
+    "article_id": "oct16-libya",
+    "enrichment": {
+      "summary": "Heavy rains flooded streets and caused damage, paralyzing Libya’s capital.",
+      "why_it_matters": "The flooding is relevant to resilience in MENA, but the available information does not establish impacts on food or water security or the net-zero transition.",
+      "relevance_score": 3,
+      "topic": [
+        "Extreme Weather",
+        "Flooding",
+        "Resilience"
+      ],
+      "region": [
+        "Libya",
+        "MENA"
+      ],
+      "newsletter_angle": "A brief look at heavy-rain disruption in Libya’s capital and its relevance to urban resilience.",
+      "sns_hook": "Heavy rains flooded streets and paralyzed Libya’s capital; the available report gives no further details on the damage.",
+      "factual_points": [
+        "Heavy rains affected Libya’s capital.",
+        "Streets were flooded.",
+        "Damage was reported.",
+        "The rains paralyzed the capital."
+      ],
+      "editorial_significance": 2,
+      "significance_reason": "The report describes disruption and damage in the capital, but provides no details on the extent, duration, or wider consequences."
+    },
+    "error": null,
+    "latency_seconds": 5.512918399996124
+  },
+  "oct16-qatar": {
+    "article_id": "oct16-qatar",
+    "enrichment": {
+      "summary": "Qatar’s renewable energy share is set to more than double by 2035, according to the article title.",
+      "why_it_matters": "Renewable energy growth in Qatar directly relates to the energy transition and net zero transition in the GCC.",
+      "relevance_score": 5,
+      "topic": [
+        "Renewable energy",
+        "Energy transition",
+        "Net zero"
+      ],
+      "region": [
+        "Qatar",
+        "GCC",
+        "MENA"
+      ],
+      "newsletter_angle": "Qatar’s stated 2035 ambition points to a significant increase in renewables, though the available information does not specify the baseline or how it will be achieved.",
+      "sns_hook": "Qatar’s renewable energy share is set to more than double by 2035. The available details do not specify the baseline or implementation plan.",
+      "factual_points": [
+        "Qatar’s renewable energy share is set to more than double by 2035."
+      ],
+      "editorial_significance": 3,
+      "significance_reason": "A more-than-doubling of renewable energy share by 2035 would be a substantial change, but the available information gives no baseline, capacity, or implementation details."
+    },
+    "error": null,
+    "latency_seconds": 5.789077299996279
+  },
+  "oct16-veal": {
+    "article_id": "oct16-veal",
+    "enrichment": {
+      "summary": "Egypt's minister approved new funding for the National Veal Project; the funding amount and project details are not provided.",
+      "why_it_matters": "The project is related to livestock and agri-food in Egypt, making it relevant to food systems, though its scale and food-security impact are unclear.",
+      "relevance_score": 3,
+      "topic": [
+        "Agriculture",
+        "Agri-food",
+        "Food security"
+      ],
+      "region": [
+        "Egypt",
+        "MENA"
+      ],
+      "newsletter_angle": "A new funding approval for Egypt's National Veal Project, with the scale and intended outcomes not yet clear from the available information.",
+      "sns_hook": "Egypt approves new funding for its National Veal Project. The amount and project details have not been disclosed in the available report.",
+      "factual_points": [
+        "An Egyptian minister approved new funding for the National Veal Project.",
+        "The funding amount and further project details are not provided."
+      ],
+      "editorial_significance": 2,
+      "significance_reason": "Funding approval is a concrete development, but the amount, project scope, and expected impact are not available."
+    },
+    "error": null,
+    "latency_seconds": 7.022291800007224
+  },
+  "rss-00": {
+    "article_id": "rss-00",
+    "enrichment": {
+      "summary": "Syria’s central bank issued its first letter of credit in nearly 14 years on October 11. The state-run Syrian Petroleum Company used it to import petroleum products from Aramco Trading.",
+      "why_it_matters": "The stated connection to SOMA MATER’s focus is regional trade and supply-chain access, but the article reports no impact on food or water security or the net-zero transition.",
+      "relevance_score": 2,
+      "topic": [
+        "Trade",
+        "Banking & Finance",
+        "Oil & Gas"
+      ],
+      "region": [
+        "Syria",
+        "Saudi Arabia",
+        "MENA"
+      ],
+      "newsletter_angle": "A limited but notable signal of renewed trade finance in Syria: the central bank’s first letter of credit in nearly 14 years supported a petroleum-products import.",
+      "sns_hook": "Syria’s central bank has issued its first letter of credit in nearly 14 years. The state-run Syrian Petroleum Company used it to import petroleum products from Aramco Trading.",
+      "factual_points": [
+        "Syria’s central bank issued its first letter of credit in nearly 14 years.",
+        "The letter was issued on October 11.",
+        "The letter allows local companies to trade internationally, according to the snippet.",
+        "The state-run Syrian Petroleum Company used the letter to import petroleum products.",
+        "The supplier was Aramco Trading, a subsidiary of Saudi Aramco.",
+        "The transaction was reported by state-run Sana news agency."
+      ],
+      "editorial_significance": 3,
+      "significance_reason": "The first letter of credit in nearly 14 years is a concrete financial-trade milestone, though the snippet identifies only one petroleum-products import transaction."
+    },
+    "error": null,
+    "latency_seconds": 9.038541099987924
+  },
+  "rss-01": {
+    "article_id": "rss-01",
+    "enrichment": {
+      "summary": "Saudi renewable energy company Acwa and Mongolia’s Sun Steppe Power signed a memorandum of cooperation to explore cross-border electricity exports to China from potential solar and wind projects.",
+      "why_it_matters": "The proposal concerns renewable energy and battery storage, relevant to the energy transition, but the projects are in Mongolia and no direct impact on MENA is stated.",
+      "relevance_score": 2,
+      "topic": [
+        "Renewable energy",
+        "Solar",
+        "Wind",
+        "Battery storage",
+        "Electricity trade"
+      ],
+      "region": [
+        "Mongolia",
+        "Saudi Arabia",
+        "China"
+      ],
+      "newsletter_angle": "A Saudi renewable energy company is exploring a large-scale solar and wind export project in Mongolia; the proposal is at an early assessment stage and has no stated direct MENA impact.",
+      "sns_hook": "Acwa and Mongolia’s SSP will assess potential solar and wind projects targeting 4.5GW, with 500MWh of battery storage, for electricity exports to China.",
+      "factual_points": [
+        "Acwa and Mongolia’s Sun Steppe Power (SSP) signed a memorandum of cooperation.",
+        "The companies will explore cross-border electricity exports to China.",
+        "They will assess potential cross-border solar and wind projects.",
+        "The projects have a targeted capacity of 4.5GW.",
+        "The proposal includes a 500MWh battery energy storage system."
+      ],
+      "editorial_significance": 3,
+      "significance_reason": "The companies are assessing projects with a targeted 4.5GW capacity and 500MWh of storage, but the memorandum is exploratory rather than an approval or construction commitment."
+    },
+    "error": null,
+    "latency_seconds": 9.050239200005308
+  },
+  "rss-02": {
+    "article_id": "rss-02",
+    "enrichment": {
+      "summary": "QatarEnergy reported a sharp fall in first-half 2026 profit and revenue after an Iranian missile strike disrupted LNG export capacity in March.",
+      "why_it_matters": "The disruption has a limited connection to regional energy supply-chain resilience, but the available information does not establish a direct impact on food or water security or the net-zero transition.",
+      "relevance_score": 2,
+      "topic": [
+        "Oil & Gas",
+        "Energy",
+        "Supply Chains",
+        "Geopolitics"
+      ],
+      "region": [
+        "Qatar",
+        "GCC",
+        "MENA"
+      ],
+      "newsletter_angle": "A regional LNG export disruption has coincided with a steep decline in QatarEnergy’s first-half profit and revenue.",
+      "sns_hook": "QatarEnergy’s net profit fell 69% to QAR15 billion in the first half of 2026, after a March missile strike disrupted LNG export capacity.",
+      "factual_points": [
+        "QatarEnergy reported a sharp decline in net profit and revenue for January–June 2026.",
+        "Net profit attributable fell 69% to QAR15 billion ($4 billion).",
+        "The company attributed the decline to the Iran conflict.",
+        "An Iranian missile strike in March disrupted QatarEnergy’s LNG export capacity.",
+        "The snippet does not quantify the revenue decline."
+      ],
+      "editorial_significance": 4,
+      "significance_reason": "A reported 69% drop in net profit and disruption to LNG export capacity indicate a material operational and financial impact."
+    },
+    "error": null,
+    "latency_seconds": 9.865854600036982
+  },
+  "rss-05": {
+    "article_id": "rss-05",
+    "enrichment": {
+      "summary": "Qatar Development Bank has increased its Logistics Support Fund to QAR400 million ($110 million) to help local manufacturers cover higher raw-material shipping costs.",
+      "why_it_matters": "The grant supports supply-chain resilience and trade in Qatar, areas adjacent to SOMA MATER’s focus, but the available information does not link it directly to food or water security or the net-zero transition.",
+      "relevance_score": 3,
+      "topic": [
+        "Supply Chains",
+        "Trade",
+        "Shipping",
+        "Industry"
+      ],
+      "region": [
+        "Qatar",
+        "GCC",
+        "MENA"
+      ],
+      "newsletter_angle": "Qatar is expanding grant support for manufacturers facing higher shipping costs, a supply-chain resilience measure with no stated direct link to food, water or energy transition.",
+      "sns_hook": "Qatar Development Bank has increased its Logistics Support Fund to QAR400 million ($110 million) to help local manufacturers cover raw-material shipping costs.",
+      "factual_points": [
+        "Qatar Development Bank (QDB) is state-owned.",
+        "QDB is supporting local manufacturers with a non-repayable grant for raw-material shipping costs.",
+        "The snippet says shipping costs have soared due to the US-Iran war.",
+        "QDB increased its Logistics Support Fund to QAR400 million ($110 million).",
+        "The fund increase is part of a support package for Qatar’s industrial sector."
+      ],
+      "editorial_significance": 3,
+      "significance_reason": "The increased QAR400 million fund is a concrete support measure for Qatar’s industrial sector, but the article snippet gives no company-level impact or further details on coverage."
+    },
+    "error": null,
+    "latency_seconds": 7.911470099992584
+  },
+  "rss-07": {
+    "article_id": "rss-07",
+    "enrichment": {
+      "summary": "Saudi Arabia plans to convert an unnamed gas pipeline as it seeks alternatives to export constraints in the Strait of Hormuz, according to a snippet about remarks by the Saudi oil minister at the WPC Energy Congress in Riyadh.",
+      "why_it_matters": "The story concerns Saudi hydrocarbon supply and export resilience, but the supplied information does not establish a direct connection to food or water security or the net-zero transition.",
+      "relevance_score": 2,
+      "topic": [
+        "Oil and gas",
+        "Energy security",
+        "Supply chains"
+      ],
+      "region": [
+        "Saudi Arabia",
+        "GCC",
+        "MENA"
+      ],
+      "newsletter_angle": "A limited update on Saudi efforts to maintain hydrocarbon export options amid constraints in the Strait of Hormuz; the pipeline's intended use and impact are unclear.",
+      "sns_hook": "Saudi Arabia plans to convert an unnamed gas pipeline as it looks for alternatives to export constraints in the Strait of Hormuz. The snippet does not specify what the pipeline will carry.",
+      "factual_points": [
+        "Saudi oil minister Prince Abdulaziz bin Salman spoke at the WPC Energy Congress in Riyadh this week.",
+        "He reassured global markets of Saudi Arabia's commitment as a hydrocarbons supplier.",
+        "Saudi Arabia is seeking alternatives to export constraints in the Strait of Hormuz.",
+        "Saudi Arabia plans to convert an unnamed gas pipeline; the snippet does not specify what it will pump."
+      ],
+      "editorial_significance": 2,
+      "significance_reason": "The snippet reports a pipeline conversion plan, but does not identify the pipeline's intended use or provide its scale, timing, or expected impact."
+    },
+    "error": null,
+    "latency_seconds": 6.9446588000282645
+  },
+  "rss-08": {
+    "article_id": "rss-08",
+    "enrichment": {
+      "summary": "GCC contract awards exceeded $200 billion in January–September 2026, rising 2.5% year on year despite the US-Iran war, as governments intervened to sustain energy and transport spending.",
+      "why_it_matters": "The story shows government support sustaining Gulf energy and transport projects, but the snippet does not specify clean-energy or other direct net-zero outcomes, so the mission connection is limited.",
+      "relevance_score": 2,
+      "topic": [
+        "Infrastructure",
+        "Energy",
+        "Transport",
+        "Government spending"
+      ],
+      "region": [
+        "GCC"
+      ],
+      "newsletter_angle": "Gulf governments helped keep energy and transport project awards growing during a period of conflict, though the available details do not show how much spending supports the energy transition.",
+      "sns_hook": "GCC project awards topped $200 billion in the first nine months of 2026, up 2.5% year on year as governments sustained energy and transport spending despite the US-Iran war.",
+      "factual_points": [
+        "GCC countries awarded contracts worth just over $200 billion between January and September 2026.",
+        "Contract awards were up 2.5% from the same period a year earlier.",
+        "Awards increased despite the US-Iran war.",
+        "Governments intervened to sustain energy and transport spending, according to the snippet.",
+        "Kamco Invest reported the figures in a quarterly update."
+      ],
+      "editorial_significance": 3,
+      "significance_reason": "The reported contract total is substantial, but growth was modest and the snippet gives no project-level details or breakdown of the spending."
+    },
+    "error": null,
+    "latency_seconds": 6.985236500040628
+  },
+  "rss-09": {
+    "article_id": "rss-09",
+    "enrichment": {
+      "summary": "A bulk carrier and a container vessel attacked near the Strait of Hormuz sank off Oman, amid a reported rise in attacks on commercial shipping.",
+      "why_it_matters": "The incidents are relevant to trade and supply-chain resilience, but the supplied information does not identify specific effects on food, water, or energy systems.",
+      "relevance_score": 2,
+      "topic": [
+        "Shipping",
+        "Maritime security",
+        "Trade"
+      ],
+      "region": [
+        "Oman",
+        "GCC",
+        "Strait of Hormuz"
+      ],
+      "newsletter_angle": "A notable escalation in commercial shipping attacks near the Strait of Hormuz, with two vessels sunk off Oman and at least 28 vessels targeted since September 28.",
+      "sns_hook": "Two vessels—a bulk carrier and a container ship—sank off Oman after attacks near the Strait of Hormuz. At least 28 vessels have been targeted around the chokepoint since September 28, according to the snippet.",
+      "factual_points": [
+        "A bulk carrier and a container vessel were attacked close to the Strait of Hormuz and sank off Oman.",
+        "The incidents occurred on Wednesday, according to the snippet.",
+        "Shipping industry sources reported the incidents.",
+        "At least 28 vessels have been targeted around the chokepoint since September 28.",
+        "The snippet says this is the highest frequency of attacks since an unspecified period."
+      ],
+      "editorial_significance": 4,
+      "significance_reason": "Two vessels sank, and at least 28 vessels have been targeted around the chokepoint since September 28, which the snippet describes as the highest attack frequency since an unspecified period."
+    },
+    "error": null,
+    "latency_seconds": 7.100956499984022
+  }
+}

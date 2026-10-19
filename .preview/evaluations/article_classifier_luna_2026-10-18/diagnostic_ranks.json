@@ -1,0 +1,33 @@
+{
+  "luna-100": {
+    "rss-01": 1,
+    "oct15-bahrain": 2,
+    "oct16-battery_definition": 3,
+    "oct16-battery_science": 4,
+    "oct16-harvests": 1,
+    "oct15-hormuz": 2,
+    "oct16-qatar": 3,
+    "oct16-iraq": 4,
+    "rss-08": 5,
+    "rss-09": 6,
+    "oct16-libya": 7,
+    "oct16-commission": 1,
+    "oct16-gerd": 1,
+    "oct16-veal": 2
+  },
+  "luna-repartitioned": {
+    "oct16-iraq": 1,
+    "oct16-harvests": 2,
+    "oct15-hormuz": 3,
+    "oct16-qatar": 4,
+    "rss-09": 5,
+    "oct16-libya": 6,
+    "rss-02": 7,
+    "rss-05": 8,
+    "rss-08": 9,
+    "oct16-commission": 1,
+    "rss-07": 2,
+    "oct16-gerd": 1,
+    "oct16-veal": 2
+  }
+}

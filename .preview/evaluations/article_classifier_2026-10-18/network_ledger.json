@@ -1,0 +1,232 @@
+{
+  "limits": {
+    "max_requests": 6,
+    "max_reserved_tokens": 160000,
+    "max_reserved_usd": 0.25
+  },
+  "requests": [
+    {
+      "request_number": 1,
+      "model": "gpt-4.1-mini",
+      "reserved_input_tokens": 19000,
+      "reserved_output_tokens": 12288,
+      "reserved_usd": 0.0272608,
+      "article_ids": [
+        "diagnostic-economy",
+        "diagnostic-egypt-green",
+        "diagnostic-foreign-water",
+        "diagnostic-landscape",
+        "diagnostic-saudi-weather",
+        "diagnostic-uae-strategy",
+        "diagnostic-water-science",
+        "oct15-bahrain",
+        "oct15-hormuz",
+        "oct15-istanbul",
+        "oct16-battery_definition",
+        "oct16-battery_science",
+        "oct16-commission",
+        "oct16-crypto",
+        "oct16-flights",
+        "oct16-gerd",
+        "oct16-harvests",
+        "oct16-iraq",
+        "oct16-libya",
+        "oct16-negation",
+        "oct16-qatar",
+        "oct16-veal",
+        "rss-00",
+        "rss-01",
+        "rss-02",
+        "rss-03",
+        "rss-04",
+        "rss-05",
+        "rss-06",
+        "rss-07",
+        "rss-08",
+        "rss-09",
+        "saved-egypt-battery",
+        "saved-sharjah",
+        "user-west-bank"
+      ],
+      "status": 200,
+      "usage": {
+        "prompt_tokens": 4270,
+        "completion_tokens": 2047,
+        "total_tokens": 6317,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "estimated_usd": 0.004983200000000001,
+      "returned_model": "gpt-4.1-mini-2025-04-14",
+      "latency_seconds": 14.941104199999245
+    },
+    {
+      "request_number": 2,
+      "model": "gpt-4.1-mini",
+      "reserved_input_tokens": 10669,
+      "reserved_output_tokens": 12288,
+      "reserved_usd": 0.023928400000000002,
+      "article_ids": [
+        "diagnostic-economy",
+        "diagnostic-egypt-green",
+        "diagnostic-foreign-water",
+        "diagnostic-landscape",
+        "diagnostic-saudi-weather",
+        "diagnostic-uae-strategy",
+        "diagnostic-water-science",
+        "oct15-bahrain",
+        "oct15-hormuz",
+        "oct15-istanbul",
+        "oct16-battery_definition",
+        "oct16-battery_science",
+        "oct16-commission",
+        "oct16-crypto",
+        "oct16-flights",
+        "oct16-gerd",
+        "oct16-harvests",
+        "oct16-iraq"
+      ],
+      "status": 200,
+      "usage": {
+        "prompt_tokens": 2154,
+        "completion_tokens": 1035,
+        "total_tokens": 3189,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "estimated_usd": 0.0025176,
+      "returned_model": "gpt-4.1-mini-2025-04-14",
+      "latency_seconds": 8.189963399985572
+    },
+    {
+      "request_number": 3,
+      "model": "gpt-4.1-mini",
+      "reserved_input_tokens": 13797,
+      "reserved_output_tokens": 12288,
+      "reserved_usd": 0.025179600000000003,
+      "article_ids": [
+        "oct16-libya",
+        "oct16-negation",
+        "oct16-qatar",
+        "oct16-veal",
+        "rss-00",
+        "rss-01",
+        "rss-02",
+        "rss-03",
+        "rss-04",
+        "rss-05",
+        "rss-06",
+        "rss-07",
+        "rss-08",
+        "rss-09",
+        "saved-egypt-battery",
+        "saved-sharjah",
+        "user-west-bank"
+      ],
+      "status": 200,
+      "usage": {
+        "prompt_tokens": 2917,
+        "completion_tokens": 1031,
+        "total_tokens": 3948,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "estimated_usd": 0.0028164,
+      "returned_model": "gpt-4.1-mini-2025-04-14",
+      "latency_seconds": 6.979290199989919
+    },
+    {
+      "request_number": 4,
+      "model": "gpt-4.1-nano",
+      "reserved_input_tokens": 19000,
+      "reserved_output_tokens": 12288,
+      "reserved_usd": 0.0068152,
+      "article_ids": [
+        "diagnostic-economy",
+        "diagnostic-egypt-green",
+        "diagnostic-foreign-water",
+        "diagnostic-landscape",
+        "diagnostic-saudi-weather",
+        "diagnostic-uae-strategy",
+        "diagnostic-water-science",
+        "oct15-bahrain",
+        "oct15-hormuz",
+        "oct15-istanbul",
+        "oct16-battery_definition",
+        "oct16-battery_science",
+        "oct16-commission",
+        "oct16-crypto",
+        "oct16-flights",
+        "oct16-gerd",
+        "oct16-harvests",
+        "oct16-iraq",
+        "oct16-libya",
+        "oct16-negation",
+        "oct16-qatar",
+        "oct16-veal",
+        "rss-00",
+        "rss-01",
+        "rss-02",
+        "rss-03",
+        "rss-04",
+        "rss-05",
+        "rss-06",
+        "rss-07",
+        "rss-08",
+        "rss-09",
+        "saved-egypt-battery",
+        "saved-sharjah",
+        "user-west-bank"
+      ],
+      "status": 200,
+      "usage": {
+        "prompt_tokens": 4270,
+        "completion_tokens": 1895,
+        "total_tokens": 6165,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "estimated_usd": 0.001185,
+      "returned_model": "gpt-4.1-nano-2025-04-14",
+      "latency_seconds": 7.133039000007557
+    }
+  ],
+  "requests_sent": 4,
+  "denied_locally": 0,
+  "reserved_tokens": 111618,
+  "reserved_usd": 0.08318400000000001,
+  "known_estimated_usd": 0.011502200000000002,
+  "requests_with_unknown_cost": 0
+}

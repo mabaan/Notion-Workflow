@@ -1,0 +1,483 @@
+{
+  "model": "gpt-4.1-mini",
+  "outcomes": [
+    {
+      "article_id": "rss-00",
+      "classification": {
+        "article_id": "rss-00",
+        "relevance_score": 4,
+        "assigned_region": "Global",
+        "primary_mission_topic": "Other/Unclear",
+        "decision": "Relevant",
+        "justification": "Syria's first letter of credit in 14 years with oil imports via Saudi Aramco signals trade resumption relevant to regional energy and economic stability."
+      },
+      "error": null
+    },
+    {
+      "article_id": "rss-01",
+      "classification": {
+        "article_id": "rss-01",
+        "relevance_score": 4,
+        "assigned_region": "Global",
+        "primary_mission_topic": "Net Zero Transition",
+        "decision": "Relevant",
+        "justification": "Saudi Acwa and Mongolia cooperation on solar/wind projects with battery storage is a strategic renewable energy initiative relevant to mission."
+      },
+      "error": null
+    },
+    {
+      "article_id": "rss-02",
+      "classification": {
+        "article_id": "rss-02",
+        "relevance_score": 4,
+        "assigned_region": "Global",
+        "primary_mission_topic": "Other/Unclear",
+        "decision": "Relevant",
+        "justification": "QatarEnergy profit fall due to Iran conflict affects energy exports, a significant systemic development with MENA regional impact."
+      },
+      "error": null
+    },
+    {
+      "article_id": "rss-03",
+      "classification": {
+        "article_id": "rss-03",
+        "relevance_score": 2,
+        "assigned_region": "Out of Scope/Unclear",
+        "primary_mission_topic": "Other/Unclear",
+        "decision": "Borderline",
+        "justification": "Abu Dhabi sovereign fund investment in Indian IPO industrial firm has indirect or uncertain mission relevance."
+      },
+      "error": null
+    },
+    {
+      "article_id": "rss-04",
+      "classification": {
+        "article_id": "rss-04",
+        "relevance_score": 2,
+        "assigned_region": "Out of Scope/Unclear",
+        "primary_mission_topic": "Net Zero Transition",
+        "decision": "Borderline",
+        "justification": "GlobalFoundries chip project backed by Abu Dhabi is a tech investment but mission relevance to food/water/net zero MENA unclear."
+      },
+      "error": null
+    },
+    {
+      "article_id": "rss-05",
+      "classification": {
+        "article_id": "rss-05",
+        "relevance_score": 4,
+        "assigned_region": "Global",
+        "primary_mission_topic": "Food Security",
+        "decision": "Relevant",
+        "justification": "Qatar bank grants to help local manufacturers offset soaring shipping costs support industrial food security amid conflict impact."
+      },
+      "error": null
+    },
+    {
+      "article_id": "rss-06",
+      "classification": {
+        "article_id": "rss-06",
+        "relevance_score": 3,
+        "assigned_region": "Global",
+        "primary_mission_topic": "Other/Unclear",
+        "decision": "Borderline",
+        "justification": "US easing sanctions on shadow fleet affects oil freight rates and prices; plausible systemic energy impact with uncertain MENA link."
+      },
+      "error": null
+    },
+    {
+      "article_id": "rss-07",
+      "classification": {
+        "article_id": "rss-07",
+        "relevance_score": 4,
+        "assigned_region": "KSA",
+        "primary_mission_topic": "Net Zero Transition",
+        "decision": "Relevant",
+        "justification": "Saudi Oil minister plans alternatives to Hormuz export constraints show strategic energy sector resilience in MENA."
+      },
+      "error": null
+    },
+    {
+      "article_id": "rss-08",
+      "classification": {
+        "article_id": "rss-08",
+        "relevance_score": 4,
+        "assigned_region": "Global",
+        "primary_mission_topic": "Other/Unclear",
+        "decision": "Relevant",
+        "justification": "Sustained Gulf government spending on energy and transport projects despite war sustains infrastructure and net zero transition relevance."
+      },
+      "error": null
+    },
+    {
+      "article_id": "rss-09",
+      "classification": {
+        "article_id": "rss-09",
+        "relevance_score": 4,
+        "assigned_region": "Global",
+        "primary_mission_topic": "Other/Unclear",
+        "decision": "Relevant",
+        "justification": "Attacks on vessels off Oman near Hormuz choke point impact shipping security essential for regional energy and food supply chains."
+      },
+      "error": null
+    },
+    {
+      "article_id": "oct16-negation",
+      "classification": {
+        "article_id": "oct16-negation",
+        "relevance_score": 1,
+        "assigned_region": "UAE",
+        "primary_mission_topic": "Other/Unclear",
+        "decision": "Irrelevant",
+        "justification": "Article about trust and currency future unrelated to food/water/net zero mission topics or MENA impact."
+      },
+      "error": null
+    },
+    {
+      "article_id": "oct16-battery_definition",
+      "classification": {
+        "article_id": "oct16-battery_definition",
+        "relevance_score": 2,
+        "assigned_region": "Global",
+        "primary_mission_topic": "Net Zero Transition",
+        "decision": "Borderline",
+        "justification": "Battery definition general science without direct MENA/systemic mission impact but relevant to net zero technology."
+      },
+      "error": null
+    },
+    {
+      "article_id": "oct16-battery_science",
+      "classification": {
+        "article_id": "oct16-battery_science",
+        "relevance_score": 2,
+        "assigned_region": "Global",
+        "primary_mission_topic": "Net Zero Transition",
+        "decision": "Borderline",
+        "justification": "Advanced battery science research relevant to net zero transition but no stated MENA/systemic application."
+      },
+      "error": null
+    },
+    {
+      "article_id": "oct16-crypto",
+      "classification": {
+        "article_id": "oct16-crypto",
+        "relevance_score": 1,
+        "assigned_region": "UAE",
+        "primary_mission_topic": "Other/Unclear",
+        "decision": "Irrelevant",
+        "justification": "Crypto trading launch unrelated to mission topics or food/water/net zero in MENA."
+      },
+      "error": null
+    },
+    {
+      "article_id": "oct16-flights",
+      "classification": {
+        "article_id": "oct16-flights",
+        "relevance_score": 1,
+        "assigned_region": "UAE",
+        "primary_mission_topic": "Other/Unclear",
+        "decision": "Irrelevant",
+        "justification": "Flight disruptions have no clear mission relevance or MENA/systemic food/water/net zero impact."
+      },
+      "error": null
+    },
+    {
+      "article_id": "oct16-commission",
+      "classification": {
+        "article_id": "oct16-commission",
+        "relevance_score": 4,
+        "assigned_region": "KSA",
+        "primary_mission_topic": "Water Security",
+        "decision": "Relevant",
+        "justification": "Saudi wins international irrigation awards indicating strategic water security achievements in MENA/KSA."
+      },
+      "error": null
+    },
+    {
+      "article_id": "oct16-veal",
+      "classification": {
+        "article_id": "oct16-veal",
+        "relevance_score": 4,
+        "assigned_region": "Egypt",
+        "primary_mission_topic": "Food Security",
+        "decision": "Relevant",
+        "justification": "Egypt approving new funding for national veal project supports food security and agricultural investment in Egypt."
+      },
+      "error": null
+    },
+    {
+      "article_id": "oct16-gerd",
+      "classification": {
+        "article_id": "oct16-gerd",
+        "relevance_score": 5,
+        "assigned_region": "Egypt",
+        "primary_mission_topic": "Water Security",
+        "decision": "Relevant",
+        "justification": "GERD Nile dam dispute directly concerns Egypt's water security and regional hydropolitics."
+      },
+      "error": null
+    },
+    {
+      "article_id": "oct16-harvests",
+      "classification": {
+        "article_id": "oct16-harvests",
+        "relevance_score": 5,
+        "assigned_region": "KSA",
+        "primary_mission_topic": "Food Security",
+        "decision": "Relevant",
+        "justification": "Hormuz shipping disruption is affecting harvests per UN agency, a consequential food security threat in MENA."
+      },
+      "error": null
+    },
+    {
+      "article_id": "oct16-iraq",
+      "classification": {
+        "article_id": "oct16-iraq",
+        "relevance_score": 4,
+        "assigned_region": "Global",
+        "primary_mission_topic": "Net Zero Transition",
+        "decision": "Relevant",
+        "justification": "Iraq talks with Saudi Acwa on solar capacity increase is a strategic renewable energy development with MENA systemic relevance."
+      },
+      "error": null
+    },
+    {
+      "article_id": "oct16-libya",
+      "classification": {
+        "article_id": "oct16-libya",
+        "relevance_score": 3,
+        "assigned_region": "Global",
+        "primary_mission_topic": "Other/Unclear",
+        "decision": "Borderline",
+        "justification": "Flood damage in Libya could impact infrastructure; food/water security impact plausible but unclear and outside core MENA."
+      },
+      "error": null
+    },
+    {
+      "article_id": "oct16-qatar",
+      "classification": {
+        "article_id": "oct16-qatar",
+        "relevance_score": 4,
+        "assigned_region": "Global",
+        "primary_mission_topic": "Net Zero Transition",
+        "decision": "Relevant",
+        "justification": "Qatar's renewable energy share doubling is a major net zero transition development relevant to MENA region."
+      },
+      "error": null
+    },
+    {
+      "article_id": "oct15-istanbul",
+      "classification": {
+        "article_id": "oct15-istanbul",
+        "relevance_score": 3,
+        "assigned_region": "Out of Scope/Unclear",
+        "primary_mission_topic": "Other/Unclear",
+        "decision": "Borderline",
+        "justification": "Heavy rain and flooding in Istanbul may affect food/water security but geography is outside MENA core."
+      },
+      "error": null
+    },
+    {
+      "article_id": "oct15-hormuz",
+      "classification": {
+        "article_id": "oct15-hormuz",
+        "relevance_score": 5,
+        "assigned_region": "KSA",
+        "primary_mission_topic": "Food Security",
+        "decision": "Relevant",
+        "justification": "Failure to activate Hormuz fertilizer plan risks food crisis in MENA; strategic food-security impact in KSA/MENA."
+      },
+      "error": null
+    },
+    {
+      "article_id": "oct15-bahrain",
+      "classification": {
+        "article_id": "oct15-bahrain",
+        "relevance_score": 2,
+        "assigned_region": "Out of Scope/Unclear",
+        "primary_mission_topic": "Net Zero Transition",
+        "decision": "Borderline",
+        "justification": "Bahraini fund investing in power grids in US/Europe lacks clear MENA/systemic mission impact."
+      },
+      "error": null
+    },
+    {
+      "article_id": "saved-sharjah",
+      "classification": {
+        "article_id": "saved-sharjah",
+        "relevance_score": 4,
+        "assigned_region": "UAE",
+        "primary_mission_topic": "Water Security",
+        "decision": "Relevant",
+        "justification": "Sharjah investments increasing water and waste capacity support vital water security infrastructure for UAE's growth."
+      },
+      "error": null
+    },
+    {
+      "article_id": "saved-egypt-battery",
+      "classification": {
+        "article_id": "saved-egypt-battery",
+        "relevance_score": 4,
+        "assigned_region": "Egypt",
+        "primary_mission_topic": "Net Zero Transition",
+        "decision": "Relevant",
+        "justification": "New lithium-ion battery assembly facility in Egypt supports local renewable energy infrastructure and net zero transition."
+      },
+      "error": null
+    },
+    {
+      "article_id": "user-west-bank",
+      "classification": {
+        "article_id": "user-west-bank",
+        "relevance_score": 2,
+        "assigned_region": "Out of Scope/Unclear",
+        "primary_mission_topic": "Food Security",
+        "decision": "Borderline",
+        "justification": "West Bank olive farmers facing violence may impact food security locally but uncertain link to systemic mission or MENA regional scale."
+      },
+      "error": null
+    },
+    {
+      "article_id": "diagnostic-uae-strategy",
+      "classification": {
+        "article_id": "diagnostic-uae-strategy",
+        "relevance_score": 4,
+        "assigned_region": "UAE",
+        "primary_mission_topic": "Food Security",
+        "decision": "Relevant",
+        "justification": "UAE food production strategy is a strategic development in food security within the UAE."
+      },
+      "error": null
+    },
+    {
+      "article_id": "diagnostic-egypt-green",
+      "classification": {
+        "article_id": "diagnostic-egypt-green",
+        "relevance_score": 4,
+        "assigned_region": "Egypt",
+        "primary_mission_topic": "Net Zero Transition",
+        "decision": "Relevant",
+        "justification": "Focus on Egypt’s green industrialization suggests strategic and commercial energy transition development in Egypt, matching mission scope."
+      },
+      "error": null
+    },
+    {
+      "article_id": "diagnostic-saudi-weather",
+      "classification": {
+        "article_id": "diagnostic-saudi-weather",
+        "relevance_score": 1,
+        "assigned_region": "KSA",
+        "primary_mission_topic": "Other/Unclear",
+        "decision": "Irrelevant",
+        "justification": "Routine weather forecasts provide no demonstrated mission relevance or systemic impact."
+      },
+      "error": null
+    },
+    {
+      "article_id": "diagnostic-landscape",
+      "classification": {
+        "article_id": "diagnostic-landscape",
+        "relevance_score": 2,
+        "assigned_region": "Out of Scope/Unclear",
+        "primary_mission_topic": "Food Security",
+        "decision": "Borderline",
+        "justification": "Generic agricultural landscape descriptions lack clear mission relevance or MENA/systemic context."
+      },
+      "error": null
+    },
+    {
+      "article_id": "diagnostic-economy",
+      "classification": {
+        "article_id": "diagnostic-economy",
+        "relevance_score": 2,
+        "assigned_region": "Out of Scope/Unclear",
+        "primary_mission_topic": "Other/Unclear",
+        "decision": "Borderline",
+        "justification": "Generic economic news mentioning energy lacks specific mission relevance or MENA/systemic bridge, context uncertain."
+      },
+      "error": null
+    },
+    {
+      "article_id": "diagnostic-water-science",
+      "classification": {
+        "article_id": "diagnostic-water-science",
+        "relevance_score": 2,
+        "assigned_region": "Out of Scope/Unclear",
+        "primary_mission_topic": "Water Security",
+        "decision": "Borderline",
+        "justification": "Water-related lab papers without demonstrated mission application have uncertain relevance."
+      },
+      "error": null
+    },
+    {
+      "article_id": "diagnostic-foreign-water",
+      "classification": {
+        "article_id": "diagnostic-foreign-water",
+        "relevance_score": 1,
+        "assigned_region": "Out of Scope/Unclear",
+        "primary_mission_topic": "Other/Unclear",
+        "decision": "Irrelevant",
+        "justification": "Foreign-local water projects without MENA or systemic bridge clearly off mission."
+      },
+      "error": null
+    }
+  ],
+  "requests": [
+    {
+      "article_ids": [
+        "diagnostic-economy",
+        "diagnostic-egypt-green",
+        "diagnostic-foreign-water",
+        "diagnostic-landscape",
+        "diagnostic-saudi-weather",
+        "diagnostic-uae-strategy",
+        "diagnostic-water-science",
+        "oct15-bahrain",
+        "oct15-hormuz",
+        "oct15-istanbul",
+        "oct16-battery_definition",
+        "oct16-battery_science",
+        "oct16-commission",
+        "oct16-crypto",
+        "oct16-flights",
+        "oct16-gerd",
+        "oct16-harvests",
+        "oct16-iraq",
+        "oct16-libya",
+        "oct16-negation",
+        "oct16-qatar",
+        "oct16-veal",
+        "rss-00",
+        "rss-01",
+        "rss-02",
+        "rss-03",
+        "rss-04",
+        "rss-05",
+        "rss-06",
+        "rss-07",
+        "rss-08",
+        "rss-09",
+        "saved-egypt-battery",
+        "saved-sharjah",
+        "user-west-bank"
+      ],
+      "requested_model": "gpt-4.1-mini",
+      "attempt": 1,
+      "status": "success",
+      "returned_model": "gpt-4.1-mini-2025-04-14",
+      "prompt_tokens": 4270,
+      "completion_tokens": 2047,
+      "total_tokens": 6317
+    }
+  ],
+  "split_count": 0,
+  "latency_seconds": 14.992457899992587,
+  "batch_size": 100,
+  "request_count": 1,
+  "usage": {
+    "prompt_tokens": 4270,
+    "completion_tokens": 2047,
+    "total_tokens": 6317
+  },
+  "requests_without_usage": 0
+}

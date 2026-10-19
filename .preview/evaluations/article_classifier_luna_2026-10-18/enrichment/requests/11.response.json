@@ -1,0 +1,36 @@
+{
+  "id": "chatcmpl-EaRBo7chl3bJhmVHHlcbMv9BRgpa5",
+  "object": "chat.completion",
+  "created": 1792353032,
+  "model": "gpt-6-luna",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"summary\": \"Egypt's minister approved new funding for the National Veal Project; the funding amount and project details are not provided.\",\n  \"why_it_matters\": \"The project is related to livestock and agri-food in Egypt, making it relevant to food systems, though its scale and food-security impact are unclear.\",\n  \"relevance_score\": 3,\n  \"editorial_significance\": 2,\n  \"significance_reason\": \"Funding approval is a concrete development, but the amount, project scope, and expected impact are not available.\",\n  \"factual_points\": [\n    \"An Egyptian minister approved new funding for the National Veal Project.\",\n    \"The funding amount and further project details are not provided.\"\n  ],\n  \"topic\": [\"Agriculture\", \"Agri-food\", \"Food security\"],\n  \"region\": [\"Egypt\", \"MENA\"],\n  \"newsletter_angle\": \"A new funding approval for Egypt's National Veal Project, with the scale and intended outcomes not yet clear from the available information.\",\n  \"sns_hook\": \"Egypt approves new funding for its National Veal Project. The amount and project details have not been disclosed in the available report.\"\n}",
+        "refusal": null,
+        "annotations": []
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1144,
+    "completion_tokens": 510,
+    "total_tokens": 1654,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 1141,
+      "audio_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 255,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+    }
+  },
+  "service_tier": "default",
+  "system_fingerprint": null
+}

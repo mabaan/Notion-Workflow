@@ -31,7 +31,8 @@ Required `.env` values include the five Notion database IDs, Notion and OpenAI c
 1. The revised Source Registry schema is validated before ingestion.
 2. Due `Publisher` rows are selected from `Check Frequency`; `Discovery Provider` rows are demand-triggered only.
 3. Due feeds are fetched concurrently with bounded HTTP retries and per-source health outcomes.
-4. URLs are normalized, deduplicated, assigned to exact quota regions, and filtered for freshness, topic, and geography.
+4. The default `ARTICLE_SELECTION_MODE=deterministic` follows the legacy steps below. Opt-in `luna` uses objective cleanup, batched GPT-6 Luna metadata classification, a merged bounded enrichment pool and regional coverage with quality-based overflow. See [controlled Luna selection and dry run](docs/luna_selection.md).
+   In deterministic mode, URLs are normalized, deduplicated, assigned to exact quota regions, and filtered for freshness, topic, and geography.
 5. Up to six candidates per deficient region are shortlisted initially and at most eight are attempted per execution. Direct mission signals precede contextual matches; within each tier, mission specificity, publisher quality and concrete developments precede recency and snippet length, while retaining publisher diversity. Expansion reserves up to two available attempts for metadata-eligible discovery results and returns unused capacity to RSS.
 6. The final queue score is 70% LLM relevance, 20% editorial significance and 10% publisher `Editorial Quality`. Registered publishers require relevance 4; unregistered publishers require 5.
 7. Selection enforces weekly targets of Global 3, UAE 4, KSA 3, and Egypt 2, with a hard two-per-publisher weekly cap and same-event suppression.

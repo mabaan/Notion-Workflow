@@ -1,0 +1,11 @@
+{
+  "benchmark_tests_passed": 21,
+  "full_tests_passed": 602,
+  "pytest_seconds": 6.29,
+  "git_diff_check_exit_code": 0,
+  "new_file_whitespace_check_passed": true,
+  "production_files_unchanged": true,
+  "notion_writes": 0,
+  "paid_llm_requests": 0,
+  "live_rss_or_ingestion_runs": 0
+}

@@ -43,6 +43,17 @@ class Settings:
     notion_social_media_database_id: str = ""
     llm_provider: str = "openai"
     llm_model: str = "gpt-6-luna"
+    article_selection_mode: str = "deterministic"
+    article_enrichment_budget: int = 32
+    article_enrichment_initial_budget: int | None = None
+    article_enrichment_max_budget: int = 48
+    article_enrichment_backfill_batch: int = 8
+    classification_model: str = "gpt-6-luna"
+    classification_batch_size: int = 100
+    classification_max_request_bytes: int = 200_000
+    classification_max_output_tokens: int = 32_768
+    classification_max_attempts: int = 2
+    classification_timeout_seconds: int = 120
     openai_api_key: str = ""
     unsplash_access_key: str = ""
     brave_search_api_key: str = ""
@@ -85,6 +96,12 @@ class Settings:
     newsapi_max_requests_per_run: int = 20
 
     @property
+    def enrichment_initial_budget(self) -> int:
+        """The new setting takes precedence over the legacy initial-budget alias."""
+
+        return self.article_enrichment_initial_budget if self.article_enrichment_initial_budget is not None else self.article_enrichment_budget
+
+    @property
     def prompt_directory(self) -> Path:
         """Return the package prompt directory."""
 
@@ -116,7 +133,7 @@ class Settings:
 
     @property
     def weekly_region_targets(self) -> dict[str, int]:
-        """Return exact weekly quota targets by region label."""
+        """Return weekly coverage targets (hard ceilings in legacy mode)."""
 
         return {
             "Global": self.article_queue_weekly_target_global,
@@ -151,6 +168,19 @@ class Settings:
         """Reject unsafe or internally inconsistent ingestion settings."""
 
         errors: list[str] = []
+        if self.article_selection_mode not in {"deterministic", "luna"}:
+            errors.append("ARTICLE_SELECTION_MODE must be deterministic or luna")
+        if self.article_enrichment_initial_budget is None and self.article_enrichment_budget <= 0:
+            errors.append("ARTICLE_ENRICHMENT_BUDGET must be greater than zero")
+        if self.article_selection_mode == "luna":
+            if not 1 <= self.enrichment_initial_budget <= self.article_enrichment_max_budget <= 48:
+                errors.append("Luna enrichment budgets require 1 <= INITIAL_BUDGET <= MAX_BUDGET <= 48")
+            if self.article_enrichment_backfill_batch <= 0:
+                errors.append("ARTICLE_ENRICHMENT_BACKFILL_BATCH must be positive")
+            if self.classification_model != "gpt-6-luna" or self.llm_model not in {"gpt-6-luna", "gpt-6-sol"}:
+                errors.append("Luna selection requires CLASSIFICATION_MODEL=gpt-6-luna and LLM_MODEL=gpt-6-luna or gpt-6-sol")
+            if self.minimum_article_relevance_score < 4:
+                errors.append("Luna selection requires MIN_ARTICLE_RELEVANCE_SCORE >= 4")
         if self.max_articles_per_run <= 0:
             errors.append("MAX_ARTICLES_PER_RUN must be greater than zero")
         if any(target <= 0 for target in self.weekly_region_targets.values()):
@@ -160,17 +190,20 @@ class Settings:
         if self.article_freshness_days <= 0:
             errors.append("ARTICLE_FRESHNESS_DAYS must be greater than zero")
         largest_target = max(self.weekly_region_targets.values())
-        if self.article_shortlist_initial_per_region < largest_target:
+        if self.article_selection_mode == "deterministic" and self.article_shortlist_initial_per_region < largest_target:
             errors.append(
                 "ARTICLE_SHORTLIST_INITIAL_PER_REGION must be at least the largest regional target"
             )
         if (
+            self.article_selection_mode == "deterministic" and
             self.article_shortlist_max_per_region
             < self.article_shortlist_initial_per_region
         ):
             errors.append(
                 "ARTICLE_SHORTLIST_MAX_PER_REGION must be at least ARTICLE_SHORTLIST_INITIAL_PER_REGION"
             )
+        if self.article_selection_mode == "luna" and self.article_shortlist_max_per_region <= 0:
+            errors.append("ARTICLE_SHORTLIST_MAX_PER_REGION discovery collection limit must be positive")
         if errors:
             raise ValueError("Invalid configuration:\n- " + "\n- ".join(errors))
 
@@ -223,6 +256,20 @@ def load_settings() -> Settings:
         ),
         llm_provider=os.getenv("LLM_PROVIDER", "openai"),
         llm_model=os.getenv("LLM_MODEL", "gpt-6-luna"),
+        article_selection_mode=os.getenv("ARTICLE_SELECTION_MODE", "deterministic").strip().lower(),
+        article_enrichment_budget=_env_int("ARTICLE_ENRICHMENT_BUDGET", 32),
+        article_enrichment_initial_budget=(
+            _env_int("ARTICLE_ENRICHMENT_INITIAL_BUDGET", 32)
+            if os.getenv("ARTICLE_ENRICHMENT_INITIAL_BUDGET", "").strip() else None
+        ),
+        article_enrichment_max_budget=_env_int("ARTICLE_ENRICHMENT_MAX_BUDGET", 48),
+        article_enrichment_backfill_batch=_env_int("ARTICLE_ENRICHMENT_BACKFILL_BATCH", 8),
+        classification_model=os.getenv("CLASSIFICATION_MODEL", "gpt-6-luna"),
+        classification_batch_size=_env_int("CLASSIFICATION_BATCH_SIZE", 100),
+        classification_max_request_bytes=_env_int("CLASSIFICATION_MAX_REQUEST_BYTES", 200_000),
+        classification_max_output_tokens=_env_int("CLASSIFICATION_MAX_OUTPUT_TOKENS", 32_768),
+        classification_max_attempts=_env_int("CLASSIFICATION_MAX_ATTEMPTS", 2),
+        classification_timeout_seconds=_env_int("CLASSIFICATION_TIMEOUT_SECONDS", 120),
         openai_api_key=os.getenv("OPENAI_API_KEY", ""),
         unsplash_access_key=_env_first(
             "UNSPLASH_ACCESS_KEY",

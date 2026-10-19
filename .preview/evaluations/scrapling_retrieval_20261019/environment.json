@@ -1,0 +1,13 @@
+{
+  "baseline_python": "C:\\Users\\Hi\\Documents\\GitHub\\Notion-Workflow\\.venv\\Scripts\\python.exe",
+  "baseline_readability": "0.9",
+  "baseline_cssselect": "1.3.0",
+  "baseline_httpx": "0.28.1",
+  "scrapling_python": "C:\\Users\\Hi\\Documents\\GitHub\\Notion-Workflow\\.preview\\evaluations\\scrapling_retrieval_20261019\\.venv\\Scripts\\python.exe",
+  "isolated_system_packages": false,
+  "scrapling_version": "0.5",
+  "reference_commit": "fd531313a499092d8471bf24a0e08dc5771f2b40",
+  "dependency_conflict": "readability-lxml 0.9 requires cssselect>=1.3,<1.4; Scrapling 0.5 requires cssselect>=1.5.0",
+  "browser_binaries_installed": false,
+  "browser_fetches": 0
+}

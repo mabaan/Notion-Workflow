@@ -258,6 +258,7 @@ def test_llm_returns_significance_from_the_existing_enrichment_call(monkeypatch)
         calls.append(prompt)
         return {
             "summary": "Iraq is negotiating a larger solar project.",
+            "story_type": "infrastructure_project", "is_new_development": True,
             "why_it_matters": "It directly concerns renewable capacity.",
             "relevance_score": 5,
             "editorial_significance": 4,

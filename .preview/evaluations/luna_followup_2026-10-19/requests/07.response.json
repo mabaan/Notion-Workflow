@@ -1,0 +1,36 @@
+{
+  "id": "chatcmpl-EaT5AfaBnPwgyxUgeZp6Gm2RBwyk5",
+  "object": "chat.completion",
+  "created": 1792360308,
+  "model": "gpt-6-luna",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"summary\": \"Morocco is seeking engineering, procurement and construction (EPC) and operations and maintenance (O&M) contractors for its 350 MW NOOR PV Multisites solar programme.\",\n  \"why_it_matters\": \"The programme directly supports Morocco’s solar generation capacity and the Net Zero Transition in MENA.\",\n  \"relevance_score\": 5,\n  \"editorial_significance\": 4,\n  \"significance_reason\": \"The contractor search is a concrete procurement step for a 350 MW solar programme, though the supplied information does not establish its timeline or operational status.\",\n  \"factual_points\": [\n    \"Morocco is seeking EPC contractors for the NOOR PV Multisites solar programme.\",\n    \"Morocco is also seeking O&M contractors for the programme.\",\n    \"The programme has a stated capacity of 350 MW.\"\n  ],\n  \"topic\": [\n    \"Solar\",\n    \"Renewable Energy\",\n    \"Energy Transition\"\n  ],\n  \"region\": [\n    \"Morocco\",\n    \"MENA\"\n  ],\n  \"newsletter_angle\": \"Morocco’s search for EPC and O&M contractors puts a 350 MW solar programme into a contractor-sourcing phase.\",\n  \"sns_hook\": \"Morocco is seeking EPC and O&M contractors for its 350 MW NOOR PV Multisites solar programme.\"\n}",
+        "refusal": null,
+        "annotations": []
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1382,
+    "completion_tokens": 592,
+    "total_tokens": 1974,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 1379,
+      "audio_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 303,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+    }
+  },
+  "service_tier": "default",
+  "system_fingerprint": null
+}

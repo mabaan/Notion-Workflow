@@ -1,0 +1,36 @@
+{
+  "id": "chatcmpl-EaT5W4eUm7nhL7mHMcOMYJFCNxJ9f",
+  "object": "chat.completion",
+  "created": 1792360330,
+  "model": "gpt-6-luna",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"summary\": \"Qatar is targeting sustainable food production, with self-sufficiency reported at 99% for fresh poultry and dairy.\",\n  \"why_it_matters\": \"The reported self-sufficiency level and sustainability target directly concern Qatar’s food security and domestic food production.\",\n  \"relevance_score\": 5,\n  \"editorial_significance\": 3,\n  \"significance_reason\": \"The headline reports 99% self-sufficiency in two food categories, but provides no details on how this level was reached or what the sustainability target entails.\",\n  \"factual_points\": [\n    \"Qatar is targeting sustainable food production.\",\n    \"Self-sufficiency is reported at 99% for fresh poultry and dairy.\"\n  ],\n  \"topic\": [\n    \"Food security\",\n    \"Agri-food\",\n    \"Sustainable agriculture\"\n  ],\n  \"region\": [\n    \"Qatar\",\n    \"GCC\",\n    \"MENA\"\n  ],\n  \"newsletter_angle\": \"Qatar’s reported 99% self-sufficiency in fresh poultry and dairy puts its sustainable food production target in focus.\",\n  \"sns_hook\": \"Qatar reports 99% self-sufficiency in fresh poultry and dairy as it targets sustainable food production.\"\n}",
+        "refusal": null,
+        "annotations": []
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1385,
+    "completion_tokens": 486,
+    "total_tokens": 1871,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 1382,
+      "audio_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 214,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+    }
+  },
+  "service_tier": "default",
+  "system_fingerprint": null
+}

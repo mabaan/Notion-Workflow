@@ -207,6 +207,7 @@ def test_feed_evidence_reaches_existing_single_enrichment_without_page_request(
         prompts.append(prompt)
         return {
             "summary": "A battery facility is proposed in Egypt.",
+            "story_type": "infrastructure_project", "is_new_development": True,
             "why_it_matters": "It would add storage manufacturing capacity.",
             "relevance_score": 5, "editorial_significance": 4,
             "significance_reason": "Proposed annual capacity is 500 MWh.",

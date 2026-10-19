@@ -25,7 +25,7 @@ def parse_args(default_limit: int) -> argparse.Namespace:
     parser.add_argument(
         "--no-enrich",
         action="store_true",
-        help="Inspect deterministic gates without LLM calls; requires --dry-run.",
+        help="Skip all LLM calls (objective cleanup only in Luna mode); requires --dry-run.",
     )
     parser.add_argument(
         "--all-sources",

@@ -1,0 +1,14 @@
+{
+  "requests": 29,
+  "prompt_tokens": 91268,
+  "completion_tokens": 50722,
+  "total_tokens": 141990,
+  "estimated_usd": 0.034264924999999995,
+  "reserved_tokens": 615670,
+  "reserved_usd": 0.16911874999999998,
+  "wall_seconds": 407.16436150000663,
+  "state_unchanged": true,
+  "full100_request_bodies_equal": true,
+  "veal_request_bodies_equal": true,
+  "reference_frozen_before_model": true
+}

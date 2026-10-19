@@ -1,0 +1,36 @@
+{
+  "id": "chatcmpl-EaT634IZzYpNWZNqqqpwhqSoMBUZF",
+  "object": "chat.completion",
+  "created": 1792360363,
+  "model": "gpt-6-luna",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"summary\": \"Gulf News reports that Sharjah’s Big Heart Foundation is helping women farmers in Zanzibar secure better incomes. Further details are unavailable.\",\n  \"why_it_matters\": \"The story concerns agricultural livelihoods, but the reported activity is in Zanzibar and its scale or food-security impact is not specified.\",\n  \"relevance_score\": 2,\n  \"editorial_significance\": 2,\n  \"significance_reason\": \"The headline indicates support for women farmers’ incomes, but provides no details on the program’s scale or outcomes.\",\n  \"factual_points\": [\n    \"The Big Heart Foundation is based in Sharjah, according to the headline.\",\n    \"The foundation is helping women farmers in Zanzibar.\",\n    \"The stated aim is to help the farmers secure better incomes.\"\n  ],\n  \"topic\": [\"Agriculture\", \"Agri-food\", \"Livelihoods\"],\n  \"region\": [\"UAE\", \"Zanzibar\"],\n  \"newsletter_angle\": \"A Sharjah foundation is supporting women farmers’ incomes in Zanzibar; the available information does not specify the program’s scale or methods.\",\n  \"sns_hook\": \"A Sharjah-based foundation is helping women farmers in Zanzibar pursue better incomes, according to Gulf News.\"\n}",
+        "refusal": null,
+        "annotations": []
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1352,
+    "completion_tokens": 574,
+    "total_tokens": 1926,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 1349,
+      "audio_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 310,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+    }
+  },
+  "service_tier": "default",
+  "system_fingerprint": null
+}

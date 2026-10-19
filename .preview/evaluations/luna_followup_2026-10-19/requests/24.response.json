@@ -1,0 +1,36 @@
+{
+  "id": "chatcmpl-EaT6T7BlprI5th8gq73VuWjwTHRqa",
+  "object": "chat.completion",
+  "created": 1792360389,
+  "model": "gpt-6-luna",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"summary\": \"Delhi backs a US$1.9 billion sewer overhaul under a single-operator model.\",\n  \"why_it_matters\": \"The project concerns sewer infrastructure, a water-management theme, but this local Delhi development is outside SOMA MATER's defined geographic scope.\",\n  \"relevance_score\": 2,\n  \"editorial_significance\": 3,\n  \"significance_reason\": \"The reported US$1.9 billion scale makes the sewer overhaul notable, although the available information does not clarify its status or implementation details.\",\n  \"factual_points\": [\n    \"Delhi backs a sewer overhaul valued at US$1.9 billion.\",\n    \"The overhaul is described as using a single-operator model.\"\n  ],\n  \"topic\": [\"Wastewater\", \"Water Infrastructure\"],\n  \"region\": [\"Delhi\", \"India\"],\n  \"newsletter_angle\": \"A major Delhi sewer overhaul is backed under a single-operator model, though it falls outside the newsletter's geographic focus.\",\n  \"sns_hook\": \"Delhi backs a US$1.9 billion sewer overhaul under a single-operator model.\"\n}",
+        "refusal": null,
+        "annotations": []
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1327,
+    "completion_tokens": 580,
+    "total_tokens": 1907,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 1324,
+      "audio_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 339,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+    }
+  },
+  "service_tier": "default",
+  "system_fingerprint": null
+}

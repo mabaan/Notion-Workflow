@@ -1,0 +1,98 @@
+{
+  "model": "gpt-6-luna",
+  "reasoning_effort": "medium",
+  "max_completion_tokens": 4096,
+  "limits": {
+    "max_requests": 25,
+    "max_reserved_tokens": 320000,
+    "max_reserved_usd": 0.2
+  },
+  "combined_limits": {
+    "max_requests": 31,
+    "max_reserved_tokens": 480000,
+    "max_reserved_usd": 0.25
+  },
+  "article_ids": [
+    "oct15-bahrain",
+    "oct15-hormuz",
+    "oct16-battery_definition",
+    "oct16-battery_science",
+    "oct16-commission",
+    "oct16-gerd",
+    "oct16-harvests",
+    "oct16-iraq",
+    "oct16-libya",
+    "oct16-qatar",
+    "oct16-veal",
+    "rss-00",
+    "rss-01",
+    "rss-02",
+    "rss-05",
+    "rss-07",
+    "rss-08",
+    "rss-09"
+  ],
+  "primary_only": true,
+  "state_before": {
+    ".local_state\\article_assets.json": "08c3607affdeea3b47b6b5bf73a9e06870a1195ce02634ec22b52137d7885574",
+    ".local_state\\seen_articles.json": "27ff85b22aa51887cfa8fa6442b418991661551e56967d2a7427460f5758b7e0"
+  },
+  "snapshot_sha256": "74bcd57168d9034f242564e82f5cd28969d71880f55fc83fc6485d1f2ba84796",
+  "enrichment_prompt_sha256": "cc5fc8d8b18984997235b8100fa90fa585200790d8d16d45c68f7abedd8c5f5f",
+  "screening_retained": {
+    "deterministic": [
+      "oct15-bahrain",
+      "oct15-hormuz",
+      "oct16-commission",
+      "oct16-gerd",
+      "oct16-harvests",
+      "oct16-iraq",
+      "oct16-libya",
+      "oct16-qatar",
+      "oct16-veal",
+      "rss-00",
+      "rss-01",
+      "rss-02",
+      "rss-07"
+    ],
+    "luna-100": [
+      "oct15-bahrain",
+      "oct15-hormuz",
+      "oct16-battery_definition",
+      "oct16-battery_science",
+      "oct16-commission",
+      "oct16-gerd",
+      "oct16-harvests",
+      "oct16-iraq",
+      "oct16-libya",
+      "oct16-qatar",
+      "oct16-veal",
+      "rss-01",
+      "rss-08",
+      "rss-09"
+    ],
+    "luna-repartitioned": [
+      "oct15-hormuz",
+      "oct16-commission",
+      "oct16-gerd",
+      "oct16-harvests",
+      "oct16-iraq",
+      "oct16-libya",
+      "oct16-qatar",
+      "oct16-veal",
+      "rss-02",
+      "rss-05",
+      "rss-07",
+      "rss-08",
+      "rss-09"
+    ]
+  },
+  "fairness": "One enrichment per union ID; original identical source-region hints, not screen-assigned regions, supplied to the LLM. Full text unavailable in both paths. Reused by ID, no positional matching.",
+  "qualification": "Registered sources need 4, unregistered 5; no lower thresholds or altered significance rules.",
+  "state_after": {
+    ".local_state\\article_assets.json": "08c3607affdeea3b47b6b5bf73a9e06870a1195ce02634ec22b52137d7885574",
+    ".local_state\\seen_articles.json": "27ff85b22aa51887cfa8fa6442b418991661551e56967d2a7427460f5758b7e0"
+  },
+  "latency_seconds": 126.46175730001414,
+  "persistent_state_unchanged": true
+}

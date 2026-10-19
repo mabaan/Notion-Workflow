@@ -1,0 +1,299 @@
+{
+  "live": true,
+  "classification_model": "gpt-6-luna",
+  "enrichment_model": "gpt-6-sol",
+  "all_publishers": 15,
+  "collected_rss": 1445,
+  "discovered": 24,
+  "classified": 753,
+  "classification_requests": 9,
+  "classification_unresolved": 0,
+  "classification_token_usage": {
+    "prompt_tokens": 144060,
+    "completion_tokens": 79042,
+    "total_tokens": 223102
+  },
+  "enrichment_budget": {
+    "initial": 32,
+    "maximum": 48,
+    "backfill_batch": 8,
+    "attempted": 48
+  },
+  "selection_counts": {
+    "strict": 5,
+    "fallback": 1,
+    "total": 6
+  },
+  "verified_page_count": 6,
+  "created_pages": [
+    {
+      "id": "3fec995b-3347-81af-a3c5-d56d3e3ae3ad",
+      "url": "https://app.notion.com/p/GERD-Explained-2026-Ethiopia-Egypt-and-the-Nile-Dam-Dispute-3fec995b334781afa3c5d56d3e3ae3ad",
+      "title": "GERD Explained 2026: Ethiopia, Egypt and the Nile Dam Dispute",
+      "publisher": "riotimesonline.com",
+      "status": "New",
+      "processed": true,
+      "archived": false,
+      "region": [
+        "Egypt"
+      ],
+      "relevance": 5,
+      "summary_present": true,
+      "why_it_matters": "The dispute directly concerns Egypt’s water security and the rules for operating a major upstream dam, particularly during drought.",
+      "weekly_link_correct": true,
+      "selection_tier": "strict",
+      "classifier_relevance": 4,
+      "editorial_significance": 3,
+      "publisher_rating": null,
+      "queue_score": 82.0,
+      "fallback_reason": "",
+      "evidence_retrieval_status": "extracted"
+    },
+    {
+      "id": "3fec995b-3347-81c9-b087-f7a75f694478",
+      "url": "https://app.notion.com/p/US-ambassador-to-Israel-calls-West-Bank-settler-attack-on-American-photojournalist-terror-3fec995b334781c9b087f7a75f694478",
+      "title": "US ambassador to Israel calls West Bank settler attack on American photojournalist ‘terror’",
+      "publisher": "The Guardian International",
+      "status": "New",
+      "processed": true,
+      "archived": false,
+      "region": [
+        "Global"
+      ],
+      "relevance": 3,
+      "summary_present": true,
+      "why_it_matters": "The food-systems connection is the reported disruption of Palestinian olive harvesting, but the article does not establish a wider effect on food supply or agricultural output.",
+      "weekly_link_correct": true,
+      "selection_tier": "fallback",
+      "classifier_relevance": 4,
+      "editorial_significance": 3,
+      "publisher_rating": 8.0,
+      "queue_score": 62.0,
+      "fallback_reason": "final relevance 3 below strict threshold 4; registered publisher; final relevance and significance >= 3; spare capacity after strict selection",
+      "evidence_retrieval_status": "extracted"
+    },
+    {
+      "id": "3fec995b-3347-8118-ba6a-e44ac1743b6e",
+      "url": "https://app.notion.com/p/Israeli-settlers-attack-European-diplomats-in-West-Bank-3fec995b33478118ba6ae44ac1743b6e",
+      "title": "Israeli settlers attack European diplomats in West Bank",
+      "publisher": "The Guardian International",
+      "status": "New",
+      "processed": true,
+      "archived": false,
+      "region": [
+        "Global"
+      ],
+      "relevance": 4,
+      "summary_present": true,
+      "why_it_matters": "Violence against olive harvesters and restrictions on access to trees directly affect agricultural production and farmers’ ability to gather a crop described as economically vital to Palestinian communities.",
+      "weekly_link_correct": true,
+      "selection_tier": "strict",
+      "classifier_relevance": 4,
+      "editorial_significance": 4,
+      "publisher_rating": 8.0,
+      "queue_score": 80.0,
+      "fallback_reason": "",
+      "evidence_retrieval_status": "extracted"
+    },
+    {
+      "id": "3fec995b-3347-8195-bd34-c980d0395454",
+      "url": "https://app.notion.com/p/UN-says-Gaza-malnutrition-gains-fragile-as-commercial-supplies-halt-Arab-News-3fec995b33478195bd34c980d0395454",
+      "title": "UN says Gaza malnutrition gains fragile as commercial supplies halt - Arab News",
+      "publisher": "Arab News",
+      "status": "New",
+      "processed": true,
+      "archived": false,
+      "region": [
+        "Global"
+      ],
+      "relevance": 4,
+      "summary_present": true,
+      "why_it_matters": "The reported halt in commercial supplies directly concerns food access and malnutrition, making this a Food Security story in MENA.",
+      "weekly_link_correct": true,
+      "selection_tier": "strict",
+      "classifier_relevance": 5,
+      "editorial_significance": 3,
+      "publisher_rating": 8.0,
+      "queue_score": 76.0,
+      "fallback_reason": "",
+      "evidence_retrieval_status": "insufficient_content"
+    },
+    {
+      "id": "3fec995b-3347-81ab-8313-eeffca184157",
+      "url": "https://app.notion.com/p/UAE-to-grow-more-food-locally-under-strategy-update-AGBI-3fec995b334781ab8313eeffca184157",
+      "title": "UAE to grow more food locally under strategy update | AGBI",
+      "publisher": "AGBI",
+      "status": "New",
+      "processed": true,
+      "archived": false,
+      "region": [
+        "UAE"
+      ],
+      "relevance": 5,
+      "summary_present": true,
+      "why_it_matters": "The proposed local-crop goal directly concerns UAE food security and domestic agricultural production.",
+      "weekly_link_correct": true,
+      "selection_tier": "strict",
+      "classifier_relevance": 5,
+      "editorial_significance": 3,
+      "publisher_rating": 10.0,
+      "queue_score": 92.0,
+      "fallback_reason": "",
+      "evidence_retrieval_status": "fetch_failed"
+    },
+    {
+      "id": "3fec995b-3347-81cf-b6b4-fec824c38cd5",
+      "url": "https://app.notion.com/p/Hormuz-shipping-disruption-is-starting-to-hit-harvests-UN-agency-says-Arab-News-3fec995b334781cfb6b4fec824c38cd5",
+      "title": "Hormuz shipping disruption is starting to hit harvests, UN agency says - Arab News",
+      "publisher": "Arab News",
+      "status": "New",
+      "processed": true,
+      "archived": false,
+      "region": [
+        "Global"
+      ],
+      "relevance": 4,
+      "summary_present": true,
+      "why_it_matters": "The reported effect on harvests provides a direct food-security connection between a MENA shipping disruption and agricultural production, though its extent is unclear.",
+      "weekly_link_correct": true,
+      "selection_tier": "strict",
+      "classifier_relevance": 5,
+      "editorial_significance": 2,
+      "publisher_rating": 8.0,
+      "queue_score": 72.0,
+      "fallback_reason": "",
+      "evidence_retrieval_status": "insufficient_content"
+    }
+  ],
+  "weekly_region_counts": {
+    "Global": 4,
+    "UAE": 1,
+    "KSA": 0,
+    "Egypt": 1
+  },
+  "remaining_shortages": {
+    "Global": 0,
+    "UAE": 3,
+    "KSA": 3,
+    "Egypt": 1
+  },
+  "dataset_url": "https://app.notion.com/p/October-19th-to-October-23rd-3fdc995b334781ce853be50347c6946b",
+  "article_queue_url": "https://app.notion.com/p/38ac995b334780679a1ac0f6bc138d27",
+  "audit_json": ".preview\\ingestion_audits\\20261019T001303177526Z_94261abe.json",
+  "completed_at_utc": "2026-10-19T00:28:42.756638+00:00",
+  "exit_code": 0,
+  "read_back_verified": true,
+  "enriched_score_distribution": [
+    {
+      "registered": false,
+      "relevance": 2,
+      "significance": 2,
+      "count": 1
+    },
+    {
+      "registered": false,
+      "relevance": 2,
+      "significance": 4,
+      "count": 1
+    },
+    {
+      "registered": false,
+      "relevance": 3,
+      "significance": 1,
+      "count": 1
+    },
+    {
+      "registered": false,
+      "relevance": 3,
+      "significance": 2,
+      "count": 3
+    },
+    {
+      "registered": false,
+      "relevance": 3,
+      "significance": 3,
+      "count": 2
+    },
+    {
+      "registered": false,
+      "relevance": 5,
+      "significance": 3,
+      "count": 1
+    },
+    {
+      "registered": true,
+      "relevance": 1,
+      "significance": 2,
+      "count": 2
+    },
+    {
+      "registered": true,
+      "relevance": 2,
+      "significance": 1,
+      "count": 3
+    },
+    {
+      "registered": true,
+      "relevance": 2,
+      "significance": 2,
+      "count": 14
+    },
+    {
+      "registered": true,
+      "relevance": 2,
+      "significance": 3,
+      "count": 2
+    },
+    {
+      "registered": true,
+      "relevance": 2,
+      "significance": 4,
+      "count": 1
+    },
+    {
+      "registered": true,
+      "relevance": 3,
+      "significance": 1,
+      "count": 1
+    },
+    {
+      "registered": true,
+      "relevance": 3,
+      "significance": 2,
+      "count": 11
+    },
+    {
+      "registered": true,
+      "relevance": 3,
+      "significance": 3,
+      "count": 1
+    },
+    {
+      "registered": true,
+      "relevance": 4,
+      "significance": 2,
+      "count": 1
+    },
+    {
+      "registered": true,
+      "relevance": 4,
+      "significance": 3,
+      "count": 1
+    },
+    {
+      "registered": true,
+      "relevance": 4,
+      "significance": 4,
+      "count": 1
+    },
+    {
+      "registered": true,
+      "relevance": 5,
+      "significance": 3,
+      "count": 1
+    }
+  ],
+  "quality_review_notes": [
+    "The fallback West Bank photojournalist story has final relevance 3/significance 3; its enrichment explicitly says wider food-supply or agricultural-output consequences are not established."
+  ]
+}

@@ -1,0 +1,175 @@
+{
+  "limits": {
+    "max_requests": 6,
+    "max_reserved_tokens": 160000,
+    "max_reserved_usd": 0.25
+  },
+  "requests": [
+    {
+      "request_number": 1,
+      "model": "gpt-6-luna",
+      "reserved_input_tokens": 19026,
+      "reserved_output_tokens": 16384,
+      "reserved_usd": 0.01057025,
+      "article_ids": [
+        "diagnostic-economy",
+        "diagnostic-egypt-green",
+        "diagnostic-foreign-water",
+        "diagnostic-landscape",
+        "diagnostic-saudi-weather",
+        "diagnostic-uae-strategy",
+        "diagnostic-water-science",
+        "oct15-bahrain",
+        "oct15-hormuz",
+        "oct15-istanbul",
+        "oct16-battery_definition",
+        "oct16-battery_science",
+        "oct16-commission",
+        "oct16-crypto",
+        "oct16-flights",
+        "oct16-gerd",
+        "oct16-harvests",
+        "oct16-iraq",
+        "oct16-libya",
+        "oct16-negation",
+        "oct16-qatar",
+        "oct16-veal",
+        "rss-00",
+        "rss-01",
+        "rss-02",
+        "rss-03",
+        "rss-04",
+        "rss-05",
+        "rss-06",
+        "rss-07",
+        "rss-08",
+        "rss-09",
+        "saved-egypt-battery",
+        "saved-sharjah",
+        "user-west-bank"
+      ],
+      "status": 200,
+      "usage": {
+        "prompt_tokens": 4267,
+        "completion_tokens": 4217,
+        "total_tokens": 8484,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 4264,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 2070,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "estimated_usd": 0.0026418,
+      "returned_model": "gpt-6-luna",
+      "cache_write_cost_assumed": false,
+      "latency_seconds": 40.92669689998729
+    },
+    {
+      "request_number": 2,
+      "model": "gpt-6-luna",
+      "reserved_input_tokens": 10695,
+      "reserved_output_tokens": 16384,
+      "reserved_usd": 0.009528875,
+      "article_ids": [
+        "diagnostic-economy",
+        "diagnostic-egypt-green",
+        "diagnostic-foreign-water",
+        "diagnostic-landscape",
+        "diagnostic-saudi-weather",
+        "diagnostic-uae-strategy",
+        "diagnostic-water-science",
+        "oct15-bahrain",
+        "oct15-hormuz",
+        "oct15-istanbul",
+        "oct16-battery_definition",
+        "oct16-battery_science",
+        "oct16-commission",
+        "oct16-crypto",
+        "oct16-flights",
+        "oct16-gerd",
+        "oct16-harvests",
+        "oct16-iraq"
+      ],
+      "status": 200,
+      "usage": {
+        "prompt_tokens": 2151,
+        "completion_tokens": 2283,
+        "total_tokens": 4434,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 2148,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1199,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "estimated_usd": 0.0014103,
+      "returned_model": "gpt-6-luna",
+      "cache_write_cost_assumed": false,
+      "latency_seconds": 21.370115600002464
+    },
+    {
+      "request_number": 3,
+      "model": "gpt-6-luna",
+      "reserved_input_tokens": 13823,
+      "reserved_output_tokens": 16384,
+      "reserved_usd": 0.009919875,
+      "article_ids": [
+        "oct16-libya",
+        "oct16-negation",
+        "oct16-qatar",
+        "oct16-veal",
+        "rss-00",
+        "rss-01",
+        "rss-02",
+        "rss-03",
+        "rss-04",
+        "rss-05",
+        "rss-06",
+        "rss-07",
+        "rss-08",
+        "rss-09",
+        "saved-egypt-battery",
+        "saved-sharjah",
+        "user-west-bank"
+      ],
+      "status": 200,
+      "usage": {
+        "prompt_tokens": 2914,
+        "completion_tokens": 2705,
+        "total_tokens": 5619,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 2911,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1592,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "estimated_usd": 0.001716675,
+      "returned_model": "gpt-6-luna",
+      "cache_write_cost_assumed": false,
+      "latency_seconds": 32.699481899966486
+    }
+  ],
+  "requests_sent": 3,
+  "denied_locally": 0,
+  "reserved_tokens": 92696,
+  "reserved_usd": 0.030018999999999997,
+  "known_estimated_usd": 0.005768775,
+  "requests_with_unknown_cost": 0
+}

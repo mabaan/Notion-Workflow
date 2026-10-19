@@ -1,0 +1,50 @@
+{
+  "model": "gpt-6-sol",
+  "max_requests": 2,
+  "max_output_tokens_per_request": 16000,
+  "estimated_usd_budget": 0.75,
+  "pricing_per_million": {
+    "input": 2.0,
+    "cached_input": 0.2,
+    "cache_write": 2.5,
+    "output": 10.0
+  },
+  "pricing_source": "https://developers.openai.com/api/docs/models/gpt-6-sol",
+  "requests": [
+    {
+      "attempt": 1,
+      "reserved_usd": 0.31536,
+      "started_at_utc": "2026-10-19T00:58:57.628826+00:00",
+      "usage": {
+        "completion_tokens": 8237,
+        "prompt_tokens": 15784,
+        "total_tokens": 24021,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 932,
+          "rejected_prediction_tokens": 0,
+          "text_tokens": null
+        },
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cache_write_tokens": 15781,
+          "cached_tokens": 0,
+          "image_tokens": null,
+          "text_tokens": null
+        }
+      },
+      "returned_model": "gpt-6-sol",
+      "service_tier": "default",
+      "latency_seconds": 63.784,
+      "estimated_usd": 0.1218285,
+      "cache_write_surcharge": "Only included when reported; account-specific billing may differ",
+      "status": "validated"
+    }
+  ],
+  "estimated_usd": 0.1218285,
+  "publisher_fetches": 0,
+  "notion_writes": 0,
+  "latency_seconds": 63.966,
+  "request_count": 1
+}

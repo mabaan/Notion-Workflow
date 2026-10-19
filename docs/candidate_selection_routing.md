@@ -1,5 +1,7 @@
 # Candidate geography and eligibility policy
 
+This document describes the legacy `deterministic` mode. In opt-in `luna` mode, objective cleanup precedes metadata classification; classifier event geography replaces these keyword/source-fallback heuristics, and coverage targets permit a second overflow pass. See [controlled Luna selection](luna_selection.md).
+
 The four quota labels and weekly targets remain Global 3, UAE 4, KSA 3 and Egypt 2. Geography controls routing; all candidates still pass the existing freshness, relevance, deduplication, publisher-cap and human-review rules.
 
 ## Project geography, participants and publishers

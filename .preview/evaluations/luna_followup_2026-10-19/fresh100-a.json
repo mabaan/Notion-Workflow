@@ -1,0 +1,1327 @@
+{
+  "model": "gpt-6-luna",
+  "outcomes": [
+    {
+      "article_id": "021bd427ae89203d2f51f8bec8f1425b80d4baa14bd75ada603b4570d1955fb6",
+      "classification": {
+        "article_id": "021bd427ae89203d2f51f8bec8f1425b80d4baa14bd75ada603b4570d1955fb6",
+        "relevance_score": 1,
+        "assigned_region": "KSA",
+        "primary_mission_topic": "Other/Unclear",
+        "decision": "Irrelevant",
+        "justification": "Consultant travel disruption has no stated food, water or net-zero consequence."
+      },
+      "error": null
+    },
+    {
+      "article_id": "002117e3270f55e3cfec2678b8642654cd4f888b3c67bd885f3c44cc92057927",
+      "classification": {
+        "article_id": "002117e3270f55e3cfec2678b8642654cd4f888b3c67bd885f3c44cc92057927",
+        "relevance_score": 1,
+        "assigned_region": "Out of Scope/Unclear",
+        "primary_mission_topic": "Other/Unclear",
+        "decision": "Irrelevant",
+        "justification": "US university assault-case handling has no supported mission connection."
+      },
+      "error": null
+    },
+    {
+      "article_id": "0015db728f0f8b16ebc936ab4c98d84cc1f748a810796176dd282fd2e9784a52",
+      "classification": {
+        "article_id": "0015db728f0f8b16ebc936ab4c98d84cc1f748a810796176dd282fd2e9784a52",
+        "relevance_score": 1,
+        "assigned_region": "Out of Scope/Unclear",
+        "primary_mission_topic": "Other/Unclear",
+        "decision": "Irrelevant",
+        "justification": "Brooklyn bird-feud threats; no food-system or other mission consequence is reported."
+      },
+      "error": null
+    },
+    {
+      "article_id": "005b14300d39e84d3766e1cf8acf90c2301b7b7e3ccef5ab8b28f30466aaa8f8",
+      "classification": {
+        "article_id": "005b14300d39e84d3766e1cf8acf90c2301b7b7e3ccef5ab8b28f30466aaa8f8",
+        "relevance_score": 2,
+        "assigned_region": "KSA",
+        "primary_mission_topic": "Other/Unclear",
+        "decision": "Borderline",
+        "justification": "Regional conflict pressure on Saudi Arabia is described, but no food, water or energy-system consequence is specified."
+      },
+      "error": null
+    },
+    {
+      "article_id": "00539a484b9d4a6f500a9ece4a5020fc0f438ee32dd0b9165386c52a893b4286",
+      "classification": {
+        "article_id": "00539a484b9d4a6f500a9ece4a5020fc0f438ee32dd0b9165386c52a893b4286",
+        "relevance_score": 1,
+        "assigned_region": "KSA",
+        "primary_mission_topic": "Other/Unclear",
+        "decision": "Irrelevant",
+        "justification": "Projectile injuries and property damage are reported; no food, water or net-zero disruption is identified."
+      },
+      "error": null
+    },
+    {
+      "article_id": "4b1b60f368a1c1e3ba7d3e9db5fe7e48b8d875d5f6ea975c183e3a15508dad72",
+      "classification": {
+        "article_id": "4b1b60f368a1c1e3ba7d3e9db5fe7e48b8d875d5f6ea975c183e3a15508dad72",
+        "relevance_score": 1,
+        "assigned_region": "Out of Scope/Unclear",
+        "primary_mission_topic": "Water Security",
+        "decision": "Irrelevant",
+        "justification": "Delhi sewer overhaul is a major water project but is foreign-local, with no MENA or systemic bridge stated."
+      },
+      "error": null
+    },
+    {
+      "article_id": "01c4153bbe04078a3d9d0e8d9783f7896d27e3252f3793eb1d4fe896eabb349b",
+      "classification": {
+        "article_id": "01c4153bbe04078a3d9d0e8d9783f7896d27e3252f3793eb1d4fe896eabb349b",
+        "relevance_score": 1,
+        "assigned_region": "Out of Scope/Unclear",
+        "primary_mission_topic": "Other/Unclear",
+        "decision": "Irrelevant",
+        "justification": "US execution livestream plan has no supported mission connection."
+      },
+      "error": null
+    },
+    {
+      "article_id": "03477cf3f5b84ad6eb35202a0251dde7808e99a6c0f5bfc1d7fdd77cd76a83dd",
+      "classification": {
+        "article_id": "03477cf3f5b84ad6eb35202a0251dde7808e99a6c0f5bfc1d7fdd77cd76a83dd",
+        "relevance_score": 1,
+        "assigned_region": "Out of Scope/Unclear",
+        "primary_mission_topic": "Other/Unclear",
+        "decision": "Irrelevant",
+        "justification": "Nigerian exchange performance is a local financial-market report with no mission bridge."
+      },
+      "error": null
+    },
+    {
+      "article_id": "04d136ccf2f10948892880fd88bbc8348fe13b667ced1667dc12248793963e8d",
+      "classification": {
+        "article_id": "04d136ccf2f10948892880fd88bbc8348fe13b667ced1667dc12248793963e8d",
+        "relevance_score": 1,
+        "assigned_region": "Global",
+        "primary_mission_topic": "Other/Unclear",
+        "decision": "Irrelevant",
+        "justification": "US political positioning and Iran are discussed without a mission-related consequence."
+      },
+      "error": null
+    },
+    {
+      "article_id": "047442c79e90a37274826927015e157950fd587c2d528a1fdc290f1ab2a1546d",
+      "classification": {
+        "article_id": "047442c79e90a37274826927015e157950fd587c2d528a1fdc290f1ab2a1546d",
+        "relevance_score": 1,
+        "assigned_region": "Out of Scope/Unclear",
+        "primary_mission_topic": "Other/Unclear",
+        "decision": "Irrelevant",
+        "justification": "European football match report has no supported mission connection."
+      },
+      "error": null
+    },
+    {
+      "article_id": "031ecd0010d1b400d6d0f6cf91e64cab060226fd835c4598428006d7f9dfe578",
+      "classification": {
+        "article_id": "031ecd0010d1b400d6d0f6cf91e64cab060226fd835c4598428006d7f9dfe578",
+        "relevance_score": 1,
+        "assigned_region": "Out of Scope/Unclear",
+        "primary_mission_topic": "Other/Unclear",
+        "decision": "Irrelevant",
+        "justification": "US execution livestream plan has no supported mission connection."
+      },
+      "error": null
+    },
+    {
+      "article_id": "02137ae9fbaf7018758bdfe0e5997a16fd0bb487711bd61dc8d961824e58fcf2",
+      "classification": {
+        "article_id": "02137ae9fbaf7018758bdfe0e5997a16fd0bb487711bd61dc8d961824e58fcf2",
+        "relevance_score": 1,
+        "assigned_region": "Global",
+        "primary_mission_topic": "Other/Unclear",
+        "decision": "Irrelevant",
+        "justification": "Lebanon-Israel ceasefire talks are reported without a food, water or net-zero link."
+      },
+      "error": null
+    },
+    {
+      "article_id": "00c63cd61222f71464cb234c01efb4035c79a5742b82f4eb6f2d3040b7b74140",
+      "classification": {
+        "article_id": "00c63cd61222f71464cb234c01efb4035c79a5742b82f4eb6f2d3040b7b74140",
+        "relevance_score": 1,
+        "assigned_region": "KSA",
+        "primary_mission_topic": "Other/Unclear",
+        "decision": "Irrelevant",
+        "justification": "Airport attack victims are the focus; no mission-related infrastructure disruption is stated."
+      },
+      "error": null
+    },
+    {
+      "article_id": "ad2bda609d4df3eb07f5587ab24027163c10dc5e7f32aa182f6bfb7ea3967a2f",
+      "classification": {
+        "article_id": "ad2bda609d4df3eb07f5587ab24027163c10dc5e7f32aa182f6bfb7ea3967a2f",
+        "relevance_score": 1,
+        "assigned_region": "Out of Scope/Unclear",
+        "primary_mission_topic": "Water Security",
+        "decision": "Irrelevant",
+        "justification": "California canal modernization is a foreign-local water project without a stated MENA or systemic bridge."
+      },
+      "error": null
+    },
+    {
+      "article_id": "021495e570e6ab2c98fb44e199bc3380cc06b0c4bf68e685148aace9c250f002",
+      "classification": {
+        "article_id": "021495e570e6ab2c98fb44e199bc3380cc06b0c4bf68e685148aace9c250f002",
+        "relevance_score": 2,
+        "assigned_region": "KSA",
+        "primary_mission_topic": "Other/Unclear",
+        "decision": "Borderline",
+        "justification": "Threats concern oil installations, but no damage, production impact or transition consequence is given."
+      },
+      "error": null
+    },
+    {
+      "article_id": "05f3c8db8f016e15e1fa777910c7ab2dec6d6f18965bcb20d3604f990d0cf752",
+      "classification": {
+        "article_id": "05f3c8db8f016e15e1fa777910c7ab2dec6d6f18965bcb20d3604f990d0cf752",
+        "relevance_score": 1,
+        "assigned_region": "UAE",
+        "primary_mission_topic": "Other/Unclear",
+        "decision": "Irrelevant",
+        "justification": "The UAE study concerns AI, security and sovereignty, not food, water or net-zero transition."
+      },
+      "error": null
+    },
+    {
+      "article_id": "11750816d2b1e6eecb36c504fbe7a481a0f890d4c27cfb66c29f864d73b55d0b",
+      "classification": {
+        "article_id": "11750816d2b1e6eecb36c504fbe7a481a0f890d4c27cfb66c29f864d73b55d0b",
+        "relevance_score": 3,
+        "assigned_region": "Global",
+        "primary_mission_topic": "Net Zero Transition",
+        "decision": "Borderline",
+        "justification": "Gulf electricity integration is directly relevant to regional power systems, but renewable or transition applications are not specified."
+      },
+      "error": null
+    },
+    {
+      "article_id": "09d598acd86f95b54bd04c8a9d32d8987f695ceddc7fb8220356850efbce65ae",
+      "classification": {
+        "article_id": "09d598acd86f95b54bd04c8a9d32d8987f695ceddc7fb8220356850efbce65ae",
+        "relevance_score": 2,
+        "assigned_region": "Global",
+        "primary_mission_topic": "Food Security",
+        "decision": "Borderline",
+        "justification": "The attacks occurred amid olive-harvest violence; no resulting harvest or food-supply disruption is established."
+      },
+      "error": null
+    },
+    {
+      "article_id": "0ade8ea0064868bc07e7d91c42f6a6e6053c048fec06febb7d9ca10883d05ab0",
+      "classification": {
+        "article_id": "0ade8ea0064868bc07e7d91c42f6a6e6053c048fec06febb7d9ca10883d05ab0",
+        "relevance_score": 2,
+        "assigned_region": "UAE",
+        "primary_mission_topic": "Net Zero Transition",
+        "decision": "Borderline",
+        "justification": "Dubai is studying an underground transport network; emissions, mode shift and project commitment are unspecified."
+      },
+      "error": null
+    },
+    {
+      "article_id": "0293ddca8e540055a337c48e5344bccff7eaf6ffd9f75743155271fa88ed72a8",
+      "classification": {
+        "article_id": "0293ddca8e540055a337c48e5344bccff7eaf6ffd9f75743155271fa88ed72a8",
+        "relevance_score": 1,
+        "assigned_region": "Out of Scope/Unclear",
+        "primary_mission_topic": "Other/Unclear",
+        "decision": "Irrelevant",
+        "justification": "US market movements and high oil prices are noted without a supported MENA mission consequence."
+      },
+      "error": null
+    },
+    {
+      "article_id": "02809c703cac5a45727dc8fea7112c20e1ce691cb7265b4e2cc373fe4d6cab44",
+      "classification": {
+        "article_id": "02809c703cac5a45727dc8fea7112c20e1ce691cb7265b4e2cc373fe4d6cab44",
+        "relevance_score": 2,
+        "assigned_region": "Global",
+        "primary_mission_topic": "Other/Unclear",
+        "decision": "Borderline",
+        "justification": "Missiles were intercepted over the Red Sea, but no shipping, production or food-supply disruption is reported."
+      },
+      "error": null
+    },
+    {
+      "article_id": "b74158cf6a65318922408c8725d33cbdfe4047f5aa30dba4a3fef34634bbd453",
+      "classification": {
+        "article_id": "b74158cf6a65318922408c8725d33cbdfe4047f5aa30dba4a3fef34634bbd453",
+        "relevance_score": 1,
+        "assigned_region": "Out of Scope/Unclear",
+        "primary_mission_topic": "Water Security",
+        "decision": "Irrelevant",
+        "justification": "Denmark treatment-plant contract is a foreign-local water project, with no MENA or systemic bridge."
+      },
+      "error": null
+    },
+    {
+      "article_id": "03cc433495d103dc3d2ec0b7fbc4f379c549f4975d41d398974f5b3078a824ec",
+      "classification": {
+        "article_id": "03cc433495d103dc3d2ec0b7fbc4f379c549f4975d41d398974f5b3078a824ec",
+        "relevance_score": 1,
+        "assigned_region": "Global",
+        "primary_mission_topic": "Other/Unclear",
+        "decision": "Irrelevant",
+        "justification": "Iranian defence appointment and US rhetoric have no stated food, water or net-zero consequence."
+      },
+      "error": null
+    },
+    {
+      "article_id": "06562ae88440680a35d4ad70b9a6acdd95b7fab8ff52bed8a93cd6d7242487ff",
+      "classification": {
+        "article_id": "06562ae88440680a35d4ad70b9a6acdd95b7fab8ff52bed8a93cd6d7242487ff",
+        "relevance_score": 3,
+        "assigned_region": "Global",
+        "primary_mission_topic": "Net Zero Transition",
+        "decision": "Borderline",
+        "justification": "A Gulf bank reports improved sustainability performance, but no specific environmental metrics or projects are identified."
+      },
+      "error": null
+    },
+    {
+      "article_id": "21d4bd6f05a0a5496620399d3fb29bbb6557c9a9e98325e161cd2ea0227afb02",
+      "classification": {
+        "article_id": "21d4bd6f05a0a5496620399d3fb29bbb6557c9a9e98325e161cd2ea0227afb02",
+        "relevance_score": 1,
+        "assigned_region": "KSA",
+        "primary_mission_topic": "Other/Unclear",
+        "decision": "Irrelevant",
+        "justification": "Riyadh airport reopening and attacks affect aviation, with no stated food, water or net-zero link."
+      },
+      "error": null
+    },
+    {
+      "article_id": "0a1fc0e2a77dade420459e2f3221faf8e6cb0133e7292542c805fbed225ce4b8",
+      "classification": {
+        "article_id": "0a1fc0e2a77dade420459e2f3221faf8e6cb0133e7292542c805fbed225ce4b8",
+        "relevance_score": 1,
+        "assigned_region": "Out of Scope/Unclear",
+        "primary_mission_topic": "Other/Unclear",
+        "decision": "Irrelevant",
+        "justification": "US community response to Israeli elections has no supported mission consequence."
+      },
+      "error": null
+    },
+    {
+      "article_id": "17d949e1b0630d1dd455cfd72d6f5e000d5e7d146779d18bc0f8a5f4e1ac6070",
+      "classification": {
+        "article_id": "17d949e1b0630d1dd455cfd72d6f5e000d5e7d146779d18bc0f8a5f4e1ac6070",
+        "relevance_score": 3,
+        "assigned_region": "Global",
+        "primary_mission_topic": "Net Zero Transition",
+        "decision": "Borderline",
+        "justification": "A Jordan bus project receives an award, but its scale, implementation and emissions benefit are not given."
+      },
+      "error": null
+    },
+    {
+      "article_id": "03694acf12963025abea7aca6480e64aa0e11498da05e7f1687417f269e67d29",
+      "classification": {
+        "article_id": "03694acf12963025abea7aca6480e64aa0e11498da05e7f1687417f269e67d29",
+        "relevance_score": 1,
+        "assigned_region": "Out of Scope/Unclear",
+        "primary_mission_topic": "Other/Unclear",
+        "decision": "Irrelevant",
+        "justification": "AI company stock and bond movements have no supported mission connection."
+      },
+      "error": null
+    },
+    {
+      "article_id": "0d40838afdc0790d36b87f77c1083ff412768ac71dae7c150c5e00c452b89dff",
+      "classification": {
+        "article_id": "0d40838afdc0790d36b87f77c1083ff412768ac71dae7c150c5e00c452b89dff",
+        "relevance_score": 1,
+        "assigned_region": "KSA",
+        "primary_mission_topic": "Other/Unclear",
+        "decision": "Irrelevant",
+        "justification": "UAV interceptions are reported without mission-related infrastructure or supply disruption."
+      },
+      "error": null
+    },
+    {
+      "article_id": "f69c38fa54f884e09184a7d7639193bb94022461b9bcabc921f1f37fa3195e70",
+      "classification": {
+        "article_id": "f69c38fa54f884e09184a7d7639193bb94022461b9bcabc921f1f37fa3195e70",
+        "relevance_score": 1,
+        "assigned_region": "Out of Scope/Unclear",
+        "primary_mission_topic": "Water Security",
+        "decision": "Irrelevant",
+        "justification": "El Salvador water and energy programme is foreign-local, with no stated MENA or systemic connection."
+      },
+      "error": null
+    },
+    {
+      "article_id": "0413ed4bff7b6b50f3a4af119c2ad64b2a0221cad057a472556017df30d56269",
+      "classification": {
+        "article_id": "0413ed4bff7b6b50f3a4af119c2ad64b2a0221cad057a472556017df30d56269",
+        "relevance_score": 1,
+        "assigned_region": "Global",
+        "primary_mission_topic": "Other/Unclear",
+        "decision": "Irrelevant",
+        "justification": "Archaeological evidence in Iraq is unrelated to the mission."
+      },
+      "error": null
+    },
+    {
+      "article_id": "07655901ab133c3498f3a0ed530555b19be13e0eb6df9a6f80a3f44edc57530b",
+      "classification": {
+        "article_id": "07655901ab133c3498f3a0ed530555b19be13e0eb6df9a6f80a3f44edc57530b",
+        "relevance_score": 1,
+        "assigned_region": "Out of Scope/Unclear",
+        "primary_mission_topic": "Other/Unclear",
+        "decision": "Irrelevant",
+        "justification": "Possible WEF leadership appointment has no supported mission connection."
+      },
+      "error": null
+    },
+    {
+      "article_id": "22604ac075e7cfb7118deaec7b30fb3a31a738b82f02176893e209472c9d9561",
+      "classification": {
+        "article_id": "22604ac075e7cfb7118deaec7b30fb3a31a738b82f02176893e209472c9d9561",
+        "relevance_score": 1,
+        "assigned_region": "Global",
+        "primary_mission_topic": "Other/Unclear",
+        "decision": "Irrelevant",
+        "justification": "GCC steel demand and project delays are not linked to a material net-zero or other mission outcome."
+      },
+      "error": null
+    },
+    {
+      "article_id": "0b0eb64d67a7a2974df54119bc60b478fb41a98e5202ff195b5230238d298084",
+      "classification": {
+        "article_id": "0b0eb64d67a7a2974df54119bc60b478fb41a98e5202ff195b5230238d298084",
+        "relevance_score": 1,
+        "assigned_region": "Global",
+        "primary_mission_topic": "Other/Unclear",
+        "decision": "Irrelevant",
+        "justification": "Diplomatic discussions about Ukraine, Iran and security have no stated mission consequence."
+      },
+      "error": null
+    },
+    {
+      "article_id": "18411ef2dbcc2c9d8384458138cf098c17fc29e2a826a7ee793075688e7e072e",
+      "classification": {
+        "article_id": "18411ef2dbcc2c9d8384458138cf098c17fc29e2a826a7ee793075688e7e072e",
+        "relevance_score": 1,
+        "assigned_region": "UAE",
+        "primary_mission_topic": "Other/Unclear",
+        "decision": "Irrelevant",
+        "justification": "Abu Dhabi music-festival announcement has no mission connection."
+      },
+      "error": null
+    },
+    {
+      "article_id": "061cc3ae804a6ec0270e0ffd3dc5e147e2e475799ca0c35ac44f9f9358233735",
+      "classification": {
+        "article_id": "061cc3ae804a6ec0270e0ffd3dc5e147e2e475799ca0c35ac44f9f9358233735",
+        "relevance_score": 1,
+        "assigned_region": "Out of Scope/Unclear",
+        "primary_mission_topic": "Other/Unclear",
+        "decision": "Irrelevant",
+        "justification": "Washington golf-course renovation is foreign-local property news with no mission link."
+      },
+      "error": null
+    },
+    {
+      "article_id": "1392542245a1db88bb9a68a374730b804eda5f57f38fc4fa748800321a02597e",
+      "classification": {
+        "article_id": "1392542245a1db88bb9a68a374730b804eda5f57f38fc4fa748800321a02597e",
+        "relevance_score": 1,
+        "assigned_region": "KSA",
+        "primary_mission_topic": "Other/Unclear",
+        "decision": "Irrelevant",
+        "justification": "Condemnation of attacks has no stated food, water or net-zero consequence."
+      },
+      "error": null
+    },
+    {
+      "article_id": "044d258145c09a5c50cd6236d317da8a5da81ac9552e453d59206e4eabeb9a9e",
+      "classification": {
+        "article_id": "044d258145c09a5c50cd6236d317da8a5da81ac9552e453d59206e4eabeb9a9e",
+        "relevance_score": 2,
+        "assigned_region": "Global",
+        "primary_mission_topic": "Food Security",
+        "decision": "Borderline",
+        "justification": "Violence occurred during an olive harvest, but the metadata does not show disruption to harvests or food supply."
+      },
+      "error": null
+    },
+    {
+      "article_id": "0a574484114dd7b351493987484f33033d0226dcc99d153214894a192bf8e334",
+      "classification": {
+        "article_id": "0a574484114dd7b351493987484f33033d0226dcc99d153214894a192bf8e334",
+        "relevance_score": 1,
+        "assigned_region": "Out of Scope/Unclear",
+        "primary_mission_topic": "Other/Unclear",
+        "decision": "Irrelevant",
+        "justification": "Eurozone bond yields and safe-haven flows are not tied to the mission in the metadata."
+      },
+      "error": null
+    },
+    {
+      "article_id": "261f8ce773b9530195c1e65f89f99b5484aff13dd2ec0388634ad98af05e1cc2",
+      "classification": {
+        "article_id": "261f8ce773b9530195c1e65f89f99b5484aff13dd2ec0388634ad98af05e1cc2",
+        "relevance_score": 1,
+        "assigned_region": "KSA",
+        "primary_mission_topic": "Other/Unclear",
+        "decision": "Irrelevant",
+        "justification": "Official reassurance after airport attacks does not establish a mission-system impact."
+      },
+      "error": null
+    },
+    {
+      "article_id": "11603c34d246144b924a42271c51ea0e6d04696e38eeda970c53ee8525cdb3e5",
+      "classification": {
+        "article_id": "11603c34d246144b924a42271c51ea0e6d04696e38eeda970c53ee8525cdb3e5",
+        "relevance_score": 1,
+        "assigned_region": "Out of Scope/Unclear",
+        "primary_mission_topic": "Other/Unclear",
+        "decision": "Irrelevant",
+        "justification": "Greenland deep-sea mining policy is foreign-local; no MENA or systemic transition consequence is established."
+      },
+      "error": null
+    },
+    {
+      "article_id": "1a30e2758ade599e3deaed227b3919ce3fb8a9db5d005732ee5d96fa2a53862d",
+      "classification": {
+        "article_id": "1a30e2758ade599e3deaed227b3919ce3fb8a9db5d005732ee5d96fa2a53862d",
+        "relevance_score": 1,
+        "assigned_region": "UAE",
+        "primary_mission_topic": "Other/Unclear",
+        "decision": "Irrelevant",
+        "justification": "Education and future jobs are discussed without a mission-related application."
+      },
+      "error": null
+    },
+    {
+      "article_id": "0740ccb196f9359fe0f12e5db890ab1ed90c0cf807a4b2b8ca31b37713664394",
+      "classification": {
+        "article_id": "0740ccb196f9359fe0f12e5db890ab1ed90c0cf807a4b2b8ca31b37713664394",
+        "relevance_score": 1,
+        "assigned_region": "Out of Scope/Unclear",
+        "primary_mission_topic": "Net Zero Transition",
+        "decision": "Irrelevant",
+        "justification": "Australian carbon-storage project is a foreign-local development with no stated MENA or systemic bridge."
+      },
+      "error": null
+    },
+    {
+      "article_id": "1445c509c803df43d3b756ea7613cbe05f149699e30fab73e69938f1d0c9b247",
+      "classification": {
+        "article_id": "1445c509c803df43d3b756ea7613cbe05f149699e30fab73e69938f1d0c9b247",
+        "relevance_score": 2,
+        "assigned_region": "KSA",
+        "primary_mission_topic": "Other/Unclear",
+        "decision": "Borderline",
+        "justification": "Municipal green-space development is reported, but no water, climate or other material mission outcome is specified."
+      },
+      "error": null
+    },
+    {
+      "article_id": "099e9086499fbdd20596e3704ca857d6e771c03a3830d6564e56bb98e9d6656a",
+      "classification": {
+        "article_id": "099e9086499fbdd20596e3704ca857d6e771c03a3830d6564e56bb98e9d6656a",
+        "relevance_score": 1,
+        "assigned_region": "Egypt",
+        "primary_mission_topic": "Other/Unclear",
+        "decision": "Irrelevant",
+        "justification": "Egyptian presidential succession is unrelated to the mission based on the metadata."
+      },
+      "error": null
+    },
+    {
+      "article_id": "0ebf12995cf54c6c4d5d52c8f6ed0b56707886c25c68ba1ca1add34a3315326d",
+      "classification": {
+        "article_id": "0ebf12995cf54c6c4d5d52c8f6ed0b56707886c25c68ba1ca1add34a3315326d",
+        "relevance_score": 1,
+        "assigned_region": "Global",
+        "primary_mission_topic": "Other/Unclear",
+        "decision": "Irrelevant",
+        "justification": "Bank Muscat earnings growth has no stated food, water or net-zero connection."
+      },
+      "error": null
+    },
+    {
+      "article_id": "2b3f0ec05fa4ad52f4eb66d06069db48aac876a925b8c37e37b373ab68deffe5",
+      "classification": {
+        "article_id": "2b3f0ec05fa4ad52f4eb66d06069db48aac876a925b8c37e37b373ab68deffe5",
+        "relevance_score": 2,
+        "assigned_region": "Global",
+        "primary_mission_topic": "Other/Unclear",
+        "decision": "Borderline",
+        "justification": "Iraq's large war-related losses are reported, but the affected sectors and mission consequences are unspecified."
+      },
+      "error": null
+    },
+    {
+      "article_id": "11d93829ffa620ec4176231e47af32665721839d2d1e6bfac9d864c6cdeb7555",
+      "classification": {
+        "article_id": "11d93829ffa620ec4176231e47af32665721839d2d1e6bfac9d864c6cdeb7555",
+        "relevance_score": 1,
+        "assigned_region": "KSA",
+        "primary_mission_topic": "Other/Unclear",
+        "decision": "Irrelevant",
+        "justification": "Public reactions to Houthi attacks have no stated mission connection."
+      },
+      "error": null
+    },
+    {
+      "article_id": "258370b50d7e5acabf88f7f84b86aea3eb99f7124102ee3cdf1616cb47666e66",
+      "classification": {
+        "article_id": "258370b50d7e5acabf88f7f84b86aea3eb99f7124102ee3cdf1616cb47666e66",
+        "relevance_score": 1,
+        "assigned_region": "Out of Scope/Unclear",
+        "primary_mission_topic": "Other/Unclear",
+        "decision": "Irrelevant",
+        "justification": "Cold-case identification has no supported mission connection."
+      },
+      "error": null
+    },
+    {
+      "article_id": "08c4a2e207610138e31c547dfd33b1cdcaf441a13e8c6d953daa0220ae84fdaa",
+      "classification": {
+        "article_id": "08c4a2e207610138e31c547dfd33b1cdcaf441a13e8c6d953daa0220ae84fdaa",
+        "relevance_score": 1,
+        "assigned_region": "Out of Scope/Unclear",
+        "primary_mission_topic": "Other/Unclear",
+        "decision": "Irrelevant",
+        "justification": "German gas storage outlook is a foreign-local supply update; no MENA or systemic consequence is stated."
+      },
+      "error": null
+    },
+    {
+      "article_id": "15df033f684511636f788a803442b131e8600bcdcb9c50228b57ae72bc6ee85d",
+      "classification": {
+        "article_id": "15df033f684511636f788a803442b131e8600bcdcb9c50228b57ae72bc6ee85d",
+        "relevance_score": 1,
+        "assigned_region": "KSA",
+        "primary_mission_topic": "Other/Unclear",
+        "decision": "Irrelevant",
+        "justification": "Saudi-UAE defence meeting has no stated mission-related outcome."
+      },
+      "error": null
+    },
+    {
+      "article_id": "0c68b8ccbad5febc782481a42a6e3962139f39830d154021c34c5aa9f028b19d",
+      "classification": {
+        "article_id": "0c68b8ccbad5febc782481a42a6e3962139f39830d154021c34c5aa9f028b19d",
+        "relevance_score": 1,
+        "assigned_region": "Global",
+        "primary_mission_topic": "Other/Unclear",
+        "decision": "Irrelevant",
+        "justification": "General Gulf security and collective-defence calls lack a food, water or net-zero bridge."
+      },
+      "error": null
+    },
+    {
+      "article_id": "1487dba652bf18142287123d6561131af1edf59f2119f58bd459166724b8dfbc",
+      "classification": {
+        "article_id": "1487dba652bf18142287123d6561131af1edf59f2119f58bd459166724b8dfbc",
+        "relevance_score": 1,
+        "assigned_region": "UAE",
+        "primary_mission_topic": "Other/Unclear",
+        "decision": "Irrelevant",
+        "justification": "UAE stock-market movement has no supported mission connection."
+      },
+      "error": null
+    },
+    {
+      "article_id": "2bd785b2e4e47c94373f5aaee020c9c4fdcffe59e3b51555e364b67c84806d91",
+      "classification": {
+        "article_id": "2bd785b2e4e47c94373f5aaee020c9c4fdcffe59e3b51555e364b67c84806d91",
+        "relevance_score": 1,
+        "assigned_region": "KSA",
+        "primary_mission_topic": "Other/Unclear",
+        "decision": "Irrelevant",
+        "justification": "The story concerns Saudi aviation ambitions, not a stated food, water or net-zero consequence."
+      },
+      "error": null
+    },
+    {
+      "article_id": "12acae011b58b9993a666ad0e796f4cb9065b9d340ba97a2b160ce4205ede3d8",
+      "classification": {
+        "article_id": "12acae011b58b9993a666ad0e796f4cb9065b9d340ba97a2b160ce4205ede3d8",
+        "relevance_score": 1,
+        "assigned_region": "Global",
+        "primary_mission_topic": "Other/Unclear",
+        "decision": "Irrelevant",
+        "justification": "Lebanese political and conflict burdens are discussed without a supported mission consequence."
+      },
+      "error": null
+    },
+    {
+      "article_id": "263157683bfe481aaf92e3262235941470bab64132165c033eec63f6378b9d88",
+      "classification": {
+        "article_id": "263157683bfe481aaf92e3262235941470bab64132165c033eec63f6378b9d88",
+        "relevance_score": 1,
+        "assigned_region": "UAE",
+        "primary_mission_topic": "Other/Unclear",
+        "decision": "Irrelevant",
+        "justification": "US-Iran standoff briefing for UAE residents has no specific mission consequence in the metadata."
+      },
+      "error": null
+    },
+    {
+      "article_id": "136340e04b369a8243282ca3574d5bdd571113ef3848d3fcc7aa128b4257dbea",
+      "classification": {
+        "article_id": "136340e04b369a8243282ca3574d5bdd571113ef3848d3fcc7aa128b4257dbea",
+        "relevance_score": 2,
+        "assigned_region": "Global",
+        "primary_mission_topic": "Food Security",
+        "decision": "Borderline",
+        "justification": "West Bank violence is reported, but the metadata does not establish agricultural or food-supply disruption."
+      },
+      "error": null
+    },
+    {
+      "article_id": "1604bb9579f7a2b0be6a679715c4d15f0377f81f146fac905040c139872d430c",
+      "classification": {
+        "article_id": "1604bb9579f7a2b0be6a679715c4d15f0377f81f146fac905040c139872d430c",
+        "relevance_score": 2,
+        "assigned_region": "KSA",
+        "primary_mission_topic": "Other/Unclear",
+        "decision": "Borderline",
+        "justification": "An Aramco administrative building was targeted, but no effect on oil operations or energy supply is reported."
+      },
+      "error": null
+    },
+    {
+      "article_id": "0d40de5e8eefb6d8845d591cbb660fa51962843c8bc89b303aca31c1a16a7306",
+      "classification": {
+        "article_id": "0d40de5e8eefb6d8845d591cbb660fa51962843c8bc89b303aca31c1a16a7306",
+        "relevance_score": 1,
+        "assigned_region": "KSA",
+        "primary_mission_topic": "Other/Unclear",
+        "decision": "Irrelevant",
+        "justification": "Personal accounts of attack victims do not establish a mission-related system impact."
+      },
+      "error": null
+    },
+    {
+      "article_id": "14d300a88d592dd4e5e21ee70169db089388a7b6c104b52213688a7114ae52b5",
+      "classification": {
+        "article_id": "14d300a88d592dd4e5e21ee70169db089388a7b6c104b52213688a7114ae52b5",
+        "relevance_score": 3,
+        "assigned_region": "Global",
+        "primary_mission_topic": "Food Security",
+        "decision": "Borderline",
+        "justification": "Agritech and supply-chain resilience are discussed, but specific food-security measures and event geography are unclear."
+      },
+      "error": null
+    },
+    {
+      "article_id": "2cbb33fd30a2c80d0ce2a8a378c9b600cfc3110813837518b1472b6e78220b37",
+      "classification": {
+        "article_id": "2cbb33fd30a2c80d0ce2a8a378c9b600cfc3110813837518b1472b6e78220b37",
+        "relevance_score": 2,
+        "assigned_region": "Out of Scope/Unclear",
+        "primary_mission_topic": "Other/Unclear",
+        "decision": "Borderline",
+        "justification": "Russian diesel supply and pricing could affect energy markets, but the metadata gives no MENA or transition impact."
+      },
+      "error": null
+    },
+    {
+      "article_id": "1524c7ad5c438ab78b3442eaee7058c5db8905e74b38fe35907dd0846c5c5e48",
+      "classification": {
+        "article_id": "1524c7ad5c438ab78b3442eaee7058c5db8905e74b38fe35907dd0846c5c5e48",
+        "relevance_score": 1,
+        "assigned_region": "Out of Scope/Unclear",
+        "primary_mission_topic": "Other/Unclear",
+        "decision": "Irrelevant",
+        "justification": "Slovak political dispute over a Russia trip has no supported mission link."
+      },
+      "error": null
+    },
+    {
+      "article_id": "297731ea188a4f3c4357e4c07c0a98099f03124a3f80701bb7c67bfd13ec7683",
+      "classification": {
+        "article_id": "297731ea188a4f3c4357e4c07c0a98099f03124a3f80701bb7c67bfd13ec7683",
+        "relevance_score": 1,
+        "assigned_region": "Out of Scope/Unclear",
+        "primary_mission_topic": "Other/Unclear",
+        "decision": "Irrelevant",
+        "justification": "Consumer-device AI security warning has no supported mission connection."
+      },
+      "error": null
+    },
+    {
+      "article_id": "1423750434eb720f423e8a9a87044708614098c4bb636b2e8cb0650462068b6b",
+      "classification": {
+        "article_id": "1423750434eb720f423e8a9a87044708614098c4bb636b2e8cb0650462068b6b",
+        "relevance_score": 3,
+        "assigned_region": "Global",
+        "primary_mission_topic": "Other/Unclear",
+        "decision": "Borderline",
+        "justification": "Strikes reportedly hit Gulf infrastructure, but the affected assets and any food, water or energy-system consequences are unspecified."
+      },
+      "error": null
+    },
+    {
+      "article_id": "18e24dc9badcedb6110e2cba030ca0b646b7c2f203728aed9d61358dc5e0dacb",
+      "classification": {
+        "article_id": "18e24dc9badcedb6110e2cba030ca0b646b7c2f203728aed9d61358dc5e0dacb",
+        "relevance_score": 1,
+        "assigned_region": "KSA",
+        "primary_mission_topic": "Other/Unclear",
+        "decision": "Irrelevant",
+        "justification": "Saudi-Iraqi talks addressing attacks are not linked to food, water or net zero."
+      },
+      "error": null
+    },
+    {
+      "article_id": "0f6d4d7b6a1cbfa8e9b45385d7bd43afbd6db2e92f6869ba8e990bb3d747f866",
+      "classification": {
+        "article_id": "0f6d4d7b6a1cbfa8e9b45385d7bd43afbd6db2e92f6869ba8e990bb3d747f866",
+        "relevance_score": 1,
+        "assigned_region": "Out of Scope/Unclear",
+        "primary_mission_topic": "Other/Unclear",
+        "decision": "Irrelevant",
+        "justification": "Manchester United management dispute is unrelated to the mission."
+      },
+      "error": null
+    },
+    {
+      "article_id": "16db3e4dd8af7a8183da087f0f11a324a8326adf01e6902b75ed4a6b2e554c7d",
+      "classification": {
+        "article_id": "16db3e4dd8af7a8183da087f0f11a324a8326adf01e6902b75ed4a6b2e554c7d",
+        "relevance_score": 1,
+        "assigned_region": "Out of Scope/Unclear",
+        "primary_mission_topic": "Other/Unclear",
+        "decision": "Irrelevant",
+        "justification": "Gold prices and US interest-rate expectations have no supported mission connection."
+      },
+      "error": null
+    },
+    {
+      "article_id": "2e445b429a5bb2951190da4ab48653079218e6b2b2f0d85bbba71cd468673ee7",
+      "classification": {
+        "article_id": "2e445b429a5bb2951190da4ab48653079218e6b2b2f0d85bbba71cd468673ee7",
+        "relevance_score": 1,
+        "assigned_region": "Out of Scope/Unclear",
+        "primary_mission_topic": "Other/Unclear",
+        "decision": "Irrelevant",
+        "justification": "Potential UAE investment in an Italian telecoms deal has no stated mission connection."
+      },
+      "error": null
+    },
+    {
+      "article_id": "15617f0ad1de91aa2bbcb14e82635b641a7de7a48931cdfbc800429c40dfe1d9",
+      "classification": {
+        "article_id": "15617f0ad1de91aa2bbcb14e82635b641a7de7a48931cdfbc800429c40dfe1d9",
+        "relevance_score": 1,
+        "assigned_region": "Global",
+        "primary_mission_topic": "Other/Unclear",
+        "decision": "Irrelevant",
+        "justification": "Iranian LPG and jet-fuel shipments concern fossil-fuel trade without a stated food or net-zero consequence."
+      },
+      "error": null
+    },
+    {
+      "article_id": "2efa5068c401706598d8fdf0a4a5e37d969ddea9bdb318503edf045aeefbd856",
+      "classification": {
+        "article_id": "2efa5068c401706598d8fdf0a4a5e37d969ddea9bdb318503edf045aeefbd856",
+        "relevance_score": 1,
+        "assigned_region": "Out of Scope/Unclear",
+        "primary_mission_topic": "Other/Unclear",
+        "decision": "Irrelevant",
+        "justification": "Celebrity arrest over an alleged flight assault has no mission connection."
+      },
+      "error": null
+    },
+    {
+      "article_id": "b63ec18bbf4993257cba0d005e4b7fa8c78f880283fdcbaa23b4bf48d661cb7f",
+      "classification": {
+        "article_id": "b63ec18bbf4993257cba0d005e4b7fa8c78f880283fdcbaa23b4bf48d661cb7f",
+        "relevance_score": 4,
+        "assigned_region": "Global",
+        "primary_mission_topic": "Net Zero Transition",
+        "decision": "Relevant",
+        "justification": "Oman's ministry and Siemens are training engineers for a renewable-powered national grid."
+      },
+      "error": null
+    },
+    {
+      "article_id": "ae539e398162fa078c34964e0ac8a2e2947dd863f46e81af1f0dbdbe70eddf4e",
+      "classification": {
+        "article_id": "ae539e398162fa078c34964e0ac8a2e2947dd863f46e81af1f0dbdbe70eddf4e",
+        "relevance_score": 4,
+        "assigned_region": "Global",
+        "primary_mission_topic": "Net Zero Transition",
+        "decision": "Relevant",
+        "justification": "Oman is widening its renewable-energy certificate market, a direct clean-energy market development."
+      },
+      "error": null
+    },
+    {
+      "article_id": "10276cae948daa5048817cafef25db3a16a49cbe6651ceb55785f32d61ef1a3e",
+      "classification": {
+        "article_id": "10276cae948daa5048817cafef25db3a16a49cbe6651ceb55785f32d61ef1a3e",
+        "relevance_score": 5,
+        "assigned_region": "Global",
+        "primary_mission_topic": "Net Zero Transition",
+        "decision": "Relevant",
+        "justification": "Morocco is seeking contractors for a 350 MW solar programme, a concrete renewable-energy procurement."
+      },
+      "error": null
+    },
+    {
+      "article_id": "1967ed99f2e9da46880d4a3b5a5778fc0f1b208c02de9fdfe769c68f7811cda8",
+      "classification": {
+        "article_id": "1967ed99f2e9da46880d4a3b5a5778fc0f1b208c02de9fdfe769c68f7811cda8",
+        "relevance_score": 4,
+        "assigned_region": "Global",
+        "primary_mission_topic": "Food Security",
+        "decision": "Relevant",
+        "justification": "Bahrain's new laws explicitly focus on food security, though specific provisions are not detailed."
+      },
+      "error": null
+    },
+    {
+      "article_id": "c972a2f5aa272ca3b0b8afe4dddf5e7d94d1aa9ad5d683f0031f5c5b5d3c33f8",
+      "classification": {
+        "article_id": "c972a2f5aa272ca3b0b8afe4dddf5e7d94d1aa9ad5d683f0031f5c5b5d3c33f8",
+        "relevance_score": 4,
+        "assigned_region": "KSA",
+        "primary_mission_topic": "Net Zero Transition",
+        "decision": "Relevant",
+        "justification": "An agreement to develop Saudi renewable-energy workforce capacity directly supports the energy transition."
+      },
+      "error": null
+    },
+    {
+      "article_id": "5df84ebf307fdb51d585496de791295c1fe86d7fc39b63b8e3a791ec3584d780",
+      "classification": {
+        "article_id": "5df84ebf307fdb51d585496de791295c1fe86d7fc39b63b8e3a791ec3584d780",
+        "relevance_score": 4,
+        "assigned_region": "KSA",
+        "primary_mission_topic": "Net Zero Transition",
+        "decision": "Relevant",
+        "justification": "The reported expiry of a Saudi green-hydrogen development MoU is a direct change to a net-zero project."
+      },
+      "error": null
+    },
+    {
+      "article_id": "03cd3b3904bd06156104154321bdff275f3fca02601a8d9a070c11c0600d8349",
+      "classification": {
+        "article_id": "03cd3b3904bd06156104154321bdff275f3fca02601a8d9a070c11c0600d8349",
+        "relevance_score": 3,
+        "assigned_region": "Egypt",
+        "primary_mission_topic": "Food Security",
+        "decision": "Borderline",
+        "justification": "Rural productive-village models could support agricultural capacity, but the title does not specify food or farming outcomes."
+      },
+      "error": null
+    },
+    {
+      "article_id": "b12f9a595c0c7b49c90080f420229e59f355a6714c9cad2bf7651c3032ca8418",
+      "classification": {
+        "article_id": "b12f9a595c0c7b49c90080f420229e59f355a6714c9cad2bf7651c3032ca8418",
+        "relevance_score": 4,
+        "assigned_region": "UAE",
+        "primary_mission_topic": "Food Security",
+        "decision": "Relevant",
+        "justification": "A UAE partnership expands domestic blueberry production, directly adding local agricultural capacity."
+      },
+      "error": null
+    },
+    {
+      "article_id": "926d261a3dea3a6d16827689d69b99279a165109264109b90fb66e9bf8f6bc18",
+      "classification": {
+        "article_id": "926d261a3dea3a6d16827689d69b99279a165109264109b90fb66e9bf8f6bc18",
+        "relevance_score": 5,
+        "assigned_region": "KSA",
+        "primary_mission_topic": "Net Zero Transition",
+        "decision": "Relevant",
+        "justification": "A 500 MW/2,000 MWh battery-storage project has secured a Saudi contract, supporting grid-scale renewable integration."
+      },
+      "error": null
+    },
+    {
+      "article_id": "b019929436115b60f2428ae7259b9cc23e2d122b39878a81cddb483a8cb8a412",
+      "classification": {
+        "article_id": "b019929436115b60f2428ae7259b9cc23e2d122b39878a81cddb483a8cb8a412",
+        "relevance_score": 4,
+        "assigned_region": "Global",
+        "primary_mission_topic": "Food Security",
+        "decision": "Relevant",
+        "justification": "Qatar's sustainable food-production targets and reported poultry and dairy self-sufficiency directly concern food security."
+      },
+      "error": null
+    },
+    {
+      "article_id": "613e5e23ee7a456c635a8f20ea19385e8dc250767bc6a29d58086f7ec54f0623",
+      "classification": {
+        "article_id": "613e5e23ee7a456c635a8f20ea19385e8dc250767bc6a29d58086f7ec54f0623",
+        "relevance_score": 5,
+        "assigned_region": "Global",
+        "primary_mission_topic": "Net Zero Transition",
+        "decision": "Relevant",
+        "justification": "Oman's grid plan covers a 7.23 GW green-energy portfolio, a major transition and infrastructure development."
+      },
+      "error": null
+    },
+    {
+      "article_id": "d8da0d09824599d68c7aed19df473e3cf03d1818802e46d95e30007d583782b0",
+      "classification": {
+        "article_id": "d8da0d09824599d68c7aed19df473e3cf03d1818802e46d95e30007d583782b0",
+        "relevance_score": 3,
+        "assigned_region": "Global",
+        "primary_mission_topic": "Net Zero Transition",
+        "decision": "Borderline",
+        "justification": "UAE-Singapore cooperation includes green finance, but no specific climate-finance activity or outcome is described."
+      },
+      "error": null
+    },
+    {
+      "article_id": "0e18dbd4fc3a1b3e13209b645f2175b844133a703b153ab85937728a698f6ff4",
+      "classification": {
+        "article_id": "0e18dbd4fc3a1b3e13209b645f2175b844133a703b153ab85937728a698f6ff4",
+        "relevance_score": 4,
+        "assigned_region": "UAE",
+        "primary_mission_topic": "Net Zero Transition",
+        "decision": "Relevant",
+        "justification": "Abu Dhabi data-centre expansion includes a stated goal for carbon-free cooling power by 2035."
+      },
+      "error": null
+    },
+    {
+      "article_id": "c545046a97083fdaa3b0c38201ebdeaf5dbcb88c6c783ce4cdc9ca7d397c8735",
+      "classification": {
+        "article_id": "c545046a97083fdaa3b0c38201ebdeaf5dbcb88c6c783ce4cdc9ca7d397c8735",
+        "relevance_score": 5,
+        "assigned_region": "UAE",
+        "primary_mission_topic": "Food Security",
+        "decision": "Relevant",
+        "justification": "The UAE's goal to grow half its crops locally is a clear food-security and domestic agricultural-capacity development."
+      },
+      "error": null
+    },
+    {
+      "article_id": "bd2bdff65098010579f1643a184429b9e064c0427da6c9a68a4a52529b2e4b24",
+      "classification": {
+        "article_id": "bd2bdff65098010579f1643a184429b9e064c0427da6c9a68a4a52529b2e4b24",
+        "relevance_score": 3,
+        "assigned_region": "Out of Scope/Unclear",
+        "primary_mission_topic": "Food Security",
+        "decision": "Borderline",
+        "justification": "Sharjah-backed support for Zanzibar women farmers could strengthen livelihoods or production; food-security outcomes are unspecified."
+      },
+      "error": null
+    },
+    {
+      "article_id": "e522718e9411a264067dbfc6b6dcaf76c85d02b9d3c65089f0887c3f26d9e2be",
+      "classification": {
+        "article_id": "e522718e9411a264067dbfc6b6dcaf76c85d02b9d3c65089f0887c3f26d9e2be",
+        "relevance_score": 3,
+        "assigned_region": "UAE",
+        "primary_mission_topic": "Net Zero Transition",
+        "decision": "Borderline",
+        "justification": "An Abu Dhabi school achieved LEED Platinum certification, but specific energy, water or emissions outcomes are not supplied."
+      },
+      "error": null
+    },
+    {
+      "article_id": "0d99f6669958fe51c0c57e6cfac30e7b7885ae1fa9be3beac0a3fa63c37de6a1",
+      "classification": {
+        "article_id": "0d99f6669958fe51c0c57e6cfac30e7b7885ae1fa9be3beac0a3fa63c37de6a1",
+        "relevance_score": 2,
+        "assigned_region": "Out of Scope/Unclear",
+        "primary_mission_topic": "Food Security",
+        "decision": "Borderline",
+        "justification": "French supermarket freezers were targeted, raising critical-infrastructure concerns, but effects on food storage or supply are unclear."
+      },
+      "error": null
+    },
+    {
+      "article_id": "43d6f50ce4038700c5afb7d7423defca4a75650705552c6c681dfc10af78af28",
+      "classification": {
+        "article_id": "43d6f50ce4038700c5afb7d7423defca4a75650705552c6c681dfc10af78af28",
+        "relevance_score": 4,
+        "assigned_region": "Global",
+        "primary_mission_topic": "Food Security",
+        "decision": "Relevant",
+        "justification": "IsDB and IFAD are strengthening cooperation on food systems and rural development, a direct food-security connection."
+      },
+      "error": null
+    },
+    {
+      "article_id": "e00535e9363c2fb7d09ca79d0a191365b06bbe63e55fb7e613517d5ba7915cdd",
+      "classification": {
+        "article_id": "e00535e9363c2fb7d09ca79d0a191365b06bbe63e55fb7e613517d5ba7915cdd",
+        "relevance_score": 3,
+        "assigned_region": "KSA",
+        "primary_mission_topic": "Net Zero Transition",
+        "decision": "Borderline",
+        "justification": "Saudi university research funding concerns renewable energy, but practical application and scale are not stated."
+      },
+      "error": null
+    },
+    {
+      "article_id": "aa8f3a5131b54d2c7857d295fc9f20a9f8f1f7048422aa00705a03fb76158955",
+      "classification": {
+        "article_id": "aa8f3a5131b54d2c7857d295fc9f20a9f8f1f7048422aa00705a03fb76158955",
+        "relevance_score": 5,
+        "assigned_region": "KSA",
+        "primary_mission_topic": "Water Security",
+        "decision": "Relevant",
+        "justification": "Saudi NWC completed a SAR74 million water pipeline and network project, a concrete water-infrastructure development."
+      },
+      "error": null
+    },
+    {
+      "article_id": "295b835ea1b72d49c1a644414cdbf1fec52c070c67f6f4a04a45d35291a51c20",
+      "classification": {
+        "article_id": "295b835ea1b72d49c1a644414cdbf1fec52c070c67f6f4a04a45d35291a51c20",
+        "relevance_score": 4,
+        "assigned_region": "KSA",
+        "primary_mission_topic": "Food Security",
+        "decision": "Relevant",
+        "justification": "Saudi Reef funding in Jazan supports production and beneficiaries, consistent with agricultural capacity, though specific outputs are unstated."
+      },
+      "error": null
+    },
+    {
+      "article_id": "6a6335d0efbc40aa4668ad2fcbf00aadd4840349db0ccea438ac7ded4f83f148",
+      "classification": {
+        "article_id": "6a6335d0efbc40aa4668ad2fcbf00aadd4840349db0ccea438ac7ded4f83f148",
+        "relevance_score": 4,
+        "assigned_region": "Global",
+        "primary_mission_topic": "Water Security",
+        "decision": "Relevant",
+        "justification": "KSrelief is pumping 500,000 liters of water in Gaza, a direct water provision action."
+      },
+      "error": null
+    },
+    {
+      "article_id": "90e898810eca447f6b47528aaa13428b40d47f61edb2736a2a417d212e6b0141",
+      "classification": {
+        "article_id": "90e898810eca447f6b47528aaa13428b40d47f61edb2736a2a417d212e6b0141",
+        "relevance_score": 4,
+        "assigned_region": "KSA",
+        "primary_mission_topic": "Food Security",
+        "decision": "Relevant",
+        "justification": "The report explicitly links Jazan crop diversity to national food security."
+      },
+      "error": null
+    },
+    {
+      "article_id": "905cd20a5becab64485f52672224ae0bea6e9e70f8c4fa53e77a309ce7ac1bb1",
+      "classification": {
+        "article_id": "905cd20a5becab64485f52672224ae0bea6e9e70f8c4fa53e77a309ce7ac1bb1",
+        "relevance_score": 4,
+        "assigned_region": "Egypt",
+        "primary_mission_topic": "Water Security",
+        "decision": "Relevant",
+        "justification": "Egypt backs financing for 36 Nile Basin water and energy projects; project locations across the basin are not specified."
+      },
+      "error": null
+    },
+    {
+      "article_id": "fd2c4af45bbf3e8d914aafdef618d1de2b27732f97bac810396da4112456a4df",
+      "classification": {
+        "article_id": "fd2c4af45bbf3e8d914aafdef618d1de2b27732f97bac810396da4112456a4df",
+        "relevance_score": 5,
+        "assigned_region": "Global",
+        "primary_mission_topic": "Net Zero Transition",
+        "decision": "Relevant",
+        "justification": "Iraq's North Oil Company targets zero gas flaring by 2027, a concrete emissions and energy-sector transition commitment."
+      },
+      "error": null
+    },
+    {
+      "article_id": "ceef5c73d936c9c7f0023d704b5ecf3cb76fb035d01b0186335ec8c71b3728b9",
+      "classification": {
+        "article_id": "ceef5c73d936c9c7f0023d704b5ecf3cb76fb035d01b0186335ec8c71b3728b9",
+        "relevance_score": 3,
+        "assigned_region": "Global",
+        "primary_mission_topic": "Net Zero Transition",
+        "decision": "Borderline",
+        "justification": "A major lithium supply deal may serve battery and clean-energy supply chains, but end use and MENA relevance are unspecified."
+      },
+      "error": null
+    },
+    {
+      "article_id": "a64dd8e909a2ba0cef4133e2e6ac75669c1ad49f81758effe911374891707b0f",
+      "classification": {
+        "article_id": "a64dd8e909a2ba0cef4133e2e6ac75669c1ad49f81758effe911374891707b0f",
+        "relevance_score": 4,
+        "assigned_region": "Global",
+        "primary_mission_topic": "Net Zero Transition",
+        "decision": "Relevant",
+        "justification": "Chinese export controls on solar-manufacturing technology could affect global solar supply chains relevant to MENA deployment."
+      },
+      "error": null
+    },
+    {
+      "article_id": "6f25044cf412a9122a09ea29e969fafb5d6eb470b368db24ba6fcb891908a062",
+      "classification": {
+        "article_id": "6f25044cf412a9122a09ea29e969fafb5d6eb470b368db24ba6fcb891908a062",
+        "relevance_score": 1,
+        "assigned_region": "Out of Scope/Unclear",
+        "primary_mission_topic": "Net Zero Transition",
+        "decision": "Irrelevant",
+        "justification": "European car-emissions agreement is foreign-local; no MENA or systemic consequence is supported by the metadata."
+      },
+      "error": null
+    },
+    {
+      "article_id": "69637e17914334e03834eb350110d0d0bd53eb3a4bad354c8479920c0c3799f6",
+      "classification": {
+        "article_id": "69637e17914334e03834eb350110d0d0bd53eb3a4bad354c8479920c0c3799f6",
+        "relevance_score": 4,
+        "assigned_region": "Global",
+        "primary_mission_topic": "Food Security",
+        "decision": "Relevant",
+        "justification": "Higher oil-shipping costs are reported to lift grocery prices, an explicit transport-cost and food-affordability link."
+      },
+      "error": null
+    },
+    {
+      "article_id": "ea8f13b3c44fb8037fea919bd23007b46e663d285192bdfe6ebc3c649a662231",
+      "classification": {
+        "article_id": "ea8f13b3c44fb8037fea919bd23007b46e663d285192bdfe6ebc3c649a662231",
+        "relevance_score": 1,
+        "assigned_region": "Out of Scope/Unclear",
+        "primary_mission_topic": "Food Security",
+        "decision": "Irrelevant",
+        "justification": "South African agriculture priorities are foreign-local with no MENA or systemic bridge stated."
+      },
+      "error": null
+    }
+  ],
+  "requests": [
+    {
+      "article_ids": [
+        "0015db728f0f8b16ebc936ab4c98d84cc1f748a810796176dd282fd2e9784a52",
+        "002117e3270f55e3cfec2678b8642654cd4f888b3c67bd885f3c44cc92057927",
+        "00539a484b9d4a6f500a9ece4a5020fc0f438ee32dd0b9165386c52a893b4286",
+        "005b14300d39e84d3766e1cf8acf90c2301b7b7e3ccef5ab8b28f30466aaa8f8",
+        "00c63cd61222f71464cb234c01efb4035c79a5742b82f4eb6f2d3040b7b74140",
+        "01c4153bbe04078a3d9d0e8d9783f7896d27e3252f3793eb1d4fe896eabb349b",
+        "02137ae9fbaf7018758bdfe0e5997a16fd0bb487711bd61dc8d961824e58fcf2",
+        "021495e570e6ab2c98fb44e199bc3380cc06b0c4bf68e685148aace9c250f002",
+        "021bd427ae89203d2f51f8bec8f1425b80d4baa14bd75ada603b4570d1955fb6",
+        "02809c703cac5a45727dc8fea7112c20e1ce691cb7265b4e2cc373fe4d6cab44",
+        "0293ddca8e540055a337c48e5344bccff7eaf6ffd9f75743155271fa88ed72a8",
+        "031ecd0010d1b400d6d0f6cf91e64cab060226fd835c4598428006d7f9dfe578",
+        "03477cf3f5b84ad6eb35202a0251dde7808e99a6c0f5bfc1d7fdd77cd76a83dd",
+        "03694acf12963025abea7aca6480e64aa0e11498da05e7f1687417f269e67d29",
+        "03cc433495d103dc3d2ec0b7fbc4f379c549f4975d41d398974f5b3078a824ec",
+        "03cd3b3904bd06156104154321bdff275f3fca02601a8d9a070c11c0600d8349",
+        "0413ed4bff7b6b50f3a4af119c2ad64b2a0221cad057a472556017df30d56269",
+        "044d258145c09a5c50cd6236d317da8a5da81ac9552e453d59206e4eabeb9a9e",
+        "047442c79e90a37274826927015e157950fd587c2d528a1fdc290f1ab2a1546d",
+        "04d136ccf2f10948892880fd88bbc8348fe13b667ced1667dc12248793963e8d",
+        "05f3c8db8f016e15e1fa777910c7ab2dec6d6f18965bcb20d3604f990d0cf752",
+        "061cc3ae804a6ec0270e0ffd3dc5e147e2e475799ca0c35ac44f9f9358233735",
+        "06562ae88440680a35d4ad70b9a6acdd95b7fab8ff52bed8a93cd6d7242487ff",
+        "0740ccb196f9359fe0f12e5db890ab1ed90c0cf807a4b2b8ca31b37713664394",
+        "07655901ab133c3498f3a0ed530555b19be13e0eb6df9a6f80a3f44edc57530b",
+        "08c4a2e207610138e31c547dfd33b1cdcaf441a13e8c6d953daa0220ae84fdaa",
+        "099e9086499fbdd20596e3704ca857d6e771c03a3830d6564e56bb98e9d6656a",
+        "09d598acd86f95b54bd04c8a9d32d8987f695ceddc7fb8220356850efbce65ae",
+        "0a1fc0e2a77dade420459e2f3221faf8e6cb0133e7292542c805fbed225ce4b8",
+        "0a574484114dd7b351493987484f33033d0226dcc99d153214894a192bf8e334",
+        "0ade8ea0064868bc07e7d91c42f6a6e6053c048fec06febb7d9ca10883d05ab0",
+        "0b0eb64d67a7a2974df54119bc60b478fb41a98e5202ff195b5230238d298084",
+        "0c68b8ccbad5febc782481a42a6e3962139f39830d154021c34c5aa9f028b19d",
+        "0d40838afdc0790d36b87f77c1083ff412768ac71dae7c150c5e00c452b89dff",
+        "0d40de5e8eefb6d8845d591cbb660fa51962843c8bc89b303aca31c1a16a7306",
+        "0d99f6669958fe51c0c57e6cfac30e7b7885ae1fa9be3beac0a3fa63c37de6a1",
+        "0e18dbd4fc3a1b3e13209b645f2175b844133a703b153ab85937728a698f6ff4",
+        "0ebf12995cf54c6c4d5d52c8f6ed0b56707886c25c68ba1ca1add34a3315326d",
+        "0f6d4d7b6a1cbfa8e9b45385d7bd43afbd6db2e92f6869ba8e990bb3d747f866",
+        "10276cae948daa5048817cafef25db3a16a49cbe6651ceb55785f32d61ef1a3e",
+        "11603c34d246144b924a42271c51ea0e6d04696e38eeda970c53ee8525cdb3e5",
+        "11750816d2b1e6eecb36c504fbe7a481a0f890d4c27cfb66c29f864d73b55d0b",
+        "11d93829ffa620ec4176231e47af32665721839d2d1e6bfac9d864c6cdeb7555",
+        "12acae011b58b9993a666ad0e796f4cb9065b9d340ba97a2b160ce4205ede3d8",
+        "136340e04b369a8243282ca3574d5bdd571113ef3848d3fcc7aa128b4257dbea",
+        "1392542245a1db88bb9a68a374730b804eda5f57f38fc4fa748800321a02597e",
+        "1423750434eb720f423e8a9a87044708614098c4bb636b2e8cb0650462068b6b",
+        "1445c509c803df43d3b756ea7613cbe05f149699e30fab73e69938f1d0c9b247",
+        "1487dba652bf18142287123d6561131af1edf59f2119f58bd459166724b8dfbc",
+        "14d300a88d592dd4e5e21ee70169db089388a7b6c104b52213688a7114ae52b5",
+        "1524c7ad5c438ab78b3442eaee7058c5db8905e74b38fe35907dd0846c5c5e48",
+        "15617f0ad1de91aa2bbcb14e82635b641a7de7a48931cdfbc800429c40dfe1d9",
+        "15df033f684511636f788a803442b131e8600bcdcb9c50228b57ae72bc6ee85d",
+        "1604bb9579f7a2b0be6a679715c4d15f0377f81f146fac905040c139872d430c",
+        "16db3e4dd8af7a8183da087f0f11a324a8326adf01e6902b75ed4a6b2e554c7d",
+        "17d949e1b0630d1dd455cfd72d6f5e000d5e7d146779d18bc0f8a5f4e1ac6070",
+        "18411ef2dbcc2c9d8384458138cf098c17fc29e2a826a7ee793075688e7e072e",
+        "18e24dc9badcedb6110e2cba030ca0b646b7c2f203728aed9d61358dc5e0dacb",
+        "1967ed99f2e9da46880d4a3b5a5778fc0f1b208c02de9fdfe769c68f7811cda8",
+        "1a30e2758ade599e3deaed227b3919ce3fb8a9db5d005732ee5d96fa2a53862d",
+        "21d4bd6f05a0a5496620399d3fb29bbb6557c9a9e98325e161cd2ea0227afb02",
+        "22604ac075e7cfb7118deaec7b30fb3a31a738b82f02176893e209472c9d9561",
+        "258370b50d7e5acabf88f7f84b86aea3eb99f7124102ee3cdf1616cb47666e66",
+        "261f8ce773b9530195c1e65f89f99b5484aff13dd2ec0388634ad98af05e1cc2",
+        "263157683bfe481aaf92e3262235941470bab64132165c033eec63f6378b9d88",
+        "295b835ea1b72d49c1a644414cdbf1fec52c070c67f6f4a04a45d35291a51c20",
+        "297731ea188a4f3c4357e4c07c0a98099f03124a3f80701bb7c67bfd13ec7683",
+        "2b3f0ec05fa4ad52f4eb66d06069db48aac876a925b8c37e37b373ab68deffe5",
+        "2bd785b2e4e47c94373f5aaee020c9c4fdcffe59e3b51555e364b67c84806d91",
+        "2cbb33fd30a2c80d0ce2a8a378c9b600cfc3110813837518b1472b6e78220b37",
+        "2e445b429a5bb2951190da4ab48653079218e6b2b2f0d85bbba71cd468673ee7",
+        "2efa5068c401706598d8fdf0a4a5e37d969ddea9bdb318503edf045aeefbd856",
+        "43d6f50ce4038700c5afb7d7423defca4a75650705552c6c681dfc10af78af28",
+        "4b1b60f368a1c1e3ba7d3e9db5fe7e48b8d875d5f6ea975c183e3a15508dad72",
+        "5df84ebf307fdb51d585496de791295c1fe86d7fc39b63b8e3a791ec3584d780",
+        "613e5e23ee7a456c635a8f20ea19385e8dc250767bc6a29d58086f7ec54f0623",
+        "69637e17914334e03834eb350110d0d0bd53eb3a4bad354c8479920c0c3799f6",
+        "6a6335d0efbc40aa4668ad2fcbf00aadd4840349db0ccea438ac7ded4f83f148",
+        "6f25044cf412a9122a09ea29e969fafb5d6eb470b368db24ba6fcb891908a062",
+        "905cd20a5becab64485f52672224ae0bea6e9e70f8c4fa53e77a309ce7ac1bb1",
+        "90e898810eca447f6b47528aaa13428b40d47f61edb2736a2a417d212e6b0141",
+        "926d261a3dea3a6d16827689d69b99279a165109264109b90fb66e9bf8f6bc18",
+        "a64dd8e909a2ba0cef4133e2e6ac75669c1ad49f81758effe911374891707b0f",
+        "aa8f3a5131b54d2c7857d295fc9f20a9f8f1f7048422aa00705a03fb76158955",
+        "ad2bda609d4df3eb07f5587ab24027163c10dc5e7f32aa182f6bfb7ea3967a2f",
+        "ae539e398162fa078c34964e0ac8a2e2947dd863f46e81af1f0dbdbe70eddf4e",
+        "b019929436115b60f2428ae7259b9cc23e2d122b39878a81cddb483a8cb8a412",
+        "b12f9a595c0c7b49c90080f420229e59f355a6714c9cad2bf7651c3032ca8418",
+        "b63ec18bbf4993257cba0d005e4b7fa8c78f880283fdcbaa23b4bf48d661cb7f",
+        "b74158cf6a65318922408c8725d33cbdfe4047f5aa30dba4a3fef34634bbd453",
+        "bd2bdff65098010579f1643a184429b9e064c0427da6c9a68a4a52529b2e4b24",
+        "c545046a97083fdaa3b0c38201ebdeaf5dbcb88c6c783ce4cdc9ca7d397c8735",
+        "c972a2f5aa272ca3b0b8afe4dddf5e7d94d1aa9ad5d683f0031f5c5b5d3c33f8",
+        "ceef5c73d936c9c7f0023d704b5ecf3cb76fb035d01b0186335ec8c71b3728b9",
+        "d8da0d09824599d68c7aed19df473e3cf03d1818802e46d95e30007d583782b0",
+        "e00535e9363c2fb7d09ca79d0a191365b06bbe63e55fb7e613517d5ba7915cdd",
+        "e522718e9411a264067dbfc6b6dcaf76c85d02b9d3c65089f0887c3f26d9e2be",
+        "ea8f13b3c44fb8037fea919bd23007b46e663d285192bdfe6ebc3c649a662231",
+        "f69c38fa54f884e09184a7d7639193bb94022461b9bcabc921f1f37fa3195e70",
+        "fd2c4af45bbf3e8d914aafdef618d1de2b27732f97bac810396da4112456a4df"
+      ],
+      "requested_model": "gpt-6-luna",
+      "attempt": 1,
+      "status": "success",
+      "returned_model": "gpt-6-luna",
+      "prompt_tokens": 18340,
+      "completion_tokens": 10099,
+      "total_tokens": 28439
+    }
+  ],
+  "split_count": 0,
+  "latency_seconds": 72.38854479999281,
+  "usage": {
+    "prompt_tokens": 18340,
+    "completion_tokens": 10099,
+    "total_tokens": 28439
+  },
+  "request_count": 1,
+  "batch_size": 100
+}

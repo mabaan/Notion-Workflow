@@ -1,0 +1,36 @@
+{
+  "id": "chatcmpl-EaT5tA1nFTHJnzB3E9B2Tb9Jv04J0",
+  "object": "chat.completion",
+  "created": 1792360353,
+  "model": "gpt-6-luna",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"summary\": \"Iraq’s North Oil Company is targeting zero gas flaring by the end of 2027.\",\n  \"why_it_matters\": \"Reducing gas flaring is a direct decarbonization issue, linking the target to the net zero transition in Iraq.\",\n  \"relevance_score\": 4,\n  \"editorial_significance\": 3,\n  \"significance_reason\": \"The company has set a specific zero-flaring target and deadline, but the available information gives no scale or implementation details.\",\n  \"factual_points\": [\n    \"Iraq’s North Oil Company targets zero gas flaring by the end of 2027.\"\n  ],\n  \"topic\": [\n    \"Net zero transition\",\n    \"Gas flaring\",\n    \"Oil & gas\"\n  ],\n  \"region\": [\n    \"Iraq\",\n    \"MENA\"\n  ],\n  \"newsletter_angle\": \"A 2027 zero-flaring target puts gas emissions reduction on the agenda for Iraq’s North Oil Company.\",\n  \"sns_hook\": \"Iraq’s North Oil Company is targeting zero gas flaring by the end of 2027.\"\n}",
+        "refusal": null,
+        "annotations": []
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1316,
+    "completion_tokens": 531,
+    "total_tokens": 1847,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 1313,
+      "audio_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 283,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+    }
+  },
+  "service_tier": "default",
+  "system_fingerprint": null
+}

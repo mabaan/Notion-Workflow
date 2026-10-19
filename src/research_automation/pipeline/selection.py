@@ -13,6 +13,7 @@ from research_automation.notion_schema import ARTICLE_QUEUE
 from research_automation.utils.regions import (
     TARGET_REGION_ORDER,
     add_primary_region_count,
+    reported_location,
     target_deficits,
 )
 from research_automation.utils.urls import clean_url, url_hostname
@@ -45,6 +46,13 @@ class SelectionResult:
     final_state: WeeklyQueueState
     shortages: dict[str, int]
     rejected_by_constraint: dict[str, int]
+
+    @property
+    def tier_counts(self) -> dict[str, int]:
+        return {
+            tier: sum(winner.selection_tier == tier for winner in self.winners)
+            for tier in ("strict", "fallback")
+        }
 
 
 def load_weekly_queue_state(
@@ -102,8 +110,48 @@ def select_final_candidates(
     targets: dict[str, int],
     run_limit: int,
     publisher_cap: int,
+    allow_regional_overflow: bool = False,
+    allow_fallback: bool = False,
 ) -> SelectionResult:
-    """Select the complete scored pool under exact quotas and hard weekly caps."""
+    """Preserve strict winners, then fill spare capacity from enriched fallback.
+
+    Reserve strict coverage AND strict quality-overflow winners first. Otherwise
+    fallback coverage could displace a strict overflow winner or consume its
+    publisher allowance. Fallback then pursues remaining coverage before overflow.
+    Legacy callers keep their existing strict selection unless explicitly opted in.
+    """
+
+    arguments = dict(targets=targets, publisher_cap=publisher_cap,
+                     allow_regional_overflow=allow_regional_overflow)
+    strict = _select_tier(
+        candidates, weekly_state=weekly_state, run_limit=run_limit, **arguments,
+    )
+    if not allow_fallback or len(strict.winners) >= run_limit:
+        return strict
+    fallback_pool = [
+        candidate for candidate in candidates
+        if candidate.fallback_eligible
+    ]
+    fallback = _select_tier(
+        fallback_pool, weekly_state=strict.final_state,
+        run_limit=run_limit - len(strict.winners), tier="fallback",
+        protected_winners=strict.winners, event_history=weekly_state.existing_titles,
+        **arguments,
+    )
+    rejected = dict(strict.rejected_by_constraint)
+    for reason, count in fallback.rejected_by_constraint.items():
+        rejected[reason] = rejected.get(reason, 0) + count
+    return SelectionResult(
+        [*strict.winners, *fallback.winners], fallback.final_state,
+        fallback.shortages, rejected,
+    )
+
+
+def _select_tier(
+    candidates, *, weekly_state, targets, run_limit, publisher_cap,
+    allow_regional_overflow, tier="strict", protected_winners=(), event_history=None,
+) -> SelectionResult:
+    """Use the existing coverage/score allocation and shared hard constraints."""
 
     state = WeeklyQueueState(
         region_counts=dict(weekly_state.region_counts),
@@ -114,18 +162,37 @@ def select_final_candidates(
     rejected: dict[str, int] = {}
     possible: list[CandidateResult] = []
     for candidate in candidates:
-        if not candidate.eligible or not candidate.target_region:
+        candidate.regional_overflow = False
+        candidate.selection_rejection_reason = ""
+        candidate.selection_tier = None
+        candidate.fallback_reason = ""
+        if tier == "fallback":
+            qualified = candidate.fallback_eligible
+        else:
+            qualified = candidate.eligible and bool(candidate.target_region)
+        if not qualified:
+            continue
+        if tier == "strict" and allow_regional_overflow and candidate.enrichment.relevance_score < max(4, candidate.required_relevance_score or 4):
+            candidate.selection_rejection_reason = "relevance below required threshold"
+            _increment(rejected, candidate.selection_rejection_reason)
             continue
         if candidate.article.canonical_url in state.existing_urls:
+            candidate.selection_rejection_reason = "existing URL"
             _increment(rejected, "existing URL")
             continue
         if any(
             probable_same_event(candidate.article.title, title)
-            for title in state.existing_titles
+            for title in (state.existing_titles if event_history is None else event_history)
         ):
+            candidate.selection_rejection_reason = "existing event"
             _increment(rejected, "existing event")
             continue
+        if any(same_candidate_event(candidate, winner) for winner in protected_winners):
+            candidate.selection_rejection_reason = "same event"
+            _increment(rejected, "same event")
+            continue
         if state.publisher_counts.get(candidate.article.publisher_key, 0) >= publisher_cap:
+            candidate.selection_rejection_reason = "publisher weekly cap"
             _increment(rejected, "publisher weekly cap")
             continue
         possible.append(candidate)
@@ -134,6 +201,7 @@ def select_final_candidates(
     deduped: list[CandidateResult] = []
     for candidate in sorted(possible, key=_final_rank_sort):
         if any(same_candidate_event(candidate, kept) for kept in deduped):
+            candidate.selection_rejection_reason = "same event"
             _increment(rejected, "same event")
             continue
         deduped.append(candidate)
@@ -175,6 +243,44 @@ def select_final_candidates(
         state.existing_titles.append(winner.article.title)
         remaining = [item for item in remaining if item is not winner]
 
+    # Coverage has had first claim on every slot. Only already-qualified
+    # candidates enter this pass; classifier scores never establish eligibility.
+    if allow_regional_overflow:
+        for candidate in sorted(remaining, key=_final_rank_sort):
+            if len(winners) >= run_limit:
+                break
+            if state.publisher_counts.get(candidate.article.publisher_key, 0) >= publisher_cap:
+                continue
+            if any(same_candidate_event(candidate, winner) for winner in winners):
+                continue
+            candidate.regional_overflow = True
+            winners.append(candidate)
+            region = candidate.target_region
+            state.region_counts[region] = state.region_counts.get(region, 0) + 1
+            key = candidate.article.publisher_key
+            state.publisher_counts[key] = state.publisher_counts.get(key, 0) + 1
+            state.existing_urls.add(candidate.article.canonical_url)
+            state.existing_titles.append(candidate.article.title)
+
+    winner_ids = {id(winner) for winner in winners}
+    for winner in winners:
+        winner.selection_tier = tier
+        if tier == "fallback":
+            winner.fallback_reason = (
+                f"final relevance {winner.enrichment.relevance_score} below strict threshold "
+                f"{winner.required_relevance_score or 4}; registered publisher; "
+                "final relevance and significance >= 3; spare capacity after strict selection"
+            )
+    for candidate in deduped:
+        if id(candidate) in winner_ids:
+            continue
+        if state.publisher_counts.get(candidate.article.publisher_key, 0) >= publisher_cap:
+            candidate.selection_rejection_reason = "publisher weekly cap"
+        elif any(same_candidate_event(candidate, winner) for winner in winners):
+            candidate.selection_rejection_reason = "same event"
+        else:
+            candidate.selection_rejection_reason = "run capacity" if len(winners) >= run_limit else "regional coverage complete"
+
     final_deficits = target_deficits(state.region_counts, targets)
     return SelectionResult(
         winners=winners,
@@ -207,7 +313,91 @@ def probable_same_event(left_title: str, right_title: str) -> bool:
 def same_candidate_event(left: CandidateResult, right: CandidateResult) -> bool:
     if left.article.canonical_url == right.article.canonical_url:
         return True
-    return probable_same_event(left.article.title, right.article.title)
+    a, b = left.article, right.article
+    a_location, _ = reported_location(a.title, a.snippet)
+    b_location, _ = reported_location(b.title, b.snippet)
+    # A common company/topic must not merge projects in different countries.
+    if a_location and b_location and a_location != b_location:
+        return False
+    a_measures, b_measures = _event_measures(a.title), _event_measures(b.title)
+    if any(a_measures[unit].isdisjoint(b_measures[unit]) for unit in a_measures.keys() & b_measures.keys()):
+        return False
+    if probable_same_event(a.title, b.title):
+        return True
+    return _same_policy_announcement(a, b, a_location, b_location)
+
+
+_EVENT_WORD_FORMS = {
+    "grow": "production", "grows": "production", "growing": "production",
+    "locally": "local", "updated": "update", "updates": "update",
+    "revised": "update", "revises": "update", "revision": "update",
+    "approved": "approve", "approves": "approve", "approval": "approve",
+    "adopted": "adopt", "adopts": "adopt", "announced": "announce",
+    "announces": "announce", "launched": "launch", "launches": "launch",
+    "policies": "policy", "regulations": "regulation", "plans": "plan",
+    "targets": "target",
+}
+_POLICY_WORDS = {"policy", "strategy", "regulation", "law", "plan"}
+_ANNOUNCEMENT_WORDS = {"update", "approve", "adopt", "announce", "launch"}
+
+
+def _event_measures(text):
+    """Compare like units; capacity in one report is not a conflicting cost."""
+
+    measures = {}
+    for number, unit in re.findall(
+        r"\b(\d[\d,]*(?:\.\d+)?)\s*(%|percent\b|per cent\b|gwh\b|mwh\b|gw\b|mw\b)",
+        text.casefold(),
+    ):
+        value = float(number.replace(",", ""))
+        if unit.startswith("g"):
+            value *= 1000
+            unit = "m" + unit[1:]
+        if unit in {"percent", "per cent"}:
+            unit = "%"
+        measures.setdefault(unit, set()).add(value)
+    return measures
+
+
+def _event_tokens(text):
+    return {
+        _EVENT_WORD_FORMS.get(token, token) for token in _TOKEN_RE.findall(text.casefold())
+        if token not in _STOP_WORDS | {"more", "under"} and len(token) > 1
+    }
+
+
+def _event_title(article):
+    # Strip the actual source suffix, including long multi-part publisher names.
+    return re.split(
+        r"\s+[-|]\s+" + re.escape(article.source_name) + r"(?:\b|$)",
+        article.title, maxsplit=1, flags=re.IGNORECASE,
+    )[0] if article.source_name else article.title
+
+
+def _same_policy_announcement(left, right, left_location, right_location):
+    """Require a shared policy action, event country, time and strong text overlap.
+
+    This is deliberately narrower than topic similarity. Sparse metadata that
+    cannot establish these anchors does not create a new event match.
+    """
+
+    if not left_location or left_location != right_location:
+        return False
+    if not left.published_date or not right.published_date:
+        return False
+    if abs((_aware_utc(left.published_date) - _aware_utc(right.published_date)).total_seconds()) > 3 * 86400:
+        return False
+    a, b = _event_tokens(_event_title(left)), _event_tokens(_event_title(right))
+    shared = a & b
+    if not a & _POLICY_WORDS or not b & _POLICY_WORDS or not shared & _ANNOUNCEMENT_WORDS:
+        return False
+    if shared & _POLICY_WORDS and min(len(a), len(b)) >= 6 and len(shared) / min(len(a), len(b)) >= 0.85:
+        return True
+    if len(shared) < 3 or not left.snippet or not right.snippet:
+        return False
+    a_evidence, b_evidence = _event_tokens(left.snippet), _event_tokens(right.snippet)
+    overlap = a_evidence & b_evidence
+    return len(overlap) >= 12 and len(overlap) / min(len(a_evidence), len(b_evidence)) >= 0.9
 
 
 def _final_rank_sort(candidate: CandidateResult) -> tuple:

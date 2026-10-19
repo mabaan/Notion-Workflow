@@ -1,0 +1,36 @@
+{
+  "id": "chatcmpl-EaRBPjYoirYqxxiggCCxaLu6XbcD5",
+  "object": "chat.completion",
+  "created": 1792353007,
+  "model": "gpt-6-luna",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"summary\": \"A UN agency says shipping disruption in the Strait of Hormuz is beginning to affect harvests; the available information gives no details on locations, causes, or scale.\",\n  \"why_it_matters\": \"The reported impact on harvests connects a key shipping disruption to food security, a core SOMA MATER focus, though the extent of the impact is unclear.\",\n  \"relevance_score\": 4,\n  \"editorial_significance\": 3,\n  \"significance_reason\": \"The report signals an emerging effect on harvests, but the available title provides no measure of scale or specific operational consequences.\",\n  \"factual_points\": [\n    \"A UN agency says the Hormuz shipping disruption is starting to affect harvests.\",\n    \"The available information does not identify the affected harvests or quantify the impact.\"\n  ],\n  \"topic\": [\n    \"Food security\",\n    \"Shipping\",\n    \"Supply chains\"\n  ],\n  \"region\": [\n    \"MENA\",\n    \"Strait of Hormuz\"\n  ],\n  \"newsletter_angle\": \"Track whether disruption around Hormuz is affecting harvests and food supply chains, and seek details on the locations and scale of the reported impact.\",\n  \"sns_hook\": \"A UN agency says Hormuz shipping disruption is starting to hit harvests. The available report does not yet specify where or how much.\"\n}",
+        "refusal": null,
+        "annotations": []
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1148,
+    "completion_tokens": 532,
+    "total_tokens": 1680,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 1145,
+      "audio_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 238,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+    }
+  },
+  "service_tier": "default",
+  "system_fingerprint": null
+}

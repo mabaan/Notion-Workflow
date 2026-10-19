@@ -1,0 +1,2211 @@
+[
+  {
+    "object": "page",
+    "id": "3fec995b-3347-8138-9048-d180f002fd38",
+    "created_time": "2026-10-19T00:47:00.000Z",
+    "last_edited_time": "2026-10-19T00:47:00.000Z",
+    "created_by": {
+      "object": "user",
+      "id": "38ac995b-3347-81e6-9e07-0027f67f6ed0"
+    },
+    "last_edited_by": {
+      "object": "user",
+      "id": "38ac995b-3347-81e6-9e07-0027f67f6ed0"
+    },
+    "cover": null,
+    "icon": null,
+    "parent": {
+      "type": "database_id",
+      "database_id": "38ac995b-3347-8067-9a1a-c0f6bc138d27"
+    },
+    "in_trash": false,
+    "is_archived": false,
+    "is_locked": false,
+    "properties": {
+      "Processed": {
+        "id": "BJe%5C",
+        "type": "checkbox",
+        "checkbox": true
+      },
+      "Region": {
+        "id": "Hsa%7D",
+        "type": "multi_select",
+        "multi_select": [
+          {
+            "id": "94de8452-3c34-4123-b140-ef1188f114ec",
+            "name": "KSA",
+            "color": "red"
+          }
+        ]
+      },
+      "URL": {
+        "id": "LB%5DB",
+        "type": "url",
+        "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE1FMWp6ckFKMHBQdEk5MGVySk1WLXUzQVRUbTNLeDlPRXQ5bkpXU29EMWRjQVFCdnVOSDhBOU55UUZZTGkzRVJ3WE9B?oc=5"
+      },
+      "Error Notes": {
+        "id": "MFI%3F",
+        "type": "rich_text",
+        "rich_text": []
+      },
+      "Summary": {
+        "id": "NTxh",
+        "type": "rich_text",
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Saudi Reef reports more than SAR1.2 billion in support in Jazan to boost production and empower beneficiaries. The available title does not specify how the support is allocated or what has been produced.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Saudi Reef reports more than SAR1.2 billion in support in Jazan to boost production and empower beneficiaries. The available title does not specify how the support is allocated or what has been produced.",
+            "href": null
+          }
+        ]
+      },
+      "Social Media Content": {
+        "id": "O~%5D%3F",
+        "type": "relation",
+        "relation": [],
+        "has_more": false
+      },
+      "Why It Matters": {
+        "id": "Q_X%5D",
+        "type": "rich_text",
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Production support under Saudi Reef has a potential connection to Saudi food security, but the available evidence does not identify the products or establish an impact on supply.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Production support under Saudi Reef has a potential connection to Saudi food security, but the available evidence does not identify the products or establish an impact on supply.",
+            "href": null
+          }
+        ]
+      },
+      "Dataset Meeting": {
+        "id": "VCwm",
+        "type": "relation",
+        "relation": [
+          {
+            "id": "3fdc995b-3347-81ce-853b-e50347c6946b"
+          }
+        ],
+        "has_more": false
+      },
+      "Canonical URL": {
+        "id": "ZSE%3F",
+        "type": "url",
+        "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE1FMWp6ckFKMHBQdEk5MGVySk1WLXUzQVRUbTNLeDlPRXQ5bkpXU29EMWRjQVFCdnVOSDhBOU55UUZZTGkzRVJ3WE9B?oc=5"
+      },
+      "URL Hash": {
+        "id": "%5BAnW",
+        "type": "rich_text",
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "295b835ea1b72d49c1a644414cdbf1fec52c070c67f6f4a04a45d35291a51c20",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "295b835ea1b72d49c1a644414cdbf1fec52c070c67f6f4a04a45d35291a51c20",
+            "href": null
+          }
+        ]
+      },
+      "Content Hash": {
+        "id": "%5DjA%5D",
+        "type": "rich_text",
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "c3fbaba83a888d867e7eb386bd778c5cac4ca8b8673cc7560b1ffe8ac4a4124f",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "c3fbaba83a888d867e7eb386bd778c5cac4ca8b8673cc7560b1ffe8ac4a4124f",
+            "href": null
+          }
+        ]
+      },
+      "Topic": {
+        "id": "bl%60n",
+        "type": "multi_select",
+        "multi_select": [
+          {
+            "id": "9ddfb2de-e3f0-4379-b438-95fb3c683735",
+            "name": "food security",
+            "color": "purple"
+          }
+        ]
+      },
+      "Relevance  Score": {
+        "id": "df~t",
+        "type": "number",
+        "number": 3
+      },
+      "Last Processed": {
+        "id": "e~RO",
+        "type": "date",
+        "date": {
+          "start": "2026-10-19T00:31:00.000+00:00",
+          "end": null,
+          "time_zone": null
+        }
+      },
+      "Status": {
+        "id": "hQT%3D",
+        "type": "select",
+        "select": {
+          "id": "b`NJ",
+          "name": "New",
+          "color": "blue"
+        }
+      },
+      "Newsletter": {
+        "id": "mHWP",
+        "type": "relation",
+        "relation": [],
+        "has_more": false
+      },
+      "Source": {
+        "id": "obV%3D",
+        "type": "relation",
+        "relation": [
+          {
+            "id": "3cec995b-3347-81b1-86e1-d8bef4942364"
+          }
+        ],
+        "has_more": false
+      },
+      "Collected Date": {
+        "id": "q%3Bke",
+        "type": "date",
+        "date": {
+          "start": "2026-10-19T00:31:00.000+00:00",
+          "end": null,
+          "time_zone": null
+        }
+      },
+      "Newsletter Angle": {
+        "id": "rV%60R",
+        "type": "rich_text",
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Examine what the reported Saudi Reef support funds and whether it translates into measurable production gains.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Examine what the reported Saudi Reef support funds and whether it translates into measurable production gains.",
+            "href": null
+          }
+        ]
+      },
+      "Published Date": {
+        "id": "u%3A~O",
+        "type": "date",
+        "date": {
+          "start": "2026-10-18T19:01:00.000+00:00",
+          "end": null,
+          "time_zone": null
+        }
+      },
+      "Duplicate": {
+        "id": "%7DWG%3F",
+        "type": "checkbox",
+        "checkbox": false
+      },
+      "SNS Hook": {
+        "id": "~QzT",
+        "type": "rich_text",
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Saudi Reef reports over SAR1.2 billion in support in Jazan—but what production results can be documented?",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Saudi Reef reports over SAR1.2 billion in support in Jazan—but what production results can be documented?",
+            "href": null
+          }
+        ]
+      },
+      "TItle": {
+        "id": "title",
+        "type": "title",
+        "title": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Saudi Reef in Jazan: Over SAR1.2 Billion in Support to Boost Production, Empower Beneficiaries - وكالة الأنباء السعودية",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Saudi Reef in Jazan: Over SAR1.2 Billion in Support to Boost Production, Empower Beneficiaries - وكالة الأنباء السعودية",
+            "href": null
+          }
+        ]
+      }
+    },
+    "url": "https://app.notion.com/p/Saudi-Reef-in-Jazan-Over-SAR1-2-Billion-in-Support-to-Boost-Production-Empower-Beneficiaries-3fec995b334781389048d180f002fd38",
+    "public_url": null,
+    "archived": false
+  },
+  {
+    "object": "page",
+    "id": "3fec995b-3347-81c9-b087-f7a75f694478",
+    "created_time": "2026-10-19T00:27:00.000Z",
+    "last_edited_time": "2026-10-19T00:48:00.000Z",
+    "created_by": {
+      "object": "user",
+      "id": "38ac995b-3347-81e6-9e07-0027f67f6ed0"
+    },
+    "last_edited_by": {
+      "object": "user",
+      "id": "379d872b-594c-8181-999e-0002067704ef"
+    },
+    "cover": null,
+    "icon": null,
+    "parent": {
+      "type": "database_id",
+      "database_id": "38ac995b-3347-8067-9a1a-c0f6bc138d27"
+    },
+    "in_trash": false,
+    "is_archived": false,
+    "is_locked": false,
+    "properties": {
+      "Processed": {
+        "id": "BJe%5C",
+        "type": "checkbox",
+        "checkbox": true
+      },
+      "Region": {
+        "id": "Hsa%7D",
+        "type": "multi_select",
+        "multi_select": [
+          {
+            "id": "a3dbe897-7f31-44bf-a892-eb2df28faf98",
+            "name": "Global",
+            "color": "gray"
+          }
+        ]
+      },
+      "URL": {
+        "id": "LB%5DB",
+        "type": "url",
+        "url": "https://www.theguardian.com/world/2026/oct/18/us-ambassador-israel-mike-huckabee-west-bank-settler-attack-photojournalist-heidi-levine"
+      },
+      "Error Notes": {
+        "id": "MFI%3F",
+        "type": "rich_text",
+        "rich_text": []
+      },
+      "Summary": {
+        "id": "NTxh",
+        "type": "rich_text",
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "US ambassador Mike Huckabee condemned an attack on photojournalist Heidi Levine during violence against Palestinian olive harvesters in the occupied West Bank and called for arrests and prosecution.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "US ambassador Mike Huckabee condemned an attack on photojournalist Heidi Levine during violence against Palestinian olive harvesters in the occupied West Bank and called for arrests and prosecution.",
+            "href": null
+          }
+        ]
+      },
+      "Social Media Content": {
+        "id": "O~%5D%3F",
+        "type": "relation",
+        "relation": [],
+        "has_more": false
+      },
+      "Why It Matters": {
+        "id": "Q_X%5D",
+        "type": "rich_text",
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "The food-systems connection is the reported disruption of Palestinian olive harvesting, but the article does not establish a wider effect on food supply or agricultural output.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "The food-systems connection is the reported disruption of Palestinian olive harvesting, but the article does not establish a wider effect on food supply or agricultural output.",
+            "href": null
+          }
+        ]
+      },
+      "Dataset Meeting": {
+        "id": "VCwm",
+        "type": "relation",
+        "relation": [
+          {
+            "id": "3fdc995b-3347-81ce-853b-e50347c6946b"
+          }
+        ],
+        "has_more": false
+      },
+      "Canonical URL": {
+        "id": "ZSE%3F",
+        "type": "url",
+        "url": "https://www.theguardian.com/world/2026/oct/18/us-ambassador-israel-mike-huckabee-west-bank-settler-attack-photojournalist-heidi-levine"
+      },
+      "URL Hash": {
+        "id": "%5BAnW",
+        "type": "rich_text",
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "76f17176b623ef2c5ecca8d495793f846d1f88fdc17417aafe3786e911f110b8",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "76f17176b623ef2c5ecca8d495793f846d1f88fdc17417aafe3786e911f110b8",
+            "href": null
+          }
+        ]
+      },
+      "Content Hash": {
+        "id": "%5DjA%5D",
+        "type": "rich_text",
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "28c2b7542940ac95c5a147f1c461ecd67a1e165a4b7636c811cdd109bdf9eec7",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "28c2b7542940ac95c5a147f1c461ecd67a1e165a4b7636c811cdd109bdf9eec7",
+            "href": null
+          }
+        ]
+      },
+      "Topic": {
+        "id": "bl%60n",
+        "type": "multi_select",
+        "multi_select": [
+          {
+            "id": "d0d4dbd0-14c1-4624-8c69-246a714efda1",
+            "name": "agriculture",
+            "color": "default"
+          },
+          {
+            "id": "6a3b38e1-aa7b-4616-b260-22a8b86e5256",
+            "name": "Regional Conflict",
+            "color": "green"
+          }
+        ]
+      },
+      "Relevance  Score": {
+        "id": "df~t",
+        "type": "number",
+        "number": 3
+      },
+      "Last Processed": {
+        "id": "e~RO",
+        "type": "date",
+        "date": {
+          "start": "2026-10-19T00:13:00.000+00:00",
+          "end": null,
+          "time_zone": null
+        }
+      },
+      "Status": {
+        "id": "hQT%3D",
+        "type": "select",
+        "select": {
+          "id": "b`NJ",
+          "name": "New",
+          "color": "blue"
+        }
+      },
+      "Newsletter": {
+        "id": "mHWP",
+        "type": "relation",
+        "relation": [],
+        "has_more": false
+      },
+      "Source": {
+        "id": "obV%3D",
+        "type": "relation",
+        "relation": [
+          {
+            "id": "3cec995b-3347-81be-9871-db9c2830ac5a"
+          }
+        ],
+        "has_more": false
+      },
+      "Collected Date": {
+        "id": "q%3Bke",
+        "type": "date",
+        "date": {
+          "start": "2026-10-19T00:13:00.000+00:00",
+          "end": null,
+          "time_zone": null
+        }
+      },
+      "Newsletter Angle": {
+        "id": "rV%60R",
+        "type": "rich_text",
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Briefly note the reported disruption to West Bank olive harvesting, without implying a quantified food-security impact.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Briefly note the reported disruption to West Bank olive harvesting, without implying a quantified food-security impact.",
+            "href": null
+          }
+        ]
+      },
+      "Published Date": {
+        "id": "u%3A~O",
+        "type": "date",
+        "date": {
+          "start": "2026-10-18T17:02:00.000+00:00",
+          "end": null,
+          "time_zone": null
+        }
+      },
+      "Duplicate": {
+        "id": "%7DWG%3F",
+        "type": "checkbox",
+        "checkbox": false
+      },
+      "SNS Hook": {
+        "id": "~QzT",
+        "type": "rich_text",
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Attacks during the West Bank olive harvest have drawn international condemnation; the effect on production remains unclear.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Attacks during the West Bank olive harvest have drawn international condemnation; the effect on production remains unclear.",
+            "href": null
+          }
+        ]
+      },
+      "TItle": {
+        "id": "title",
+        "type": "title",
+        "title": [
+          {
+            "type": "text",
+            "text": {
+              "content": "US ambassador to Israel calls West Bank settler attack on American photojournalist ‘terror’",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "US ambassador to Israel calls West Bank settler attack on American photojournalist ‘terror’",
+            "href": null
+          }
+        ]
+      }
+    },
+    "url": "https://app.notion.com/p/US-ambassador-to-Israel-calls-West-Bank-settler-attack-on-American-photojournalist-terror-3fec995b334781c9b087f7a75f694478",
+    "public_url": null,
+    "archived": false
+  },
+  {
+    "object": "page",
+    "id": "3fec995b-3347-81cf-b6b4-fec824c38cd5",
+    "created_time": "2026-10-19T00:27:00.000Z",
+    "last_edited_time": "2026-10-19T00:48:00.000Z",
+    "created_by": {
+      "object": "user",
+      "id": "38ac995b-3347-81e6-9e07-0027f67f6ed0"
+    },
+    "last_edited_by": {
+      "object": "user",
+      "id": "379d872b-594c-8181-999e-0002067704ef"
+    },
+    "cover": null,
+    "icon": null,
+    "parent": {
+      "type": "database_id",
+      "database_id": "38ac995b-3347-8067-9a1a-c0f6bc138d27"
+    },
+    "in_trash": false,
+    "is_archived": false,
+    "is_locked": false,
+    "properties": {
+      "Processed": {
+        "id": "BJe%5C",
+        "type": "checkbox",
+        "checkbox": true
+      },
+      "Region": {
+        "id": "Hsa%7D",
+        "type": "multi_select",
+        "multi_select": [
+          {
+            "id": "a3dbe897-7f31-44bf-a892-eb2df28faf98",
+            "name": "Global",
+            "color": "gray"
+          }
+        ]
+      },
+      "URL": {
+        "id": "LB%5DB",
+        "type": "url",
+        "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPMF94azRMeWMtY05iU3BpQzZoanNWRlJKRG1xVnVyWEgxU2lKeU1sc0dmZVV6aFJOX1l4VnNFRTgzdHFpd2lfcTg2SURXV2g0ZWFhV2FiWnN5US1mNXdCUm93ZVd1T2lIalV6SHdZdnRweGFJSlluT01yR2RUV1hwRE9NZGp3bkZCWVJqOUxHSVhvUS1mVklxck9jZ0RGZ0phV2ltMjlfekNzcXFpVmhXQkhYNzk?oc=5"
+      },
+      "Error Notes": {
+        "id": "MFI%3F",
+        "type": "rich_text",
+        "rich_text": []
+      },
+      "Summary": {
+        "id": "NTxh",
+        "type": "rich_text",
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "A UN agency says disruption to shipping through Hormuz is starting to affect harvests, according to the article title. The available evidence gives no location, crop or scale of impact.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "A UN agency says disruption to shipping through Hormuz is starting to affect harvests, according to the article title. The available evidence gives no location, crop or scale of impact.",
+            "href": null
+          }
+        ]
+      },
+      "Social Media Content": {
+        "id": "O~%5D%3F",
+        "type": "relation",
+        "relation": [],
+        "has_more": false
+      },
+      "Why It Matters": {
+        "id": "Q_X%5D",
+        "type": "rich_text",
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "The reported effect on harvests provides a direct food-security connection between a MENA shipping disruption and agricultural production, though its extent is unclear.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "The reported effect on harvests provides a direct food-security connection between a MENA shipping disruption and agricultural production, though its extent is unclear.",
+            "href": null
+          }
+        ]
+      },
+      "Dataset Meeting": {
+        "id": "VCwm",
+        "type": "relation",
+        "relation": [
+          {
+            "id": "3fdc995b-3347-81ce-853b-e50347c6946b"
+          }
+        ],
+        "has_more": false
+      },
+      "Canonical URL": {
+        "id": "ZSE%3F",
+        "type": "url",
+        "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPMF94azRMeWMtY05iU3BpQzZoanNWRlJKRG1xVnVyWEgxU2lKeU1sc0dmZVV6aFJOX1l4VnNFRTgzdHFpd2lfcTg2SURXV2g0ZWFhV2FiWnN5US1mNXdCUm93ZVd1T2lIalV6SHdZdnRweGFJSlluT01yR2RUV1hwRE9NZGp3bkZCWVJqOUxHSVhvUS1mVklxck9jZ0RGZ0phV2ltMjlfekNzcXFpVmhXQkhYNzk?oc=5"
+      },
+      "URL Hash": {
+        "id": "%5BAnW",
+        "type": "rich_text",
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "df0123a05b17d50f0b4a11d19955bc4cd199759785b53e2ff65a94b5790479b0",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "df0123a05b17d50f0b4a11d19955bc4cd199759785b53e2ff65a94b5790479b0",
+            "href": null
+          }
+        ]
+      },
+      "Content Hash": {
+        "id": "%5DjA%5D",
+        "type": "rich_text",
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "4317c250df1e2d1e6ea60e0a365bea6b6ae50309080471659058b6d70974cd62",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "4317c250df1e2d1e6ea60e0a365bea6b6ae50309080471659058b6d70974cd62",
+            "href": null
+          }
+        ]
+      },
+      "Topic": {
+        "id": "bl%60n",
+        "type": "multi_select",
+        "multi_select": [
+          {
+            "id": "9ddfb2de-e3f0-4379-b438-95fb3c683735",
+            "name": "food security",
+            "color": "purple"
+          },
+          {
+            "id": "fcb5697d-a559-4d7b-9517-988fb9ea5492",
+            "name": "supply chains",
+            "color": "purple"
+          },
+          {
+            "id": "cd8e479b-d2b5-407b-b7b2-4c7c96e7c0e3",
+            "name": "trade",
+            "color": "brown"
+          }
+        ]
+      },
+      "Relevance  Score": {
+        "id": "df~t",
+        "type": "number",
+        "number": 4
+      },
+      "Last Processed": {
+        "id": "e~RO",
+        "type": "date",
+        "date": {
+          "start": "2026-10-19T00:13:00.000+00:00",
+          "end": null,
+          "time_zone": null
+        }
+      },
+      "Status": {
+        "id": "hQT%3D",
+        "type": "select",
+        "select": {
+          "id": "b`NJ",
+          "name": "New",
+          "color": "blue"
+        }
+      },
+      "Newsletter": {
+        "id": "mHWP",
+        "type": "relation",
+        "relation": [],
+        "has_more": false
+      },
+      "Source": {
+        "id": "obV%3D",
+        "type": "relation",
+        "relation": [
+          {
+            "id": "3cec995b-3347-81d6-8a0b-f6df4ea23bb4"
+          }
+        ],
+        "has_more": false
+      },
+      "Collected Date": {
+        "id": "q%3Bke",
+        "type": "date",
+        "date": {
+          "start": "2026-10-19T00:13:00.000+00:00",
+          "end": null,
+          "time_zone": null
+        }
+      },
+      "Newsletter Angle": {
+        "id": "rV%60R",
+        "type": "rich_text",
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Watch for evidence on where and how Hormuz shipping disruption is affecting harvests.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Watch for evidence on where and how Hormuz shipping disruption is affecting harvests.",
+            "href": null
+          }
+        ]
+      },
+      "Published Date": {
+        "id": "u%3A~O",
+        "type": "date",
+        "date": {
+          "start": "2026-10-15T21:57:00.000+00:00",
+          "end": null,
+          "time_zone": null
+        }
+      },
+      "Duplicate": {
+        "id": "%7DWG%3F",
+        "type": "checkbox",
+        "checkbox": false
+      },
+      "SNS Hook": {
+        "id": "~QzT",
+        "type": "rich_text",
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "A UN agency says Hormuz shipping disruption is starting to hit harvests. Which crops and regions are affected remains unclear from the available report.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "A UN agency says Hormuz shipping disruption is starting to hit harvests. Which crops and regions are affected remains unclear from the available report.",
+            "href": null
+          }
+        ]
+      },
+      "TItle": {
+        "id": "title",
+        "type": "title",
+        "title": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Hormuz shipping disruption is starting to hit harvests, UN agency says - Arab News",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Hormuz shipping disruption is starting to hit harvests, UN agency says - Arab News",
+            "href": null
+          }
+        ]
+      }
+    },
+    "url": "https://app.notion.com/p/Hormuz-shipping-disruption-is-starting-to-hit-harvests-UN-agency-says-Arab-News-3fec995b334781cfb6b4fec824c38cd5",
+    "public_url": null,
+    "archived": false
+  },
+  {
+    "object": "page",
+    "id": "3fec995b-3347-8195-bd34-c980d0395454",
+    "created_time": "2026-10-19T00:27:00.000Z",
+    "last_edited_time": "2026-10-19T00:48:00.000Z",
+    "created_by": {
+      "object": "user",
+      "id": "38ac995b-3347-81e6-9e07-0027f67f6ed0"
+    },
+    "last_edited_by": {
+      "object": "user",
+      "id": "379d872b-594c-8181-999e-0002067704ef"
+    },
+    "cover": null,
+    "icon": null,
+    "parent": {
+      "type": "database_id",
+      "database_id": "38ac995b-3347-8067-9a1a-c0f6bc138d27"
+    },
+    "in_trash": false,
+    "is_archived": false,
+    "is_locked": false,
+    "properties": {
+      "Processed": {
+        "id": "BJe%5C",
+        "type": "checkbox",
+        "checkbox": true
+      },
+      "Region": {
+        "id": "Hsa%7D",
+        "type": "multi_select",
+        "multi_select": [
+          {
+            "id": "a3dbe897-7f31-44bf-a892-eb2df28faf98",
+            "name": "Global",
+            "color": "gray"
+          }
+        ]
+      },
+      "URL": {
+        "id": "LB%5DB",
+        "type": "url",
+        "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxONWxEcklqdkwyYnlDaW1wZVNVN2pSOGtlcE41SzlrcVByYU5mdl9nemdOa2daVHpULWJQN3dSLVFFSU5wcm1DVGloUTlLMkdWREFrSGsyQ05CVGVSZnBxeDI0QXZEZjNCNGd3N1pHdC1KeV9vSDlNeVBzVGg0SldDWGVaLUY2UmkybndRMXFhR19STVhZWENQaXJscW5aRVhiNVRQSUVtaDVoamtzaVlLYUFR?oc=5"
+      },
+      "Error Notes": {
+        "id": "MFI%3F",
+        "type": "rich_text",
+        "rich_text": []
+      },
+      "Summary": {
+        "id": "NTxh",
+        "type": "rich_text",
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "The UN says gains against malnutrition in Gaza are fragile as commercial supplies halt.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "The UN says gains against malnutrition in Gaza are fragile as commercial supplies halt.",
+            "href": null
+          }
+        ]
+      },
+      "Social Media Content": {
+        "id": "O~%5D%3F",
+        "type": "relation",
+        "relation": [],
+        "has_more": false
+      },
+      "Why It Matters": {
+        "id": "Q_X%5D",
+        "type": "rich_text",
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "The reported halt in commercial supplies directly concerns food access and malnutrition, making this a Food Security story in MENA.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "The reported halt in commercial supplies directly concerns food access and malnutrition, making this a Food Security story in MENA.",
+            "href": null
+          }
+        ]
+      },
+      "Dataset Meeting": {
+        "id": "VCwm",
+        "type": "relation",
+        "relation": [
+          {
+            "id": "3fdc995b-3347-81ce-853b-e50347c6946b"
+          }
+        ],
+        "has_more": false
+      },
+      "Canonical URL": {
+        "id": "ZSE%3F",
+        "type": "url",
+        "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxONWxEcklqdkwyYnlDaW1wZVNVN2pSOGtlcE41SzlrcVByYU5mdl9nemdOa2daVHpULWJQN3dSLVFFSU5wcm1DVGloUTlLMkdWREFrSGsyQ05CVGVSZnBxeDI0QXZEZjNCNGd3N1pHdC1KeV9vSDlNeVBzVGg0SldDWGVaLUY2UmkybndRMXFhR19STVhZWENQaXJscW5aRVhiNVRQSUVtaDVoamtzaVlLYUFR?oc=5"
+      },
+      "URL Hash": {
+        "id": "%5BAnW",
+        "type": "rich_text",
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "be93191b36649572545aea3a3e630f96bcfe1e65684574f3bb03f38305c89b52",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "be93191b36649572545aea3a3e630f96bcfe1e65684574f3bb03f38305c89b52",
+            "href": null
+          }
+        ]
+      },
+      "Content Hash": {
+        "id": "%5DjA%5D",
+        "type": "rich_text",
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "f16675e8512a97e3425f6e54358ed1b7609376c546d5aa02d5705de7f3040f3d",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "f16675e8512a97e3425f6e54358ed1b7609376c546d5aa02d5705de7f3040f3d",
+            "href": null
+          }
+        ]
+      },
+      "Topic": {
+        "id": "bl%60n",
+        "type": "multi_select",
+        "multi_select": [
+          {
+            "id": "9ddfb2de-e3f0-4379-b438-95fb3c683735",
+            "name": "food security",
+            "color": "purple"
+          },
+          {
+            "id": "20b87f74-d6f2-444e-b9ff-dc0739b2591c",
+            "name": "Humanitarian Crisis",
+            "color": "default"
+          }
+        ]
+      },
+      "Relevance  Score": {
+        "id": "df~t",
+        "type": "number",
+        "number": 4
+      },
+      "Last Processed": {
+        "id": "e~RO",
+        "type": "date",
+        "date": {
+          "start": "2026-10-19T00:13:00.000+00:00",
+          "end": null,
+          "time_zone": null
+        }
+      },
+      "Status": {
+        "id": "hQT%3D",
+        "type": "select",
+        "select": {
+          "id": "b`NJ",
+          "name": "New",
+          "color": "blue"
+        }
+      },
+      "Newsletter": {
+        "id": "mHWP",
+        "type": "relation",
+        "relation": [],
+        "has_more": false
+      },
+      "Source": {
+        "id": "obV%3D",
+        "type": "relation",
+        "relation": [
+          {
+            "id": "3cec995b-3347-81d6-8a0b-f6df4ea23bb4"
+          }
+        ],
+        "has_more": false
+      },
+      "Collected Date": {
+        "id": "q%3Bke",
+        "type": "date",
+        "date": {
+          "start": "2026-10-19T00:13:00.000+00:00",
+          "end": null,
+          "time_zone": null
+        }
+      },
+      "Newsletter Angle": {
+        "id": "rV%60R",
+        "type": "rich_text",
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Examine the link the UN draws between halted commercial supplies and fragile malnutrition gains, while noting that the available evidence does not establish the halt’s scale or duration.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Examine the link the UN draws between halted commercial supplies and fragile malnutrition gains, while noting that the available evidence does not establish the halt’s scale or duration.",
+            "href": null
+          }
+        ]
+      },
+      "Published Date": {
+        "id": "u%3A~O",
+        "type": "date",
+        "date": {
+          "start": "2026-10-16T12:04:00.000+00:00",
+          "end": null,
+          "time_zone": null
+        }
+      },
+      "Duplicate": {
+        "id": "%7DWG%3F",
+        "type": "checkbox",
+        "checkbox": false
+      },
+      "SNS Hook": {
+        "id": "~QzT",
+        "type": "rich_text",
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "UN: Gaza’s malnutrition gains are fragile as commercial supplies halt.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "UN: Gaza’s malnutrition gains are fragile as commercial supplies halt.",
+            "href": null
+          }
+        ]
+      },
+      "TItle": {
+        "id": "title",
+        "type": "title",
+        "title": [
+          {
+            "type": "text",
+            "text": {
+              "content": "UN says Gaza malnutrition gains fragile as commercial supplies halt - Arab News",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "UN says Gaza malnutrition gains fragile as commercial supplies halt - Arab News",
+            "href": null
+          }
+        ]
+      }
+    },
+    "url": "https://app.notion.com/p/UN-says-Gaza-malnutrition-gains-fragile-as-commercial-supplies-halt-Arab-News-3fec995b33478195bd34c980d0395454",
+    "public_url": null,
+    "archived": false
+  },
+  {
+    "object": "page",
+    "id": "3fec995b-3347-8118-ba6a-e44ac1743b6e",
+    "created_time": "2026-10-19T00:27:00.000Z",
+    "last_edited_time": "2026-10-19T00:48:00.000Z",
+    "created_by": {
+      "object": "user",
+      "id": "38ac995b-3347-81e6-9e07-0027f67f6ed0"
+    },
+    "last_edited_by": {
+      "object": "user",
+      "id": "379d872b-594c-8181-999e-0002067704ef"
+    },
+    "cover": null,
+    "icon": null,
+    "parent": {
+      "type": "database_id",
+      "database_id": "38ac995b-3347-8067-9a1a-c0f6bc138d27"
+    },
+    "in_trash": false,
+    "is_archived": false,
+    "is_locked": false,
+    "properties": {
+      "Processed": {
+        "id": "BJe%5C",
+        "type": "checkbox",
+        "checkbox": true
+      },
+      "Region": {
+        "id": "Hsa%7D",
+        "type": "multi_select",
+        "multi_select": [
+          {
+            "id": "a3dbe897-7f31-44bf-a892-eb2df28faf98",
+            "name": "Global",
+            "color": "gray"
+          }
+        ]
+      },
+      "URL": {
+        "id": "LB%5DB",
+        "type": "url",
+        "url": "https://www.theguardian.com/world/2026/oct/17/israeli-settlers-attack-european-diplomats-in-west-bank"
+      },
+      "Error Notes": {
+        "id": "MFI%3F",
+        "type": "rich_text",
+        "rich_text": []
+      },
+      "Summary": {
+        "id": "NTxh",
+        "type": "rich_text",
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Settlers attacked European diplomats and Palestinians during the olive harvest near Taybeh in the occupied West Bank. The report also describes widespread attacks on harvesters and Israeli rules restricting access to agricultural land.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Settlers attacked European diplomats and Palestinians during the olive harvest near Taybeh in the occupied West Bank. The report also describes widespread attacks on harvesters and Israeli rules restricting access to agricultural land.",
+            "href": null
+          }
+        ]
+      },
+      "Social Media Content": {
+        "id": "O~%5D%3F",
+        "type": "relation",
+        "relation": [],
+        "has_more": false
+      },
+      "Why It Matters": {
+        "id": "Q_X%5D",
+        "type": "rich_text",
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Violence against olive harvesters and restrictions on access to trees directly affect agricultural production and farmers’ ability to gather a crop described as economically vital to Palestinian communities.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Violence against olive harvesters and restrictions on access to trees directly affect agricultural production and farmers’ ability to gather a crop described as economically vital to Palestinian communities.",
+            "href": null
+          }
+        ]
+      },
+      "Dataset Meeting": {
+        "id": "VCwm",
+        "type": "relation",
+        "relation": [
+          {
+            "id": "3fdc995b-3347-81ce-853b-e50347c6946b"
+          }
+        ],
+        "has_more": false
+      },
+      "Canonical URL": {
+        "id": "ZSE%3F",
+        "type": "url",
+        "url": "https://www.theguardian.com/world/2026/oct/17/israeli-settlers-attack-european-diplomats-in-west-bank"
+      },
+      "URL Hash": {
+        "id": "%5BAnW",
+        "type": "rich_text",
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "7872aa95c13a73e64eda83aba82b2ca27c15f35056bd3413c708b241f4855207",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "7872aa95c13a73e64eda83aba82b2ca27c15f35056bd3413c708b241f4855207",
+            "href": null
+          }
+        ]
+      },
+      "Content Hash": {
+        "id": "%5DjA%5D",
+        "type": "rich_text",
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "bb34229028738568ec26ae157d475ee60aae58cc6efed7b7180a595145ebfefb",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "bb34229028738568ec26ae157d475ee60aae58cc6efed7b7180a595145ebfefb",
+            "href": null
+          }
+        ]
+      },
+      "Topic": {
+        "id": "bl%60n",
+        "type": "multi_select",
+        "multi_select": [
+          {
+            "id": "d0d4dbd0-14c1-4624-8c69-246a714efda1",
+            "name": "agriculture",
+            "color": "default"
+          },
+          {
+            "id": "9ddfb2de-e3f0-4379-b438-95fb3c683735",
+            "name": "food security",
+            "color": "purple"
+          },
+          {
+            "id": "6a3b38e1-aa7b-4616-b260-22a8b86e5256",
+            "name": "Regional Conflict",
+            "color": "green"
+          }
+        ]
+      },
+      "Relevance  Score": {
+        "id": "df~t",
+        "type": "number",
+        "number": 4
+      },
+      "Last Processed": {
+        "id": "e~RO",
+        "type": "date",
+        "date": {
+          "start": "2026-10-19T00:13:00.000+00:00",
+          "end": null,
+          "time_zone": null
+        }
+      },
+      "Status": {
+        "id": "hQT%3D",
+        "type": "select",
+        "select": {
+          "id": "b`NJ",
+          "name": "New",
+          "color": "blue"
+        }
+      },
+      "Newsletter": {
+        "id": "mHWP",
+        "type": "relation",
+        "relation": [],
+        "has_more": false
+      },
+      "Source": {
+        "id": "obV%3D",
+        "type": "relation",
+        "relation": [
+          {
+            "id": "3cec995b-3347-81be-9871-db9c2830ac5a"
+          }
+        ],
+        "has_more": false
+      },
+      "Collected Date": {
+        "id": "q%3Bke",
+        "type": "date",
+        "date": {
+          "start": "2026-10-19T00:13:00.000+00:00",
+          "end": null,
+          "time_zone": null
+        }
+      },
+      "Newsletter Angle": {
+        "id": "rV%60R",
+        "type": "rich_text",
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "How violence and land-access restrictions are affecting the West Bank olive harvest.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "How violence and land-access restrictions are affecting the West Bank olive harvest.",
+            "href": null
+          }
+        ]
+      },
+      "Published Date": {
+        "id": "u%3A~O",
+        "type": "date",
+        "date": {
+          "start": "2026-10-17T18:57:00.000+00:00",
+          "end": null,
+          "time_zone": null
+        }
+      },
+      "Duplicate": {
+        "id": "%7DWG%3F",
+        "type": "checkbox",
+        "checkbox": false
+      },
+      "SNS Hook": {
+        "id": "~QzT",
+        "type": "rich_text",
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "More than 170 settler attacks have been recorded since the olive harvest began, as new rules also restrict farmers’ access to trees in Area C.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "More than 170 settler attacks have been recorded since the olive harvest began, as new rules also restrict farmers’ access to trees in Area C.",
+            "href": null
+          }
+        ]
+      },
+      "TItle": {
+        "id": "title",
+        "type": "title",
+        "title": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Israeli settlers attack European diplomats in West Bank",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Israeli settlers attack European diplomats in West Bank",
+            "href": null
+          }
+        ]
+      }
+    },
+    "url": "https://app.notion.com/p/Israeli-settlers-attack-European-diplomats-in-West-Bank-3fec995b33478118ba6ae44ac1743b6e",
+    "public_url": null,
+    "archived": false
+  },
+  {
+    "object": "page",
+    "id": "3fec995b-3347-81af-a3c5-d56d3e3ae3ad",
+    "created_time": "2026-10-19T00:27:00.000Z",
+    "last_edited_time": "2026-10-19T00:48:00.000Z",
+    "created_by": {
+      "object": "user",
+      "id": "38ac995b-3347-81e6-9e07-0027f67f6ed0"
+    },
+    "last_edited_by": {
+      "object": "user",
+      "id": "379d872b-594c-8181-999e-0002067704ef"
+    },
+    "cover": null,
+    "icon": null,
+    "parent": {
+      "type": "database_id",
+      "database_id": "38ac995b-3347-8067-9a1a-c0f6bc138d27"
+    },
+    "in_trash": false,
+    "is_archived": false,
+    "is_locked": false,
+    "properties": {
+      "Processed": {
+        "id": "BJe%5C",
+        "type": "checkbox",
+        "checkbox": true
+      },
+      "Region": {
+        "id": "Hsa%7D",
+        "type": "multi_select",
+        "multi_select": [
+          {
+            "id": "a88668bd-3939-4966-8fa8-cf7ab3960ba7",
+            "name": "Egypt",
+            "color": "pink"
+          }
+        ]
+      },
+      "URL": {
+        "id": "LB%5DB",
+        "type": "url",
+        "url": "https://riotimesonline.com/gerd-nile-dam-dispute-explained-2026"
+      },
+      "Error Notes": {
+        "id": "MFI%3F",
+        "type": "rich_text",
+        "rich_text": []
+      },
+      "Summary": {
+        "id": "NTxh",
+        "type": "rich_text",
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "An explainer on the completed Grand Ethiopian Renaissance Dam describes Egypt’s unresolved concerns over Nile water, Ethiopia’s position on operating the dam, and the lack of renewed negotiations.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "An explainer on the completed Grand Ethiopian Renaissance Dam describes Egypt’s unresolved concerns over Nile water, Ethiopia’s position on operating the dam, and the lack of renewed negotiations.",
+            "href": null
+          }
+        ]
+      },
+      "Social Media Content": {
+        "id": "O~%5D%3F",
+        "type": "relation",
+        "relation": [],
+        "has_more": false
+      },
+      "Why It Matters": {
+        "id": "Q_X%5D",
+        "type": "rich_text",
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "The dispute directly concerns Egypt’s water security and the rules for operating a major upstream dam, particularly during drought.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "The dispute directly concerns Egypt’s water security and the rules for operating a major upstream dam, particularly during drought.",
+            "href": null
+          }
+        ]
+      },
+      "Dataset Meeting": {
+        "id": "VCwm",
+        "type": "relation",
+        "relation": [
+          {
+            "id": "3fdc995b-3347-81ce-853b-e50347c6946b"
+          }
+        ],
+        "has_more": false
+      },
+      "Canonical URL": {
+        "id": "ZSE%3F",
+        "type": "url",
+        "url": "https://www.riotimesonline.com/gerd-nile-dam-dispute-explained-2026"
+      },
+      "URL Hash": {
+        "id": "%5BAnW",
+        "type": "rich_text",
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "0cf9ac7e990d00e99653cc735e29bdfa90f81afd4a7014804b1f76535979e7ed",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "0cf9ac7e990d00e99653cc735e29bdfa90f81afd4a7014804b1f76535979e7ed",
+            "href": null
+          }
+        ]
+      },
+      "Content Hash": {
+        "id": "%5DjA%5D",
+        "type": "rich_text",
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "9f4fdeba2818e6198a214348055e980ed431f9ff23856ffae68e4eda65d7c775",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "9f4fdeba2818e6198a214348055e980ed431f9ff23856ffae68e4eda65d7c775",
+            "href": null
+          }
+        ]
+      },
+      "Topic": {
+        "id": "bl%60n",
+        "type": "multi_select",
+        "multi_select": [
+          {
+            "id": "d666f512-66a8-4752-b473-8a64a4195d6a",
+            "name": "Water Security",
+            "color": "brown"
+          },
+          {
+            "id": "035de5b6-3045-45b7-9ca9-2c0535b52d7f",
+            "name": "Hydropower",
+            "color": "default"
+          },
+          {
+            "id": "c3c65fc9-a351-4616-9056-45ef38d1fa49",
+            "name": "Regulation",
+            "color": "brown"
+          }
+        ]
+      },
+      "Relevance  Score": {
+        "id": "df~t",
+        "type": "number",
+        "number": 5
+      },
+      "Last Processed": {
+        "id": "e~RO",
+        "type": "date",
+        "date": {
+          "start": "2026-10-19T00:13:00.000+00:00",
+          "end": null,
+          "time_zone": null
+        }
+      },
+      "Status": {
+        "id": "hQT%3D",
+        "type": "select",
+        "select": {
+          "id": "b`NJ",
+          "name": "New",
+          "color": "blue"
+        }
+      },
+      "Newsletter": {
+        "id": "mHWP",
+        "type": "relation",
+        "relation": [],
+        "has_more": false
+      },
+      "Source": {
+        "id": "obV%3D",
+        "type": "relation",
+        "relation": [],
+        "has_more": false
+      },
+      "Collected Date": {
+        "id": "q%3Bke",
+        "type": "date",
+        "date": {
+          "start": "2026-10-19T00:23:00.000+00:00",
+          "end": null,
+          "time_zone": null
+        }
+      },
+      "Newsletter Angle": {
+        "id": "rV%60R",
+        "type": "rich_text",
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "What the unresolved GERD operating rules mean for Egypt’s Nile water security.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "What the unresolved GERD operating rules mean for Egypt’s Nile water security.",
+            "href": null
+          }
+        ]
+      },
+      "Published Date": {
+        "id": "u%3A~O",
+        "type": "date",
+        "date": {
+          "start": "2026-10-16T08:13:00.000+00:00",
+          "end": null,
+          "time_zone": null
+        }
+      },
+      "Duplicate": {
+        "id": "%7DWG%3F",
+        "type": "checkbox",
+        "checkbox": false
+      },
+      "SNS Hook": {
+        "id": "~QzT",
+        "type": "rich_text",
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "The GERD is complete. The rules for managing its water during a multi-year drought remain unresolved.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "The GERD is complete. The rules for managing its water during a multi-year drought remain unresolved.",
+            "href": null
+          }
+        ]
+      },
+      "TItle": {
+        "id": "title",
+        "type": "title",
+        "title": [
+          {
+            "type": "text",
+            "text": {
+              "content": "GERD Explained 2026: Ethiopia, Egypt and the Nile Dam Dispute",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "GERD Explained 2026: Ethiopia, Egypt and the Nile Dam Dispute",
+            "href": null
+          }
+        ]
+      }
+    },
+    "url": "https://app.notion.com/p/GERD-Explained-2026-Ethiopia-Egypt-and-the-Nile-Dam-Dispute-3fec995b334781afa3c5d56d3e3ae3ad",
+    "public_url": null,
+    "archived": false
+  },
+  {
+    "object": "page",
+    "id": "3fec995b-3347-81ab-8313-eeffca184157",
+    "created_time": "2026-10-19T00:27:00.000Z",
+    "last_edited_time": "2026-10-19T00:48:00.000Z",
+    "created_by": {
+      "object": "user",
+      "id": "38ac995b-3347-81e6-9e07-0027f67f6ed0"
+    },
+    "last_edited_by": {
+      "object": "user",
+      "id": "379d872b-594c-8181-999e-0002067704ef"
+    },
+    "cover": null,
+    "icon": null,
+    "parent": {
+      "type": "database_id",
+      "database_id": "38ac995b-3347-8067-9a1a-c0f6bc138d27"
+    },
+    "in_trash": false,
+    "is_archived": false,
+    "is_locked": false,
+    "properties": {
+      "Processed": {
+        "id": "BJe%5C",
+        "type": "checkbox",
+        "checkbox": true
+      },
+      "Region": {
+        "id": "Hsa%7D",
+        "type": "multi_select",
+        "multi_select": [
+          {
+            "id": "c3115d61-ba13-44bd-a162-352a0742b21a",
+            "name": "UAE",
+            "color": "yellow"
+          }
+        ]
+      },
+      "URL": {
+        "id": "LB%5DB",
+        "type": "url",
+        "url": "https://agbi.com/agriculture/2026/10/uae-to-grow-more-food-locally-under-strategy-update"
+      },
+      "Error Notes": {
+        "id": "MFI%3F",
+        "type": "rich_text",
+        "rich_text": []
+      },
+      "Summary": {
+        "id": "NTxh",
+        "type": "rich_text",
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "The UAE is updating its National Food Security Strategy 2051 with the aim of growing half of the country’s crops locally.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "The UAE is updating its National Food Security Strategy 2051 with the aim of growing half of the country’s crops locally.",
+            "href": null
+          }
+        ]
+      },
+      "Social Media Content": {
+        "id": "O~%5D%3F",
+        "type": "relation",
+        "relation": [],
+        "has_more": false
+      },
+      "Why It Matters": {
+        "id": "Q_X%5D",
+        "type": "rich_text",
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "The proposed local-crop goal directly concerns UAE food security and domestic agricultural production.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "The proposed local-crop goal directly concerns UAE food security and domestic agricultural production.",
+            "href": null
+          }
+        ]
+      },
+      "Dataset Meeting": {
+        "id": "VCwm",
+        "type": "relation",
+        "relation": [
+          {
+            "id": "3fdc995b-3347-81ce-853b-e50347c6946b"
+          }
+        ],
+        "has_more": false
+      },
+      "Canonical URL": {
+        "id": "ZSE%3F",
+        "type": "url",
+        "url": "https://agbi.com/agriculture/2026/10/uae-to-grow-more-food-locally-under-strategy-update"
+      },
+      "URL Hash": {
+        "id": "%5BAnW",
+        "type": "rich_text",
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "bf0754f6d3f9a0e32d0f95a249f48fc59700fe501668f0fc2da338a36e173083",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "bf0754f6d3f9a0e32d0f95a249f48fc59700fe501668f0fc2da338a36e173083",
+            "href": null
+          }
+        ]
+      },
+      "Content Hash": {
+        "id": "%5DjA%5D",
+        "type": "rich_text",
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "093dfb33853805d28769631979e7f1c05a0ac2ade0297a25d38d6d3ed28d9514",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "093dfb33853805d28769631979e7f1c05a0ac2ade0297a25d38d6d3ed28d9514",
+            "href": null
+          }
+        ]
+      },
+      "Topic": {
+        "id": "bl%60n",
+        "type": "multi_select",
+        "multi_select": [
+          {
+            "id": "9ddfb2de-e3f0-4379-b438-95fb3c683735",
+            "name": "food security",
+            "color": "purple"
+          },
+          {
+            "id": "d0d4dbd0-14c1-4624-8c69-246a714efda1",
+            "name": "agriculture",
+            "color": "default"
+          },
+          {
+            "id": "32c787bc-096a-427e-a8be-8629db41014d",
+            "name": "Policy",
+            "color": "gray"
+          }
+        ]
+      },
+      "Relevance  Score": {
+        "id": "df~t",
+        "type": "number",
+        "number": 5
+      },
+      "Last Processed": {
+        "id": "e~RO",
+        "type": "date",
+        "date": {
+          "start": "2026-10-19T00:13:00.000+00:00",
+          "end": null,
+          "time_zone": null
+        }
+      },
+      "Status": {
+        "id": "hQT%3D",
+        "type": "select",
+        "select": {
+          "id": "b`NJ",
+          "name": "New",
+          "color": "blue"
+        }
+      },
+      "Newsletter": {
+        "id": "mHWP",
+        "type": "relation",
+        "relation": [],
+        "has_more": false
+      },
+      "Source": {
+        "id": "obV%3D",
+        "type": "relation",
+        "relation": [
+          {
+            "id": "3cec995b-3347-818b-9ef2-c15f8db3108c"
+          }
+        ],
+        "has_more": false
+      },
+      "Collected Date": {
+        "id": "q%3Bke",
+        "type": "date",
+        "date": {
+          "start": "2026-10-19T00:23:00.000+00:00",
+          "end": null,
+          "time_zone": null
+        }
+      },
+      "Newsletter Angle": {
+        "id": "rV%60R",
+        "type": "rich_text",
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Track how the UAE plans to pursue its local crop-production goal as details of the strategy update emerge.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Track how the UAE plans to pursue its local crop-production goal as details of the strategy update emerge.",
+            "href": null
+          }
+        ]
+      },
+      "Published Date": {
+        "id": "u%3A~O",
+        "type": "date",
+        "date": {
+          "start": "2026-10-16T06:12:00.000+00:00",
+          "end": null,
+          "time_zone": null
+        }
+      },
+      "Duplicate": {
+        "id": "%7DWG%3F",
+        "type": "checkbox",
+        "checkbox": false
+      },
+      "SNS Hook": {
+        "id": "~QzT",
+        "type": "rich_text",
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "The UAE aims to grow half its crops locally under an update to its National Food Security Strategy 2051.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "The UAE aims to grow half its crops locally under an update to its National Food Security Strategy 2051.",
+            "href": null
+          }
+        ]
+      },
+      "TItle": {
+        "id": "title",
+        "type": "title",
+        "title": [
+          {
+            "type": "text",
+            "text": {
+              "content": "UAE to grow more food locally under strategy update | AGBI",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "UAE to grow more food locally under strategy update | AGBI",
+            "href": null
+          }
+        ]
+      }
+    },
+    "url": "https://app.notion.com/p/UAE-to-grow-more-food-locally-under-strategy-update-AGBI-3fec995b334781ab8313eeffca184157",
+    "public_url": null,
+    "archived": false
+  }
+]

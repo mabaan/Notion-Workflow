@@ -1,0 +1,150 @@
+[
+  {
+    "name": "Nature",
+    "feed_url": "https://news.google.com/rss/search?q=site%3Anature.com%20climate%20OR%20water%20OR%20food%20security%20OR%20environment&hl=en-US&gl=US&ceid=US%3Aen",
+    "source_regions": [
+      "Global"
+    ],
+    "quality": 10.0,
+    "method": "Google News RSS"
+  },
+  {
+    "name": "AGBI",
+    "feed_url": "https://news.google.com/rss/search?q=site%3Aagbi.com&hl=en-US&gl=US&ceid=US%3Aen",
+    "source_regions": [
+      "GCC",
+      "MENA"
+    ],
+    "quality": 10.0,
+    "method": "Google News RSS"
+  },
+  {
+    "name": "Reuters",
+    "feed_url": "https://news.google.com/rss/search?q=site%3Areuters.com%20GCC%20OR%20Middle%20East%20OR%20energy%20OR%20climate&hl=en-US&gl=US&ceid=US%3Aen",
+    "source_regions": [
+      "GCC",
+      "Global"
+    ],
+    "quality": 9.0,
+    "method": "Google News RSS"
+  },
+  {
+    "name": "S&P Global",
+    "feed_url": "https://news.google.com/rss/search?q=site%3Aspglobal.com/energy&hl=en-US&gl=US&ceid=US%3Aen",
+    "source_regions": [
+      "GCC",
+      "Global"
+    ],
+    "quality": 9.0,
+    "method": "Google News RSS"
+  },
+  {
+    "name": "Arab News",
+    "feed_url": "https://news.google.com/rss/search?q=site%3Aarabnews.com&hl=en-US&gl=US&ceid=US%3Aen",
+    "source_regions": [
+      "KSA",
+      "MENA"
+    ],
+    "quality": 8.0,
+    "method": "Google News RSS"
+  },
+  {
+    "name": "Saudi Gazette",
+    "feed_url": "https://news.google.com/rss/search?q=site%3Asaudigazette.com.sa&hl=en-US&gl=US&ceid=US%3Aen",
+    "source_regions": [
+      "GCC",
+      "KSA"
+    ],
+    "quality": 8.0,
+    "method": "Google News RSS"
+  },
+  {
+    "name": "The Guardian International",
+    "feed_url": "https://www.theguardian.com/world/rss",
+    "source_regions": [
+      "Global"
+    ],
+    "quality": 8.0,
+    "method": "RSS"
+  },
+  {
+    "name": "Council on Foreign Relations",
+    "feed_url": "https://news.google.com/rss/search?q=site%3Acfr.org%20Middle%20East%20OR%20Gulf%20OR%20Saudi%20OR%20UAE&hl=en-US&gl=US&ceid=US%3Aen",
+    "source_regions": [
+      "Global",
+      "MENA"
+    ],
+    "quality": 7.0,
+    "method": "Google News RSS"
+  },
+  {
+    "name": "Smart Water Magazine",
+    "feed_url": "https://news.google.com/rss/search?q=site%3Asmartwatermagazine.com&hl=en-US&gl=US&ceid=US%3Aen",
+    "source_regions": [
+      "GCC",
+      "Global"
+    ],
+    "quality": 7.0,
+    "method": "Google News RSS"
+  },
+  {
+    "name": "Saudi Press Agency",
+    "feed_url": "https://news.google.com/rss/search?q=site%3Aspa.gov.sa/en&hl=en-US&gl=US&ceid=US%3Aen",
+    "source_regions": [
+      "KSA"
+    ],
+    "quality": 7.0,
+    "method": "Google News RSS"
+  },
+  {
+    "name": "ZAWYA",
+    "feed_url": "https://news.google.com/rss/search?q=site%3Azawya.com&hl=en-US&gl=US&ceid=US%3Aen",
+    "source_regions": [
+      "GCC",
+      "MENA"
+    ],
+    "quality": 6.0,
+    "method": "Google News RSS"
+  },
+  {
+    "name": "Khaleej Times",
+    "feed_url": "https://news.google.com/rss/search?q=site%3Akhaleejtimes.com&hl=en-US&gl=US&ceid=US%3Aen",
+    "source_regions": [
+      "GCC",
+      "UAE"
+    ],
+    "quality": 6.0,
+    "method": "Google News RSS"
+  },
+  {
+    "name": "Gulf News",
+    "feed_url": "https://news.google.com/rss/search?q=site%3Agulfnews.com&hl=en-US&gl=US&ceid=US%3Aen",
+    "source_regions": [
+      "GCC",
+      "UAE"
+    ],
+    "quality": 6.0,
+    "method": "Google News RSS"
+  },
+  {
+    "name": "The National",
+    "feed_url": "https://news.google.com/rss/search?q=site%3Athenationalnews.com&hl=en-US&gl=US&ceid=US%3Aen",
+    "source_regions": [
+      "GCC",
+      "MENA",
+      "UAE"
+    ],
+    "quality": 6.0,
+    "method": "Google News RSS"
+  },
+  {
+    "name": "Fast Company Middle East",
+    "feed_url": "https://news.google.com/rss/search?q=site%3Afastcompanyme.com&hl=en-US&gl=US&ceid=US%3Aen",
+    "source_regions": [
+      "GCC",
+      "MENA"
+    ],
+    "quality": 5.0,
+    "method": "Google News RSS"
+  }
+]

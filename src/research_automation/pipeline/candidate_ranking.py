@@ -199,6 +199,9 @@ def evaluate_candidate_pool(
                 evaluation.enriched_counts[region] = (
                     evaluation.enriched_counts.get(region, 0) + 1
                 )
+                if result.editorial_rejection_reason:
+                    evaluation.reject(result, result.editorial_rejection_reason)
+                    continue
                 required_score = result.required_relevance_score
                 if enriched.relevance_score < required_score:
                     evaluation.reject(

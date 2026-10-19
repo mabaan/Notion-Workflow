@@ -1,0 +1,128 @@
+[
+  {
+    "publisher": "ALL",
+    "method": "baseline",
+    "urls": 2,
+    "attempted": 2,
+    "successful": 2,
+    "statuses": {
+      "extracted": 2
+    },
+    "canonical_resolved": 2,
+    "median_characters": 4261.0,
+    "median_attempted_characters": 4261.0,
+    "median_latency": 0.891
+  },
+  {
+    "publisher": "ALL",
+    "method": "scrapling_rendered",
+    "urls": 2,
+    "attempted": 0,
+    "successful": 0,
+    "statuses": {
+      "not_attempted": 2
+    },
+    "canonical_resolved": 0,
+    "median_characters": 0,
+    "median_attempted_characters": 0,
+    "median_latency": null
+  },
+  {
+    "publisher": "ALL",
+    "method": "scrapling_static",
+    "urls": 2,
+    "attempted": 2,
+    "successful": 2,
+    "statuses": {
+      "extracted": 2
+    },
+    "canonical_resolved": 2,
+    "median_characters": 4620.0,
+    "median_attempted_characters": 4620.0,
+    "median_latency": 0.125
+  },
+  {
+    "publisher": "Arab News",
+    "method": "baseline",
+    "urls": 1,
+    "attempted": 1,
+    "successful": 1,
+    "statuses": {
+      "extracted": 1
+    },
+    "canonical_resolved": 1,
+    "median_characters": 2091,
+    "median_attempted_characters": 2091,
+    "median_latency": 0.891
+  },
+  {
+    "publisher": "Arab News",
+    "method": "scrapling_rendered",
+    "urls": 1,
+    "attempted": 0,
+    "successful": 0,
+    "statuses": {
+      "not_attempted": 1
+    },
+    "canonical_resolved": 0,
+    "median_characters": 0,
+    "median_attempted_characters": 0,
+    "median_latency": null
+  },
+  {
+    "publisher": "Arab News",
+    "method": "scrapling_static",
+    "urls": 1,
+    "attempted": 1,
+    "successful": 1,
+    "statuses": {
+      "extracted": 1
+    },
+    "canonical_resolved": 1,
+    "median_characters": 2480,
+    "median_attempted_characters": 2480,
+    "median_latency": 0.078
+  },
+  {
+    "publisher": "The National",
+    "method": "baseline",
+    "urls": 1,
+    "attempted": 1,
+    "successful": 1,
+    "statuses": {
+      "extracted": 1
+    },
+    "canonical_resolved": 1,
+    "median_characters": 6431,
+    "median_attempted_characters": 6431,
+    "median_latency": 0.891
+  },
+  {
+    "publisher": "The National",
+    "method": "scrapling_rendered",
+    "urls": 1,
+    "attempted": 0,
+    "successful": 0,
+    "statuses": {
+      "not_attempted": 1
+    },
+    "canonical_resolved": 0,
+    "median_characters": 0,
+    "median_attempted_characters": 0,
+    "median_latency": null
+  },
+  {
+    "publisher": "The National",
+    "method": "scrapling_static",
+    "urls": 1,
+    "attempted": 1,
+    "successful": 1,
+    "statuses": {
+      "extracted": 1
+    },
+    "canonical_resolved": 1,
+    "median_characters": 6760,
+    "median_attempted_characters": 6760,
+    "median_latency": 0.172
+  }
+]

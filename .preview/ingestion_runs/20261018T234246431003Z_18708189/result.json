@@ -1,0 +1,103 @@
+{
+  "live": true,
+  "all_publishers": 15,
+  "collected_RSS": 1445,
+  "discovered": 32,
+  "classified": 759,
+  "enrichment_budget": {
+    "initial": 32,
+    "maximum": 48,
+    "backfill_batch": 8,
+    "attempted": 48
+  },
+  "verified_page_count": 4,
+  "created_pages": [
+    {
+      "id": "3fdc995b-3347-8121-bc3e-c81177165a35",
+      "url": "https://app.notion.com/p/Hormuz-shipping-disruption-is-starting-to-hit-harvests-UN-agency-says-Reuters-3fdc995b33478121bc3ec81177165a35",
+      "title": "Hormuz shipping disruption is starting to hit harvests, UN agency says - Reuters",
+      "status": {
+        "id": "b`NJ",
+        "name": "New",
+        "color": "blue"
+      },
+      "processed": true,
+      "region": [
+        "Global"
+      ],
+      "relevance": 4,
+      "summary_present": true,
+      "weekly_link_correct": true
+    },
+    {
+      "id": "3fdc995b-3347-81ea-b9f4-eb9abe525aea",
+      "url": "https://app.notion.com/p/UN-says-Gaza-malnutrition-gains-fragile-as-commercial-supplies-halt-Reuters-3fdc995b334781eab9f4eb9abe525aea",
+      "title": "UN says Gaza malnutrition gains fragile as commercial supplies halt - Reuters",
+      "status": {
+        "id": "b`NJ",
+        "name": "New",
+        "color": "blue"
+      },
+      "processed": true,
+      "region": [
+        "Global"
+      ],
+      "relevance": 4,
+      "summary_present": true,
+      "weekly_link_correct": true
+    },
+    {
+      "id": "3fdc995b-3347-81de-afad-f7be86d9b356",
+      "url": "https://app.notion.com/p/Egypt-s-minister-approves-new-funding-for-National-Veal-Project-Zawya-3fdc995b334781deafadf7be86d9b356",
+      "title": "Egypt's minister approves new funding for National Veal Project - Zawya",
+      "status": {
+        "id": "b`NJ",
+        "name": "New",
+        "color": "blue"
+      },
+      "processed": true,
+      "region": [
+        "Egypt"
+      ],
+      "relevance": 4,
+      "summary_present": true,
+      "weekly_link_correct": true
+    },
+    {
+      "id": "3fdc995b-3347-815c-ade7-e8c6341d3492",
+      "url": "https://app.notion.com/p/UAE-targets-50-local-crop-production-under-updated-Food-Security-Strategy-2051-Fast-Company-Middl-3fdc995b3347815cade7e8c6341d3492",
+      "title": "UAE targets 50% local crop production under updated Food Security Strategy 2051 - Fast Company Middle East | The future of tech, business and innovation.",
+      "status": {
+        "id": "b`NJ",
+        "name": "New",
+        "color": "blue"
+      },
+      "processed": true,
+      "region": [
+        "UAE"
+      ],
+      "relevance": 5,
+      "summary_present": true,
+      "weekly_link_correct": true
+    }
+  ],
+  "weekly_dataset_url": "https://app.notion.com/p/October-19th-to-October-23rd-3fdc995b334781ce853be50347c6946b",
+  "queue_url": "https://app.notion.com/p/38ac995b334780679a1ac0f6bc138d27",
+  "shortages": {
+    "Global": 1,
+    "UAE": 3,
+    "KSA": 3,
+    "Egypt": 1
+  },
+  "audit_path": ".preview\\ingestion_audits\\20261018T234246431003Z_18708189.json",
+  "newsletter_status": {
+    "id": "0d23b22b-ae0a-4c61-a914-5a28d58ecb38",
+    "name": "Not started",
+    "color": "default"
+  },
+  "social_status": {
+    "id": "c2a2d2a6-d682-478d-9a1a-2eaf53cd25c2",
+    "name": "Not ready",
+    "color": "default"
+  }
+}
